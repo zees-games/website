@@ -1,0 +1,23 @@
+---
+/*
+ * Umami is configured at container start, not at build: the pages carry the
+ * `<!--umami-->` marker below, and nginx swaps it for the Umami snippet when
+ * UMAMI_SRC and UMAMI_WEBSITE_ID are set in .env (docker/40-umami.sh). Changing
+ * either is a container restart, not a rebuild; `npm run dev` has no analytics.
+ *
+ * Named events are `data-umami-event` attributes (`Ev()` in `lib/umami.ts`)
+ * and `track()` calls, both inert without the snippet. The script here adds one
+ * more: any other link that leaves the site is tagged `outbound-link-click`
+ * with its URL.
+ */
+---
+
+<Fragment set:html="<!--umami-->" />
+<script>
+  for (const a of document.querySelectorAll('a')) {
+    if (a.host !== window.location.host && !a.hasAttribute('data-umami-event')) {
+      a.setAttribute('data-umami-event', 'outbound-link-click')
+      a.setAttribute('data-umami-event-url', a.href)
+    }
+  }
+</script>

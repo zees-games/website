@@ -14,6 +14,8 @@ export const nl: Messages = {
     notFoundTitle: "Niet gevonden",
     notFoundDescription: "Deze pagina bestaat niet.",
     bannerAlt: "Banner van Zee's Games: neonkoptekst boven een wireframelandschap",
+    ogAlt: "Zee's Games: het neon-Z-logo, de lijst met spellen en screenshots van drie ervan",
+    ogGameAlt: "{title} op Zee's Games",
   },
   nav: {
     main: "Hoofdmenu",
@@ -22,6 +24,7 @@ export const nl: Messages = {
     goals: "Doelen",
     menu: "Menu",
     github: "Zee's Games op GitHub",
+    discord: "Zee's Games op Discord",
     playOnTmc: "Speel op TMC",
     language: "Taal",
   },
@@ -34,6 +37,7 @@ export const nl: Messages = {
     orgOnGithub: "zees-games op GitHub",
     sourceCode: "Broncode",
     madeWithGodot: "Gemaakt met Godot",
+    discord: "Discord-server",
     sourceOnGithub: "Broncode op GitHub",
     disclaimer:
       "Zee's Games is een persoonlijk project en geen officieel product van The Modding Community. De originele maps zijn van hun makers; zie de vermelding bij elke map.",
@@ -73,6 +77,9 @@ export const nl: Messages = {
     poweredBody:
       "TMC host, vermeldt en draait elke game hier. Deze games zijn de demo's ervan: het bewijs van wat het platform en de open Dot-addons voor Godot voor elke game kunnen doen. Ze zijn ook gewoon leuk.",
     readGoals: "Lees mijn doelen",
+    discordTitle: "Kom erbij op Discord",
+    discordBody: "Vind medespelers, meld bugs, stel maps voor en zie wat eraan komt.",
+    discordCta: "Word lid van de Discord",
     features: [
       { title: "Communityservers", body: "Iedereen kan een server hosten, de instellingen aanpassen en hem vermelden." },
       { title: "Overal spelen", body: "Browser, desktopapp of telefoon, allemaal op dezelfde servers." },

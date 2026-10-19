@@ -31,12 +31,16 @@ npm run dev
 
 ## Deploy (Docker)
 
-The image builds the site and serves `dist/` from nginx. `.env` is read at **build** time (it holds only `PUBLIC_*` origins, which are inlined into the pages) and gives compose its port settings.
+The image builds the site and serves `dist/` from nginx. `.env` is read twice: at **build** time for the `PUBLIC_*` origins, which are inlined into the pages, and at **container start** for the Umami settings and compose's ports.
 
 ```sh
-cp .env.ex .env   # set PUBLIC_SITE_URL, PUBLIC_TMC_URL, INTERNAL_PORT, BIND_ADDR, BIND_PORT
+cp .env.ex .env   # set the origins, UMAMI_*, INTERNAL_PORT, BIND_ADDR, BIND_PORT
 docker compose up -d --build
 ```
+
+Analytics: set `UMAMI_SRC` and `UMAMI_WEBSITE_ID` in `.env` to load [Umami](https://umami.is). They are read when the container starts, so `docker compose up -d --force-recreate` applies a change without a rebuild. The custom events are listed in `src/lib/umami.ts`.
+
+The icon set and share banners in `public/` and `public/og/` are generated: `npx playwright install chromium` once, then `npm run brand` after adding a game or changing a cover.
 
 Put a TLS-terminating reverse proxy in front of `BIND_ADDR:BIND_PORT`.
 

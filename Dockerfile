@@ -27,6 +27,8 @@ ENV INTERNAL_PORT=${INTERNAL_PORT}
 # nginx's entrypoint envsubsts templates/ into conf.d/ at startup, so the
 # listen port has one source of truth (.env).
 COPY docker/nginx.conf.template /etc/nginx/templates/default.conf.template
+# Turns UMAMI_* from .env into the include that injects the analytics snippet.
+COPY --chmod=755 docker/40-umami.sh /docker-entrypoint.d/40-umami.sh
 
 # COPY merges into a directory: clear the stock welcome page first.
 RUN rm -rf /usr/share/nginx/html/*

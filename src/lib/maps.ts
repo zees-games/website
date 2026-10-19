@@ -15,6 +15,8 @@ interface RawMap {
   id: string
   name: string
   image: string | null
+  /** How well `image` reads as a thumbnail, 0-100 (brightness + contrast; `scripts/gen-maps.py`). */
+  score: number | null
   author: string | null
   originalGame: string | null
   originalMap: string | null

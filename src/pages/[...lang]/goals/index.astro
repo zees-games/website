@@ -4,9 +4,12 @@ import {
   Sparkles, Server, SlidersHorizontal, Shuffle, CloudDownload,
   GitBranch, Bot, Globe, Monitor, Smartphone, ArrowRight, Map, Package,
 } from 'lucide-react'
-import { GITHUB_ORG, TmcHref } from '../../../lib/site'
+import { FaDiscord } from 'react-icons/fa6'
+import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../../i18n'
+import { Ev } from '../../../lib/umami'
+import { BreadcrumbLd } from '../../../lib/seo'
 
 export const getStaticPaths = LocalePaths
 
@@ -22,7 +25,7 @@ const TILE_COLOR = (i: number) => (i % 4 === 0 ? 'text-cyan' : i % 4 === 2 ? 'te
 const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-cyan']] as const
 ---
 
-<Layout locale={locale} title={t.meta.goalsTitle} description={t.meta.goalsDescription}>
+<Layout locale={locale} title={t.meta.goalsTitle} description={t.meta.goalsDescription} imageAlt={t.meta.ogAlt} jsonLd={[BreadcrumbLd(locale, [[t.meta.goalsTitle, '/goals']])]}>
   <!-- Hero -->
   <section class="relative isolate overflow-hidden border-b border-line/60">
     <img src="/images/card01.jpg" alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-30" />
@@ -110,7 +113,7 @@ const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-
         <p class="font-display text-sm font-semibold tracking-widest text-cyan">04</p>
         <h2 class="mt-2 text-3xl font-bold">{G.anywhere.title}</h2>
         <p class="mt-4 leading-relaxed text-muted">{G.anywhere.body}</p>
-        <a href={TmcHref('/play', locale)} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{G.anywhere.browse} <ArrowRight className="size-4" /></a>
+        <a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'goals' })} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{G.anywhere.browse} <ArrowRight className="size-4" /></a>
       </div>
       <div class="grid grid-cols-3 gap-4 md:order-1" aria-hidden="true">
         {([[Globe, G.anywhere.browser, 'text-cyan'], [Monitor, G.anywhere.desktop, 'text-amber'], [Smartphone, G.anywhere.mobile, 'text-violet']] as const).map(([Icon, label, color]) => (
@@ -174,9 +177,14 @@ const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-
           <p class="font-display text-sm font-semibold tracking-widest text-cyan">07</p>
           <h2 class="mt-2 text-3xl font-bold">{G.open.title}</h2>
           <p class="mt-4 leading-relaxed text-muted">{G.open.body}</p>
-          <a href={GITHUB_ORG} class="mt-6 inline-flex items-center gap-2 rounded-lg border border-line bg-night px-4 py-2 text-sm font-semibold hover:border-cyan/60">
+          <div class="mt-6 flex flex-wrap gap-2">
+          <a href={GITHUB_ORG} {...Ev('repo_link', { kind: 'org', place: 'goals' })} class="inline-flex items-center gap-2 rounded-lg border border-line bg-night px-4 py-2 text-sm font-semibold hover:border-cyan/60">
             {G.open.org} <ArrowRight className="size-4" />
           </a>
+          <a href={DISCORD_URL} {...Ev('discord', { place: 'goals' })} class="inline-flex items-center gap-2 rounded-lg border border-line bg-night px-4 py-2 text-sm font-semibold hover:border-discord/70">
+            <FaDiscord className="size-4 text-discord" /> {t.home.discordCta}
+          </a>
+          </div>
         </div>
         <div>
           <h3 class="flex items-center gap-2 text-xl font-bold"><Bot className="size-5 text-amber" /> {G.open.aiTitle}</h3>

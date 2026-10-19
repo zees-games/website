@@ -14,6 +14,8 @@ export const ja: Messages = {
     notFoundTitle: "見つかりません",
     notFoundDescription: "このページは存在しません。",
     bannerAlt: "Zee's Games のバナー：ワイヤーフレームの風景に浮かぶネオンのタイトル",
+    ogAlt: "Zee's Games：ネオンの Z ロゴ、ゲーム一覧、そのうち 3 本のスクリーンショット",
+    ogGameAlt: "Zee's Games の {title}",
   },
   nav: {
     main: "メイン",
@@ -22,6 +24,7 @@ export const ja: Messages = {
     goals: "目標",
     menu: "メニュー",
     github: "GitHub の Zee's Games",
+    discord: "Discord の Zee's Games",
     playOnTmc: "TMC で遊ぶ",
     language: "言語",
   },
@@ -34,6 +37,7 @@ export const ja: Messages = {
     orgOnGithub: "GitHub の zees-games",
     sourceCode: "ソースコード",
     madeWithGodot: "Godot 製",
+    discord: "Discord サーバー",
     sourceOnGithub: "GitHub のソースコード",
     disclaimer:
       "Zee's Games は個人プロジェクトであり、The Modding Community の公式製品ではありません。オリジナルのマップは各作者に帰属します。各マップのクレジットをご覧ください。",
@@ -73,6 +77,9 @@ export const ja: Messages = {
     poweredBody:
       "ここにあるすべてのゲームを、TMC がホスト、掲載、運営しています。これらのゲームは TMC のデモであり、プラットフォームと Godot 向けのオープンな Dot アドオンがどんなゲームにも役立つことの証明です。もちろん、単純に楽しいゲームでもあります。",
     readGoals: "私の目標を読む",
+    discordTitle: "Discord で会いましょう",
+    discordBody: "一緒に遊ぶ仲間を探したり、バグを報告したり、マップを提案したり、今後の予定をチェックしたりできます。",
+    discordCta: "Discord に参加",
     features: [
       { title: "コミュニティサーバー", body: "誰でもサーバーを立て、設定を調整して公開できます。" },
       { title: "どこでも遊べる", body: "ブラウザー、デスクトップアプリ、スマートフォンから、同じサーバーで遊べます。" },

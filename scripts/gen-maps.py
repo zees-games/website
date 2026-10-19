@@ -7,6 +7,11 @@ def conv(src, dst, w):
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     if not os.path.exists(dst):
         subprocess.run(['magick', src, '-resize', f'{w}x>', '-quality', '78', dst], check=True)
+def score(path):
+    # Brightness plus contrast, 0-100: how well a shot reads as a small
+    # thumbnail. The game page previews the highest-scoring maps.
+    out = subprocess.run(['magick', path, '-colorspace', 'Gray', '-format', '%[fx:100*(mean+standard_deviation)]', 'info:'], capture_output=True, text=True, check=True).stdout
+    return round(float(out))
 def local(p): return f'{S}/shots{p}'
 for g in d['games']:
     if g['iconOrScreenshot']:
@@ -25,9 +30,9 @@ for pack, lst in d['maps'].items():
             conv(local(shot), OUT + '/public' + img, 960)
         author = m.get('author')
         if author in (pack, 'TMC') or (author and author.startswith(('mg-', 'game-'))): author = None
-        rows.append({'id': m['id'], 'name': m['name'], 'image': img, 'author': author,
+        rows.append({'id': m['id'], 'name': m['name'], 'image': img, 'score': score(OUT + '/public' + img) if img else None, 'author': author,
                      'originalGame': (m.get('originalGame') or '').replace(', inferred', '').replace(' (Source)', '').replace(' inferred','') or None,
                      'originalMap': m.get('originalMapName')})
     maps[slug] = {'repo': pack, 'maps': rows}
-json.dump(maps, open(f'{OUT}/src/data/maps.json', 'w'), indent=1)
+open(f'{OUT}/src/data/maps.json', 'w').write(json.dumps(maps, indent=2, ensure_ascii=False) + '\n')
 print({k: len(v['maps']) for k, v in maps.items()})

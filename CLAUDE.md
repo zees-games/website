@@ -12,6 +12,9 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 | `src/layouts/Layout.astro`, `src/components/*` | The one layout, header, footer, game card, play buttons |
 | `src/styles/global.css` | The theme (`@theme` tokens from the org banner: ink/panel, cyan, amber, violet) and the few custom utilities |
 | `src/lib/site.ts` | Every origin and every link into TMC and GitHub |
+| `src/lib/umami.ts`, `src/components/UmamiAnalytics.astro` | The Umami event registry (`Ev()` for links, `track()` for scripts) and the snippet |
+| `src/lib/seo.ts`, `src/pages/{robots.txt,site.webmanifest}.ts` | JSON-LD builders (`SiteLd`, `GameLd`, `BreadcrumbLd`) that `Layout` renders from its `jsonLd` prop; robots and the install manifest |
+| `scripts/gen-brand.mjs` (`npm run brand`) | Renders the icon set into `public/` and the 1200×630 share banners into `public/og/` (`site.jpg`, one per game) with Playwright's Chromium (`npx playwright install chromium` once) |
 | `src/lib/maps.ts` | Joins `maps.json` with `originals.json` |
 | `src/data/games.ts` | The games' structural data (slug, repos, server, accent), by hand; their copy is in `src/i18n/games/` |
 | `src/data/maps.json`, `originals.json` | Generated map data; see Data below |
@@ -35,8 +38,11 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 - Every origin is a `PUBLIC_*` var in `src/lib/site.ts` with a production default. It is inlined at build, so it can never be a secret, and changing it needs a rebuild.
 - Summaries say what a game does today, taken from its README. The games are platform demos that are meant to be fun, and the copy keeps both.
 - Original-map screenshots are third-party: always shown with their source link, never claimed as ours, and excluded from the MIT licence (`LICENSE`).
+- Analytics is Umami, configured at container start, not at build: every page carries `<!--umami-->` and nginx swaps it for the snippet when `UMAMI_SRC` and `UMAMI_WEBSITE_ID` are in `.env` (`docker/40-umami.sh` validates them and writes the `sub_filter` include). A restart applies a change; `npm run dev` and a bare `dist/` have no analytics. A new event is a name in `UMAMI_EVENTS` plus its call site (never a name nothing fires); event data are identifiers (slug, map id, repo, `place`), never translated text. Links take `{...Ev(name, data)}`; in-page behaviour calls `track()`.
+- Every page passes `Layout` a title, description and translated `imageAlt`; game and maps pages use `/og/<slug>.jpg`, the rest `/og/site.jpg`. A new game needs `npm run brand` re-run (it reads `GAMES` and the covers), and a new page needs its `jsonLd` (at least a `BreadcrumbLd`). Pages without an address of their own take `noAlternates noindex`.
+- Discord links all use `DISCORD_URL` (`https://dis.zeesgames.com`, an invite redirect) and fire the `discord` event with their `place`; Discord styling uses the `discord` colour token, nowhere else.
 - Brand icons come from `react-icons/fa6` (lucide's are deprecated); everything else is `lucide-react`.
 
 ## Data
 
-`python3 scripts/gen-maps.py <dir> <repo-root>` rebuilds `maps.json` and the map WebPs from an inventory of the map repos on x-tmc-dev02 (`~/godot/*-maps`; `PACK` in the script maps each pack to its game, and packs not in it are skipped): `<dir>` holds `inventory.json` and the screenshots under `shots/` copied from dev02. `originals.json` comes from hand-checked web research; every entry keeps its `source`.
+`python3 scripts/gen-maps.py <dir> <repo-root>` rebuilds `maps.json` and the map WebPs from an inventory of the map repos on x-tmc-dev02 (`~/godot/*-maps`; `PACK` in the script maps each pack to its game, and packs not in it are skipped): `<dir>` holds `inventory.json` and the screenshots under `shots/` copied from dev02. Each map row carries a `score` (brightness + contrast of its shot), which picks the game page's six previews. `originals.json` comes from hand-checked web research; every entry keeps its `source`.

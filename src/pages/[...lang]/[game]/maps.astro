@@ -8,6 +8,8 @@ import { MapsFor, type MapEntry } from '../../../lib/maps'
 import { RepoHref } from '../../../lib/site'
 import { LANG_TAG, LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Fmt, Rich, UseI18n } from '../../../i18n'
+import { Ev } from '../../../lib/umami'
+import { BreadcrumbLd } from '../../../lib/seo'
 import type { Messages } from '../../../i18n/ui/en'
 import { Search, ImageOff, ExternalLink, Sparkles } from 'lucide-react'
 
@@ -47,7 +49,9 @@ function credit(m: MapEntry): string {
   locale={locale}
   title={Fmt(t.meta.mapsTitle, { title: game.title })}
   description={Fmt(ported ? t.meta.mapsDescription : t.meta.mapsDescriptionOwn, { title: game.title })}
-  image={`/images/games/${game.slug}.webp`}
+  image={`/og/${game.slug}.jpg`}
+  imageAlt={Fmt(t.meta.ogGameAlt, { title: game.title })}
+  jsonLd={[BreadcrumbLd(locale, [[game.title, `/${game.slug}`], [Fmt(t.meta.mapsTitle, { title: game.title }), `/${game.slug}/maps`]])]}
 >
   <section class="relative isolate overflow-hidden border-b border-line/60">
     <div class="pointer-events-none absolute -top-40 left-1/3 -z-10 size-[36rem] rounded-full bg-violet/15 blur-[110px]" aria-hidden="true"></div>
@@ -56,9 +60,9 @@ function credit(m: MapEntry): string {
       <h1 class="mt-4 text-4xl font-bold sm:text-6xl" set:html={Rich(t.maps.heading, { title: Escape(game.title), maps: `<span class="${a.text}">${Escape(t.maps.headingWord)}</span>` })} />
       <p class="mt-4 max-w-3xl text-lg text-muted">{plural(t.maps.count, pack.maps.length)} {intro}</p>
       <div class="mt-6 flex flex-wrap items-center gap-3">
-        <PlayButtons game={game} locale={locale} />
+        <PlayButtons game={game} locale={locale} place="maps" />
       </div>
-      <a href={RepoHref(pack.repo)} class="mt-5 inline-flex items-center gap-2 rounded-lg border border-line bg-night/70 px-4 py-2 text-sm font-semibold transition hover:border-cyan/60">
+      <a href={RepoHref(pack.repo)} {...Ev('repo_link', { kind: 'maps', repo: pack.repo, game: game.slug, place: 'maps' })} class="mt-5 inline-flex items-center gap-2 rounded-lg border border-line bg-night/70 px-4 py-2 text-sm font-semibold transition hover:border-cyan/60">
         <FaGithub className="size-4" aria-hidden="true" /> {t.maps.mapPack}
         <span class="font-mono text-xs font-normal text-muted">zees-games/{pack.repo}</span>
       </a>
@@ -82,7 +86,7 @@ function credit(m: MapEntry): string {
       <span id="map-count" class="text-sm text-muted" data-lang={LANG_TAG[locale]} data-forms={JSON.stringify(t.maps.shown)}>{plural(t.maps.shown, pack.maps.length)}</span>
     </div>
 
-    <ul class="mt-8 grid gap-6 lg:grid-cols-2" id="map-list">
+    <ul class="mt-8 grid gap-6 lg:grid-cols-2" id="map-list" data-game={game.slug}>
       {pack.maps.map((m) => (
         <li id={m.id} data-name={`${m.name} ${m.id} ${m.originalMap ?? ''}`.toLowerCase()} data-family={familyOf(m) ?? ''} class="map-card glow-card scroll-mt-36 overflow-hidden">
           <div class:list={['grid gap-px bg-line', m.originalMap && 'grid-cols-2']}>
@@ -128,6 +132,8 @@ function credit(m: MapEntry): string {
 </Layout>
 
 <script>
+  import { QueryField, track } from '../../../lib/umami'
+
   const input = document.getElementById('map-search') as HTMLInputElement | null
   const cards = [...document.querySelectorAll<HTMLElement>('.map-card')]
   const chips = [...document.querySelectorAll<HTMLButtonElement>('.family-chip')]
@@ -138,7 +144,10 @@ function credit(m: MapEntry): string {
   const forms = JSON.parse(count?.dataset.forms ?? '{"other":"{n}"}') as Record<string, string>
   const rules = new Intl.PluralRules(lang)
   const num = new Intl.NumberFormat(lang)
+  const game = document.getElementById('map-list')?.dataset.game
   let family = ''
+  let searchTimer: ReturnType<typeof setTimeout> | undefined
+  let lastQuery = ''
 
   function apply() {
     const q = (input?.value ?? '').trim().toLowerCase()
@@ -150,14 +159,26 @@ function credit(m: MapEntry): string {
     }
     if (count) count.textContent = (forms[rules.select(shown)] ?? forms.other).replace('{n}', num.format(shown))
     empty?.classList.toggle('hidden', shown > 0)
+    return shown
   }
 
-  input?.addEventListener('input', apply)
+  // Report a settled query, not every keystroke: "surf" would otherwise file s, su, sur.
+  input?.addEventListener('input', () => {
+    const shown = apply()
+    clearTimeout(searchTimer)
+    searchTimer = setTimeout(() => {
+      const q = QueryField(input.value)
+      if (!q || q === lastQuery) return
+      lastQuery = q
+      track('maps_search', { game, query: q, results: shown, family: family || undefined })
+    }, 1000)
+  })
   for (const chip of chips) {
     chip.addEventListener('click', () => {
       family = chip.dataset.family ?? ''
       for (const c of chips) c.setAttribute('aria-pressed', String(c === chip))
-      apply()
+      const shown = apply()
+      track('maps_filter', { game, family: family || 'all', results: shown })
     })
   }
 </script>

@@ -14,6 +14,8 @@ export const pt: Messages = {
     notFoundTitle: 'Não encontrado',
     notFoundDescription: 'Esta página não existe.',
     bannerAlt: "Banner do Zee's Games: título em néon sobre uma paisagem em estrutura de arame",
+    ogAlt: "Zee's Games: o logótipo do Z em néon, a lista de jogos e capturas de ecrã de três deles",
+    ogGameAlt: "{title} no Zee's Games",
   },
   nav: {
     main: 'Principal',
@@ -22,6 +24,7 @@ export const pt: Messages = {
     goals: 'Objetivos',
     menu: 'Menu',
     github: "Zee's Games no GitHub",
+    discord: "Zee's Games no Discord",
     playOnTmc: 'Jogar na TMC',
     language: 'Idioma',
   },
@@ -34,6 +37,7 @@ export const pt: Messages = {
     orgOnGithub: 'zees-games no GitHub',
     sourceCode: 'Código-fonte',
     madeWithGodot: 'Feito com Godot',
+    discord: "Servidor do Discord",
     sourceOnGithub: 'Código-fonte no GitHub',
     disclaimer:
       "O Zee's Games é um projeto pessoal e não um produto oficial da The Modding Community. Os mapas originais pertencem aos seus autores; consulte os créditos de cada mapa.",
@@ -73,6 +77,9 @@ export const pt: Messages = {
     poweredBody:
       'A TMC aloja, lista e executa todos os jogos aqui presentes. Estes jogos são as suas demonstrações: a prova do que a plataforma, e os addons abertos Dot para Godot, podem fazer por qualquer jogo. E são, simplesmente, divertidos.',
     readGoals: 'Ler os meus objetivos',
+    discordTitle: "Junte-se a nós no Discord",
+    discordBody: "Encontre pessoas para jogar, comunique erros, sugira mapas e veja o que vem a seguir.",
+    discordCta: "Entrar no Discord",
     features: [
       { title: 'Servidores da comunidade', body: 'Qualquer pessoa pode alojar um servidor, ajustar as suas definições e listá-lo.' },
       { title: 'Jogue em qualquer lado', body: 'Navegador, aplicação de computador ou telemóvel, tudo nos mesmos servidores.' },

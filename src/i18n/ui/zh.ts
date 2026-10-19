@@ -14,6 +14,8 @@ export const zh: Messages = {
     notFoundTitle: "未找到",
     notFoundDescription: "此页面不存在。",
     bannerAlt: "Zee's Games 横幅：线框风景上方的霓虹标题",
+    ogAlt: "Zee's Games：霓虹 Z 标志、游戏列表以及其中三款游戏的截图",
+    ogGameAlt: "Zee's Games 上的 {title}",
   },
   nav: {
     main: "主导航",
@@ -22,6 +24,7 @@ export const zh: Messages = {
     goals: "目标",
     menu: "菜单",
     github: "GitHub 上的 Zee's Games",
+    discord: "Zee's Games 的 Discord",
     playOnTmc: "在 TMC 上游玩",
     language: "语言",
   },
@@ -34,6 +37,7 @@ export const zh: Messages = {
     orgOnGithub: "GitHub 上的 zees-games",
     sourceCode: "源代码",
     madeWithGodot: "使用 Godot 制作",
+    discord: "Discord 服务器",
     sourceOnGithub: "GitHub 上的源代码",
     disclaimer:
       "Zee's Games 是个人项目，并非 The Modding Community 的官方产品。原版地图归其作者所有，请参阅各地图的署名信息。",
@@ -73,6 +77,9 @@ export const zh: Messages = {
     poweredBody:
       "TMC 托管、收录并运行这里的每一款游戏。这些游戏是它的演示：证明了该平台以及面向 Godot 的开源 Dot 插件能为任何游戏做到什么。当然，它们本身也很好玩。",
     readGoals: "阅读我的目标",
+    discordTitle: "来 Discord 一起玩",
+    discordBody: "寻找一起玩的伙伴、报告错误、推荐地图，并了解接下来的计划。",
+    discordCta: "加入 Discord",
     features: [
       { title: "社区服务器", body: "任何人都可以架设服务器、调整设置并将其上架。" },
       { title: "随处可玩", body: "浏览器、桌面应用或手机，都在同一批服务器上。" },

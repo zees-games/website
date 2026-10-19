@@ -11,6 +11,9 @@ export const SITE_URL = trim(import.meta.env.PUBLIC_SITE_URL ?? 'https://zeesgam
 /** The Modding Community, which hosts, lists and runs every game here. */
 export const TMC_URL = trim(import.meta.env.PUBLIC_TMC_URL ?? 'https://moddingcommunity.com')
 
+/** Zee's Games' Discord server (an invite redirect we own, so the invite can change). */
+export const DISCORD_URL = trim(import.meta.env.PUBLIC_DISCORD_URL ?? 'https://dis.zeesgames.com')
+
 export const GITHUB_ORG = 'https://github.com/zees-games'
 export const SITE_REPO = `${GITHUB_ORG}/website`
 

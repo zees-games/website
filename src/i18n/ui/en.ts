@@ -24,6 +24,8 @@ export const en = {
     notFoundTitle: 'Not found',
     notFoundDescription: 'This page does not exist.',
     bannerAlt: "Zee's Games banner: neon title over a wireframe landscape",
+    ogAlt: "Zee's Games: the neon Z logo, the list of games and screenshots of three of them",
+    ogGameAlt: "{title} on Zee's Games",
   },
   nav: {
     main: 'Main',
@@ -32,6 +34,7 @@ export const en = {
     goals: 'Goals',
     menu: 'Menu',
     github: "Zee's Games on GitHub",
+    discord: "Zee's Games on Discord",
     playOnTmc: 'Play on TMC',
     language: 'Language',
   },
@@ -44,6 +47,7 @@ export const en = {
     orgOnGithub: 'zees-games on GitHub',
     sourceCode: 'Source code',
     madeWithGodot: 'Made with Godot',
+    discord: "Discord server",
     sourceOnGithub: 'Source code on GitHub',
     disclaimer:
       "Zee's Games is a personal project and not an official product of The Modding Community. Original maps belong to their authors; see each map's credits.",
@@ -83,6 +87,9 @@ export const en = {
     poweredBody:
       'TMC hosts, lists and runs every game here. These games are its demos: proof of what the platform, and the open Dot addons for Godot, can do for any game. They are also just fun.',
     readGoals: 'Read my goals',
+    discordTitle: "Come hang out on Discord",
+    discordBody: "Find people to play with, report bugs, suggest maps and see what is coming next.",
+    discordCta: "Join the Discord",
     features: [
       { title: 'Community servers', body: 'Anyone can host a server, tune its settings and list it.' },
       { title: 'Play anywhere', body: 'Browser, desktop app or phone, all on the same servers.' },

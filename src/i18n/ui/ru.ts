@@ -14,6 +14,8 @@ export const ru: Messages = {
     notFoundTitle: "Не найдено",
     notFoundDescription: "Такой страницы не существует.",
     bannerAlt: "Баннер Zee's Games: неоновый заголовок над каркасным ландшафтом",
+    ogAlt: "Zee's Games: неоновый логотип Z, список игр и скриншоты трёх из них",
+    ogGameAlt: "{title} на Zee's Games",
   },
   nav: {
     main: "Главная",
@@ -22,6 +24,7 @@ export const ru: Messages = {
     goals: "Цели",
     menu: "Меню",
     github: "Zee's Games на GitHub",
+    discord: "Zee's Games в Discord",
     playOnTmc: "Играть на TMC",
     language: "Язык",
   },
@@ -34,6 +37,7 @@ export const ru: Messages = {
     orgOnGithub: "zees-games на GitHub",
     sourceCode: "Исходный код",
     madeWithGodot: "Сделано на Godot",
+    discord: "Сервер Discord",
     sourceOnGithub: "Исходный код на GitHub",
     disclaimer:
       "Zee's Games — личный проект, а не официальный продукт The Modding Community. Оригинальные карты принадлежат их авторам; см. указания авторства у каждой карты.",
@@ -73,6 +77,9 @@ export const ru: Messages = {
     poweredBody:
       "TMC размещает, каталогизирует и запускает все здешние игры. Они служат её демонстрацией: доказательством того, что платформа и открытые аддоны Dot для Godot могут дать любой игре. А ещё в них просто интересно играть.",
     readGoals: "Прочитать о моих целях",
+    discordTitle: "Присоединяйтесь к нам в Discord",
+    discordBody: "Находите напарников для игры, сообщайте об ошибках, предлагайте карты и узнавайте, что будет дальше.",
+    discordCta: "Присоединиться к Discord",
     features: [
       { title: "Серверы сообщества", body: "Любой может запустить сервер, настроить его и добавить в список." },
       { title: "Играйте где угодно", body: "Браузер, десктопное приложение или телефон, и всё это на одних и тех же серверах." },

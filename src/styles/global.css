@@ -20,6 +20,8 @@
   --color-cyan: #2ee6ff;
   --color-amber: #ffad33;
   --color-violet: #9b6bff;
+  /* Discord's blurple, only on Discord links. */
+  --color-discord: #5865f2;
 }
 
 @layer base {

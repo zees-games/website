@@ -5,15 +5,16 @@ import { ACCENT } from '../lib/accent'
 import { MapsFor } from '../lib/maps'
 import type { Locale } from '../i18n/config'
 import { Fmt, UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
 
-interface Props { game: Game; locale: Locale }
-const { game, locale } = Astro.props
+interface Props { game: Game; locale: Locale; /** Which list the card is in, for analytics. */ place: 'running' | 'works' | 'more' }
+const { game, locale, place } = Astro.props
 const { t, g, p, plural } = UseI18n(locale)
 const a = ACCENT[game.accent]
 const maps = MapsFor(game.slug)
 ---
 
-<a href={p(`/${game.slug}`)} class="glow-card group relative flex flex-col overflow-hidden">
+<a href={p(`/${game.slug}`)} {...Ev('game_card', { game: game.slug, place })} class="glow-card group relative flex flex-col overflow-hidden">
   <div class="relative aspect-[16/10] overflow-hidden">
     <img
       src={`/images/games/${game.slug}.webp`}

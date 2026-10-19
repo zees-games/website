@@ -8,7 +8,7 @@ import { UseI18n } from '../i18n'
 const en = UseI18n('en').t
 ---
 
-<Layout locale="en" title={en.meta.notFoundTitle} description={en.meta.notFoundDescription} noAlternates>
+<Layout locale="en" title={en.meta.notFoundTitle} description={en.meta.notFoundDescription} imageAlt={en.meta.ogAlt} noAlternates noindex>
   <section class="mx-auto max-w-2xl px-4 py-32 text-center sm:px-6">
     <p class="font-display text-8xl font-bold neon-amber">404</p>
     {LOCALES.map((l) => {
@@ -25,6 +25,9 @@ const en = UseI18n('en').t
 </Layout>
 
 <script>
+  import { track } from '../lib/umami'
+
+  track('not_found', { path: location.pathname })
   const seg = location.pathname.split('/')[1]
   const block = seg && seg !== 'en' ? document.querySelector<HTMLElement>(`[data-locale="${CSS.escape(seg)}"]`) : null
   if (block) {

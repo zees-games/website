@@ -33,7 +33,7 @@ export const LANG_TAG: Record<Locale, string> = {
 
 /** Open Graph wants language_TERRITORY. */
 export const OG_LOCALE: Record<Locale, string> = {
-  en: 'en_US', es: 'es_ES', fr: 'fr_FR', de: 'de_DE', ru: 'ru_RU', nl: 'nl_NL', ja: 'ja_JP', zh: 'zh_CN', pt: 'pt_BR',
+  en: 'en_US', es: 'es_ES', fr: 'fr_FR', de: 'de_DE', ru: 'ru_RU', nl: 'nl_NL', ja: 'ja_JP', zh: 'zh_CN', pt: 'pt_PT',
 }
 
 export function isLocale(value: unknown): value is Locale {

@@ -7,6 +7,14 @@ PUBLIC_SITE_URL=https://zeesgames.com
 # The Modding Community, which hosts and runs every game. Play buttons and game
 # links point here.
 PUBLIC_TMC_URL=https://moddingcommunity.com
+# The Discord invite every Discord link points at.
+PUBLIC_DISCORD_URL=https://dis.zeesgames.com
+
+# Umami analytics, read when the container starts (a restart applies a change,
+# no rebuild needed). Both must be set, or the pages carry no analytics at all.
+# The website id is the UUID Umami shows after adding zeesgames.com as a website.
+UMAMI_SRC=https://visitor.modcommunity.net/script.js
+UMAMI_WEBSITE_ID=
 
 # The container (docker-compose.yml). nginx listens on INTERNAL_PORT inside the
 # container; the host publishes it on BIND_ADDR:BIND_PORT.

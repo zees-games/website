@@ -1,9 +1,10 @@
 ---
-import { FaGithub } from 'react-icons/fa6'
+import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import { Gamepad2, Target, ExternalLink, Menu, Languages, Check } from 'lucide-react'
-import { GITHUB_ORG, TmcHref } from '../lib/site'
+import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../lib/site'
 import { ENDONYMS, LANG_TAG, LOCALES, LocalizePath, StripLocale, type Locale } from '../i18n/config'
 import { UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
 
 interface Props { locale: Locale }
 const { locale } = Astro.props
@@ -47,6 +48,7 @@ const playHref = TmcHref('/play', locale)
             <li>
               <a
                 href={LocalizePath(path, l)}
+                {...Ev('locale_change', { from: locale, to: l })}
                 hreflang={LANG_TAG[l]}
                 lang={LANG_TAG[l]}
                 aria-current={l === locale ? 'true' : undefined}
@@ -59,11 +61,15 @@ const playHref = TmcHref('/play', locale)
         </ul>
       </details>
 
-      <a href={GITHUB_ORG} class="hidden rounded-lg p-2 text-muted transition hover:bg-panel hover:text-text sm:block" aria-label={t.nav.github}>
+      <a href={DISCORD_URL} {...Ev('discord', { place: 'header' })} class="hidden rounded-lg p-2 text-muted transition hover:bg-panel hover:text-discord sm:block" aria-label={t.nav.discord}>
+        <FaDiscord className="size-5" aria-hidden="true" />
+      </a>
+      <a href={GITHUB_ORG} {...Ev('repo_link', { kind: 'org', place: 'header' })} class="hidden rounded-lg p-2 text-muted transition hover:bg-panel hover:text-text sm:block" aria-label={t.nav.github}>
         <FaGithub className="size-5" aria-hidden="true" />
       </a>
       <a
         href={playHref}
+        {...Ev('tmc_play', { place: 'header' })}
         class="hidden items-center gap-2 rounded-lg bg-cyan px-4 py-2 text-sm font-semibold text-ink shadow-[0_0_24px_-6px_var(--color-cyan)] transition hover:brightness-110 sm:flex"
       >
         {t.nav.playOnTmc} <ExternalLink className="size-4" aria-hidden="true" />
@@ -79,10 +85,13 @@ const playHref = TmcHref('/play', locale)
               <Icon className="size-4" aria-hidden="true" />{label}
             </a>
           ))}
-          <a href={GITHUB_ORG} class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-panel-2">
+          <a href={DISCORD_URL} {...Ev('discord', { place: 'menu' })} class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-panel-2">
+            <FaDiscord className="size-4" aria-hidden="true" />Discord
+          </a>
+          <a href={GITHUB_ORG} {...Ev('repo_link', { kind: 'org', place: 'menu' })} class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-panel-2">
             <FaGithub className="size-4" aria-hidden="true" />GitHub
           </a>
-          <a href={playHref} class="mt-1 flex items-center gap-3 rounded-lg bg-cyan px-3 py-2 text-sm font-semibold text-ink">
+          <a href={playHref} {...Ev('tmc_play', { place: 'menu' })} class="mt-1 flex items-center gap-3 rounded-lg bg-cyan px-3 py-2 text-sm font-semibold text-ink">
             <ExternalLink className="size-4" aria-hidden="true" />{t.nav.playOnTmc}
           </a>
         </div>
