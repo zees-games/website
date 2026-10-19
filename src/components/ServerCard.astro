@@ -1,0 +1,47 @@
+---
+import { Play, Server, Shuffle } from 'lucide-react'
+import { GameBySlug } from '../data/games'
+import { ServerAddress, ServerPath, type ZeeServer } from '../data/servers'
+import { ACCENT } from '../lib/accent'
+import { TmcServerPlayHref } from '../lib/site'
+import type { Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
+import CopyAddress from './CopyAddress.astro'
+
+/*
+ * One of Zee's servers in a list: name and game, its address to copy, Play
+ * (TMC's own play address for it) and the server's page here.
+ */
+interface Props { server: ZeeServer; locale: Locale; /** Which page lists it, for analytics. */ place: 'servers' | 'server' }
+const { server, locale, place } = Astro.props
+const { t, p } = UseI18n(locale)
+const game = server.app === 'godot' ? undefined : GameBySlug(server.app)
+const a = ACCENT[game?.accent ?? 'violet']
+const Icon = game ? Server : Shuffle
+---
+
+<article class="glow-card flex flex-col gap-4 p-5">
+  <div class="flex items-start gap-3">
+    <span class:list={['grid size-10 shrink-0 place-items-center rounded-xl border', a.border, a.bg]}>
+      <Icon className={`size-5 ${a.text}`} aria-hidden="true" />
+    </span>
+    <div class="min-w-0">
+      <h3 class="text-lg font-bold leading-tight">
+        <a href={p(ServerPath(server))} {...Ev('server_card', { server: server.id, place })} class="hover:underline">{server.name}</a>
+      </h3>
+      <p class:list={['mt-0.5 text-sm font-semibold', a.text]}>
+        {game ? <a href={p(`/${game.slug}`)} class="hover:underline">{game.title}</a> : t.servers.multi[server.multi!]}
+      </p>
+    </div>
+  </div>
+  <CopyAddress address={ServerAddress(server)} server={server.id} locale={locale} />
+  <div class="mt-auto flex gap-2">
+    <a href={TmcServerPlayHref(server, locale)} {...Ev('play_server', { game: server.app, server: server.id, place })} class="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-emerald-400 px-4 py-2 text-sm font-semibold text-ink transition hover:brightness-110">
+      <Play className="size-4 fill-current" aria-hidden="true" /> {t.servers.play}
+    </a>
+    <a href={p(ServerPath(server))} {...Ev('server_card', { server: server.id, place })} class="inline-flex flex-1 items-center justify-center rounded-lg border border-line bg-night px-4 py-2 text-sm font-semibold transition hover:border-cyan/60">
+      {t.servers.details}
+    </a>
+  </div>
+</article>

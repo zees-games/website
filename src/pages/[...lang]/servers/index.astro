@@ -1,0 +1,77 @@
+---
+import { FaGithub } from 'react-icons/fa6'
+import { ArrowRight, MessageSquareOff, Server, Shuffle, Wrench } from 'lucide-react'
+import Layout from '../../../layouts/Layout.astro'
+import ServerCard from '../../../components/ServerCard.astro'
+import PlayerCommands from '../../../components/PlayerCommands.astro'
+import { SERVERS } from '../../../data/servers'
+import { DEPLOY_REPO, TmcHref } from '../../../lib/site'
+import { LocalePaths, type Locale } from '../../../i18n/config'
+import { Escape, Rich, UseI18n } from '../../../i18n'
+import { Ev } from '../../../lib/umami'
+import { BreadcrumbLd } from '../../../lib/seo'
+
+export const getStaticPaths = LocalePaths
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, p } = UseI18n(locale)
+const S = t.servers
+
+const single = SERVERS.filter((s) => !s.multi)
+const multi = SERVERS.filter((s) => s.multi)
+const LINK = 'text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan'
+const tmcLink = `<a href="${TmcHref('/', locale)}" class="${LINK}">${Escape(S.tmc)}</a>`
+const deployLink = `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(S.deploy)}</a>`
+---
+
+<Layout locale={locale} title={t.meta.serversTitle} description={t.meta.serversDescription} imageAlt={t.meta.ogAlt} jsonLd={[BreadcrumbLd(locale, [[t.meta.serversTitle, '/servers']])]}>
+  <section class="relative isolate overflow-hidden border-b border-line/60">
+    <div class="pointer-events-none absolute -left-24 -top-24 -z-10 size-[32rem] rounded-full bg-emerald-400/10 blur-[120px]" aria-hidden="true"></div>
+    <div class="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pt-24">
+      <p class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-emerald-300">
+        <span class="size-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_currentColor]"></span>{S.eyebrow}
+      </p>
+      <h1 class="mt-6 text-5xl font-bold leading-[1.05] sm:text-6xl">{S.title} <span class="neon-cyan">{S.titleAccent}</span></h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted" set:html={Rich(S.intro, { tmc: tmcLink })} />
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-7xl space-y-16 px-4 pt-14 sm:px-6">
+    <section>
+      <h2 class="flex items-center gap-2 text-2xl font-bold"><Server className="size-6 text-cyan" aria-hidden="true" /> {S.gameTitle}</h2>
+      <p class="mt-2 text-muted">{S.gameBody}</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {single.map((s) => <ServerCard server={s} locale={locale} place="servers" />)}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="flex items-center gap-2 text-2xl font-bold"><Shuffle className="size-6 text-violet" aria-hidden="true" /> {S.multiTitle}</h2>
+      <p class="mt-2 text-muted">{S.multiBody}</p>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {multi.map((s) => <ServerCard server={s} locale={locale} place="servers" />)}
+      </div>
+    </section>
+
+    <div class="grid gap-6 lg:grid-cols-2">
+      <section id="moderation" class="scroll-mt-24 rounded-2xl border border-amber/30 bg-gradient-to-br from-amber/10 via-panel to-night p-6 sm:p-8">
+        <h2 class="flex items-center gap-2 text-2xl font-bold"><MessageSquareOff className="size-6 text-amber" aria-hidden="true" /> {S.modTitle}</h2>
+        <p class="mt-3 leading-relaxed text-muted">{S.modBody}</p>
+        <PlayerCommands locale={locale} />
+        <p class="mt-4 text-sm text-muted">{S.modNote}</p>
+      </section>
+
+      <section class="rounded-2xl border border-cyan/30 bg-gradient-to-br from-cyan/10 via-panel to-night p-6 sm:p-8">
+        <h2 class="flex items-center gap-2 text-2xl font-bold"><Wrench className="size-6 text-cyan" aria-hidden="true" /> {S.hostTitle}</h2>
+        <p class="mt-3 leading-relaxed text-muted" set:html={Rich(S.hostBody, { deploy: deployLink })} />
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href={DEPLOY_REPO} {...Ev('repo_link', { kind: 'deploy', repo: 'dot-server-deploy', place: 'servers' })} class="inline-flex items-center gap-2 rounded-xl bg-cyan px-5 py-2.5 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-cyan)] transition hover:brightness-110">
+            <FaGithub className="size-5" aria-hidden="true" /> {S.deploy}
+          </a>
+          <a href={p('/goals')} class="inline-flex items-center gap-1.5 px-2 py-2.5 font-semibold text-cyan hover:underline">{S.hostCta} <ArrowRight className="size-4" aria-hidden="true" /></a>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>

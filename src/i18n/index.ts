@@ -1,6 +1,7 @@
 import { LANG_TAG, LocalizePath, type Locale } from './config'
 import type { Messages, Plural } from './ui/en'
 import type { GameText } from './games/en'
+import type { ControlsText } from './controls/en'
 import type { GameSlug } from '../data/games'
 import { en } from './ui/en'
 import { es } from './ui/es'
@@ -20,10 +21,22 @@ import { nl as gNl } from './games/nl'
 import { ja as gJa } from './games/ja'
 import { zh as gZh } from './games/zh'
 import { pt as gPt } from './games/pt'
+import { en as cEn } from './controls/en'
+import { es as cEs } from './controls/es'
+import { fr as cFr } from './controls/fr'
+import { de as cDe } from './controls/de'
+import { ru as cRu } from './controls/ru'
+import { nl as cNl } from './controls/nl'
+import { ja as cJa } from './controls/ja'
+import { zh as cZh } from './controls/zh'
+import { pt as cPt } from './controls/pt'
 
 const UI: Record<Locale, Messages> = { en, es, fr, de, ru, nl, ja, zh, pt }
 const GAMES_TEXT: Record<Locale, Record<GameSlug, GameText>> = {
   en: gEn, es: gEs, fr: gFr, de: gDe, ru: gRu, nl: gNl, ja: gJa, zh: gZh, pt: gPt,
+}
+const CONTROLS_TEXT: Record<Locale, ControlsText> = {
+  en: cEn, es: cEs, fr: cFr, de: cDe, ru: cRu, nl: cNl, ja: cJa, zh: cZh, pt: cPt,
 }
 
 type Params = Record<string, string | number>
@@ -54,6 +67,8 @@ export function UseI18n(locale: Locale) {
     t,
     /** A game's translated copy. */
     g: (slug: GameSlug) => GAMES_TEXT[locale][slug],
+    /** The games' control labels and group titles. */
+    c: CONTROLS_TEXT[locale],
     /** A path on this site in this locale. */
     p: (path: string) => LocalizePath(path, locale),
     /** Pick the plural form for `n` and fill `{n}` (locale-formatted) plus `params`. */

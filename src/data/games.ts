@@ -18,8 +18,6 @@ export interface Game {
   repo: string
   /** The external map pack's repository, when the game has one. Only these get a /maps page. */
   mapsRepo?: string
-  /** Zee's own server's id on TMC (`/<slug>/s/<id>`), when one is running. */
-  server?: string
   accent: 'cyan' | 'amber' | 'violet'
 }
 
@@ -27,12 +25,12 @@ export const GAME_SLUGS = ['arena', 'g2gfast', 'playground', 'hungario', 'buses-
 export type GameSlug = (typeof GAME_SLUGS)[number]
 
 export const GAMES: Game[] = [
-  { slug: 'arena', title: "Arena", kind: 'game', repo: 'game-arena', mapsRepo: 'arena-surf-dm-maps', server: 'arena01', accent: 'amber' },
-  { slug: 'g2gfast', title: "G2g Fast", kind: 'game', repo: 'game-g2gfast', mapsRepo: 'g2gfast-maps', server: 'g2gfast01', accent: 'cyan' },
-  { slug: 'playground', title: "Playground", kind: 'game', repo: 'game-playground', mapsRepo: 'game-playground-maps', server: 'pg01', accent: 'violet' },
-  { slug: 'hungario', title: "Hungario", kind: 'game', repo: 'game-hungario', server: 'hungario01', accent: 'cyan' },
-  { slug: 'buses-from-hell', title: "Buses From Hell", kind: 'minigame', repo: 'mg-buses-from-hell', server: 'bfh01', accent: 'amber' },
-  { slug: 'smash-copter', title: "Smash Copter", kind: 'minigame', repo: 'mg-smash-copter', server: 'smash01', accent: 'violet' },
+  { slug: 'arena', title: "Arena", kind: 'game', repo: 'game-arena', mapsRepo: 'arena-surf-dm-maps', accent: 'amber' },
+  { slug: 'g2gfast', title: "G2g Fast", kind: 'game', repo: 'game-g2gfast', mapsRepo: 'g2gfast-maps', accent: 'cyan' },
+  { slug: 'playground', title: "Playground", kind: 'game', repo: 'game-playground', mapsRepo: 'game-playground-maps', accent: 'violet' },
+  { slug: 'hungario', title: "Hungario", kind: 'game', repo: 'game-hungario', accent: 'cyan' },
+  { slug: 'buses-from-hell', title: "Buses From Hell", kind: 'minigame', repo: 'mg-buses-from-hell', accent: 'amber' },
+  { slug: 'smash-copter', title: "Smash Copter", kind: 'minigame', repo: 'mg-smash-copter', accent: 'violet' },
   { slug: 'zombie-zone', title: "Zombie Zone", kind: 'game', repo: 'game-zombie-zone', mapsRepo: 'zombie-zone-maps', accent: 'amber' },
   { slug: 'hide-n-seek', title: "Hide n Seek", kind: 'game', repo: 'game-hide-n-seek', mapsRepo: 'hide-n-seek-maps', accent: 'cyan' },
   { slug: 'prop-hunt', title: "Prop Hunt", kind: 'game', repo: 'game-prop-hunt', mapsRepo: 'mg-prop-hunt-maps', accent: 'violet' },

@@ -6,17 +6,19 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 
 | Path | What |
 | --- | --- |
-| `src/pages/[...lang]/{index,goals/index,inspirations/index,[game]/index,[game]/maps}.astro`, `404.astro` | Every route, built once per locale (`lang` is undefined for English, so English has no prefix) |
+| `src/pages/[...lang]/{index,goals/index,inspirations/index,servers/index,[game]/index,[game]/maps,[app]/s/[server]}.astro`, `404.astro` | Every route, built once per locale (`lang` is undefined for English, so English has no prefix) |
 | `src/i18n/config.ts` | The locales (TMC's nine), their tags, `LocalePaths`, `LocalizePath` |
-| `src/i18n/ui/<locale>.ts`, `src/i18n/games/<locale>.ts` | Every string on the site, and each game's copy, per locale; `index.ts` has `UseI18n`, `Fmt`, `Rich` |
-| `src/layouts/Layout.astro`, `src/components/*` | The one layout, header, footer, game card, play buttons |
+| `src/i18n/ui/<locale>.ts`, `src/i18n/games/<locale>.ts`, `src/i18n/controls/<locale>.ts` | Every string on the site, each game's copy, and the control labels (shared by every game), per locale; `index.ts` has `UseI18n`, `Fmt`, `Rich` |
+| `src/layouts/Layout.astro`, `src/components/*` | The one layout, header, footer, game card, play buttons, server card, copy-address button, `Controls` + `Key` (keycaps), `PlayerCommands` |
 | `src/styles/global.css` | The theme (`@theme` tokens from the org banner: ink/panel, cyan, amber, violet) and the few custom utilities |
 | `src/lib/site.ts` | Every origin and every link into TMC and GitHub |
 | `src/lib/umami.ts`, `src/components/UmamiAnalytics.astro` | The Umami event registry (`Ev()` for links, `track()` for scripts) and the snippet |
 | `src/lib/seo.ts`, `src/pages/{robots.txt,site.webmanifest}.ts` | JSON-LD builders (`SiteLd`, `GameLd`, `BreadcrumbLd`) that `Layout` renders from its `jsonLd` prop; robots and the install manifest |
 | `scripts/gen-brand.mjs` (`npm run brand`) | Renders the icon set into `public/` and the 1200×630 share banners into `public/og/` (`site.jpg`, one per game) with Playwright's Chromium (`npx playwright install chromium` once) |
 | `src/lib/maps.ts` | Joins `maps.json` with `originals.json` |
-| `src/data/games.ts` | The games' structural data (slug, repos, server, accent), by hand; their copy is in `src/i18n/games/` |
+| `src/data/games.ts` | The games' structural data (slug, repos, accent), by hand; their copy is in `src/i18n/games/` |
+| `src/data/servers.ts` | Zee's servers (subdomain id, app, TMC server id, name, port), by hand from TMC's server list |
+| `src/data/controls.ts` | Each game's default keys, from its in-game help screen (`*_bindings.gd` on x-tmc-dev02) |
 | `src/data/maps.json`, `originals.json` | Generated map data; see Data below |
 | `public/images/{games,maps,originals}` | Covers, in-game map shots, original-map shots (WebP) |
 | `Dockerfile`, `docker-compose.yml`, `docker/`, `.env.ex` | Deployment, at the repo root like website-learn |
@@ -34,7 +36,9 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 - Plurals are objects of CLDR forms (`{one, few, many, other}`), picked by `plural()`; the maps page's live count ships its forms in `data-forms`.
 - Only external map packs (a game's `mapsRepo`) get maps on the site. Maps that ship inside a game repo are not listed.
 - A game's `slug` is its app `url` on TMC: `/<slug>` here and `TMC_URL/<slug>` there name the same game. Never invent one.
-- Every Play / Play Now / play-solo button goes to TMC (`TmcPlayHref` = `TMC_URL/<slug>/play`, quick play; `TmcServerPlayHref` for Zee's own server). This site never launches a game itself.
+- Every Play / Play Now / play-solo button goes to TMC (`TmcPlayHref` = `TMC_URL/<slug>/play`, quick play; `TmcServerPlayHref` = `TMC_URL/<app>/s/<tmcId>/play` for one of Zee's servers). This site never launches a game itself.
+- A server's page is `/<app>/s/<id>`, where `id` is its subdomain under `zeesgames.com` (its address is `<id>.zeesgames.com:<port>`) and `app` its TMC app url; multi-game servers sit under `godot`. A new server is a row in `SERVERS`, with its `tmcId` from TMC (`/api/app/v1/servers/lookup?host=&port=`).
+- The Controls section mirrors each game's help screen: when a game's key table changes, update `src/data/controls.ts` and add any new label to all nine `src/i18n/controls/*.ts`. Keys render through `Key.astro`, never as bare text.
 - Every origin is a `PUBLIC_*` var in `src/lib/site.ts` with a production default. It is inlined at build, so it can never be a secret, and changing it needs a rebuild.
 - Summaries say what a game does today, taken from its README. The games are platform demos that are made for fun, and the copy keeps both; it says they were made for fun, never claims they are fun.
 - Original-map screenshots are third-party: always shown with their source link, never claimed as ours, and excluded from the MIT licence (`LICENSE`).

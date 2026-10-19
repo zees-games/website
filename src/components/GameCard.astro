@@ -3,6 +3,7 @@ import { ArrowUpRight, Map } from 'lucide-react'
 import type { Game } from '../data/games'
 import { ACCENT } from '../lib/accent'
 import { MapsFor } from '../lib/maps'
+import { ServersFor } from '../data/servers'
 import type { Locale } from '../i18n/config'
 import { Fmt, UseI18n } from '../i18n'
 import { Ev } from '../lib/umami'
@@ -12,6 +13,7 @@ const { game, locale, place } = Astro.props
 const { t, g, p, plural } = UseI18n(locale)
 const a = ACCENT[game.accent]
 const maps = MapsFor(game.slug)
+const hasServer = ServersFor(game.slug).length > 0
 ---
 
 <a href={p(`/${game.slug}`)} {...Ev('game_card', { game: game.slug, place })} class="glow-card group relative flex flex-col overflow-hidden">
@@ -27,7 +29,7 @@ const maps = MapsFor(game.slug)
     <span class:list={['absolute left-3 top-3 rounded-full border bg-ink/75 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider backdrop-blur', a.border, a.text]}>
       {t.kind[game.kind]}
     </span>
-    {game.server && (
+    {hasServer && (
       <span class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-ink/60 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 backdrop-blur">
         <span class="size-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_currentColor]"></span>{t.card.zeesServer}
       </span>

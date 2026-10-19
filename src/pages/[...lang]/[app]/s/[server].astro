@@ -1,0 +1,113 @@
+---
+import { ArrowRight, ExternalLink, Gamepad2, Keyboard, MessageSquareOff, Play, Shuffle } from 'lucide-react'
+import Layout from '../../../../layouts/Layout.astro'
+import CopyAddress from '../../../../components/CopyAddress.astro'
+import ServerCard from '../../../../components/ServerCard.astro'
+import { GameBySlug } from '../../../../data/games'
+import { SERVERS, ServerAddress, ServerPath, type ZeeServer } from '../../../../data/servers'
+import { ACCENT } from '../../../../lib/accent'
+import { TmcServerHref, TmcServerPlayHref } from '../../../../lib/site'
+import { LocalePaths, type Locale } from '../../../../i18n/config'
+import { Fmt, UseI18n } from '../../../../i18n'
+import { Ev } from '../../../../lib/umami'
+import { BreadcrumbLd } from '../../../../lib/seo'
+
+/*
+ * One page per server, at `/<app>/s/<subdomain>`: the same shape as the
+ * server's address on TMC, with our subdomain in place of TMC's id.
+ */
+export function getStaticPaths() {
+  return LocalePaths().flatMap(({ params, props }) =>
+    SERVERS.map((server) => ({ params: { ...params, app: server.app, server: server.id }, props: { ...props, server } })),
+  )
+}
+
+interface Props { server: ZeeServer; locale: Locale }
+const { server, locale } = Astro.props
+const { t, p } = UseI18n(locale)
+const game = server.app === 'godot' ? undefined : GameBySlug(server.app)
+const a = ACCENT[game?.accent ?? 'violet']
+const address = ServerAddress(server)
+const description = game
+  ? Fmt(t.meta.serverDescription, { name: server.name, title: game.title, address })
+  : Fmt(t.meta.serverMultiDescription, { name: server.name, address })
+const others = SERVERS.filter((s) => s.id !== server.id).slice(0, 3)
+---
+
+<Layout
+  locale={locale}
+  title={server.name}
+  description={description}
+  image={game ? `/og/${game.slug}.jpg` : undefined}
+  imageAlt={game ? Fmt(t.meta.ogGameAlt, { title: game.title }) : t.meta.ogAlt}
+  jsonLd={[BreadcrumbLd(locale, [[t.meta.serversTitle, '/servers'], [server.name, ServerPath(server)]])]}
+>
+  <section class="relative isolate overflow-hidden border-b border-line/60">
+    {game && <img src={`/images/games/${game.slug}.webp`} alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-35" />}
+    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/40"></div>
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
+    <div class="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pt-24">
+      <a href={p('/servers')} class="text-sm text-muted hover:text-text">{t.server.allServers}</a>
+      <p class:list={['mt-6 inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs font-semibold uppercase tracking-widest', a.border, a.bg, a.text]}>
+        {game ? <><Gamepad2 className="size-3.5" aria-hidden="true" /> {game.title}</> : <><Shuffle className="size-3.5" aria-hidden="true" /> {t.servers.multiGame}</>}
+      </p>
+      <h1 class="mt-4 text-4xl font-bold sm:text-6xl">{server.name}</h1>
+      <p class="mt-4 max-w-2xl text-lg text-muted">
+        {game ? Fmt(t.server.funGame, { title: game.title }) : <>{t.servers.multi[server.multi!]}. {t.server.funMulti}</>}
+      </p>
+      <div class="mt-8 flex max-w-xl flex-col gap-3 sm:flex-row sm:items-center">
+        <a href={TmcServerPlayHref(server, locale)} {...Ev('play_server', { game: server.app, server: server.id, place: 'server' })} class="inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-400 px-7 py-3 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-emerald-400)] transition hover:brightness-110">
+          <Play className="size-5 fill-current" aria-hidden="true" /> {t.servers.play}
+        </a>
+        <div class="min-w-0 flex-1"><CopyAddress address={address} server={server.id} locale={locale} size="lg" /></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 pt-14 sm:px-6 lg:grid-cols-[1fr_20rem]">
+    <section class="min-w-0">
+      <h2 class="text-2xl font-bold">{t.server.howToJoin}</h2>
+      <ol class="mt-5 space-y-3">
+        {t.server.join.map((step, i) => (
+          <li class="flex gap-4 rounded-xl border border-line bg-panel/70 p-4">
+            <span class:list={['grid size-8 shrink-0 place-items-center rounded-lg font-display font-bold', a.bg, a.text]}>{i + 1}</span>
+            <span class="pt-1 text-muted">{step}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <aside class="space-y-5">
+      <div class="rounded-2xl border border-line bg-panel/80 p-5">
+        <dl class="space-y-4 text-sm">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-widest text-muted">{t.server.game}</dt>
+            <dd class="mt-1">{game ? <a href={p(`/${game.slug}`)} class:list={['font-semibold hover:underline', a.text]}>{game.title}</a> : t.servers.multi[server.multi!]}</dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-widest text-muted">{t.server.address}</dt>
+            <dd class="mt-1 break-all font-mono">{address}</dd>
+          </div>
+        </dl>
+      </div>
+      <div class="rounded-2xl border border-line bg-panel/80 p-5">
+        <ul class="space-y-2 text-sm">
+          <li><a href={TmcServerHref(server, locale)} {...Ev('tmc_servers', { game: server.app, server: server.id, place: 'server' })} class="flex items-center gap-2 hover:text-cyan"><ExternalLink className="size-4 shrink-0 text-muted" aria-hidden="true" /> {t.server.onTmc}</a></li>
+          {game && <li><a href={p(`/${game.slug}#controls`)} class="flex items-center gap-2 hover:text-cyan"><Keyboard className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.controls, { title: game.title })}</a></li>}
+          {game && <li><a href={p(`/${game.slug}`)} class="flex items-center gap-2 hover:text-cyan"><Gamepad2 className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.aboutGame, { title: game.title })}</a></li>}
+          <li><a href={p('/servers#moderation')} class="flex items-center gap-2 hover:text-cyan"><MessageSquareOff className="size-4 shrink-0 text-muted" aria-hidden="true" /> {t.server.selfModLink}</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <section class="mx-auto mt-20 max-w-7xl px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+      <h2 class="text-2xl font-bold">{t.server.otherServers}</h2>
+      <a href={p('/servers')} class="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan hover:underline">{t.home.allServers} <ArrowRight className="size-4" aria-hidden="true" /></a>
+    </div>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {others.map((s) => <ServerCard server={s} locale={locale} place="server" />)}
+    </div>
+  </section>
+</Layout>

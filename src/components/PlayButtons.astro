@@ -3,6 +3,7 @@ import { FaGithub } from 'react-icons/fa6'
 import { Play, Server, ExternalLink } from 'lucide-react'
 import type { Game } from '../data/games'
 import { ACCENT } from '../lib/accent'
+import { ServersFor } from '../data/servers'
 import { TmcPlayHref, TmcGameHref, TmcServerPlayHref, RepoHref } from '../lib/site'
 import type { Locale } from '../i18n/config'
 import { Fmt, UseI18n } from '../i18n'
@@ -18,14 +19,15 @@ const { game, locale, place } = Astro.props
 const ev = { game: game.slug, place }
 const { t } = UseI18n(locale)
 const a = ACCENT[game.accent]
+const server = ServersFor(game.slug)[0]
 ---
 
 <div class="grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
   <a href={TmcPlayHref(game.slug, locale)} {...Ev('play_now', ev)} class:list={['col-span-2 inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:brightness-110', a.button]}>
     <Play className="size-5 fill-current" aria-hidden="true" /> {t.play.playNow}
   </a>
-  {game.server && (
-    <a href={TmcServerPlayHref(game.slug, game.server, locale)} {...Ev('play_server', { ...ev, server: game.server })} class="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-5 py-3 font-semibold transition hover:border-emerald-400/60">
+  {server && (
+    <a href={TmcServerPlayHref(server, locale)} {...Ev('play_server', { ...ev, server: server.id })} class="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-5 py-3 font-semibold transition hover:border-emerald-400/60">
       <Server className="size-5 text-emerald-400" aria-hidden="true" /> {t.play.zeesServer}
     </a>
   )}

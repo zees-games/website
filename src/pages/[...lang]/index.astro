@@ -3,6 +3,7 @@ import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../layouts/Layout.astro'
 import GameCard from '../../components/GameCard.astro'
 import { GAMES } from '../../data/games'
+import { SERVERS, ServersFor } from '../../data/servers'
 import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../lib/site'
 import { LocalePaths, type Locale } from '../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../i18n'
@@ -16,8 +17,8 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const { t, p, n } = UseI18n(locale)
 
-const live = GAMES.filter((g) => g.server)
-const more = GAMES.filter((g) => !g.server)
+const live = GAMES.filter((g) => ServersFor(g.slug).length > 0)
+const more = GAMES.filter((g) => ServersFor(g.slug).length === 0)
 const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.home.tmc)}</a>`
 const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, 'text-violet'], [Code2, 'text-cyan']] as const
 ---
@@ -52,7 +53,7 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
         </div>
         <dl class="mt-12 grid max-w-md grid-cols-3 gap-6">
           <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statGames}</dt><dd class="font-display text-3xl font-bold text-cyan">{n(GAMES.length)}</dd></div>
-          <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statServers}</dt><dd class="font-display text-3xl font-bold text-amber">{n(live.length)}</dd></div>
+          <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statServers}</dt><dd class="font-display text-3xl font-bold text-amber">{n(SERVERS.length)}</dd></div>
           <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statPrice}</dt><dd class="font-display text-3xl font-bold text-violet">{t.home.free}</dd></div>
         </dl>
       </div>
@@ -71,7 +72,10 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
         <h2 class="text-3xl font-bold sm:text-4xl">{t.home.runningTitle}</h2>
         <p class="mt-2 text-muted">{t.home.runningBody}</p>
       </div>
-      <a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'home' })} class="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan hover:underline">{t.home.allOnTmc} <ArrowRight className="size-4" /></a>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href={p('/servers')} class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 hover:underline">{t.home.allServers} <ArrowRight className="size-4" /></a>
+        <a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'home' })} class="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan hover:underline">{t.home.allOnTmc} <ArrowRight className="size-4" /></a>
+      </div>
     </div>
     <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
       {live.map((g) => <GameCard game={g} locale={locale} place="running" />)}

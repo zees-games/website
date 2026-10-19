@@ -1,4 +1,5 @@
 import { LocalizePath, type Locale } from '../i18n/config'
+import type { ZeeServer } from '../data/servers'
 
 /**
  * Every origin the site links to. All are `PUBLIC_*` with a production
@@ -34,8 +35,13 @@ export const TmcPlayHref = (slug: string, locale: Locale) => TmcHref(`/${slug}/p
 /** A game's servers on TMC. */
 export const TmcServersHref = (slug: string, locale: Locale) => TmcHref(`/${slug}/servers/browse`, locale)
 
-/** Zee's own server for a game: its page on TMC, launching on arrival. */
-export const TmcServerPlayHref = (slug: string, server: string, locale: Locale) =>
-  TmcHref(`/${slug}/s/${server}/play`, locale)
+/** One of Zee's servers on TMC: its page there. */
+export const TmcServerHref = (s: ZeeServer, locale: Locale) => TmcHref(`/${s.app}/s/${s.tmcId}`, locale)
+
+/** One of Zee's servers: its page on TMC, launching on arrival. */
+export const TmcServerPlayHref = (s: ZeeServer, locale: Locale) => TmcHref(`/${s.app}/s/${s.tmcId}/play`, locale)
+
+/** The deploy kit anyone can run a server of these games with. */
+export const DEPLOY_REPO = 'https://github.com/modcommunity/dot-server-deploy'
 
 export const RepoHref = (repo: string) => `${GITHUB_ORG}/${repo}`

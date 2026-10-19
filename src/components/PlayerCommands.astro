@@ -1,0 +1,38 @@
+---
+import Key from './Key.astro'
+import type { Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+
+/**
+ * The self-mute command every game has (dot-chat's `sm`): it hides a player's
+ * chat and silences their voice for whoever typed it. The examples are typed
+ * as is, so they are not translated.
+ */
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, p } = UseI18n(locale)
+const C = t.servers.cmd
+const ROWS: [string, string][] = [['sm', C.list], ['sm 3', C.byNumber], ['sm zee', C.byName], ['sm #1042', C.byId]]
+const CODE = 'rounded-md border border-line bg-night px-1.5 py-0.5 font-mono text-sm text-text'
+/** Split a message on its `{slot}`s, so components can go in between. */
+const parts = (msg: string) => msg.split(/(\{\w+\})/)
+---
+
+<p class="mt-4 text-sm leading-relaxed text-muted">
+  {parts(C.how).map((s) => (s === '{bang}' ? <code class={CODE}>!sm</code> : s === '{slash}' ? <code class={CODE}>/sm</code> : s))}
+</p>
+<dl class="mt-4 divide-y divide-line/60 rounded-xl border border-line bg-night/60">
+  {ROWS.map(([cmd, what]) => (
+    <div class="flex flex-col gap-1 px-4 py-3 sm:flex-row sm:items-center sm:gap-4">
+      <dt class="shrink-0 sm:w-28"><code class="font-mono text-sm font-semibold text-amber">!{cmd}</code></dt>
+      <dd class="text-sm text-muted">{what}</dd>
+    </div>
+  ))}
+</dl>
+<p class="mt-4 text-sm leading-relaxed text-muted">
+  {parts(C.lookAtMe).map((s) =>
+    s === '{game}' ? <a href={p('/look-at-me#controls')} class="text-text underline decoration-amber/50 underline-offset-4 hover:decoration-amber">Look At Me</a>
+    : s === '{g}' ? <Key k="G" locale={locale} size="sm" />
+    : s === '{k}' ? <Key k="K" locale={locale} size="sm" />
+    : s)}
+</p>

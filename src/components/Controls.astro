@@ -1,0 +1,56 @@
+---
+import {
+  Box, Boxes, Car, Crosshair, Eye, EyeOff, Footprints, Gamepad2, Hand, Keyboard, LayoutDashboard, MessageSquare,
+  MessagesSquare, Mic, Mouse, Move, Route, Settings2, Target, Timer, Wrench,
+} from 'lucide-react'
+import Key from './Key.astro'
+import type { GameSlug } from '../data/games'
+import { CONTROLS } from '../data/controls'
+import type { ControlGroupId } from '../i18n/controls/en'
+import type { Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+
+/** A game's default controls, grouped as its help screen groups them. */
+interface Props { slug: GameSlug; locale: Locale; accent: string }
+const { slug, locale, accent } = Astro.props
+const { t, c } = UseI18n(locale)
+const groups = CONTROLS[slug]
+const ICON: Record<ControlGroupId, typeof Move> = {
+  movement: Move, weapons: Crosshair, chat: MessageSquare, interface: LayoutDashboard, running: Timer, view: Eye,
+  communication: MessagesSquare, building: Boxes, tools: Wrench, general: Settings2, playing: Gamepad2, mouse: Mouse,
+  hands: Hand, hiders: EyeOff, hunters: Target, props: Box, driving: Car, onFoot: Footprints, trip: Route, voice: Mic,
+}
+const [before, after] = t.game.controlsIntro.split('{key}')
+---
+
+<section id="controls" class="scroll-mt-24">
+  <h2 class="flex items-center gap-2 text-2xl font-bold"><Keyboard className={`size-6 ${accent}`} aria-hidden="true" /> {t.game.controls}</h2>
+  <p class="mt-3 text-muted">{before}<Key k="H" locale={locale} size="sm" />{after}</p>
+  <div class="mt-6 gap-5 md:columns-2">
+    {groups.map(({ group, rows }) => {
+      const Icon = ICON[group]
+      return (
+        <div class="mb-5 break-inside-avoid rounded-2xl border border-line bg-panel/70 p-5">
+          <h3 class="flex items-center gap-2 text-sm font-semibold uppercase tracking-widest text-muted">
+            <Icon className={`size-4 ${accent}`} aria-hidden="true" /> {c.groups[group]}
+          </h3>
+          <dl class="mt-3 divide-y divide-line/60">
+            {rows.map((row) => (
+              <div class="flex flex-col gap-2 py-2.5 sm:flex-row sm:items-center sm:gap-4">
+                <dt class="flex shrink-0 flex-wrap items-center gap-1.5 sm:w-40">
+                  {row.keys.map((alt, i) => (
+                    <>
+                      {i > 0 && <span class="text-xs text-muted">{t.game.or}</span>}
+                      {alt.map((k, j) => <>{j > 0 && <span class="text-muted" aria-hidden="true">+</span>}<Key k={k} locale={locale} /></>)}
+                    </>
+                  ))}
+                </dt>
+                <dd class="text-sm leading-snug text-text/90">{c.labels[row.label]}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      )
+    })}
+  </div>
+</section>

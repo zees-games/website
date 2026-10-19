@@ -1,6 +1,6 @@
 ---
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
-import { Gamepad2, Target, Lightbulb, ExternalLink, Menu, Languages, Check } from 'lucide-react'
+import { Gamepad2, Server, Target, Lightbulb, ExternalLink, Menu, Languages, Check } from 'lucide-react'
 import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../lib/site'
 import { ENDONYMS, LANG_TAG, LOCALES, LocalizePath, StripLocale, type Locale } from '../i18n/config'
 import { UseI18n } from '../i18n'
@@ -13,6 +13,7 @@ const { t, p } = UseI18n(locale)
 const path = StripLocale(Astro.url.pathname)
 const links = [
   { href: p('/#games'), label: t.nav.games, Icon: Gamepad2, active: path === '/' },
+  { href: p('/servers'), label: t.nav.servers, Icon: Server, active: path.startsWith('/servers') || path.includes('/s/') },
   { href: p('/goals'), label: t.nav.goals, Icon: Target, active: path.startsWith('/goals') },
   { href: p('/inspirations'), label: t.nav.inspirations, Icon: Lightbulb, active: path.startsWith('/inspirations') },
 ]

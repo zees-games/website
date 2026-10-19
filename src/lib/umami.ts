@@ -43,6 +43,10 @@ export const UMAMI_EVENTS = [
   'game_card',
   /** A map thumbnail on a game page, which deep-links into its maps page. */
   'map_preview',
+  /** A link to one of Zee's server pages (`place`: servers | game | server), carrying the server. */
+  'server_card',
+  /** The copy button beside a server's address, carrying the server. */
+  'copy_address',
 
   /*
    * The maps page's search and family chips run in the page and never touch

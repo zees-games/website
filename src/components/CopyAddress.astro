@@ -1,0 +1,49 @@
+---
+import { Copy, Check } from 'lucide-react'
+import type { Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+
+/** A server's `host:port`, with a button that copies it. */
+interface Props { address: string; server: string; locale: Locale; size?: 'sm' | 'lg' }
+const { address, server, locale, size = 'sm' } = Astro.props
+const { t } = UseI18n(locale)
+---
+
+<div class:list={['flex items-center gap-2 rounded-lg border border-line bg-night pl-3', size === 'lg' ? 'py-1.5 pr-1.5' : 'py-1 pr-1']}>
+  <code class:list={['min-w-0 flex-1 truncate font-mono text-muted', size === 'lg' ? 'text-base' : 'text-sm']} title={t.servers.address}>{address}</code>
+  <button
+    type="button"
+    data-copy={address}
+    data-server={server}
+    data-copied={t.servers.copied}
+    aria-label={t.servers.copy}
+    title={t.servers.copy}
+    class="group relative grid size-8 shrink-0 place-items-center rounded-md text-muted transition hover:bg-panel-2 hover:text-text"
+  >
+    <Copy className="size-4 group-data-[done]:hidden" aria-hidden="true" />
+    <Check className="hidden size-4 text-emerald-400 group-data-[done]:block" aria-hidden="true" />
+  </button>
+</div>
+
+<script>
+  import { track } from '../lib/umami'
+
+  // One listener for every copy button on the page.
+  document.addEventListener('click', async (e) => {
+    const btn = (e.target as Element).closest<HTMLButtonElement>('button[data-copy]')
+    if (!btn) return
+    try {
+      await navigator.clipboard.writeText(btn.dataset.copy!)
+    } catch {
+      return
+    }
+    track('copy_address', { server: btn.dataset.server })
+    const label = btn.getAttribute('aria-label')!
+    btn.toggleAttribute('data-done', true)
+    btn.setAttribute('aria-label', btn.dataset.copied!)
+    setTimeout(() => {
+      btn.toggleAttribute('data-done', false)
+      btn.setAttribute('aria-label', label)
+    }, 1500)
+  })
+</script>

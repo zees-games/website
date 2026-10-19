@@ -20,6 +20,7 @@ const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline de
       <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.footer.explore}</p>
       <ul class="mt-3 space-y-2 text-sm">
         <li><a href={p('/#games')} class="hover:text-cyan">{t.nav.games}</a></li>
+        <li><a href={p('/servers')} class="hover:text-cyan">{t.nav.servers}</a></li>
         <li><a href={p('/goals')} class="hover:text-cyan">{t.nav.goals}</a></li>
         <li><a href={p('/inspirations')} class="hover:text-cyan">{t.nav.inspirations}</a></li>
         <li><a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'footer' })} class="hover:text-cyan">{t.nav.playOnTmc}</a></li>

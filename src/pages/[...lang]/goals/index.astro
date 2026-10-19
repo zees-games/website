@@ -5,7 +5,7 @@ import {
   GitBranch, Bot, Globe, Monitor, Smartphone, ArrowRight, Map, Package,
 } from 'lucide-react'
 import { FaDiscord } from 'react-icons/fa6'
-import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../../lib/site'
+import { DISCORD_URL, GITHUB_ORG, TmcHref, DEPLOY_REPO } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../../i18n'
 import { Ev } from '../../../lib/umami'
@@ -18,7 +18,6 @@ const { locale } = Astro.props
 const { t } = UseI18n(locale)
 const G = t.goals
 
-const DEPLOY = 'https://github.com/modcommunity/dot-server-deploy'
 const LINK = 'text-cyan underline decoration-cyan/40 underline-offset-4 hover:decoration-cyan'
 const strong = (s: string) => `<strong class="text-text">${Escape(s)}</strong>`
 const TILE_COLOR = (i: number) => (i % 4 === 0 ? 'text-cyan' : i % 4 === 2 ? 'text-amber' : 'text-text')
@@ -67,7 +66,7 @@ const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-
         <h2 class="mt-2 text-3xl font-bold">{G.community.title}</h2>
         <p class="mt-4 leading-relaxed text-muted" set:html={Rich(G.community.body, {
           strong: strong(G.community.strong),
-          deploy: `<a href="${DEPLOY}" class="${LINK}">${Escape(G.community.deploy)}</a>`,
+          deploy: `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(G.community.deploy)}</a>`,
         })} />
       </div>
       <div class="glow-card relative overflow-hidden p-6 md:order-1" aria-hidden="true">

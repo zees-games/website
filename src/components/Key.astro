@@ -1,0 +1,73 @@
+---
+import { MousePointer2 } from 'lucide-react'
+import type { Locale } from '../i18n/config'
+import { Fmt, UseI18n } from '../i18n'
+
+/**
+ * One key of a game's controls, drawn as a keycap. `k` is a key name from
+ * `src/data/controls.ts`: special keys print their translated name, arrows a
+ * glyph, mouse buttons a mouse with that button lit. Whatever is drawn, the
+ * key's full name is the cap's tooltip and what a screen reader reads.
+ */
+interface Props { k: string; locale: Locale; size?: 'sm' | 'md' }
+const { k, locale, size = 'md' } = Astro.props
+const { t } = UseI18n(locale)
+const K = t.keys
+
+const NAMED: Record<string, { label: string; wide: string }> = {
+  Space: { label: K.space, wide: 'min-w-28' },
+  Shift: { label: K.shift, wide: 'min-w-16' },
+  Ctrl: { label: K.ctrl, wide: 'min-w-14' },
+  Alt: { label: K.alt, wide: 'min-w-12' },
+  Tab: { label: K.tab, wide: 'min-w-14' },
+  Esc: { label: K.esc, wide: 'min-w-12' },
+}
+const ARROWS: Record<string, [string, string]> = { Up: ['↑', K.up], Down: ['↓', K.down], Left: ['←', K.left], Right: ['→', K.right] }
+type Part = 'left' | 'right' | 'wheel' | 'none'
+const MOUSE: Record<string, [Part, string, string]> = {
+  Mouse1: ['left', K.short.left, K.mouseLeft],
+  Mouse2: ['right', K.short.right, K.mouseRight],
+  Mouse3: ['wheel', K.short.middle, K.mouseMiddle],
+  Wheel: ['wheel', K.short.wheel, K.wheel],
+  WheelUp: ['wheel', `${K.short.wheel} ↑`, K.wheelUp],
+  WheelDown: ['wheel', `${K.short.wheel} ↓`, K.wheelDown],
+}
+const cap = size === 'sm' ? 'keycap h-7 min-w-7 px-1.5 text-xs' : 'keycap'
+const lit = 'fill-cyan'
+const dim = 'fill-white/10'
+---
+
+{k === 'WASD' ? (
+  <span class="inline-grid grid-cols-3 gap-1" title={K.wasd} role="img" aria-label={K.wasd}>
+    <kbd class="keycap col-start-2 h-7 min-w-7 px-1.5 text-xs" aria-hidden="true">W</kbd>
+    <kbd class="keycap col-start-1 h-7 min-w-7 px-1.5 text-xs" aria-hidden="true">A</kbd>
+    <kbd class="keycap h-7 min-w-7 px-1.5 text-xs" aria-hidden="true">S</kbd>
+    <kbd class="keycap h-7 min-w-7 px-1.5 text-xs" aria-hidden="true">D</kbd>
+  </span>
+) : /^\d-\d$/.test(k) ? (
+  <span class="inline-flex gap-1" title={Fmt(K.range, { a: k[0], b: k[2] })} role="img" aria-label={Fmt(K.range, { a: k[0], b: k[2] })}>
+    {Array.from({ length: +k[2] - +k[0] + 1 }, (_, i) => <kbd class="keycap h-7 min-w-7 px-1.5 text-xs" aria-hidden="true">{+k[0] + i}</kbd>)}
+  </span>
+) : NAMED[k] ? (
+  <kbd class:list={[cap, NAMED[k].wide]} title={NAMED[k].label}>{NAMED[k].label}</kbd>
+) : ARROWS[k] ? (
+  <kbd class={cap} title={ARROWS[k][1]}><span aria-hidden="true" class="text-base">{ARROWS[k][0]}</span><span class="sr-only">{ARROWS[k][1]}</span></kbd>
+) : MOUSE[k] ? (
+  <kbd class:list={[cap, 'gap-1.5 font-sans']} title={MOUSE[k][2]}>
+    <svg viewBox="0 0 16 22" class="h-5 w-auto shrink-0" aria-hidden="true">
+      <path d="M8 1A7 7 0 0 0 1 8v1h7z" class={MOUSE[k][0] === 'left' ? lit : dim} />
+      <path d="M8 1a7 7 0 0 1 7 7v1H8z" class={MOUSE[k][0] === 'right' ? lit : dim} />
+      <rect x="1" y="1" width="14" height="20" rx="7" class="fill-none stroke-current" stroke-width="1.4" />
+      <path d="M8 1v8M1 9h14" class="stroke-current opacity-60" stroke-width="1" />
+      <rect x="6.6" y="3" width="2.8" height="4.6" rx="1.4" class={MOUSE[k][0] === 'wheel' ? lit : 'fill-ink stroke-current opacity-80'} stroke-width="0.8" />
+    </svg>
+    <span aria-hidden="true">{MOUSE[k][1]}</span><span class="sr-only">{MOUSE[k][2]}</span>
+  </kbd>
+) : k === 'Point' ? (
+  <kbd class:list={[cap, 'gap-1.5 font-sans']} title={K.point}>
+    <MousePointer2 className="size-4 fill-cyan text-cyan" aria-hidden="true" />
+    <span aria-hidden="true">{K.short.point}</span><span class="sr-only">{K.point}</span>
+  </kbd>
+) : (
+  <kbd class={cap}>{k}</kbd>
+)}
