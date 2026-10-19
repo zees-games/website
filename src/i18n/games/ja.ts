@@ -105,21 +105,21 @@ export const ja: Record<GameSlug, GameText> = {
     inspiredBy: "mg_3k_smash_lego_copter（Counter-Strike: Source のミニゲームマップ）",
   },
   'zombie-zone': {
-    tagline: "協力型ゾンビサバイバル：街を抜けて脱出するか、10 ウェーブを耐え抜こう。",
+    tagline: "協力型ゾンビサバイバル：街を抜けて脱出するか、ウェーブを生き延びよう。",
     summary: [
-      "協力型のゾンビゲームです。夜の街を一つの避難所から次の避難所へと戦い抜くか、特殊感染者を含む指揮された群れの 10 ウェーブを相手に、学校、ショッピングモール、野球場を守り抜きます。",
+      "協力型のゾンビゲームです。夜の街を一つの避難所から次の避難所へと戦い抜くか、特殊感染者を含む指揮された群れのウェーブを相手に、学校、ショッピングモール、野球場を守り抜きます。",
       "ゾンビはランダムな効果のあるボックスを落とします。良いものもあれば、とても悪いものもあります。",
     ],
     howToPlay: [
       "固まって行動し、互いに援護しましょう。",
-      "Exodus では次のセーフルームを目指し、Survival では 10 ウェーブ耐え抜きます。",
+      "Exodus では次のセーフルームを目指し、Survival ではウェーブを生き延びます。",
       "勇気があるなら、ドロップボックスに賭けてみましょう。",
     ],
     modes: [
       "協力サバイバル",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead と Counter-Strike: Source のゾンビサーバー",
+    inspiredBy: "Left 4 Dead と Counter-Strike: Source のゾンビサーバー。ただしコンセプトと目的は大きく作り直しています",
   },
   'hide-n-seek': {
     tagline: "自分の姿のまま隠れよう。見つかった隠れ役は、鬼に加わる。",
@@ -135,6 +135,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "かくれんぼ",
     ],
+    inspiredBy: "Hide and Seek。人気はそれほど出なかったものの、とても楽しかった Garry's Mod のゲームモード",
   },
   'prop-hunt': {
     tagline: "家具に化けてじっとしていよう。目隠しされたハンターが探しに来る。",

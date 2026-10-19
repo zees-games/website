@@ -105,21 +105,21 @@ export const zh: Record<GameSlug, GameText> = {
     inspiredBy: "mg_3k_smash_lego_copter，一张 Counter-Strike: Source 小游戏地图",
   },
   'zombie-zone': {
-    tagline: "合作僵尸生存：穿越城市逃生，或坚守十波进攻。",
+    tagline: "合作僵尸生存：穿越城市逃生，或在一波波进攻中生存。",
     summary: [
-      "一款合作僵尸游戏。在夜晚的城市里从一个避难所杀到下一个，或者在学校、商场、棒球场中抵御十波由导演系统操控、带有特殊感染者的尸潮。",
+      "一款合作僵尸游戏。在夜晚的城市里从一个避难所杀到下一个，或者在学校、商场、棒球场中抵御一波波由导演系统操控、带有特殊感染者的尸潮。",
       "僵尸会掉落带有随机效果的箱子，有的很好，有的非常糟糕。",
     ],
     howToPlay: [
       "紧靠队友，互相掩护。",
-      "在 Exodus 中抵达下一个安全屋；在 Survival 中坚持十波。",
+      "在 Exodus 中抵达下一个安全屋；在 Survival 中在一波波进攻中生存。",
       "要是有胆量，就赌一把掉落的箱子。",
     ],
     modes: [
       "合作 Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead 和 Counter-Strike: Source 僵尸服务器",
+    inspiredBy: "Left 4 Dead 和 Counter-Strike: Source 僵尸服务器，但概念和目标都经过了大幅改造",
   },
   'hide-n-seek': {
     tagline: "以自己的模样藏起来；每个被抓到的躲藏者都会加入搜捕。",
@@ -135,6 +135,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "捉迷藏",
     ],
+    inspiredBy: "Hide and Seek，一个没有它应得的那么火、但非常好玩的 Garry's Mod 游戏模式",
   },
   'prop-hunt': {
     tagline: "伪装成家具一动不动，躲避蒙眼猎人的搜寻。",

@@ -1,0 +1,146 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import {
+  Lightbulb, Cpu, Boxes, Map, Server, History, Ghost, ArrowRight, GitBranch, CircleOff, Sparkles,
+} from 'lucide-react'
+import { GAMES } from '../../../data/games'
+import { LocalePaths, type Locale } from '../../../i18n/config'
+import { UseI18n } from '../../../i18n'
+import { BreadcrumbLd } from '../../../lib/seo'
+
+export const getStaticPaths = LocalePaths
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, g, p } = UseI18n(locale)
+const I = t.inspirations
+
+const SOURCE_STYLE = [
+  [Cpu, 'text-amber'],
+  [Boxes, 'text-cyan'],
+  [Map, 'text-violet'],
+  [Server, 'text-text'],
+] as const
+const MODE_COLOR = (i: number) => (i % 3 === 0 ? 'text-cyan border-cyan/40 bg-cyan/10' : i % 3 === 1 ? 'text-amber border-amber/40 bg-amber/10' : 'text-violet border-violet/40 bg-violet/10')
+// Maps that became games here (each game's `inspiredBy` names them), then the next one.
+const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_smash_lego_copter', 'Smash Copter', 'text-violet']] as const
+---
+
+<Layout locale={locale} title={t.meta.inspirationsTitle} description={t.meta.inspirationsDescription} imageAlt={t.meta.ogAlt} jsonLd={[BreadcrumbLd(locale, [[t.meta.inspirationsTitle, '/inspirations']])]}>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden border-b border-line/60">
+    <img src="/images/card01.jpg" alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-30" />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/40 via-ink/80 to-ink"></div>
+    <div class="mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 sm:py-32">
+      <p class="inline-flex items-center gap-2 rounded-full border border-amber/40 bg-amber/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-amber">
+        <Lightbulb className="size-3.5" aria-hidden="true" /> {I.eyebrow}
+      </p>
+      <h1 class="mt-6 text-4xl font-bold sm:text-6xl">
+        {I.title} <span class="neon-cyan">{I.titleAccent}</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">{I.intro}</p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl space-y-28 px-4 pt-20 sm:px-6">
+
+    <!-- Where it comes from -->
+    <section>
+      <h2 class="text-3xl font-bold">{I.sourcesTitle}</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2">
+        {I.sources.map(({ name, body }, i) => {
+          const [Icon, color] = SOURCE_STYLE[i % SOURCE_STYLE.length]
+          return (
+            <div class="glow-card p-6">
+              <h3 class="flex items-center gap-3 text-xl font-bold"><Icon className={`size-6 shrink-0 ${color}`} aria-hidden="true" />{name}</h3>
+              <p class="mt-3 leading-relaxed text-muted">{body}</p>
+            </div>
+          )
+        })}
+      </div>
+      <p class="mt-6 text-sm text-muted">{I.also}</p>
+    </section>
+
+    <!-- 1. Modes that have been around forever -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">01</p>
+        <h2 class="mt-2 flex items-center gap-3 text-3xl font-bold"><History className="size-7 shrink-0 text-cyan" aria-hidden="true" />{I.classicTitle}</h2>
+        {I.classicBody.map((para) => <p class="mt-4 leading-relaxed text-muted">{para}</p>)}
+      </div>
+      <div class="flex flex-wrap justify-center gap-3" aria-hidden="true">
+        {I.modes.map((mode, i) => (
+          <span class:list={['rounded-full border px-4 py-2 text-sm font-semibold', MODE_COLOR(i)]}>{mode}</span>
+        ))}
+      </div>
+    </section>
+
+    <!-- 2. Dead modes and forgotten maps -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div class="md:order-2">
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">02</p>
+        <h2 class="mt-2 flex items-center gap-3 text-3xl font-bold"><Ghost className="size-7 shrink-0 text-violet" aria-hidden="true" />{I.deadTitle}</h2>
+        {I.deadBody.map((para) => <p class="mt-4 leading-relaxed text-muted">{para}</p>)}
+      </div>
+      <div class="glow-card min-w-0 space-y-3 p-6 md:order-1" aria-hidden="true">
+        {REVIVED.map(([map, game, color]) => (
+          <div class="flex items-center gap-3 rounded-xl border border-line bg-night/80 px-4 py-3 text-sm">
+            <span class="min-w-0 flex-1">
+              <span class="block truncate font-mono text-muted line-through decoration-muted/50">{map}</span>
+              <span class="flex items-center gap-1.5 text-xs text-muted"><CircleOff className="size-3" />{I.offline}</span>
+            </span>
+            <ArrowRight className="size-4 shrink-0 text-muted" />
+            <span class={`flex-1 truncate text-right font-semibold ${color}`}>{game}</span>
+          </div>
+        ))}
+        <div class="flex items-center gap-3 rounded-xl border border-dashed border-cyan/40 bg-cyan/5 px-4 py-3 text-sm">
+          <span class="min-w-0 flex-1 truncate text-muted">{I.yours}</span>
+          <ArrowRight className="size-4 shrink-0 text-muted" />
+          <span class="flex-1 text-right font-semibold text-cyan">?</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Your server can be anything -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">03</p>
+        <h2 class="mt-2 flex items-center gap-3 text-3xl font-bold"><Sparkles className="size-7 shrink-0 text-amber" aria-hidden="true" />{I.serversTitle}</h2>
+        {I.serversBody.map((para) => <p class="mt-4 leading-relaxed text-muted">{para}</p>)}
+        <a href={p('/goals')} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{I.serversCta} <ArrowRight className="size-4" /></a>
+      </div>
+      <div class="glow-card p-6" aria-hidden="true">
+        <div class="mx-auto w-fit rounded-xl border border-amber/40 bg-amber/10 px-5 py-3 text-center font-semibold text-amber">Arena</div>
+        <div class="mx-auto my-3 flex w-fit items-center gap-2 text-muted"><GitBranch className="size-5" /></div>
+        <div class="grid grid-cols-3 gap-3 text-center text-xs sm:text-sm">
+          {[['gungame-24-7', 'text-cyan border-cyan/40'], ['surf-dm-only', 'text-violet border-violet/40'], [I.serverNew, 'text-text border-dashed border-line']].map(([name, style]) => (
+            <div class={`flex flex-col items-center gap-2 rounded-xl border bg-night/80 px-2 py-4 ${style}`}>
+              <Server className="size-5" />
+              <span class="break-all font-mono">{name}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Where each game comes from -->
+    <section>
+      <h2 class="text-3xl font-bold">{I.gamesTitle}</h2>
+      <p class="mt-2 text-muted">{I.gamesBody}</p>
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {GAMES.map((game) => (
+          <a href={p(`/${game.slug}`)} class="glow-card group flex items-center gap-4 p-3 transition hover:border-cyan/60">
+            <img src={`/images/games/${game.slug}.webp`} alt="" loading="lazy" class="aspect-video w-28 shrink-0 rounded-lg object-cover" />
+            <div class="min-w-0">
+              <p class="font-semibold group-hover:text-cyan">{game.title} <span class="ml-1 text-xs font-normal text-muted">{t.kind[game.kind]}</span></p>
+              {g(game.slug).inspiredBy
+                ? <p class="mt-1 text-sm text-muted">{g(game.slug).inspiredBy}</p>
+                : <p class="mt-1 flex items-center gap-1.5 text-sm text-amber"><Lightbulb className="size-3.5 shrink-0" aria-hidden="true" />{I.ownIdea}</p>}
+            </div>
+          </a>
+        ))}
+      </div>
+      <p class="mt-10 text-xs leading-relaxed text-muted">{I.disclaimer}</p>
+    </section>
+  </div>
+</Layout>

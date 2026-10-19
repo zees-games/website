@@ -86,18 +86,18 @@ export const de: Record<GameSlug, GameText> = {
     inspiredBy: 'mg_3k_smash_lego_copter, eine Minispiel-Map aus Counter-Strike: Source',
   },
   'zombie-zone': {
-    tagline: 'Kooperatives Zombie-Überleben: Fliehen Sie durch die Stadt oder halten Sie zehn Wellen durch.',
+    tagline: 'Kooperatives Zombie-Überleben: Fliehen Sie durch die Stadt oder überstehen Sie Wellen.',
     summary: [
-      'Ein kooperatives Zombiespiel. Kämpfen Sie sich nachts durch eine Stadt von einem Unterschlupf zum nächsten, oder verteidigen Sie eine Schule, ein Einkaufszentrum oder ein Baseballstadion gegen zehn Wellen einer gelenkten Horde mit speziellen Infizierten.',
+      'Ein kooperatives Zombiespiel. Kämpfen Sie sich nachts durch eine Stadt von einem Unterschlupf zum nächsten, oder verteidigen Sie eine Schule, ein Einkaufszentrum oder ein Baseballstadion gegen Wellen einer gelenkten Horde mit speziellen Infizierten.',
       'Zombies lassen Kisten mit zufälligen Effekten fallen, manche gut, manche sehr schlecht.',
     ],
     howToPlay: [
       'Bleiben Sie zusammen und decken Sie einander.',
-      'In Exodus erreichen Sie den nächsten sicheren Raum; in Survival halten Sie zehn Wellen durch.',
+      'In Exodus erreichen Sie den nächsten sicheren Raum; in Survival überstehen Sie Wellen.',
       'Riskieren Sie es mit den Kisten, wenn Sie sich trauen.',
     ],
     modes: ['Koop-Survival', 'Exodus'],
-    inspiredBy: 'Left 4 Dead und Zombie-Server aus Counter-Strike: Source',
+    inspiredBy: "Left 4 Dead und Zombie-Server aus Counter-Strike: Source, mit stark überarbeiteten Konzepten und Zielen",
   },
   'hide-n-seek': {
     tagline: 'Verstecken Sie sich als Sie selbst; jeder gefundene Versteckte schließt sich der Jagd an.',
@@ -111,6 +111,7 @@ export const de: Record<GameSlug, GameText> = {
       'Der letzte übrige Versteckte gewinnt die Runde.',
     ],
     modes: ['Verstecken'],
+    inspiredBy: "Hide and Seek, ein Garry's-Mod-Spielmodus, der nie so beliebt wurde, wie er es verdient hätte, aber viel Spaß gemacht hat",
   },
   'prop-hunt': {
     tagline: 'Tarnen Sie sich als Möbelstück und bleiben Sie still, während Jäger mit verbundenen Augen suchen.',

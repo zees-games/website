@@ -20,7 +20,10 @@ export const en = {
     mapsDescriptionOwn: "Every {title} map, as it looks in Zee's Games.",
     goalsTitle: 'Goals',
     goalsDescription:
-      "Why Zee's Games exist: real, fun games that show what The Modding Community's gaming platform can do, from community servers to multi-game servers that switch games without dropping players.",
+      "Why Zee's Games exist: real games, made for fun, that show what The Modding Community's gaming platform can do, from community servers to multi-game servers that switch games without dropping players.",
+    inspirationsTitle: "Inspirations",
+    inspirationsDescription:
+      "What Zee's Games grew out of: Valve's Source games, Facepunch's Garry's Mod, community servers, and the mappers and modders behind classic game modes like DeathRun, surf and Prop Hunt.",
     notFoundTitle: 'Not found',
     notFoundDescription: 'This page does not exist.',
     bannerAlt: "Zee's Games banner: neon title over a wireframe landscape",
@@ -32,6 +35,7 @@ export const en = {
     home: "Zee's Games home",
     games: 'Games',
     goals: 'Goals',
+    inspirations: "Inspirations",
     menu: 'Menu',
     github: "Zee's Games on GitHub",
     discord: "Zee's Games on Discord",
@@ -40,11 +44,11 @@ export const en = {
   },
   footer: {
     blurb:
-      "Open source multiplayer games built with Godot, hosted and played on {tmc}'s gaming platform. They started as demos of what the platform can do, and they are meant to be fun.",
+      "Open source multiplayer games built with Godot, hosted and played on {tmc}'s gaming platform. They started as demos of what the platform can do, and they are made for fun.",
     tmc: 'The Modding Community',
     explore: 'Explore',
     openSource: 'Open source',
-    orgOnGithub: 'zees-games on GitHub',
+    github: 'GitHub',
     sourceCode: 'Source code',
     madeWithGodot: 'Made with Godot',
     discord: "Discord server",
@@ -70,7 +74,7 @@ export const en = {
   home: {
     eyebrow: 'Open source · Made with Godot',
     intro:
-      "Multiplayer games I build and run on {tmc}'s gaming platform. Each one shows off what the platform can do, and each one is built to be fun: deathmatch, surf and bhop, a physics sandbox, and a pile of minigames.",
+      "Multiplayer games I build for fun and run on {tmc}'s gaming platform. Each one shows off what the platform can do: deathmatch, surf and bhop, a physics sandbox, and a pile of minigames. All of them are still in development.",
     tmc: 'The Modding Community',
     pickGame: 'Pick a game',
     myGoals: 'My goals',
@@ -78,14 +82,14 @@ export const en = {
     statServers: 'My servers',
     statPrice: 'Price',
     free: 'Free',
-    runningTitle: 'Running now',
-    runningBody: 'Games with one of my own servers up on TMC. Jump straight in.',
+    runningTitle: "With a dedicated server",
+    runningBody: "Every game here is still in development. These ones already have one of my own dedicated servers up on TMC, so you can jump straight in.",
     allOnTmc: 'All games on TMC',
-    worksTitle: 'In the works',
-    worksBody: 'More games and minigames on the way. Most are playable already; servers come next.',
+    worksTitle: "No dedicated server yet",
+    worksBody: "Also in development, with more games and minigames on the way. Most are playable already; dedicated servers come next.",
     poweredTitle: 'Powered by The Modding Community',
     poweredBody:
-      'TMC hosts, lists and runs every game here. These games are its demos: proof of what the platform, and the open Dot addons for Godot, can do for any game. They are also just fun.',
+      'TMC hosts, lists and runs every game here. These games are its demos: proof of what the platform, and the open Dot addons for Godot, can do for any game. They are also made for fun.',
     readGoals: 'Read my goals',
     discordTitle: "Come hang out on Discord",
     discordBody: "Find people to play with, report bugs, suggest maps and see what is coming next.",
@@ -153,7 +157,7 @@ export const en = {
     title: 'Demos of a platform.',
     titleAccent: 'Games worth playing.',
     intro:
-      "Every game here started as a demonstration of what The Modding Community's gaming platform and its Dot collection can do, and of what your own gaming projects can do on it. A demo still deserves to be fun, so each one is built as a real game.",
+      "Every game here started as a demonstration of what The Modding Community's gaming platform and its Dot collection can do, and of what your own gaming projects can do on it. They are also made for fun, so each one is built as a real game.",
     demo: {
       title: 'Show what the platform can do',
       body: [
@@ -220,6 +224,35 @@ export const en = {
     title: 'Respawning elsewhere',
     body: 'This page does not exist, or it moved.',
     back: 'Back to the games',
+  },
+  inspirations: {
+    eyebrow: "Inspirations",
+    title: "Classic game modes.",
+    titleAccent: "New homes.",
+    intro: "Zee's Games grew out of years spent on community servers in Source games and Garry's Mod. These are the games, studios and people that shaped it.",
+    sourcesTitle: "Where it all comes from",
+    sources: [
+      { name: "Valve and the Source engine", body: "Counter-Strike, Half-Life 2: Deathmatch, Team Fortress 2 and Left 4 Dead. The movement Counter-Strike inherited from Half-Life and Quake made surfing and bunny hopping possible, and community servers on the Source engine turned a handful of games into hundreds of game modes: surf, bhop, deathrun, zombie survival and minigame maps of every kind." },
+      { name: "Facepunch and Garry's Mod", body: "A sandbox with no rules that became a platform for game modes: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun and countless more, all made by its community. Playground is my take on the sandbox itself." },
+      { name: "Mappers and modders", body: "The people who built the maps and mods, often for free and over many years: surf and bhop maps, minigame maps, zombie maps and total conversions, many of them more inventive than the games they ran in." },
+      { name: "Community servers", body: "The server owners and communities who kept these modes alive, set their own rules and gave players a place to come back to, night after night." },
+    ],
+    also: "Not everything comes from Source: Hungario takes after Agar.io, and Wipeout after the TV show.",
+    classicTitle: "Modes that have been around forever",
+    classicBody: ["Many of these game modes are originals in the truest sense: they have been around for about as long as online games have. DeathRun, surf, bunny hop, zombie survival, hide and seek and prop hunt have been rebuilt in engine after engine, and nobody owns them.", "Zee's Games does not claim to have invented any of them. Each game here is the next rebuild of a mode people already love, made to run on a modern, open platform."],
+    modes: ["DeathRun", "Surf", "Bunny hop", "Zombie survival", "Hide and seek", "Prop hunt", "Murder", "GunGame", "Minigames"],
+    deadTitle: "Dead modes and forgotten maps",
+    deadBody: ["Plenty of great game modes are dead or close to it: their servers shut down, their communities moved on and their games aged out. There are also many awesome, impressive maps and mods that were only ever a map or a mod inside someone else's game.", "I want to turn them into games of their own on The Modding Community's gaming platform, the way Buses From Hell and Smash Copter grew out of Counter-Strike: Source minigame maps."],
+    offline: "offline",
+    yours: "your favourite map",
+    serversTitle: "Your server can be anything",
+    serversBody: ["Anyone can spin up a server derived from these games, and it does not have to look like mine. Change the rules, the maps and the modes, or build something completely different and unique on top of it.", "That is the great thing about it: each game is a starting point, and every server can grow into its own thing, just like the community servers that inspired these games in the first place."],
+    serversCta: "How community servers work",
+    serverNew: "something new",
+    gamesTitle: "Where each game comes from",
+    gamesBody: "What each game takes after, and which ones are my own ideas.",
+    ownIdea: "An original idea of mine",
+    disclaimer: "Valve, Source, Counter-Strike, Half-Life, Team Fortress, Left 4 Dead, Facepunch, Garry's Mod, Agar.io and Wipeout belong to their owners. Zee's Games is not affiliated with or endorsed by any of them.",
   },
 }
 

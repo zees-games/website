@@ -6,7 +6,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 
 | Path | What |
 | --- | --- |
-| `src/pages/[...lang]/{index,goals/index,[game]/index,[game]/maps}.astro`, `404.astro` | Every route, built once per locale (`lang` is undefined for English, so English has no prefix) |
+| `src/pages/[...lang]/{index,goals/index,inspirations/index,[game]/index,[game]/maps}.astro`, `404.astro` | Every route, built once per locale (`lang` is undefined for English, so English has no prefix) |
 | `src/i18n/config.ts` | The locales (TMC's nine), their tags, `LocalePaths`, `LocalizePath` |
 | `src/i18n/ui/<locale>.ts`, `src/i18n/games/<locale>.ts` | Every string on the site, and each game's copy, per locale; `index.ts` has `UseI18n`, `Fmt`, `Rich` |
 | `src/layouts/Layout.astro`, `src/components/*` | The one layout, header, footer, game card, play buttons |
@@ -36,7 +36,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 - A game's `slug` is its app `url` on TMC: `/<slug>` here and `TMC_URL/<slug>` there name the same game. Never invent one.
 - Every Play / Play Now / play-solo button goes to TMC (`TmcPlayHref` = `TMC_URL/<slug>/play`, quick play; `TmcServerPlayHref` for Zee's own server). This site never launches a game itself.
 - Every origin is a `PUBLIC_*` var in `src/lib/site.ts` with a production default. It is inlined at build, so it can never be a secret, and changing it needs a rebuild.
-- Summaries say what a game does today, taken from its README. The games are platform demos that are meant to be fun, and the copy keeps both.
+- Summaries say what a game does today, taken from its README. The games are platform demos that are made for fun, and the copy keeps both; it says they were made for fun, never claims they are fun.
 - Original-map screenshots are third-party: always shown with their source link, never claimed as ours, and excluded from the MIT licence (`LICENSE`).
 - Analytics is Umami, configured at container start, not at build: every page carries `<!--umami-->` and nginx swaps it for the snippet when `UMAMI_SRC` and `UMAMI_WEBSITE_ID` are in `.env` (`docker/40-umami.sh` validates them and writes the `sub_filter` include). A restart applies a change; `npm run dev` and a bare `dist/` have no analytics. A new event is a name in `UMAMI_EVENTS` plus its call site (never a name nothing fires); event data are identifiers (slug, map id, repo, `place`), never translated text. Links take `{...Ev(name, data)}`; in-page behaviour calls `track()`.
 - Every page passes `Layout` a title, description and translated `imageAlt`; game and maps pages use `/og/<slug>.jpg`, the rest `/og/site.jpg`. A new game needs `npm run brand` re-run (it reads `GAMES` and the covers), and a new page needs its `jsonLd` (at least a `BreadcrumbLd`). Pages without an address of their own take `noAlternates noindex`.

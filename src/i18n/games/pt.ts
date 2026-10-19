@@ -86,18 +86,18 @@ export const pt: Record<GameSlug, GameText> = {
     inspiredBy: 'mg_3k_smash_lego_copter, um mapa de minijogo do Counter-Strike: Source',
   },
   'zombie-zone': {
-    tagline: 'Sobrevivência zombie cooperativa: fuja pela cidade ou aguente dez vagas.',
+    tagline: 'Sobrevivência zombie cooperativa: fuja pela cidade ou sobreviva a vagas.',
     summary: [
-      'Um jogo cooperativo de zombies. Lute pela cidade durante a noite, de um abrigo para o seguinte, ou defenda uma escola, um centro comercial ou um campo de basebol durante dez vagas de uma horda dirigida com infetados especiais.',
+      'Um jogo cooperativo de zombies. Lute pela cidade durante a noite, de um abrigo para o seguinte, ou defenda uma escola, um centro comercial ou um campo de basebol contra vagas de uma horda dirigida com infetados especiais.',
       'Os zombies largam caixas com efeitos aleatórios, uns bons e outros muito maus.',
     ],
     howToPlay: [
       'Fiquem juntos e protejam-se uns aos outros.',
-      'No Exodus, chegue à sala segura seguinte; no Survival, aguente dez vagas.',
+      'No Exodus, chegue à sala segura seguinte; no Survival, sobreviva a vagas.',
       'Arrisque com as caixas, se se atrever.',
     ],
     modes: ['Sobrevivência cooperativa', 'Exodus'],
-    inspiredBy: 'Left 4 Dead e os servidores de zombies do Counter-Strike: Source',
+    inspiredBy: "Left 4 Dead e os servidores de zombies do Counter-Strike: Source, com os conceitos e objetivos muito reformulados",
   },
   'hide-n-seek': {
     tagline: 'Esconda-se como você mesmo; cada escondido apanhado junta-se à caça.',
@@ -111,6 +111,7 @@ export const pt: Record<GameSlug, GameText> = {
       'O último escondido que restar ganha a ronda.',
     ],
     modes: ['Esconde-esconde'],
+    inspiredBy: "Hide and Seek, um modo de jogo do Garry's Mod que nunca foi tão popular quanto merecia, mas era muito divertido",
   },
   'prop-hunt': {
     tagline: 'Disfarce-se de mobília e fique quieto enquanto caçadores de olhos vendados o procuram.',

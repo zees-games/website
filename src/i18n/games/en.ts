@@ -117,21 +117,21 @@ export const en: Record<GameSlug, GameText> = {
     inspiredBy: "mg_3k_smash_lego_copter, a Counter-Strike: Source minigame map",
   },
   'zombie-zone': {
-    tagline: "Co-op zombie survival: escape through the city or hold out through ten waves.",
+    tagline: "Co-op zombie survival: escape through the city or survive waves.",
     summary: [
-      "A co-op zombie game. Fight through a city at night from one shelter to the next, or hold a school, mall or ballpark through ten waves of a directed horde with special infected.",
+      "A co-op zombie game. Fight through a city at night from one shelter to the next, or hold a school, mall or ballpark through waves of a directed horde with special infected.",
       "Zombies drop boxes with random effects, some good and some very bad.",
     ],
     howToPlay: [
       "Stick together and cover each other.",
-      "In Exodus, reach the next safe room; in Survival, last ten waves.",
+      "In Exodus, reach the next safe room; in Survival, survive waves.",
       "Gamble on the drop boxes, if you dare.",
     ],
     modes: [
       "Co-op Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead and Counter-Strike: Source zombie servers",
+    inspiredBy: "Left 4 Dead and Counter-Strike: Source zombie servers, with the concepts and objectives heavily reworked",
   },
   'hide-n-seek': {
     tagline: "Hide as yourself; every hider caught joins the hunt.",
@@ -147,6 +147,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Hide and seek",
     ],
+    inspiredBy: "Hide and Seek, a Garry's Mod game mode that never got as popular as it deserved, but was a lot of fun",
   },
   'prop-hunt': {
     tagline: "Disguise as furniture and keep still while blindfolded hunters search.",

@@ -105,21 +105,21 @@ export const nl: Record<GameSlug, GameText> = {
     inspiredBy: "mg_3k_smash_lego_copter, een Counter-Strike: Source-minigamemap",
   },
   'zombie-zone': {
-    tagline: "Coöp zombieoverleving: ontsnap door de stad of houd stand tijdens tien golven.",
+    tagline: "Coöp zombieoverleving: ontsnap door de stad of overleef golven.",
     summary: [
-      "Een coöp zombiegame. Vecht je door een stad bij nacht van de ene schuilplaats naar de volgende, of verdedig een school, winkelcentrum of honkbalstadion tegen tien golven van een aangestuurde horde met speciale besmette zombies.",
+      "Een coöp zombiegame. Vecht je door een stad bij nacht van de ene schuilplaats naar de volgende, of verdedig een school, winkelcentrum of honkbalstadion tegen golven van een aangestuurde horde met speciale besmette zombies.",
       "Zombies laten kisten met willekeurige effecten vallen, sommige goed en sommige heel slecht.",
     ],
     howToPlay: [
       "Blijf bij elkaar en dek elkaar.",
-      "Bereik in Exodus de volgende veilige kamer; houd in Survival tien golven vol.",
+      "Bereik in Exodus de volgende veilige kamer; overleef in Survival golven.",
       "Waag een gok met de kisten, als je durft.",
     ],
     modes: [
       "Coöp Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead en zombieservers van Counter-Strike: Source",
+    inspiredBy: "Left 4 Dead en zombieservers van Counter-Strike: Source, met sterk herwerkte concepten en doelen",
   },
   'hide-n-seek': {
     tagline: "Verstop je als jezelf; elke betrapte verstopper doet mee aan de jacht.",
@@ -135,6 +135,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Verstoppertje",
     ],
+    inspiredBy: "Hide and Seek, een Garry's Mod-spelmodus die nooit zo populair werd als hij verdiende, maar wel heel leuk was",
   },
   'prop-hunt': {
     tagline: "Vermom je als meubilair en blijf stilstaan terwijl geblinddoekte jagers zoeken.",

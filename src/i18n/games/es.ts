@@ -86,18 +86,18 @@ export const es: Record<GameSlug, GameText> = {
     inspiredBy: 'mg_3k_smash_lego_copter, un mapa minijuego de Counter-Strike: Source',
   },
   'zombie-zone': {
-    tagline: 'Supervivencia zombi cooperativa: escapa por la ciudad o resiste diez oleadas.',
+    tagline: 'Supervivencia zombi cooperativa: escapa por la ciudad o sobrevive a oleadas.',
     summary: [
-      'Un juego cooperativo de zombis. Abre paso por una ciudad de noche de un refugio al siguiente, o defiende una escuela, un centro comercial o un campo de béisbol durante diez oleadas de una horda dirigida con infectados especiales.',
+      'Un juego cooperativo de zombis. Abre paso por una ciudad de noche de un refugio al siguiente, o defiende una escuela, un centro comercial o un campo de béisbol durante oleadas de una horda dirigida con infectados especiales.',
       'Los zombis sueltan cajas con efectos aleatorios, unos buenos y otros muy malos.',
     ],
     howToPlay: [
       'Manteneos juntos y cubríos las espaldas.',
-      'En Exodus, llega a la siguiente sala segura; en Survival, aguanta diez oleadas.',
+      'En Exodus, llega a la siguiente sala segura; en Survival, sobrevive a oleadas.',
       'Arriésgate con las cajas, si te atreves.',
     ],
     modes: ['Supervivencia cooperativa', 'Exodus'],
-    inspiredBy: 'Left 4 Dead y los servidores de zombis de Counter-Strike: Source',
+    inspiredBy: "Left 4 Dead y los servidores de zombis de Counter-Strike: Source, con los conceptos y objetivos muy reelaborados",
   },
   'hide-n-seek': {
     tagline: 'Escóndete como tú mismo; cada escondido atrapado se une a la caza.',
@@ -111,6 +111,7 @@ export const es: Record<GameSlug, GameText> = {
       'El último escondido que quede gana la ronda.',
     ],
     modes: ['Escondite'],
+    inspiredBy: "Hide and Seek, un modo de juego de Garry's Mod que nunca fue tan popular como merecía, pero era muy divertido",
   },
   'prop-hunt': {
     tagline: 'Disfrázate de mueble y quédate quieto mientras cazadores con los ojos vendados te buscan.',

@@ -86,18 +86,18 @@ export const fr: Record<GameSlug, GameText> = {
     inspiredBy: 'mg_3k_smash_lego_copter, une carte mini-jeu de Counter-Strike: Source',
   },
   'zombie-zone': {
-    tagline: 'Survie zombie en coopération : fuyez à travers la ville ou tenez bon pendant dix vagues.',
+    tagline: 'Survie zombie en coopération : fuyez à travers la ville ou survivez aux vagues.',
     summary: [
-      'Un jeu de zombies en coopération. Frayez-vous un chemin dans une ville de nuit, d’un abri à l’autre, ou défendez une école, un centre commercial ou un terrain de baseball pendant dix vagues d’une horde dirigée avec des infectés spéciaux.',
+      'Un jeu de zombies en coopération. Frayez-vous un chemin dans une ville de nuit, d’un abri à l’autre, ou défendez une école, un centre commercial ou un terrain de baseball face aux vagues d’une horde dirigée avec des infectés spéciaux.',
       'Les zombies laissent tomber des caisses aux effets aléatoires, certains bons et d’autres très mauvais.',
     ],
     howToPlay: [
       'Restez groupés et couvrez-vous mutuellement.',
-      'Dans Exodus, atteignez la prochaine zone sûre ; dans Survival, tenez dix vagues.',
+      'Dans Exodus, atteignez la prochaine zone sûre ; dans Survival, survivez aux vagues.',
       'Tentez votre chance avec les caisses, si vous l’osez.',
     ],
     modes: ['Survie en coopération', 'Exodus'],
-    inspiredBy: 'Left 4 Dead et les serveurs zombies de Counter-Strike: Source',
+    inspiredBy: "Left 4 Dead et les serveurs zombies de Counter-Strike: Source, avec des concepts et des objectifs largement retravaillés",
   },
   'hide-n-seek': {
     tagline: 'Cachez-vous sous votre propre apparence ; chaque caché trouvé rejoint la chasse.',
@@ -111,6 +111,7 @@ export const fr: Record<GameSlug, GameText> = {
       'Le dernier caché restant remporte la manche.',
     ],
     modes: ['Cache-cache'],
+    inspiredBy: "Hide and Seek, un mode de jeu de Garry's Mod qui n’a jamais été aussi populaire qu’il le méritait, mais qui était très amusant",
   },
   'prop-hunt': {
     tagline: 'Déguisez-vous en meuble et restez immobile pendant que des chasseurs aux yeux bandés vous cherchent.',
