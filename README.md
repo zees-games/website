@@ -1,10 +1,8 @@
-# Zee's Games
-
 The website for [Zee's Games](https://zeesgames.com): open source multiplayer games made with
 [Godot](https://godotengine.org) and run on [The Modding Community](https://moddingcommunity.com)'s
-gaming platform. The games themselves live in the [zees-games](https://github.com/zees-games) organisation.
+gaming platform. The games code lives in the [zees-games](https://github.com/zees-games) organisation.
 
-A static [Astro](https://astro.build) site styled with Tailwind CSS. Every Play button links to The Modding Community, which hosts and runs the games.
+A static [Astro](https://astro.build) site styled with Tailwind CSS.
 
 ## Pages
 
