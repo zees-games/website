@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro'
+import { LANG_TAG, LOCALES, LocalizePath } from '../i18n/config'
+import { UseI18n } from '../i18n'
+
+// nginx serves this one file for every missing path, so it carries every
+// locale's copy and the script below shows the one the path asks for.
+const en = UseI18n('en').t
+---
+
+<Layout locale="en" title={en.meta.notFoundTitle} description={en.meta.notFoundDescription} noAlternates>
+  <section class="mx-auto max-w-2xl px-4 py-32 text-center sm:px-6">
+    <p class="font-display text-8xl font-bold neon-amber">404</p>
+    {LOCALES.map((l) => {
+      const t = UseI18n(l).t.notFound
+      return (
+        <div data-locale={l} lang={LANG_TAG[l]} hidden={l !== 'en'}>
+          <h1 class="mt-6 text-3xl font-bold">{t.title}</h1>
+          <p class="mt-4 text-muted">{t.body}</p>
+          <a href={LocalizePath('/', l)} class="mt-8 inline-flex rounded-xl bg-cyan px-6 py-3 font-semibold text-ink">{t.back}</a>
+        </div>
+      )
+    })}
+  </section>
+</Layout>
+
+<script>
+  const seg = location.pathname.split('/')[1]
+  const block = seg && seg !== 'en' ? document.querySelector<HTMLElement>(`[data-locale="${CSS.escape(seg)}"]`) : null
+  if (block) {
+    document.querySelector<HTMLElement>('[data-locale="en"]')!.hidden = true
+    block.hidden = false
+    document.documentElement.lang = block.lang
+  }
+</script>

@@ -1,0 +1,24 @@
+# The build context is the repo itself, so everything the image does not need
+# is named here.
+.git/
+.github/
+
+# Reinstalled and rebuilt inside the image.
+node_modules/
+dist/
+.astro/
+
+# Reaches the build as a BuildKit secret mount, never through the context.
+.env
+.env.*
+
+# The deployment itself; docker/ is copied explicitly in the runtime stage.
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+.vscode/
+.idea/
+.claude/
+**/*.log
+**/.DS_Store

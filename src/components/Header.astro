@@ -1,0 +1,105 @@
+---
+import { FaGithub } from 'react-icons/fa6'
+import { Gamepad2, Target, ExternalLink, Menu, Languages, Check } from 'lucide-react'
+import { GITHUB_ORG, TmcHref } from '../lib/site'
+import { ENDONYMS, LANG_TAG, LOCALES, LocalizePath, StripLocale, type Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, p } = UseI18n(locale)
+
+const path = StripLocale(Astro.url.pathname)
+const links = [
+  { href: p('/#games'), label: t.nav.games, Icon: Gamepad2, active: path === '/' },
+  { href: p('/goals'), label: t.nav.goals, Icon: Target, active: path.startsWith('/goals') },
+]
+const playHref = TmcHref('/play', locale)
+---
+
+<header class="sticky top-0 z-40 border-b border-line/70 bg-ink/75 backdrop-blur-xl">
+  <div class="mx-auto flex h-16 max-w-7xl items-center gap-6 px-4 sm:px-6">
+    <a href={p('/')} class="font-display text-xl font-bold tracking-tight whitespace-nowrap" aria-label={t.nav.home}>
+      <span class="neon-cyan">Zee's</span> <span class="neon-amber">Games</span>
+    </a>
+
+    <nav class="hidden items-center gap-1 sm:flex" aria-label={t.nav.main}>
+      {links.map(({ href, label, Icon, active }) => (
+        <a
+          href={href}
+          class:list={[
+            'flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition',
+            active ? 'bg-panel-2 text-text' : 'text-muted hover:bg-panel hover:text-text',
+          ]}
+        >
+          <Icon className="size-4" aria-hidden="true" />{label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="ml-auto flex items-center gap-2">
+      <details class="relative">
+        <summary class="flex list-none cursor-pointer items-center gap-1.5 rounded-lg p-2 text-sm text-muted hover:bg-panel hover:text-text [&::-webkit-details-marker]:hidden" aria-label={t.nav.language}>
+          <Languages className="size-5" aria-hidden="true" /><span class="hidden uppercase md:inline">{locale}</span>
+        </summary>
+        <ul class="absolute right-0 mt-2 w-48 rounded-xl border border-line bg-panel p-2 shadow-2xl">
+          {LOCALES.map((l) => (
+            <li>
+              <a
+                href={LocalizePath(path, l)}
+                hreflang={LANG_TAG[l]}
+                lang={LANG_TAG[l]}
+                aria-current={l === locale ? 'true' : undefined}
+                class:list={['flex items-center justify-between rounded-lg px-3 py-2 text-sm hover:bg-panel-2', l === locale && 'text-cyan']}
+              >
+                {ENDONYMS[l]}{l === locale && <Check className="size-4" aria-hidden="true" />}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </details>
+
+      <a href={GITHUB_ORG} class="hidden rounded-lg p-2 text-muted transition hover:bg-panel hover:text-text sm:block" aria-label={t.nav.github}>
+        <FaGithub className="size-5" aria-hidden="true" />
+      </a>
+      <a
+        href={playHref}
+        class="hidden items-center gap-2 rounded-lg bg-cyan px-4 py-2 text-sm font-semibold text-ink shadow-[0_0_24px_-6px_var(--color-cyan)] transition hover:brightness-110 sm:flex"
+      >
+        {t.nav.playOnTmc} <ExternalLink className="size-4" aria-hidden="true" />
+      </a>
+
+      <details class="relative sm:hidden">
+        <summary class="list-none cursor-pointer rounded-lg p-2 text-muted hover:bg-panel hover:text-text [&::-webkit-details-marker]:hidden" aria-label={t.nav.menu}>
+          <Menu className="size-6" aria-hidden="true" />
+        </summary>
+        <div class="absolute right-0 mt-2 w-56 rounded-xl border border-line bg-panel p-2 shadow-2xl">
+          {links.map(({ href, label, Icon }) => (
+            <a href={href} class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-panel-2">
+              <Icon className="size-4" aria-hidden="true" />{label}
+            </a>
+          ))}
+          <a href={GITHUB_ORG} class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-panel-2">
+            <FaGithub className="size-4" aria-hidden="true" />GitHub
+          </a>
+          <a href={playHref} class="mt-1 flex items-center gap-3 rounded-lg bg-cyan px-3 py-2 text-sm font-semibold text-ink">
+            <ExternalLink className="size-4" aria-hidden="true" />{t.nav.playOnTmc}
+          </a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Opening one menu closes the other, and a click outside closes both.
+  const menus = [...document.querySelectorAll<HTMLDetailsElement>('header details')]
+  for (const d of menus) {
+    d.addEventListener('toggle', () => {
+      if (d.open) for (const o of menus) if (o !== d) o.open = false
+    })
+  }
+  document.addEventListener('click', (e) => {
+    for (const d of menus) if (d.open && !d.contains(e.target as Node)) d.open = false
+  })
+</script>

@@ -1,0 +1,21 @@
+services:
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                INTERNAL_PORT: ${INTERNAL_PORT:-8010}
+            secrets:
+                - env
+        env_file:
+            - path: .env
+              required: false
+        environment:
+            INTERNAL_PORT: ${INTERNAL_PORT:-8010}
+            NGINX_ENVSUBST_FILTER: INTERNAL_PORT
+        ports:
+            - ${BIND_ADDR:-127.0.0.1}:${BIND_PORT:-8010}:${INTERNAL_PORT:-8010}
+        restart: unless-stopped
+secrets:
+    env:
+        file: ./.env

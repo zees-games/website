@@ -1,0 +1,47 @@
+---
+import { ArrowUpRight, Map } from 'lucide-react'
+import type { Game } from '../data/games'
+import { ACCENT } from '../lib/accent'
+import { MapsFor } from '../lib/maps'
+import type { Locale } from '../i18n/config'
+import { Fmt, UseI18n } from '../i18n'
+
+interface Props { game: Game; locale: Locale }
+const { game, locale } = Astro.props
+const { t, g, p, plural } = UseI18n(locale)
+const a = ACCENT[game.accent]
+const maps = MapsFor(game.slug)
+---
+
+<a href={p(`/${game.slug}`)} class="glow-card group relative flex flex-col overflow-hidden">
+  <div class="relative aspect-[16/10] overflow-hidden">
+    <img
+      src={`/images/games/${game.slug}.webp`}
+      alt={Fmt(t.card.coverAlt, { title: game.title })}
+      loading="lazy"
+      decoding="async"
+      class="size-full object-cover transition duration-500 group-hover:scale-105"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-panel via-panel/20 to-transparent"></div>
+    <span class:list={['absolute left-3 top-3 rounded-full border bg-ink/75 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wider backdrop-blur', a.border, a.text]}>
+      {t.kind[game.kind]}
+    </span>
+    {game.server && (
+      <span class="absolute right-3 top-3 flex items-center gap-1.5 rounded-full border border-emerald-400/40 bg-ink/60 px-2.5 py-1 text-[11px] font-semibold text-emerald-300 backdrop-blur">
+        <span class="size-1.5 rounded-full bg-emerald-400 shadow-[0_0_8px_currentColor]"></span>{t.card.zeesServer}
+      </span>
+    )}
+  </div>
+  <div class="flex flex-1 flex-col gap-2 p-5">
+    <h3 class="flex items-center gap-2 text-xl font-bold">
+      {game.title}
+      <ArrowUpRight className={`size-5 opacity-0 transition group-hover:opacity-100 ${a.text}`} aria-hidden="true" />
+    </h3>
+    <p class="text-sm leading-relaxed text-muted">{g(game.slug).tagline}</p>
+    {maps && (
+      <p class="mt-auto flex items-center gap-1.5 pt-2 text-xs font-medium text-muted">
+        <Map className="size-3.5" aria-hidden="true" />{plural(t.card.maps, maps.maps.length)}
+      </p>
+    )}
+  </div>
+</a>

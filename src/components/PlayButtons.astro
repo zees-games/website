@@ -1,0 +1,36 @@
+---
+import { FaGithub } from 'react-icons/fa6'
+import { Play, Server, ExternalLink } from 'lucide-react'
+import type { Game } from '../data/games'
+import { ACCENT } from '../lib/accent'
+import { TmcPlayHref, TmcGameHref, TmcServerPlayHref, RepoHref } from '../lib/site'
+import type { Locale } from '../i18n/config'
+import { Fmt, UseI18n } from '../i18n'
+
+/*
+ * Every way to play leaves this site for The Modding Community: Play Now is
+ * TMC's quick play for the game, and Zee's server is that server's own play
+ * address there. Nothing here launches a game itself.
+ */
+interface Props { game: Game; locale: Locale }
+const { game, locale } = Astro.props
+const { t } = UseI18n(locale)
+const a = ACCENT[game.accent]
+---
+
+<div class="flex flex-wrap gap-3">
+  <a href={TmcPlayHref(game.slug, locale)} class:list={['inline-flex items-center gap-2 rounded-xl px-6 py-3 font-semibold transition hover:brightness-110', a.button]}>
+    <Play className="size-5 fill-current" aria-hidden="true" /> {t.play.playNow}
+  </a>
+  {game.server && (
+    <a href={TmcServerPlayHref(game.slug, game.server, locale)} class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel px-5 py-3 font-semibold transition hover:border-emerald-400/60">
+      <Server className="size-5 text-emerald-400" aria-hidden="true" /> {t.play.zeesServer}
+    </a>
+  )}
+  <a href={TmcGameHref(game.slug, locale)} class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel px-5 py-3 font-semibold transition hover:border-cyan/60">
+    <ExternalLink className="size-5 text-muted" aria-hidden="true" /> {Fmt(t.play.onTmc, { title: game.title })}
+  </a>
+  <a href={RepoHref(game.repo)} class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel px-5 py-3 font-semibold transition hover:border-cyan/60">
+    <FaGithub className="size-5 text-muted" aria-hidden="true" /> {t.play.source}
+  </a>
+</div>

@@ -1,0 +1,39 @@
+---
+import { GITHUB_ORG, SITE_REPO, TmcHref } from '../lib/site'
+import type { Locale } from '../i18n/config'
+import { Escape, Rich, UseI18n } from '../i18n'
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, p } = UseI18n(locale)
+const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.footer.tmc)}</a>`
+---
+
+<footer class="mt-24 border-t border-line/70 bg-night">
+  <div class="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-[2fr_1fr_1fr]">
+    <div class="max-w-md">
+      <p class="font-display text-lg font-bold"><span class="neon-cyan">Zee's</span> <span class="neon-amber">Games</span></p>
+      <p class="mt-3 text-sm leading-relaxed text-muted" set:html={Rich(t.footer.blurb, { tmc: tmcLink })} />
+    </div>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.footer.explore}</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href={p('/#games')} class="hover:text-cyan">{t.nav.games}</a></li>
+        <li><a href={p('/goals')} class="hover:text-cyan">{t.nav.goals}</a></li>
+        <li><a href={TmcHref('/play', locale)} class="hover:text-cyan">{t.nav.playOnTmc}</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.footer.openSource}</p>
+      <ul class="mt-3 space-y-2 text-sm">
+        <li><a href={GITHUB_ORG} class="hover:text-cyan">{t.footer.orgOnGithub}</a></li>
+        <li><a href={SITE_REPO} class="hover:text-cyan">{t.footer.sourceCode}</a></li>
+        <li><a href="https://godotengine.org" class="hover:text-cyan">{t.footer.madeWithGodot}</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="border-t border-line/50 px-4 py-5 text-center text-xs text-muted">
+    <a href={SITE_REPO} class="font-semibold text-text hover:text-cyan">{t.footer.sourceOnGithub}</a> (MIT) ·
+    {t.footer.disclaimer}
+  </p>
+</footer>

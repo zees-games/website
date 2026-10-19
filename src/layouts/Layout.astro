@@ -1,0 +1,53 @@
+---
+import '../styles/global.css'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
+import { SITE_URL } from '../lib/site'
+import { LANG_TAG, LOCALES, LocalizePath, OG_LOCALE, StripLocale, type Locale } from '../i18n/config'
+
+interface Props {
+  locale: Locale
+  title: string
+  description: string
+  /** Absolute or root-relative path of the Open Graph image. */
+  image?: string
+  /** Leave out canonical and hreflang (the 404 page, which has no address of its own). */
+  noAlternates?: boolean
+}
+
+const { locale, title, description, image = '/images/banner01.jpg', noAlternates = false } = Astro.props
+const fullTitle = title === "Zee's Games" ? title : `${title} · Zee's Games`
+const canonical = new URL(Astro.url.pathname, SITE_URL).href
+const ogImage = new URL(image, SITE_URL).href
+const base = StripLocale(Astro.url.pathname)
+---
+
+<!doctype html>
+<html lang={LANG_TAG[locale]} class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {!noAlternates && <link rel="canonical" href={canonical} />}
+    {!noAlternates && LOCALES.map((l) => <link rel="alternate" hreflang={LANG_TAG[l]} href={new URL(LocalizePath(base, l), SITE_URL).href} />)}
+    {!noAlternates && <link rel="alternate" hreflang="x-default" href={new URL(base, SITE_URL).href} />}
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="theme-color" content="#05060f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Zee's Games" />
+    <meta property="og:locale" content={OG_LOCALE[locale]} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="min-h-dvh flex flex-col">
+    <Header locale={locale} />
+    <main class="flex-1 overflow-x-clip">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

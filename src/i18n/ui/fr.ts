@@ -1,0 +1,207 @@
+import type { Messages } from './en'
+
+export const fr: Messages = {
+  meta: {
+    siteDescription:
+      'Des jeux multijoueurs open source créés avec Godot et hébergés sur la plateforme de jeux de The Modding Community : deathmatch, surf et bhop, sandbox, mini-jeux et bien plus.',
+    gameDescription: '{title} : {tagline} Gratuit et open source, jouez-y sur The Modding Community.',
+    mapsTitle: 'Cartes de {title}',
+    mapsDescription: "Toutes les cartes de {title}, présentées dans Zee's Games à côté de la carte d’origine dont elles sont issues.",
+    mapsDescriptionOwn: "Toutes les cartes de {title}, telles qu’elles apparaissent dans Zee's Games.",
+    goalsTitle: 'Objectifs',
+    goalsDescription:
+      "Pourquoi Zee's Games existe : de vrais jeux amusants qui montrent ce que la plateforme de jeux de The Modding Community sait faire, des serveurs communautaires aux serveurs multijeux qui changent de jeu sans déconnecter les joueurs.",
+    notFoundTitle: 'Introuvable',
+    notFoundDescription: 'Cette page n’existe pas.',
+    bannerAlt: "Bannière de Zee's Games : titre au néon sur un paysage en fil de fer",
+  },
+  nav: {
+    main: 'Principal',
+    home: "Accueil de Zee's Games",
+    games: 'Jeux',
+    goals: 'Objectifs',
+    menu: 'Menu',
+    github: "Zee's Games sur GitHub",
+    playOnTmc: 'Jouer sur TMC',
+    language: 'Langue',
+  },
+  footer: {
+    blurb:
+      'Des jeux multijoueurs open source créés avec Godot, hébergés et joués sur la plateforme de jeux de {tmc}. Ils sont nés comme des démonstrations de ce que la plateforme sait faire, et ils sont faits pour être amusants.',
+    tmc: 'The Modding Community',
+    explore: 'Explorer',
+    openSource: 'Open source',
+    orgOnGithub: 'zees-games sur GitHub',
+    sourceCode: 'Code source',
+    madeWithGodot: 'Créé avec Godot',
+    sourceOnGithub: 'Code source sur GitHub',
+    disclaimer:
+      "Zee's Games est un projet personnel et non un produit officiel de The Modding Community. Les cartes originales appartiennent à leurs auteurs ; consultez les crédits de chaque carte.",
+  },
+  kind: {
+    game: 'Jeu',
+    minigame: 'Mini-jeu',
+  },
+  card: {
+    zeesServer: 'Serveur de Zee',
+    coverAlt: '{title} en jeu',
+    maps: { one: '{n} carte', many: '{n} de cartes', other: '{n} cartes' },
+  },
+  play: {
+    playNow: 'Jouer maintenant',
+    zeesServer: 'Jouer sur le serveur de Zee',
+    onTmc: '{title} sur TMC',
+    source: 'Source',
+  },
+  home: {
+    eyebrow: 'Open source · Créé avec Godot',
+    intro:
+      'Des jeux multijoueurs que je crée et fais tourner sur la plateforme de jeux de {tmc}. Chacun montre ce que la plateforme sait faire, et chacun est conçu pour être amusant : deathmatch, surf et bhop, un bac à sable physique et une foule de mini-jeux.',
+    tmc: 'The Modding Community',
+    pickGame: 'Choisissez un jeu',
+    myGoals: 'Mes objectifs',
+    statGames: 'Jeux',
+    statServers: 'Mes serveurs',
+    statPrice: 'Prix',
+    free: 'Gratuit',
+    runningTitle: 'En ligne maintenant',
+    runningBody: 'Des jeux avec l’un de mes propres serveurs actif sur TMC. Lancez-vous directement.',
+    allOnTmc: 'Tous les jeux sur TMC',
+    worksTitle: 'En préparation',
+    worksBody: 'D’autres jeux et mini-jeux arrivent. La plupart sont déjà jouables ; les serveurs suivront.',
+    poweredTitle: 'Propulsé par The Modding Community',
+    poweredBody:
+      'TMC héberge, référence et fait tourner chaque jeu présenté ici. Ces jeux sont ses démonstrations : la preuve de ce que la plateforme, et les addons Dot ouverts pour Godot, peuvent apporter à n’importe quel jeu. Et ils sont aussi tout simplement amusants.',
+    readGoals: 'Lire mes objectifs',
+    features: [
+      { title: 'Serveurs communautaires', body: 'Chacun peut héberger un serveur, régler ses paramètres et le référencer.' },
+      { title: 'Jouez partout', body: 'Navigateur, application de bureau ou téléphone, sur les mêmes serveurs.' },
+      { title: 'Plusieurs jeux, un seul serveur', body: 'Changez de jeu sans déconnecter les joueurs.' },
+      { title: 'Open source', body: 'Chaque jeu, pack de cartes et addon est sur GitHub.' },
+    ],
+  },
+  game: {
+    allGames: '← Tous les jeux',
+    whatItIs: 'De quoi s’agit-il',
+    howToPlay: 'Comment jouer',
+    maps: 'Cartes',
+    allMaps: 'Les {n} cartes',
+    mapAlt: '{map} dans {title}',
+    modes: 'Modes',
+    inspiredBy: 'Inspiré de',
+    links: 'Liens',
+    onTmcLong: '{title} sur The Modding Community',
+    serverBrowser: 'Navigateur de serveurs',
+    mapPack: 'Pack de cartes sur GitHub',
+    moreGames: 'Plus de jeux',
+  },
+  maps: {
+    heading: '{maps} de {title}',
+    headingWord: 'Cartes',
+    count: { one: '{n} carte.', many: '{n} de cartes.', other: '{n} cartes.' },
+    allPorted:
+      "Toutes ont été portées depuis d’anciens jeux ; chacune est présentée dans Zee's Games à côté d’une capture d’écran de l’original.",
+    somePorted:
+      "{n} d’entre elles ont été portées depuis d’anciens jeux ; chacune est présentée dans Zee's Games à côté d’une capture d’écran de l’original. Les autres ont été créées pour ce jeu.",
+    nonePorted: 'Toutes ont été créées pour {title}.',
+    mapPack: 'Pack de cartes sur GitHub',
+    search: 'Rechercher des cartes',
+    filter: 'Filtrer par type',
+    all: 'Toutes',
+    shown: { one: '{n} carte', many: '{n} de cartes', other: '{n} cartes' },
+    none: 'Aucune carte ne correspond.',
+    noScreenshot: 'Pas encore de capture d’écran',
+    noOriginal: 'Aucune image de l’original trouvée',
+    labelOurs: "Zee's Games",
+    labelOriginal: 'Original',
+    originalAlt: '{map} dans {game}',
+    theOriginalGame: 'le jeu d’origine',
+    portedFrom: 'Portée depuis {map}',
+    portedFromGame: 'Portée depuis {map} ({game})',
+    madeFor: 'Créée pour {title}',
+    by: 'par {author}',
+    originalShot: 'Capture d’écran de l’original :',
+    source: 'source',
+    closestMatch: '(correspondance la plus proche trouvée : {map})',
+    families: {
+      surf: 'Surf',
+      bhop: 'Bunny Hop',
+      kz: 'KZ',
+      ze: 'Zombie Escape',
+      zs: 'Zombie Survival',
+    },
+  },
+  goals: {
+    eyebrow: 'Mes objectifs',
+    title: 'Les démonstrations d’une plateforme.',
+    titleAccent: 'Des jeux qui valent la peine d’être joués.',
+    intro:
+      'Chaque jeu présenté ici est né comme une démonstration de ce que la plateforme de jeux de The Modding Community et sa collection Dot savent faire, et de ce que vos propres projets de jeu peuvent y accomplir. Une démo mérite aussi d’être amusante : chacune est donc conçue comme un vrai jeu.',
+    demo: {
+      title: 'Montrer ce que la plateforme sait faire',
+      body: [
+        'Ces jeux sont une vitrine fonctionnelle de la plateforme de jeux de TMC : déplacements, combat, véhicules, PNJ, physique, classements, parties, matchmaking et serveurs dédiés, le tout construit avec les mêmes addons Dot ouverts que n’importe quel autre projet peut utiliser. Si l’un de ces jeux sait le faire, le vôtre aussi.',
+        'Être une démo n’est pas une excuse pour un jeu ennuyeux. Chacun a ses propres cartes, ses modes et sa finition, et mérite d’être joué pour lui-même.',
+      ],
+      tiles: ['Déplacements', 'Combat', 'Véhicules', 'IA des PNJ', 'Physique', 'Classements', 'Parties', 'Matchmaking', 'Serveurs'],
+    },
+    community: {
+      title: 'Priorité aux serveurs communautaires',
+      body:
+        'Ces jeux, et la plateforme dans son ensemble, prospèrent grâce aux {strong}. Un objectif majeur est que chacun puisse lancer un serveur faisant tourner un ou plusieurs de ces jeux avec le dépôt {deploy}.',
+      strong: 'serveurs communautaires',
+      deploy: 'Dot Server Deploy',
+      online: 'En ligne',
+    },
+    rules: {
+      title: 'Votre serveur, vos règles',
+      body:
+        'Le propriétaire d’un serveur peut modifier la configuration du jeu et de chaque addon utilisé pour rendre le gameplay unique. Il référence ensuite le serveur, et le jeu, sur la plateforme.',
+      sliders: ['Durée de la manche', 'Gravité', 'Joueurs max.', 'Dispersion des armes'],
+    },
+    anywhere: {
+      title: 'Rejoignez depuis n’importe où',
+      body:
+        'Les joueurs rejoignent un serveur référencé directement depuis le navigateur web, l’application de bureau ou un téléphone. La plateforme est multiplateforme : tout le monde joue sur les mêmes serveurs.',
+      browse: 'Parcourir les jeux sur TMC',
+      browser: 'Navigateur',
+      desktop: 'Bureau',
+      mobile: 'Mobile',
+    },
+    multi: {
+      title: 'Un serveur, plusieurs jeux',
+      body: [
+        "Un serveur peut faire tourner {strong} en même temps et passer de l’un à l’autre sans que les joueurs soient déconnectés. Si vous avez joué sur des serveurs communautaires de Garry's Mod ou de Counter-Strike, vous avez vu un serveur changer de carte, chaque joueur la télécharger et la monter. Ici, les jeux fonctionnent de la même façon.",
+        'Les jeux ont toujours leurs propres cartes, mais charger une carte et charger un jeu reposent sur presque les mêmes mécanismes en coulisses.',
+      ],
+      strong: 'plusieurs jeux',
+      nextRound: 'manche suivante',
+      buildNight: 'soirée construction',
+      connected: '12 joueurs connectés tout du long',
+    },
+    cdn: {
+      title: 'Le contenu arrive tout seul',
+      body:
+        'Quand le jeu ou la carte change, les joueurs téléchargent automatiquement ce dont ils ont besoin depuis le CDN mondial de la plateforme. Le CDN synchronise les fichiers depuis les {assets} de The Modding Community, rangées sous Godot ou le jeu pour lequel le contenu est conçu, avec des versions et des étiquettes proches de celles de GitHub pour la sécurité, le déploiement et les conflits.',
+      assets: 'Ressources',
+      player: 'Joueur',
+    },
+    open: {
+      title: 'Gratuit et open source',
+      body:
+        'Chaque jeu, pack de cartes et addon est open source sur GitHub. Découvrez comment quelque chose fonctionne, lancez votre propre serveur ou empruntez un élément pour votre propre jeu.',
+      org: 'zees-games sur GitHub',
+      aiTitle: 'Oui, j’utilise l’IA',
+      aiBody: [
+        'La plupart de ces jeux ne sont pas encore terminés et recevront bientôt beaucoup plus de travail. Ils ont été créés avec Claude Code, y compris la conversion de cartes issues d’anciens jeux (créditées dans le README de chaque dépôt et sur la page de chaque carte).',
+        'Ils sont gratuits, open source et pour la plupart de petits mini-jeux, et je développe aussi la plateforme sur laquelle ils tournent, ce qui me prend déjà {em} de temps. L’IA accélère les choses. J’aimerais ne pas en avoir besoin.',
+      ],
+      aLot: 'beaucoup',
+    },
+  },
+  notFound: {
+    title: 'Réapparition ailleurs',
+    body: 'Cette page n’existe pas, ou elle a été déplacée.',
+    back: 'Retour aux jeux',
+  },
+}

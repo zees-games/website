@@ -1,0 +1,207 @@
+import type { Messages } from './en'
+
+export const es: Messages = {
+  meta: {
+    siteDescription:
+      "Juegos multijugador de código abierto hechos con Godot y alojados en la plataforma de juegos de The Modding Community: deathmatch, surf y bhop, sandbox, minijuegos y mucho más.",
+    gameDescription: '{title}: {tagline} Gratis y de código abierto, juégalo en The Modding Community.',
+    mapsTitle: 'Mapas de {title}',
+    mapsDescription: "Todos los mapas de {title}, mostrados en Zee's Games junto al mapa original del que se portaron.",
+    mapsDescriptionOwn: "Todos los mapas de {title}, tal como se ven en Zee's Games.",
+    goalsTitle: 'Objetivos',
+    goalsDescription:
+      "Por qué existe Zee's Games: juegos reales y divertidos que muestran lo que puede hacer la plataforma de juegos de The Modding Community, desde servidores de la comunidad hasta servidores multijuego que cambian de juego sin expulsar a los jugadores.",
+    notFoundTitle: 'No encontrado',
+    notFoundDescription: 'Esta página no existe.',
+    bannerAlt: "Banner de Zee's Games: título de neón sobre un paisaje de estructura alámbrica",
+  },
+  nav: {
+    main: 'Principal',
+    home: "Inicio de Zee's Games",
+    games: 'Juegos',
+    goals: 'Objetivos',
+    menu: 'Menú',
+    github: "Zee's Games en GitHub",
+    playOnTmc: 'Jugar en TMC',
+    language: 'Idioma',
+  },
+  footer: {
+    blurb:
+      'Juegos multijugador de código abierto creados con Godot, alojados y jugados en la plataforma de juegos de {tmc}. Nacieron como demostraciones de lo que puede hacer la plataforma, y están pensados para ser divertidos.',
+    tmc: 'The Modding Community',
+    explore: 'Explorar',
+    openSource: 'Código abierto',
+    orgOnGithub: 'zees-games en GitHub',
+    sourceCode: 'Código fuente',
+    madeWithGodot: 'Hecho con Godot',
+    sourceOnGithub: 'Código fuente en GitHub',
+    disclaimer:
+      "Zee's Games es un proyecto personal y no un producto oficial de The Modding Community. Los mapas originales pertenecen a sus autores; consulta los créditos de cada mapa.",
+  },
+  kind: {
+    game: 'Juego',
+    minigame: 'Minijuego',
+  },
+  card: {
+    zeesServer: 'Servidor de Zee',
+    coverAlt: '{title} en el juego',
+    maps: { one: '{n} mapa', other: '{n} mapas' },
+  },
+  play: {
+    playNow: 'Jugar ahora',
+    zeesServer: 'Jugar en el servidor de Zee',
+    onTmc: '{title} en TMC',
+    source: 'Código',
+  },
+  home: {
+    eyebrow: 'Código abierto · Hecho con Godot',
+    intro:
+      'Juegos multijugador que creo y ejecuto en la plataforma de juegos de {tmc}. Cada uno muestra lo que la plataforma puede hacer y cada uno está pensado para ser divertido: deathmatch, surf y bhop, un sandbox de física y un montón de minijuegos.',
+    tmc: 'The Modding Community',
+    pickGame: 'Elige un juego',
+    myGoals: 'Mis objetivos',
+    statGames: 'Juegos',
+    statServers: 'Mis servidores',
+    statPrice: 'Precio',
+    free: 'Gratis',
+    runningTitle: 'En marcha ahora',
+    runningBody: 'Juegos con un servidor propio activo en TMC. Entra directamente.',
+    allOnTmc: 'Todos los juegos en TMC',
+    worksTitle: 'En desarrollo',
+    worksBody: 'Vienen más juegos y minijuegos. La mayoría ya se pueden jugar; los servidores llegarán después.',
+    poweredTitle: 'Con la tecnología de The Modding Community',
+    poweredBody:
+      'TMC aloja, lista y ejecuta cada juego de este sitio. Estos juegos son sus demostraciones: la prueba de lo que la plataforma, y los addons abiertos de Dot para Godot, pueden hacer por cualquier juego. Además, son simplemente divertidos.',
+    readGoals: 'Leer mis objetivos',
+    features: [
+      { title: 'Servidores de la comunidad', body: 'Cualquiera puede alojar un servidor, ajustar su configuración y publicarlo.' },
+      { title: 'Juega en cualquier parte', body: 'Navegador, aplicación de escritorio o móvil, todos en los mismos servidores.' },
+      { title: 'Muchos juegos, un servidor', body: 'Cambia de juego sin expulsar a los jugadores.' },
+      { title: 'Código abierto', body: 'Cada juego, paquete de mapas y addon está en GitHub.' },
+    ],
+  },
+  game: {
+    allGames: '← Todos los juegos',
+    whatItIs: 'De qué trata',
+    howToPlay: 'Cómo se juega',
+    maps: 'Mapas',
+    allMaps: 'Los {n} mapas',
+    mapAlt: '{map} en {title}',
+    modes: 'Modos',
+    inspiredBy: 'Inspirado en',
+    links: 'Enlaces',
+    onTmcLong: '{title} en The Modding Community',
+    serverBrowser: 'Explorador de servidores',
+    mapPack: 'Paquete de mapas en GitHub',
+    moreGames: 'Más juegos',
+  },
+  maps: {
+    heading: '{maps} de {title}',
+    headingWord: 'Mapas',
+    count: { one: '{n} mapa.', other: '{n} mapas.' },
+    allPorted:
+      "Todos se portaron de juegos antiguos; cada uno muestra cómo se ve en Zee's Games junto a una captura del original.",
+    somePorted:
+      "{n} de ellos se portaron de juegos antiguos; cada uno muestra cómo se ve en Zee's Games junto a una captura del original. El resto se hicieron para este juego.",
+    nonePorted: 'Todos se hicieron para {title}.',
+    mapPack: 'Paquete de mapas en GitHub',
+    search: 'Buscar mapas',
+    filter: 'Filtrar por tipo',
+    all: 'Todos',
+    shown: { one: '{n} mapa', other: '{n} mapas' },
+    none: 'Ningún mapa coincide.',
+    noScreenshot: 'Aún no hay captura',
+    noOriginal: 'No se encontró ninguna imagen del original',
+    labelOurs: "Zee's Games",
+    labelOriginal: 'Original',
+    originalAlt: '{map} en {game}',
+    theOriginalGame: 'el juego original',
+    portedFrom: 'Portado de {map}',
+    portedFromGame: 'Portado de {map} ({game})',
+    madeFor: 'Hecho para {title}',
+    by: 'de {author}',
+    originalShot: 'Captura original:',
+    source: 'fuente',
+    closestMatch: '(coincidencia más cercana: {map})',
+    families: {
+      surf: 'Surf',
+      bhop: 'Bunny Hop',
+      kz: 'KZ',
+      ze: 'Zombie Escape',
+      zs: 'Zombie Survival',
+    },
+  },
+  goals: {
+    eyebrow: 'Mis objetivos',
+    title: 'Demostraciones de una plataforma.',
+    titleAccent: 'Juegos que merecen la pena.',
+    intro:
+      'Cada juego de aquí nació como una demostración de lo que pueden hacer la plataforma de juegos de The Modding Community y su colección Dot, y de lo que pueden hacer en ella tus propios proyectos. Una demo también merece ser divertida, así que cada una está construida como un juego de verdad.',
+    demo: {
+      title: 'Mostrar lo que puede hacer la plataforma',
+      body: [
+        'Estos juegos son una muestra funcional de la plataforma de juegos de TMC: movimiento, combate, vehículos, NPC, física, clasificaciones, parties, emparejamiento y servidores dedicados, todo creado con los mismos addons abiertos de Dot que puede usar cualquier otro proyecto. Si uno de estos juegos puede hacer algo, el tuyo también.',
+        'Ser una demo no es excusa para un juego aburrido. Cada uno tiene sus propios mapas, modos y acabado, así que vale la pena jugarlo por sí mismo.',
+      ],
+      tiles: ['Movimiento', 'Combate', 'Vehículos', 'IA de NPC', 'Física', 'Clasificaciones', 'Parties', 'Emparejamiento', 'Servidores'],
+    },
+    community: {
+      title: 'Atención a los servidores de la comunidad',
+      body:
+        'Estos juegos, y la plataforma en su conjunto, prosperan gracias a los {strong}. Un objetivo principal es que cualquiera pueda poner en marcha un servidor con uno o varios de estos juegos mediante el repositorio {deploy}.',
+      strong: 'servidores de la comunidad',
+      deploy: 'Dot Server Deploy',
+      online: 'En línea',
+    },
+    rules: {
+      title: 'Tu servidor, tus reglas',
+      body:
+        'El propietario de un servidor puede cambiar la configuración del juego y de cada addon que usa para que la jugabilidad sea única. Después publica el servidor, y el juego, en la plataforma.',
+      sliders: ['Duración de la ronda', 'Gravedad', 'Máx. de jugadores', 'Dispersión de armas'],
+    },
+    anywhere: {
+      title: 'Únete desde cualquier lugar',
+      body:
+        'Los jugadores entran en un servidor publicado directamente desde el navegador web, la aplicación de escritorio o el móvil. La plataforma es multiplataforma, así que todos juegan en los mismos servidores.',
+      browse: 'Explorar juegos en TMC',
+      browser: 'Navegador',
+      desktop: 'Escritorio',
+      mobile: 'Móvil',
+    },
+    multi: {
+      title: 'Un servidor, muchos juegos',
+      body: [
+        "Un servidor puede ejecutar {strong} a la vez y cambiar entre ellos sin que los jugadores pierdan la conexión. Si has jugado en servidores de la comunidad de Garry's Mod o Counter-Strike, has visto cómo el servidor cambia de mapa y cada jugador lo descarga y lo monta. Aquí los juegos funcionan igual.",
+        'Los juegos siguen teniendo sus propios mapas, pero cargar un mapa y cargar un juego pasan por casi la misma maquinaria interna.',
+      ],
+      strong: 'varios juegos',
+      nextRound: 'próxima ronda',
+      buildNight: 'noche de construcción',
+      connected: '12 jugadores conectados todo el rato',
+    },
+    cdn: {
+      title: 'El contenido llega solo',
+      body:
+        'Cuando cambia el juego o el mapa, los jugadores descargan automáticamente lo que necesitan desde la CDN global de la plataforma. La CDN sincroniza archivos de {assets} de The Modding Community, clasificados bajo Godot o el juego para el que se creó el contenido, con versiones y etiquetas similares a las de GitHub para la seguridad, el despliegue y los conflictos.',
+      assets: 'Recursos',
+      player: 'Jugador',
+    },
+    open: {
+      title: 'Gratis y de código abierto',
+      body:
+        'Cada juego, paquete de mapas y addon es de código abierto en GitHub. Lee cómo funciona algo, ejecuta tu propio servidor o toma prestada una pieza para tu propio juego.',
+      org: 'zees-games en GitHub',
+      aiTitle: 'Sí, uso IA',
+      aiBody: [
+        'La mayoría de estos juegos aún no están terminados y recibirán mucho más trabajo pronto. Se crearon con Claude Code, incluida la conversión de mapas de juegos antiguos (con créditos en el README de cada repositorio y en la página de cada mapa).',
+        'Son gratuitos, de código abierto y casi todos minijuegos pequeños, y además construyo la plataforma en la que funcionan, lo que ya me lleva {em} tiempo. La IA lo acelera. Ojalá no la necesitara.',
+      ],
+      aLot: 'mucho',
+    },
+  },
+  notFound: {
+    title: 'Reapareciendo en otro sitio',
+    body: 'Esta página no existe o se ha movido.',
+    back: 'Volver a los juegos',
+  },
+}

@@ -1,0 +1,207 @@
+import type { Messages } from './en'
+
+export const nl: Messages = {
+  meta: {
+    siteDescription:
+      "Open source multiplayergames, gemaakt met Godot en draaiend op het gamingplatform van The Modding Community: deathmatch, surf en bhop, sandbox, minigames en meer.",
+    gameDescription: "{title}: {tagline} Gratis en open source, speel het op The Modding Community.",
+    mapsTitle: "{title}-maps",
+    mapsDescription: "Alle maps van {title}, in Zee's Games naast de originele map waarvan ze zijn overgezet.",
+    mapsDescriptionOwn: "Alle maps van {title}, zoals ze eruitzien in Zee's Games.",
+    goalsTitle: "Doelen",
+    goalsDescription:
+      "Waarom Zee's Games bestaat: echte, leuke games die laten zien wat het gamingplatform van The Modding Community kan, van communityservers tot multigameservers die van game wisselen zonder spelers te verliezen.",
+    notFoundTitle: "Niet gevonden",
+    notFoundDescription: "Deze pagina bestaat niet.",
+    bannerAlt: "Banner van Zee's Games: neonkoptekst boven een wireframelandschap",
+  },
+  nav: {
+    main: "Hoofdmenu",
+    home: "Zee's Games startpagina",
+    games: "Games",
+    goals: "Doelen",
+    menu: "Menu",
+    github: "Zee's Games op GitHub",
+    playOnTmc: "Speel op TMC",
+    language: "Taal",
+  },
+  footer: {
+    blurb:
+      "Open source multiplayergames, gebouwd met Godot en gehost en gespeeld op het gamingplatform van {tmc}. Ze begonnen als demo's van wat het platform kan, en ze zijn bedoeld om leuk te zijn.",
+    tmc: "The Modding Community",
+    explore: "Ontdekken",
+    openSource: "Open source",
+    orgOnGithub: "zees-games op GitHub",
+    sourceCode: "Broncode",
+    madeWithGodot: "Gemaakt met Godot",
+    sourceOnGithub: "Broncode op GitHub",
+    disclaimer:
+      "Zee's Games is een persoonlijk project en geen officieel product van The Modding Community. De originele maps zijn van hun makers; zie de vermelding bij elke map.",
+  },
+  kind: {
+    game: "Game",
+    minigame: "Minigame",
+  },
+  card: {
+    zeesServer: "Zee's server",
+    coverAlt: "{title} in het spel",
+    maps: { one: "{n} map", other: "{n} maps" },
+  },
+  play: {
+    playNow: "Nu spelen",
+    zeesServer: "Speel op Zee's server",
+    onTmc: "{title} op TMC",
+    source: "Broncode",
+  },
+  home: {
+    eyebrow: "Open source · Gemaakt met Godot",
+    intro:
+      "Multiplayergames die ik bouw en draai op het gamingplatform van {tmc}. Elke game laat zien wat het platform kan, en elke game is gemaakt om leuk te zijn: deathmatch, surf en bhop, een physics-sandbox en een hele reeks minigames.",
+    tmc: "The Modding Community",
+    pickGame: "Kies een game",
+    myGoals: "Mijn doelen",
+    statGames: "Games",
+    statServers: "Mijn servers",
+    statPrice: "Prijs",
+    free: "Gratis",
+    runningTitle: "Nu live",
+    runningBody: "Games waarvoor een van mijn eigen servers op TMC draait. Spring er meteen in.",
+    allOnTmc: "Alle games op TMC",
+    worksTitle: "In ontwikkeling",
+    worksBody: "Er komen meer games en minigames aan. De meeste zijn al speelbaar; servers volgen.",
+    poweredTitle: "Mogelijk gemaakt door The Modding Community",
+    poweredBody:
+      "TMC host, vermeldt en draait elke game hier. Deze games zijn de demo's ervan: het bewijs van wat het platform en de open Dot-addons voor Godot voor elke game kunnen doen. Ze zijn ook gewoon leuk.",
+    readGoals: "Lees mijn doelen",
+    features: [
+      { title: "Communityservers", body: "Iedereen kan een server hosten, de instellingen aanpassen en hem vermelden." },
+      { title: "Overal spelen", body: "Browser, desktopapp of telefoon, allemaal op dezelfde servers." },
+      { title: "Veel games, één server", body: "Wissel van game zonder de spelers te verliezen." },
+      { title: "Open source", body: "Elke game, mappack en addon staat op GitHub." },
+    ],
+  },
+  game: {
+    allGames: "← Alle games",
+    whatItIs: "Wat is het",
+    howToPlay: "Zo speel je",
+    maps: "Maps",
+    allMaps: "Alle {n} maps",
+    mapAlt: "{map} in {title}",
+    modes: "Modi",
+    inspiredBy: "Geïnspireerd door",
+    links: "Links",
+    onTmcLong: "{title} op The Modding Community",
+    serverBrowser: "Serverbrowser",
+    mapPack: "Mappack op GitHub",
+    moreGames: "Meer games",
+  },
+  maps: {
+    heading: "{title} {maps}",
+    headingWord: "maps",
+    count: { one: "{n} map.", other: "{n} maps." },
+    allPorted:
+      "Ze zijn allemaal overgezet uit oudere games; bij elke map zie je hoe hij eruitziet in Zee's Games naast een screenshot van het origineel.",
+    somePorted:
+      "{n} daarvan zijn overgezet uit oudere games; bij elke map zie je hoe hij eruitziet in Zee's Games naast een screenshot van het origineel. De rest is speciaal voor deze game gemaakt.",
+    nonePorted: "Ze zijn allemaal speciaal voor {title} gemaakt.",
+    mapPack: "Mappack op GitHub",
+    search: "Maps zoeken",
+    filter: "Filteren op type",
+    all: "Alles",
+    shown: { one: "{n} map", other: "{n} maps" },
+    none: "Geen maps gevonden.",
+    noScreenshot: "Nog geen screenshot",
+    noOriginal: "Geen afbeelding van het origineel gevonden",
+    labelOurs: "Zee's Games",
+    labelOriginal: "Origineel",
+    originalAlt: "{map} in {game}",
+    theOriginalGame: "de oorspronkelijke game",
+    portedFrom: "Overgezet van {map}",
+    portedFromGame: "Overgezet van {map} ({game})",
+    madeFor: "Gemaakt voor {title}",
+    by: "door {author}",
+    originalShot: "Originele screenshot:",
+    source: "bron",
+    closestMatch: "(dichtstbijzijnde match: {map})",
+    families: {
+      surf: "Surf",
+      bhop: "Bunny Hop",
+      kz: "KZ",
+      ze: "Zombie Escape",
+      zs: "Zombie Survival",
+    },
+  },
+  goals: {
+    eyebrow: "Mijn doelen",
+    title: "Demo's van een platform.",
+    titleAccent: "Games die het spelen waard zijn.",
+    intro:
+      "Elke game hier begon als demonstratie van wat het gamingplatform van The Modding Community en de Dot-collectie ervan kunnen, en van wat jouw eigen gameprojecten erop kunnen. Een demo mag ook gewoon leuk zijn, dus elke game is gebouwd als een echte game.",
+    demo: {
+      title: "Laten zien wat het platform kan",
+      body: [
+        "Deze games zijn een werkende etalage voor het TMC-gamingplatform: beweging, gevechten, voertuigen, NPC's, physics, leaderboards, parties, matchmaking en dedicated servers, allemaal gebouwd met dezelfde open Dot-addons die elk ander project kan gebruiken. Als een van deze games iets kan, kan die van jou het ook.",
+        "Een demo zijn is geen excuus voor een saaie game. Elke game krijgt eigen maps, modi en afwerking, zodat hij het spelen op zichzelf waard is.",
+      ],
+      tiles: ["Beweging", "Gevechten", "Voertuigen", "NPC-AI", "Physics", "Leaderboards", "Parties", "Matchmaking", "Servers"],
+    },
+    community: {
+      title: "De nadruk op communityservers",
+      body:
+        "Deze games, en het platform als geheel, gedijen op {strong}. Een belangrijk doel is dat iedereen met de repository {deploy} een server kan opzetten waarop een of meer van deze games draaien.",
+      strong: "communityservers",
+      deploy: "Dot Server Deploy",
+      online: "Online",
+    },
+    rules: {
+      title: "Jouw server, jouw regels",
+      body:
+        "Een servereigenaar kan de configuratie van de game en van elke gebruikte addon aanpassen om de gameplay uniek te maken. Daarna vermeldt hij de server en de game op het platform.",
+      sliders: ["Rondetijd", "Zwaartekracht", "Max. spelers", "Wapenspreiding"],
+    },
+    anywhere: {
+      title: "Doe overal mee",
+      body:
+        "Spelers sluiten rechtstreeks aan op een vermelde server vanuit de webbrowser, de desktopapp of een telefoon. Het platform werkt op alle systemen, dus iedereen speelt op dezelfde servers.",
+      browse: "Games bekijken op TMC",
+      browser: "Browser",
+      desktop: "Desktop",
+      mobile: "Mobiel",
+    },
+    multi: {
+      title: "Eén server, veel games",
+      body: [
+        "Een server kan {strong} tegelijk draaien en ertussen wisselen terwijl spelers verbonden blijven. Als je ooit op communityservers in Garry's Mod of Counter-Strike hebt gespeeld, heb je gezien hoe een server van map wisselt en elke speler die downloadt en laadt. Games werken hier op dezelfde manier.",
+        "Games hebben nog steeds hun eigen maps, maar het laden van een map en het laden van een game verlopen onder de motorkap bijna via hetzelfde mechanisme.",
+      ],
+      strong: "meerdere games",
+      nextRound: "volgende ronde",
+      buildNight: "bouwavond",
+      connected: "12 spelers de hele tijd verbonden",
+    },
+    cdn: {
+      title: "Content komt vanzelf binnen",
+      body:
+        "Wanneer de game of map wisselt, downloaden spelers automatisch wat ze nodig hebben van het wereldwijde CDN van het platform. Het CDN synchroniseert bestanden uit {assets} op The Modding Community, geordend onder Godot of de game waarvoor de content is gemaakt, met versies en tags die sterk lijken op die van GitHub, voor beveiliging, uitrol en conflicten.",
+      assets: "Assets",
+      player: "Speler",
+    },
+    open: {
+      title: "Gratis en open source",
+      body:
+        "Elke game, mappack en addon is open source op GitHub. Lees hoe iets werkt, draai je eigen server of leen een onderdeel voor je eigen game.",
+      org: "zees-games op GitHub",
+      aiTitle: "Ja, ik gebruik AI",
+      aiBody: [
+        "De meeste van deze games zijn nog niet af en krijgen binnenkort veel meer aandacht. Ze zijn gemaakt met Claude Code, ook de conversie van maps uit oudere games (vermeld in de README van elke repository en op de pagina van elke map hier).",
+        "Ze zijn gratis, open source en meestal kleine minigames, en ik bouw ook het platform waarop ze draaien, wat nu al {em} tijd kost. AI maakt dat sneller. Ik wou dat ik het niet nodig had.",
+      ],
+      aLot: "veel",
+    },
+  },
+  notFound: {
+    title: "Elders respawnen",
+    body: "Deze pagina bestaat niet of is verplaatst.",
+    back: "Terug naar de games",
+  },
+}

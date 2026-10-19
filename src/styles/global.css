@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/space-grotesk';
+@import '@fontsource-variable/dm-sans';
+
+/*
+ * The palette is the banner's: neon cyan and amber over a deep navy, with the
+ * violet of its wireframe hills as the third accent. Dark only, on purpose.
+ */
+@theme {
+  --font-sans: 'DM Sans Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Space Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #05060f;
+  --color-night: #0a0d1f;
+  --color-panel: #10142b;
+  --color-panel-2: #161b38;
+  --color-line: #232a52;
+  --color-text: #e7ecff;
+  --color-muted: #9aa3c7;
+  --color-cyan: #2ee6ff;
+  --color-amber: #ffad33;
+  --color-violet: #9b6bff;
+}
+
+@layer base {
+  html { color-scheme: dark; scroll-behavior: smooth; }
+  body { @apply bg-ink text-text font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-display tracking-tight; }
+  ::selection { background: color-mix(in oklab, var(--color-cyan) 35%, transparent); }
+}
+
+@utility neon-cyan {
+  color: var(--color-cyan);
+  text-shadow: 0 0 6px color-mix(in oklab, var(--color-cyan) 70%, transparent), 0 0 24px color-mix(in oklab, var(--color-cyan) 40%, transparent);
+}
+@utility neon-amber {
+  color: var(--color-amber);
+  text-shadow: 0 0 6px color-mix(in oklab, var(--color-amber) 70%, transparent), 0 0 24px color-mix(in oklab, var(--color-amber) 40%, transparent);
+}
+
+/* The synthwave floor: a perspective grid fading into the horizon. */
+@utility grid-floor {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-violet) 35%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-cyan) 25%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(420px) rotateX(62deg);
+  transform-origin: center top;
+  mask-image: linear-gradient(to bottom, transparent, black 30%, black 60%, transparent);
+}
+
+@utility glow-card {
+  @apply rounded-2xl border border-line bg-panel/80 backdrop-blur transition duration-300;
+  &:hover {
+    border-color: color-mix(in oklab, var(--color-cyan) 55%, var(--color-line));
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-cyan) 25%, transparent), 0 18px 50px -20px color-mix(in oklab, var(--color-cyan) 45%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

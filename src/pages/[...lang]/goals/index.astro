@@ -1,0 +1,188 @@
+---
+import Layout from '../../../layouts/Layout.astro'
+import {
+  Sparkles, Server, SlidersHorizontal, Shuffle, CloudDownload,
+  GitBranch, Bot, Globe, Monitor, Smartphone, ArrowRight, Map, Package,
+} from 'lucide-react'
+import { GITHUB_ORG, TmcHref } from '../../../lib/site'
+import { LocalePaths, type Locale } from '../../../i18n/config'
+import { Escape, Rich, UseI18n } from '../../../i18n'
+
+export const getStaticPaths = LocalePaths
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t } = UseI18n(locale)
+const G = t.goals
+
+const DEPLOY = 'https://github.com/modcommunity/dot-server-deploy'
+const LINK = 'text-cyan underline decoration-cyan/40 underline-offset-4 hover:decoration-cyan'
+const strong = (s: string) => `<strong class="text-text">${Escape(s)}</strong>`
+const TILE_COLOR = (i: number) => (i % 4 === 0 ? 'text-cyan' : i % 4 === 2 ? 'text-amber' : 'text-text')
+const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-cyan']] as const
+---
+
+<Layout locale={locale} title={t.meta.goalsTitle} description={t.meta.goalsDescription}>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden border-b border-line/60">
+    <img src="/images/card01.jpg" alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-30" />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/40 via-ink/80 to-ink"></div>
+    <div class="mx-auto max-w-5xl px-4 py-24 text-center sm:px-6 sm:py-32">
+      <p class="inline-flex items-center gap-2 rounded-full border border-violet/40 bg-violet/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-violet">
+        <Sparkles className="size-3.5" aria-hidden="true" /> {G.eyebrow}
+      </p>
+      <h1 class="mt-6 text-4xl font-bold sm:text-6xl">
+        {G.title} <span class="neon-amber">{G.titleAccent}</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-muted">{G.intro}</p>
+    </div>
+  </section>
+
+  <div class="mx-auto max-w-6xl space-y-28 px-4 pt-20 sm:px-6">
+
+    <!-- 1. Demonstration first -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">01</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.demo.title}</h2>
+        {G.demo.body.map((para) => <p class="mt-4 leading-relaxed text-muted">{para}</p>)}
+      </div>
+      <div class="grid grid-cols-3 gap-3" aria-hidden="true">
+        {G.demo.tiles.map((label, i) => (
+          <div class:list={['glow-card flex aspect-square flex-col items-center justify-center gap-2 p-3 text-center text-xs font-semibold sm:text-sm', TILE_COLOR(i)]}>
+            <span class="size-2 rounded-full bg-current shadow-[0_0_12px_currentColor]"></span>
+            {label}
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 2. Community servers -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div class="md:order-2">
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">02</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.community.title}</h2>
+        <p class="mt-4 leading-relaxed text-muted" set:html={Rich(G.community.body, {
+          strong: strong(G.community.strong),
+          deploy: `<a href="${DEPLOY}" class="${LINK}">${Escape(G.community.deploy)}</a>`,
+        })} />
+      </div>
+      <div class="glow-card relative overflow-hidden p-6 md:order-1" aria-hidden="true">
+        <div class="absolute -right-16 -top-16 size-48 rounded-full bg-cyan/20 blur-3xl"></div>
+        <div class="relative space-y-3">
+          {[['zee-arena-01', 'Arena · GunGame', 'text-cyan'], ['surf-heaven', 'G2g Fast · Surf', 'text-amber'], ['friday-night-mg', 'Smash Copter · Buses From Hell', 'text-violet']].map(([host, game, color]) => (
+            <div class="flex items-center gap-4 rounded-xl border border-line bg-night/80 px-4 py-3">
+              <Server className={`size-5 shrink-0 ${color}`} />
+              <div class="min-w-0">
+                <p class="truncate font-mono text-sm">{host}</p>
+                <p class="truncate text-xs text-muted">{game}</p>
+              </div>
+              <span class="ml-auto flex items-center gap-1.5 text-xs text-emerald-400"><span class="size-2 rounded-full bg-emerald-400 shadow-[0_0_8px_currentColor]"></span>{G.community.online}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Your server, your rules -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">03</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.rules.title}</h2>
+        <p class="mt-4 leading-relaxed text-muted">{G.rules.body}</p>
+      </div>
+      <div class="glow-card space-y-5 p-6" aria-hidden="true">
+        {G.rules.sliders.map((label, i) => {
+          const [value, color] = SLIDERS[i % SLIDERS.length]
+          return (
+            <div>
+              <div class="mb-2 flex items-center justify-between text-sm"><span class="flex items-center gap-2"><SlidersHorizontal className="size-4 text-muted" />{label}</span><span class="font-mono text-muted">{value}%</span></div>
+              <div class="h-2 rounded-full bg-night"><div class={`h-2 rounded-full ${color} shadow-[0_0_12px_currentColor]`} style={`width:${value}%`}></div></div>
+            </div>
+          )
+        })}
+      </div>
+    </section>
+
+    <!-- 4. Play anywhere -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div class="md:order-2">
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">04</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.anywhere.title}</h2>
+        <p class="mt-4 leading-relaxed text-muted">{G.anywhere.body}</p>
+        <a href={TmcHref('/play', locale)} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{G.anywhere.browse} <ArrowRight className="size-4" /></a>
+      </div>
+      <div class="grid grid-cols-3 gap-4 md:order-1" aria-hidden="true">
+        {([[Globe, G.anywhere.browser, 'text-cyan'], [Monitor, G.anywhere.desktop, 'text-amber'], [Smartphone, G.anywhere.mobile, 'text-violet']] as const).map(([Icon, label, color]) => (
+          <div class="glow-card flex flex-col items-center gap-3 px-3 py-8">
+            <Icon className={`size-10 ${color}`} />
+            <span class="text-center text-sm font-semibold">{label}</span>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- 5. Multi-game servers -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div>
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">05</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.multi.title}</h2>
+        {G.multi.body.map((para) => <p class="mt-4 leading-relaxed text-muted" set:html={Rich(para, { strong: strong(G.multi.strong) })} />)}
+      </div>
+      <div class="glow-card p-6" aria-hidden="true">
+        <div class="flex items-center justify-between gap-2 text-center text-xs font-semibold sm:text-sm">
+          <div class="flex-1 rounded-xl border border-cyan/40 bg-cyan/10 px-2 py-4 text-cyan">Arena<br /><span class="font-normal text-muted">dm_rooftops</span></div>
+          <Shuffle className="size-6 shrink-0 text-muted" />
+          <div class="flex-1 rounded-xl border border-amber/40 bg-amber/10 px-2 py-4 text-amber">Smash Copter<br /><span class="font-normal text-muted">{G.multi.nextRound}</span></div>
+          <Shuffle className="size-6 shrink-0 text-muted" />
+          <div class="flex-1 rounded-xl border border-violet/40 bg-violet/10 px-2 py-4 text-violet">Playground<br /><span class="font-normal text-muted">{G.multi.buildNight}</span></div>
+        </div>
+        <p class="mt-5 text-center text-sm text-muted">{G.multi.connected}</p>
+      </div>
+    </section>
+
+    <!-- 6. Global CDN -->
+    <section class="grid items-center gap-10 md:grid-cols-2">
+      <div class="md:order-2">
+        <p class="font-display text-sm font-semibold tracking-widest text-cyan">06</p>
+        <h2 class="mt-2 text-3xl font-bold">{G.cdn.title}</h2>
+        <p class="mt-4 leading-relaxed text-muted" set:html={Rich(G.cdn.body, {
+          assets: `<a href="${TmcHref('/assets', locale)}" class="${LINK}">${Escape(G.cdn.assets)}</a>`,
+        })} />
+      </div>
+      <div class="glow-card p-6 md:order-1" aria-hidden="true">
+        <div class="flex items-center gap-3">
+          {([[Package, G.cdn.assets, 'text-amber'], [GitBranch, 'v1.4.2', 'text-violet'], [CloudDownload, 'CDN', 'text-cyan'], [Map, G.cdn.player, 'text-text']] as const).map(([Icon, label, color], i) => (
+            <>
+              {i > 0 && <span class="h-px flex-1 bg-gradient-to-r from-line via-cyan/60 to-line"></span>}
+              <div class="flex flex-col items-center gap-2">
+                <span class="grid size-12 place-items-center rounded-xl border border-line bg-night"><Icon className={`size-6 ${color}`} /></span>
+                <span class="text-xs text-muted">{label}</span>
+              </div>
+            </>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Open source -->
+    <section class="glow-card relative overflow-hidden p-8 sm:p-12">
+      <div class="absolute -left-20 -top-20 size-72 rounded-full bg-violet/20 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-10 size-72 rounded-full bg-amber/10 blur-3xl"></div>
+      <div class="relative grid gap-10 md:grid-cols-2">
+        <div>
+          <p class="font-display text-sm font-semibold tracking-widest text-cyan">07</p>
+          <h2 class="mt-2 text-3xl font-bold">{G.open.title}</h2>
+          <p class="mt-4 leading-relaxed text-muted">{G.open.body}</p>
+          <a href={GITHUB_ORG} class="mt-6 inline-flex items-center gap-2 rounded-lg border border-line bg-night px-4 py-2 text-sm font-semibold hover:border-cyan/60">
+            {G.open.org} <ArrowRight className="size-4" />
+          </a>
+        </div>
+        <div>
+          <h3 class="flex items-center gap-2 text-xl font-bold"><Bot className="size-5 text-amber" /> {G.open.aiTitle}</h3>
+          {G.open.aiBody.map((para) => <p class="mt-4 leading-relaxed text-muted" set:html={Rich(para, { em: `<em>${Escape(G.open.aLot)}</em>` })} />)}
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

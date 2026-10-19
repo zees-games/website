@@ -1,0 +1,110 @@
+---
+import { FaGithub } from 'react-icons/fa6'
+import Layout from '../../layouts/Layout.astro'
+import GameCard from '../../components/GameCard.astro'
+import { GAMES } from '../../data/games'
+import { GITHUB_ORG, TmcHref } from '../../lib/site'
+import { LocalePaths, type Locale } from '../../i18n/config'
+import { Escape, Rich, UseI18n } from '../../i18n'
+import { Play, Target, Server, Globe, Shuffle, Code2, ArrowRight } from 'lucide-react'
+
+export const getStaticPaths = LocalePaths
+
+interface Props { locale: Locale }
+const { locale } = Astro.props
+const { t, p, n } = UseI18n(locale)
+
+const live = GAMES.filter((g) => g.server)
+const more = GAMES.filter((g) => !g.server)
+const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.home.tmc)}</a>`
+const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, 'text-violet'], [Code2, 'text-cyan']] as const
+---
+
+<Layout locale={locale} title="Zee's Games" description={t.meta.siteDescription}>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden">
+    <div class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[55%] overflow-hidden" aria-hidden="true">
+      <div class="grid-floor absolute -inset-x-1/2 top-0 h-[200%]"></div>
+    </div>
+    <div class="pointer-events-none absolute left-1/2 top-24 -z-10 size-[42rem] -translate-x-1/2 rounded-full bg-violet/20 blur-[120px]" aria-hidden="true"></div>
+
+    <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-24 pt-16 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:pt-24">
+      <div>
+        <p class="inline-flex items-center gap-2 rounded-full border border-cyan/30 bg-cyan/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-cyan">
+          {t.home.eyebrow}
+        </p>
+        <h1 class="mt-6 text-5xl font-bold leading-[1.05] sm:text-7xl">
+          <span class="neon-cyan">Zee's</span> <span class="neon-amber">Games</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted" set:html={Rich(t.home.intro, { tmc: tmcLink })} />
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="#games" class="inline-flex items-center gap-2 rounded-xl bg-cyan px-6 py-3 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-cyan)] transition hover:brightness-110">
+            <Play className="size-5 fill-current" aria-hidden="true" /> {t.home.pickGame}
+          </a>
+          <a href={p('/goals')} class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel px-6 py-3 font-semibold transition hover:border-amber/60">
+            <Target className="size-5 text-amber" aria-hidden="true" /> {t.home.myGoals}
+          </a>
+          <a href={GITHUB_ORG} class="inline-flex items-center gap-2 rounded-xl border border-line bg-panel px-6 py-3 font-semibold transition hover:border-violet/60">
+            <FaGithub className="size-5 text-violet" aria-hidden="true" /> GitHub
+          </a>
+        </div>
+        <dl class="mt-12 grid max-w-md grid-cols-3 gap-6">
+          <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statGames}</dt><dd class="font-display text-3xl font-bold text-cyan">{n(GAMES.length)}</dd></div>
+          <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statServers}</dt><dd class="font-display text-3xl font-bold text-amber">{n(live.length)}</dd></div>
+          <div><dt class="text-xs uppercase tracking-widest text-muted">{t.home.statPrice}</dt><dd class="font-display text-3xl font-bold text-violet">{t.home.free}</dd></div>
+        </dl>
+      </div>
+
+      <div class="relative">
+        <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-cyan/30 via-violet/20 to-amber/30 blur-2xl" aria-hidden="true"></div>
+        <img src="/images/banner01.jpg" alt={t.meta.bannerAlt} width="1376" height="768" class="w-full rounded-2xl border border-line shadow-2xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Games -->
+  <section id="games" class="mx-auto max-w-7xl scroll-mt-20 px-4 sm:px-6">
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 class="text-3xl font-bold sm:text-4xl">{t.home.runningTitle}</h2>
+        <p class="mt-2 text-muted">{t.home.runningBody}</p>
+      </div>
+      <a href={TmcHref('/play', locale)} class="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan hover:underline">{t.home.allOnTmc} <ArrowRight className="size-4" /></a>
+    </div>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {live.map((g) => <GameCard game={g} locale={locale} />)}
+    </div>
+
+    <h2 class="mt-20 text-3xl font-bold sm:text-4xl">{t.home.worksTitle}</h2>
+    <p class="mt-2 text-muted">{t.home.worksBody}</p>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {more.map((g) => <GameCard game={g} locale={locale} />)}
+    </div>
+  </section>
+
+  <!-- Powered by TMC -->
+  <section class="mx-auto mt-28 max-w-7xl px-4 sm:px-6">
+    <div class="glow-card relative overflow-hidden p-8 sm:p-12">
+      <div class="absolute -right-24 -top-24 size-80 rounded-full bg-cyan/15 blur-3xl" aria-hidden="true"></div>
+      <div class="relative grid gap-10 lg:grid-cols-[1fr_1.3fr]">
+        <div>
+          <h2 class="text-3xl font-bold">{t.home.poweredTitle}</h2>
+          <p class="mt-4 leading-relaxed text-muted">{t.home.poweredBody}</p>
+          <a href={p('/goals')} class="mt-6 inline-flex items-center gap-2 font-semibold text-amber hover:underline">{t.home.readGoals} <ArrowRight className="size-4" /></a>
+        </div>
+        <ul class="grid gap-4 sm:grid-cols-2">
+          {t.home.features.map((f, i) => {
+            const [Icon, color] = FEATURE_STYLE[i % FEATURE_STYLE.length]
+            return (
+              <li class="rounded-xl border border-line bg-night/70 p-5">
+                <Icon className={`size-6 ${color}`} aria-hidden="true" />
+                <p class="mt-3 font-semibold">{f.title}</p>
+                <p class="mt-1 text-sm text-muted">{f.body}</p>
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>
