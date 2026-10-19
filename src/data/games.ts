@@ -35,12 +35,12 @@ export const GAMES: Game[] = [
   { slug: 'smash-copter', title: "Smash Copter", kind: 'minigame', repo: 'mg-smash-copter', server: 'smash01', accent: 'violet' },
   { slug: 'zombie-zone', title: "Zombie Zone", kind: 'game', repo: 'game-zombie-zone', mapsRepo: 'zombie-zone-maps', accent: 'amber' },
   { slug: 'hide-n-seek', title: "Hide n Seek", kind: 'game', repo: 'game-hide-n-seek', mapsRepo: 'hide-n-seek-maps', accent: 'cyan' },
-  { slug: 'prop-hunt', title: "Prop Hunt", kind: 'minigame', repo: 'game-prop-hunt', mapsRepo: 'mg-prop-hunt-maps', accent: 'violet' },
+  { slug: 'prop-hunt', title: "Prop Hunt", kind: 'game', repo: 'game-prop-hunt', mapsRepo: 'mg-prop-hunt-maps', accent: 'violet' },
   { slug: 'murder-mystery', title: "Murder Mystery", kind: 'game', repo: 'game-murder-mystery', mapsRepo: 'murder-mystery-maps', accent: 'amber' },
-  { slug: 'deathrun', title: "Deathrun", kind: 'minigame', repo: 'game-deathrun', mapsRepo: 'mg-deathrun-maps', accent: 'cyan' },
+  { slug: 'deathrun', title: "Deathrun", kind: 'game', repo: 'game-deathrun', mapsRepo: 'mg-deathrun-maps', accent: 'cyan' },
   { slug: 'wipeout', title: "Wipeout", kind: 'minigame', repo: 'mg-wipeout', mapsRepo: 'mg-wipeout-maps', accent: 'amber' },
-  { slug: 'dangerous-delivery', title: "Dangerous Delivery", kind: 'minigame', repo: 'mg-dangerous-delivery', accent: 'violet' },
-  { slug: 'look-at-me', title: "Look At Me", kind: 'minigame', repo: 'mg-look-at-me', accent: 'cyan' },
+  { slug: 'dangerous-delivery', title: "Dangerous Delivery", kind: 'game', repo: 'mg-dangerous-delivery', accent: 'violet' },
+  { slug: 'look-at-me', title: "Look At Me", kind: 'game', repo: 'mg-look-at-me', accent: 'cyan' },
 ]
 
 export const GameBySlug = (slug: string) => GAMES.find((g) => g.slug === slug)
