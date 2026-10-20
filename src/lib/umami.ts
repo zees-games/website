@@ -39,7 +39,7 @@ export const UMAMI_EVENTS = [
   'discord',
 
   /* Moving around: which entry into a game gets used. */
-  /** A game card (`place`: running | works | more), carrying the game. */
+  /** A game card (`place`: games | minigames | more), carrying the game. */
   'game_card',
   /** A map thumbnail on a game page, which deep-links into its maps page. */
   'map_preview',

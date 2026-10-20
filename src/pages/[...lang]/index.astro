@@ -3,7 +3,7 @@ import { Asset } from '../../lib/asset'
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../layouts/Layout.astro'
 import GameCard from '../../components/GameCard.astro'
-import { GAMES } from '../../data/games'
+import { GAMES, type GameKind } from '../../data/games'
 import { SERVERS, ServersFor } from '../../data/servers'
 import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../lib/site'
 import { LocalePaths, type Locale } from '../../i18n/config'
@@ -18,8 +18,10 @@ interface Props { locale: Locale }
 const { locale } = Astro.props
 const { t, p, n } = UseI18n(locale)
 
-const live = GAMES.filter((g) => ServersFor(g.slug).length > 0)
-const more = GAMES.filter((g) => ServersFor(g.slug).length === 0)
+// Each list puts the games with a server of mine first, keeping GAMES' order otherwise.
+const byServer = (kind: GameKind) => GAMES.filter((g) => g.kind === kind).sort((a, b) => Number(ServersFor(b.slug).length > 0) - Number(ServersFor(a.slug).length > 0))
+const full = byServer('game')
+const minis = byServer('minigame')
 const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.home.tmc)}</a>`
 const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, 'text-violet'], [Code2, 'text-cyan']] as const
 ---
@@ -70,8 +72,8 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
   <section id="games" class="mx-auto max-w-7xl scroll-mt-20 px-4 sm:px-6">
     <div class="flex flex-wrap items-end justify-between gap-4">
       <div>
-        <h2 class="text-3xl font-bold sm:text-4xl">{t.home.runningTitle}</h2>
-        <p class="mt-2 text-muted">{t.home.runningBody}</p>
+        <h2 class="text-3xl font-bold sm:text-4xl">{t.home.gamesTitle}</h2>
+        <p class="mt-2 text-muted">{t.home.gamesBody}</p>
       </div>
       <div class="flex flex-wrap items-center gap-5">
         <a href={p('/servers')} class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 hover:underline">{t.home.allServers} <ArrowRight className="size-4" /></a>
@@ -79,13 +81,13 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
       </div>
     </div>
     <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-      {live.map((g) => <GameCard game={g} locale={locale} place="running" />)}
+      {full.map((g) => <GameCard game={g} locale={locale} place="games" />)}
     </div>
 
-    <h2 class="mt-20 text-3xl font-bold sm:text-4xl">{t.home.worksTitle}</h2>
-    <p class="mt-2 text-muted">{t.home.worksBody}</p>
-    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-      {more.map((g) => <GameCard game={g} locale={locale} place="works" />)}
+    <h2 class="mt-20 text-3xl font-bold sm:text-4xl">{t.home.minigamesTitle}</h2>
+    <p class="mt-2 max-w-3xl text-muted">{t.home.minigamesBody}</p>
+    <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {minis.map((g) => <GameCard game={g} locale={locale} place="minigames" />)}
     </div>
   </section>
 
