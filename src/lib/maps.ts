@@ -1,3 +1,4 @@
+import { Asset } from './asset'
 import mapsData from '../data/maps.json'
 import originalsData from '../data/originals.json'
 import { GameBySlug } from '../data/games'
@@ -43,7 +44,10 @@ export function MapsFor(slug: string): { repo: string; maps: MapEntry[] } | null
   if (!repo || !pack || pack.maps.length === 0) return null
   return {
     repo,
-    maps: pack.maps.map((m) => ({ ...m, original: m.originalMap ? originals[m.originalMap] ?? null : null })),
+    maps: pack.maps.map((m) => {
+      const original = m.originalMap ? originals[m.originalMap] ?? null : null
+      return { ...m, image: m.image && Asset(m.image), original: original && { ...original, image: Asset(original.image) } }
+    }),
   }
 }
 

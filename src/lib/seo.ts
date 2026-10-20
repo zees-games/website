@@ -1,3 +1,4 @@
+import { Asset } from './asset'
 import type { Game } from '../data/games'
 import type { GameText } from '../i18n/games/en'
 import { LANG_TAG, LocalizePath, type Locale } from '../i18n/config'
@@ -61,7 +62,7 @@ export function GameLd(game: Game, text: GameText, locale: Locale): JsonLd {
     name: game.title,
     url: page(`/${game.slug}`, locale),
     description: `${text.tagline} ${text.summary[0] ?? ''}`.trim(),
-    image: [abs(`/og/${game.slug}.jpg`), abs(`/images/games/${game.slug}.webp`)],
+    image: [abs(Asset(`/og/${game.slug}.jpg`)), abs(Asset(`/images/games/${game.slug}.webp`))],
     inLanguage: LANG_TAG[locale],
     genre: text.modes,
     playMode: 'MultiPlayer',

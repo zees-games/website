@@ -1,4 +1,5 @@
 ---
+import { Asset } from '../../../lib/asset'
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../../layouts/Layout.astro'
 import PlayButtons from '../../../components/PlayButtons.astro'
@@ -30,7 +31,7 @@ const maps = MapsFor(game.slug)
 // The six shots that read best as thumbnails; alphabetical order put near-black ones first.
 const preview = maps?.maps.filter((m) => m.image).sort((x, y) => (y.score ?? 0) - (x.score ?? 0)).slice(0, 6) ?? []
 const others = GAMES.filter((o) => o.slug !== game.slug).slice(0, 4)
-const cover = `/images/games/${game.slug}.webp`
+const cover = Asset(`/images/games/${game.slug}.webp`)
 const mapsPath = p(`/${game.slug}/maps`)
 const servers = ServersFor(game.slug)
 ---

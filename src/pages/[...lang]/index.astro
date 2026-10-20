@@ -1,4 +1,5 @@
 ---
+import { Asset } from '../../lib/asset'
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../layouts/Layout.astro'
 import GameCard from '../../components/GameCard.astro'
@@ -60,7 +61,7 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
 
       <div class="relative">
         <div class="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-tr from-cyan/30 via-violet/20 to-amber/30 blur-2xl" aria-hidden="true"></div>
-        <img src="/images/banner01.jpg" alt={t.meta.bannerAlt} width="1376" height="768" class="w-full rounded-2xl border border-line shadow-2xl" />
+        <img src={Asset('/images/banner01.jpg')} alt={t.meta.bannerAlt} width="1376" height="768" class="w-full rounded-2xl border border-line shadow-2xl" />
       </div>
     </div>
   </section>

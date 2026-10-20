@@ -1,4 +1,5 @@
 ---
+import { Asset } from '../lib/asset'
 import { ArrowUpRight, Map } from 'lucide-react'
 import type { Game } from '../data/games'
 import { ACCENT } from '../lib/accent'
@@ -19,7 +20,7 @@ const hasServer = ServersFor(game.slug).length > 0
 <a href={p(`/${game.slug}`)} {...Ev('game_card', { game: game.slug, place })} class="glow-card group relative flex flex-col overflow-hidden">
   <div class="relative aspect-[16/10] overflow-hidden">
     <img
-      src={`/images/games/${game.slug}.webp`}
+      src={Asset(`/images/games/${game.slug}.webp`)}
       alt={Fmt(t.card.coverAlt, { title: game.title })}
       loading="lazy"
       decoding="async"

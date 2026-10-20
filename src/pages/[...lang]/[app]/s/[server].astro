@@ -1,4 +1,5 @@
 ---
+import { Asset } from '../../../../lib/asset'
 import { ArrowRight, ExternalLink, Gamepad2, Keyboard, MessageSquareOff, Play, Shuffle } from 'lucide-react'
 import Layout from '../../../../layouts/Layout.astro'
 import CopyAddress from '../../../../components/CopyAddress.astro'
@@ -43,7 +44,7 @@ const others = SERVERS.filter((s) => s.id !== server.id).slice(0, 3)
   jsonLd={[BreadcrumbLd(locale, [[t.meta.serversTitle, '/servers'], [server.name, ServerPath(server)]])]}
 >
   <section class="relative isolate overflow-hidden border-b border-line/60">
-    {game && <img src={`/images/games/${game.slug}.webp`} alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-35" />}
+    {game && <img src={Asset(`/images/games/${game.slug}.webp`)} alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-35" />}
     <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/90 to-ink/40"></div>
     <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
     <div class="mx-auto max-w-7xl px-4 pb-14 pt-16 sm:px-6 sm:pt-24">

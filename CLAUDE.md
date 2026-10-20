@@ -12,6 +12,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 | `src/layouts/Layout.astro`, `src/components/*` | The one layout, header, footer, game card, play buttons, server card, copy-address button, `Controls` + `Key` (keycaps), `PlayerCommands` |
 | `src/styles/global.css` | The theme (`@theme` tokens from the org banner: ink/panel, cyan, amber, violet) and the few custom utilities |
 | `src/lib/site.ts` | Every origin and every link into TMC and GitHub |
+| `src/lib/asset.ts` | `Asset()`: cache-busted URLs for files in `public/` |
 | `src/lib/umami.ts`, `src/components/UmamiAnalytics.astro` | The Umami event registry (`Ev()` for links, `track()` for scripts) and the snippet |
 | `src/lib/seo.ts`, `src/pages/{robots.txt,site.webmanifest}.ts` | JSON-LD builders (`SiteLd`, `GameLd`, `BreadcrumbLd`) that `Layout` renders from its `jsonLd` prop; robots and the install manifest |
 | `scripts/gen-brand.mjs` (`npm run brand`) | Renders the icon set into `public/` and the 1200×630 share banners into `public/og/` (`site.jpg`, one per game) with Playwright's Chromium (`npx playwright install chromium` once) |
@@ -40,6 +41,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 - Every Play / Play Now / play-solo button goes to TMC (`TmcPlayHref` = `TMC_URL/<slug>/play`, quick play; `TmcServerPlayHref` = `TMC_URL/<app>/s/<tmcId>/play` for one of Zee's servers). This site never launches a game itself.
 - A server's page is `/<app>/s/<id>`, where `id` is its subdomain under `zeesgames.com` (its address is `<id>.zeesgames.com:<port>`) and `app` its TMC app url; multi-game servers sit under `godot`. A new server is a row in `SERVERS`, with its `tmcId` from TMC (`/api/app/v1/servers/lookup?host=&port=`).
 - The Controls section mirrors each game's help screen: when a game's key table changes, update `src/data/controls.ts` and add any new label to all nine `src/i18n/controls/*.ts`. Keys render through `Key.astro`, never as bare text.
+- Every image in `public/` is linked through `Asset(path)` (`src/lib/asset.ts`), which appends a content hash: images are cached for a week by Cloudflare and browsers, so a changed cover or map shot only shows up under a new URL.
 - Every origin is a `PUBLIC_*` var in `src/lib/site.ts` with a production default. It is inlined at build, so it can never be a secret, and changing it needs a rebuild.
 - Summaries say what a game does today, taken from its README. The games are platform demos that are made for fun, and the copy keeps both; it says they were made for fun, never claims they are fun.
 - Original-map screenshots are third-party: always shown with their source link, never claimed as ours, and excluded from the MIT licence (`LICENSE`).
