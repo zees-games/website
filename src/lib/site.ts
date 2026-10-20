@@ -35,6 +35,13 @@ export const TmcPlayHref = (slug: string, locale: Locale) => TmcHref(`/${slug}/p
 /** A game's servers on TMC. */
 export const TmcServersHref = (slug: string, locale: Locale) => TmcHref(`/${slug}/servers/browse`, locale)
 
+/** What TMC says and plans about a game, at `/<slug>/<surface>` there. */
+export const TMC_SURFACES = ['roadmap', 'changelog', 'bugs'] as const
+export type TmcSurface = (typeof TMC_SURFACES)[number]
+
+/** A game's roadmap, changelog or bug tracker on TMC. */
+export const TmcSurfaceHref = (slug: string, surface: TmcSurface, locale: Locale) => TmcHref(`/${slug}/${surface}`, locale)
+
 /** One of Zee's servers on TMC: its page there. */
 export const TmcServerHref = (s: ZeeServer, locale: Locale) => TmcHref(`/${s.app}/s/${s.tmcId}`, locale)
 

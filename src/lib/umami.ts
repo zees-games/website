@@ -26,6 +26,8 @@ export const UMAMI_EVENTS = [
   'tmc_game',
   /** A game's server browser on TMC. */
   'tmc_servers',
+  /** A game's roadmap, changelog or bug tracker on TMC (`surface`: roadmap | changelog | bugs). */
+  'tmc_surface',
   /** The generic "Play on TMC" / "all games on TMC" links (`place`: header, menu, home, goals, footer). */
   'tmc_play',
 
