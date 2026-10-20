@@ -150,7 +150,7 @@
         "id": "surf_japan_ptad",
         "name": "Japan Ptad",
         "image": "/images/maps/arena/surf_japan_ptad.webp",
-        "score": 40,
+        "score": 70,
         "author": "ptad, monkeydie",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_japan_ptad"
@@ -578,7 +578,7 @@
         "id": "bhop_sqee",
         "name": "Sqee",
         "image": "/images/maps/g2gfast/bhop_sqee.webp",
-        "score": 39,
+        "score": 42,
         "author": "sQee, QuiSt, KorYouZ, lólmarcel, dawn, Ray-on.NoOb, nairda",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "bhop_sqee"
@@ -713,7 +713,7 @@
         "id": "surf_greensway",
         "name": "Greensway",
         "image": "/images/maps/g2gfast/surf_greensway.webp",
-        "score": 45,
+        "score": 74,
         "author": "NvC_DmN_CH",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_greensway"
@@ -722,7 +722,7 @@
         "id": "surf_hologram",
         "name": "Hologram",
         "image": "/images/maps/g2gfast/surf_hologram.webp",
-        "score": 75,
+        "score": 91,
         "author": "Chent",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_hologram"

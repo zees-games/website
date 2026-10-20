@@ -20,7 +20,8 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 | `src/data/servers.ts` | Zee's servers (subdomain id, app, TMC server id, name, port), by hand from TMC's server list |
 | `src/data/controls.ts` | Each game's default keys, from its in-game help screen (`*_bindings.gd` on x-tmc-dev02) |
 | `src/data/maps.json`, `originals.json` | Generated map data; see Data below |
-| `public/images/{games,maps,originals}` | Covers, in-game map shots, original-map shots (WebP) |
+| `public/images/{games,maps,originals}` | Covers (1920×1080, rendered by the banner kit on x-tmc-dev02), in-game map shots, original-map shots (WebP) |
+| `scripts/map-views.json`, `scripts/map-shot/` | Per-map camera poses matching each original's screenshot, and the renderer that re-shoots them on x-tmc-dev02 |
 | `Dockerfile`, `docker-compose.yml`, `docker/`, `.env.ex` | Deployment, at the repo root like website-learn |
 
 ## Run and test
@@ -50,3 +51,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 ## Data
 
 `python3 scripts/gen-maps.py <dir> <repo-root>` rebuilds `maps.json` and the map WebPs from an inventory of the map repos on x-tmc-dev02 (`~/godot/*-maps`; `PACK` in the script maps each pack to its game, and packs not in it are skipped): `<dir>` holds `inventory.json` and the screenshots under `shots/` copied from dev02. Each map row carries a `score` (brightness + contrast of its shot), which picks the game page's six previews. `originals.json` comes from hand-checked web research; every entry keeps its `source`.
+
+A map with a pose in `scripts/map-views.json` is re-shot with `scripts/map-shot/run.sh scripts/map-views.json <arena|g2gfast> <outdir>` (usage at its top), then resized to 960 px WebP over its file in `public/images/maps/` and its `score` in `maps.json` recomputed. `gen-maps.py` only writes WebPs that do not exist, so a re-shot one survives it. Each pose's `note` lists what the view still lacks next to the original; filling those gaps is game-side work (Kenney stand-ins, never source textures).
+
+Game covers come from the Blender banner kit on x-tmc-dev02 (`~/banners/src`, README there): `build.sh <repo> cover` renders the scene text-free at 1920×1080 into `~/banners/covers/`; convert to WebP into `public/images/games/<slug>.webp`, then `npm run brand` for the share images. Never bake the title into a cover; the site prints it.

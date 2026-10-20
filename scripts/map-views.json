@@ -1,0 +1,98 @@
+{
+ "surf_skyworld": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   60,
+   75,
+   60
+  ],
+  "at": [
+   -40,
+   25,
+   0
+  ],
+  "fov": 65,
+  "note": "Sea/island view from the high corner. Missing: textured sky (flat gradient), water is a flat plane, island props sparse."
+ },
+ "surf_japan_ptad": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   70,
+   35,
+   5
+  ],
+  "at": [
+   -10,
+   5,
+   0
+  ],
+  "fov": 75,
+  "note": "Ramps, canal, pagoda and tower from above. Missing: overcast rain sky and fog (clear blue instead), trees and crates on the grass strip, ramp shingle texture (prototype grid on tan), stone texture on the tower."
+ },
+ "surf_hologram": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   0,
+   300,
+   -218
+  ],
+  "at": [
+   55.7,
+   250.0,
+   -151.7
+  ],
+  "fov": 80,
+  "note": "Spawn room from a high corner. Missing: hologram emissive textures and skybox (CS2 prototype/untextured materials), props."
+ },
+ "surf_greensway": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   22.0,
+   24.0,
+   255.0
+  ],
+  "at": [
+   30.6,
+   6.6,
+   156.9
+  ],
+  "fov": 75,
+  "note": "Ramp over the chasm with candy canes and trees, as in the original. Missing: chocolate and wafer props on the deck, big marshmallow in the left foreground, sky banner text is a flat label, sparse far-field detail."
+ },
+ "bhop_sqee": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   139,
+   -44,
+   -36
+  ],
+  "at": [
+   115.0,
+   -81.5,
+   -125.6
+  ],
+  "fov": 70,
+  "note": "Fallback corridor: the original's (hard variant) area was not found in the port. Untextured prototype materials, no sky."
+ },
+ "surf_kitsune": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -223,
+   -30,
+   230
+  ],
+  "at": [
+   -214.5,
+   -50.8,
+   132.6
+  ],
+  "fov": 70,
+  "note": "Prototype/untextured CS2 materials, no skybox, foliage and lanterns missing."
+ }
+}
