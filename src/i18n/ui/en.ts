@@ -58,6 +58,10 @@ export const en = {
     sourceCode: 'Source code',
     madeWithGodot: 'Made with Godot',
     discord: "Discord server",
+    youtube: "Zee's Games on YouTube",
+    instagram: "Zee's Games on Instagram",
+    facebook: "Zee's Games on Facebook",
+    email: "Email Zee's Games",
     sourceOnGithub: 'Source code on GitHub',
     disclaimer:
       "Zee's Games is a personal project and not an official product of The Modding Community. Original maps belong to their authors; see each map's credits.",
@@ -101,6 +105,7 @@ export const en = {
     discordTitle: "Come hang out on Discord",
     discordBody: "Find people to play with, report bugs, suggest maps and see what is coming next.",
     discordCta: "Join the Discord",
+    followOn: "Follow us on",
     features: [
       { title: 'Community servers', body: 'Anyone can host a server, tune its settings and list it.' },
       { title: 'Play anywhere', body: 'Browser, desktop app or phone, all on the same servers.' },
@@ -329,7 +334,7 @@ export const en = {
       { name: "Mappers and modders", body: "The people who built the maps and mods, often for free and over many years: surf and bhop maps, minigame maps, zombie maps and total conversions, many of them more inventive than the games they ran in." },
       { name: "Community servers", body: "The server owners and communities who kept these modes alive, set their own rules and gave players a place to come back to, night after night." },
     ],
-    also: "Not everything comes from Source: Hungario takes after Agar.io, and Wipeout after the TV show.",
+    also: "Not everything comes from Source alone: Hungario takes after Agar.io, and Wipeout after the TV show as well as Counter-Strike: Source's course maps.",
     classicTitle: "Modes that have been around forever",
     classicBody: ["Many of these game modes are originals in the truest sense: they have been around for about as long as online games have. DeathRun, surf, bunny hop, zombie survival, hide and seek and prop hunt have been rebuilt in engine after engine, and nobody owns them.", "Zee's Games does not claim to have invented any of them. Each game here is the next rebuild of a mode people already love, made to run on a modern, open platform."],
     modes: ["DeathRun", "Surf", "Bunny hop", "Zombie survival", "Hide and seek", "Prop hunt", "Murder", "GunGame", "Minigames"],

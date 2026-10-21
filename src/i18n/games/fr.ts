@@ -158,7 +158,7 @@ export const fr: Record<GameSlug, GameText> = {
     tagline: 'Parcours d’obstacles au-dessus de l’eau : bras balayeurs, grosses boules et combat final.',
     summary: [
       'Courez sur des parcours d’obstacles construits au-dessus de l’eau : bras balayeurs, grosses boules, rondins roulants, marteaux et sols qui s’effondrent. Tomber à l’eau vous renvoie au dernier point de contrôle.',
-      'Si plusieurs joueurs franchissent la ligne, ils s’affrontent dans une arène aléatoire jusqu’à ce qu’il n’en reste qu’un. Inspiré de l’émission télévisée classique.',
+      "Si plusieurs joueurs franchissent la ligne, ils s’affrontent dans une arène aléatoire jusqu’à ce qu’il n’en reste qu’un. Inspiré de l’émission télévisée classique et des cartes de parcours de Counter-Strike: Source.",
     ],
     howToPlay: [
       'Chronométrez vos sauts pour passer chaque obstacle.',
@@ -166,7 +166,7 @@ export const fr: Record<GameSlug, GameText> = {
       'Terminez le parcours, puis remportez la finale dans l’arène.',
     ],
     modes: ['Course d’obstacles', 'Finale en arène'],
-    inspiredBy: 'Wipeout, l’émission télévisée',
+    inspiredBy: "Wipeout, l’émission télévisée, et les cartes de parcours de Counter-Strike: Source",
   },
   'dangerous-delivery': {
     tagline: 'Transportez des chargements sur des routes de montagne sans garde-fou. Plus c’est risqué, mieux ça paie.',
@@ -182,15 +182,15 @@ export const fr: Record<GameSlug, GameText> = {
     modes: ['Livraisons'],
   },
   'look-at-me': {
-    tagline: 'Une maison sombre de 32 niveaux de profondeur, et les sorcières qui arpentent ses pièces.',
+    tagline: "Deux maisons sombres, cinquante niveaux, et des sorcières dans chaque pièce.",
     summary: [
-      'Un jeu de semi-horreur. Avancez dans une maison sombre de 32 niveaux de profondeur pendant que des sorcières arpentent ses pièces. Ce sont des PNJ qui patrouillent chaque niveau, et chaque niveau est plus difficile que le précédent.',
-      'Trouvez ce qui ouvre la porte suivante avant que l’une d’elles ne vous regarde trop longtemps. Les cartes personnalisées sont prises en charge.',
+      "Un jeu semi-horrifique. Frayez-vous un chemin à travers deux maisons sombres, The House (32 niveaux) et The Asylum (18), pendant que des sorcières arpentent leurs pièces. Chaque niveau est une carte différente, avec ses propres pièces, ses portes verrouillées et ses rondes de sorcières, et chacun est plus difficile que le précédent : une sorcière au début, six plus rapides et plus perçantes à la fin.",
+      "Trouvez ce qui ouvre la porte suivante (une clé, un fusible, le code d’une note, de l’eau pour un feu) avant que l’une d’elles ne vous regarde trop longtemps. Un serveur joue une maison à la fois, et les joueurs votent pour la suivante. Les cartes personnalisées sont prises en charge.",
     ],
     howToPlay: [
-      'Trouvez l’objectif qui ouvre la porte suivante.',
+      "Trouvez ce qui ouvre la porte suivante : une clé, un fusible, un outil ou un code.",
       'Restez hors de vue des sorcières ; ne laissez pas l’une d’elles vous regarder longtemps.',
-      'Terminez les 32 niveaux.',
+      "Terminez tous les niveaux d’une maison pour gagner une couronne.",
     ],
     modes: ['Progression par niveaux'],
   },

@@ -47,6 +47,10 @@ export const nl: Messages = {
     sourceCode: "Broncode",
     madeWithGodot: "Gemaakt met Godot",
     discord: "Discord-server",
+    youtube: "Zee's Games op YouTube",
+    instagram: "Zee's Games op Instagram",
+    facebook: "Zee's Games op Facebook",
+    email: "Mail Zee's Games",
     sourceOnGithub: "Broncode op GitHub",
     disclaimer:
       "Zee's Games is een persoonlijk project en geen officieel product van The Modding Community. De originele maps zijn van hun makers; zie de vermelding bij elke map.",
@@ -90,6 +94,7 @@ export const nl: Messages = {
     discordTitle: "Kom erbij op Discord",
     discordBody: "Vind medespelers, meld bugs, stel maps voor en zie wat eraan komt.",
     discordCta: "Word lid van de Discord",
+    followOn: "Volg ons op",
     features: [
       { title: "Communityservers", body: "Iedereen kan een server hosten, de instellingen aanpassen en hem vermelden." },
       { title: "Overal spelen", body: "Browser, desktopapp of telefoon, allemaal op dezelfde servers." },
@@ -321,7 +326,7 @@ export const nl: Messages = {
       { name: "Mappers en modders", body: "De mensen die de maps en mods bouwden, vaak gratis en jarenlang: surf- en bhopmaps, minigamemaps, zombiemaps en total conversions, vaak inventiever dan de games waarin ze draaiden." },
       { name: "Communityservers", body: "De serverbeheerders en community’s die deze modi levend hielden, hun eigen regels maakten en spelers een plek gaven om avond na avond naar terug te keren." },
     ],
-    also: "Niet alles komt uit Source: Hungario is gebaseerd op Agar.io, en Wipeout op het tv-programma.",
+    also: "Niet alles komt alleen uit Source: Hungario is gebaseerd op Agar.io, en Wipeout op de tv-show en de parcoursmaps uit Counter-Strike: Source.",
     classicTitle: "Modi die al eeuwen bestaan",
     classicBody: ["Veel van deze spelmodi zijn originelen in de ware zin: ze bestaan bijna net zo lang als online games zelf. DeathRun, surf, bunny hop, zombieoverleving, verstoppertje en prop hunt zijn in de ene engine na de andere opnieuw gebouwd, en niemand is er eigenaar van.", "Zee's Games beweert geen van allemaal te hebben bedacht. Elke game hier is de volgende herbouw van een modus waar mensen al van houden, gemaakt voor een modern, open platform."],
     modes: ["DeathRun", "Surf", "Bunny hop", "Zombieoverleving", "Verstoppertje", "Prop hunt", "Murder", "GunGame", "Minigames"],

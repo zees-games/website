@@ -158,7 +158,7 @@ export const pt: Record<GameSlug, GameText> = {
     tagline: 'Percursos de obstáculos sobre a água: braços giratórios, bolas enormes e uma luta na meta.',
     summary: [
       'Corra por percursos de obstáculos construídos sobre a água: braços giratórios, bolas enormes, troncos rolantes, martelos e pisos que desaparecem. Cair à água leva-o de volta ao último ponto de controlo.',
-      'Se mais de um jogador chegar à meta, lutam numa arena aleatória até restar apenas um. Inspirado no clássico programa de televisão.',
+      "Se mais de um jogador chegar à meta, lutam numa arena aleatória até restar apenas um. Inspirado no clássico programa de televisão e nos mapas de percurso de Counter-Strike: Source.",
     ],
     howToPlay: [
       'Calcule os seus saltos para passar cada obstáculo.',
@@ -166,7 +166,7 @@ export const pt: Record<GameSlug, GameText> = {
       'Chegue à meta e depois ganhe a final na arena.',
     ],
     modes: ['Corrida de obstáculos', 'Final na arena'],
-    inspiredBy: 'Wipeout, o programa de televisão',
+    inspiredBy: "Wipeout, o programa de televisão, e os mapas de percurso de Counter-Strike: Source",
   },
   'dangerous-delivery': {
     tagline: 'Transporte cargas por estradas de montanha sem proteções. Quanto mais arriscado, mais paga.',
@@ -182,15 +182,15 @@ export const pt: Record<GameSlug, GameText> = {
     modes: ['Entregas'],
   },
   'look-at-me': {
-    tagline: 'Uma casa escura com 32 níveis de profundidade e as bruxas que percorrem as suas divisões.',
+    tagline: "Duas casas escuras, cinquenta níveis e bruxas em cada divisão.",
     summary: [
-      'Um jogo de semiterror. Avance por uma casa escura com 32 níveis de profundidade enquanto as bruxas percorrem as suas divisões. São NPC que patrulham cada nível, e cada nível é mais difícil do que o anterior.',
-      'Encontre o que abre a porta seguinte antes que uma delas o olhe durante demasiado tempo. Há suporte para mapas personalizados.',
+      "Um jogo de semi-terror. Atravesse duas casas escuras, The House (32 níveis) e The Asylum (18), enquanto bruxas percorrem as divisões. Cada nível é um mapa diferente, com as suas próprias divisões, portas trancadas e rondas de bruxas, e cada um é mais difícil do que o anterior: uma bruxa no início, seis mais rápidas e atentas no fim.",
+      "Encontre o que abre a porta seguinte (uma chave, um fusível, o código de um bilhete, água para um incêndio) antes que uma delas olhe para si durante demasiado tempo. Um servidor joga uma casa de cada vez, e os jogadores votam na seguinte. São suportados mapas personalizados.",
     ],
     howToPlay: [
-      'Encontre o objetivo que abre a porta seguinte.',
+      "Encontre o que abre a porta seguinte: uma chave, um fusível, uma ferramenta ou um código.",
       'Fique fora da vista das bruxas; não deixe que uma o olhe durante muito tempo.',
-      'Complete os 32 níveis.',
+      "Complete todos os níveis de uma casa para ganhar uma coroa.",
     ],
     modes: ['Progressão por níveis'],
   },

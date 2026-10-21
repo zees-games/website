@@ -1,0 +1,57 @@
+---
+import { FaDiscord, FaFacebook, FaInstagram, FaYoutube } from 'react-icons/fa6'
+import { Mail } from 'lucide-react'
+import { DISCORD_URL, FACEBOOK_URL, INSTAGRAM_URL, YOUTUBE_URL } from '../lib/site'
+import type { Locale } from '../i18n/config'
+import { UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
+
+/**
+ * Discord, the social accounts and the contact button, as a row of icons.
+ * The contact address is never in the HTML: the script below puts it together
+ * on click, so address harvesters reading the page find nothing to spam.
+ */
+interface Props { locale: Locale; place: 'home' | 'footer'; discord?: boolean }
+const { locale, place, discord = true } = Astro.props
+const { t } = UseI18n(locale)
+const NETWORKS = [
+  ['youtube', YOUTUBE_URL, FaYoutube, t.footer.youtube],
+  ['instagram', INSTAGRAM_URL, FaInstagram, t.footer.instagram],
+  ['facebook', FACEBOOK_URL, FaFacebook, t.footer.facebook],
+] as const
+const icon = 'grid size-9 place-items-center rounded-lg text-muted transition hover:bg-panel-2'
+---
+
+<ul class="flex flex-wrap items-center gap-1">
+  {discord && (
+    <li>
+      <a href={DISCORD_URL} {...Ev('discord', { place })} class={`${icon} hover:text-discord`} aria-label={t.nav.discord} title={t.nav.discord}>
+        <FaDiscord className="size-5" aria-hidden="true" />
+      </a>
+    </li>
+  )}
+  {NETWORKS.map(([network, href, Icon, label]) => (
+    <li>
+      <a href={href} {...Ev('social', { network, place })} rel="me" class={`${icon} hover:text-cyan`} aria-label={label} title={label}>
+        <Icon className="size-5" aria-hidden="true" />
+      </a>
+    </li>
+  ))}
+  <li>
+    <button type="button" data-contact data-place={place} class={`${icon} hover:text-cyan`} aria-label={t.footer.email} title={t.footer.email}>
+      <Mail className="size-5" aria-hidden="true" />
+    </button>
+  </li>
+</ul>
+
+<script>
+  import { track } from '../lib/umami'
+
+  // Built from parts at click time so the address never appears whole in the page or the bundle.
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as Element).closest<HTMLButtonElement>('button[data-contact]')
+    if (!btn) return
+    track('contact', { place: btn.dataset.place })
+    window.location.href = ['mailto:contact', ['zeesgames', 'com'].join('.')].join('@')
+  })
+</script>

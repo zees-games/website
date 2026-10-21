@@ -200,7 +200,7 @@ export const en: Record<GameSlug, GameText> = {
     tagline: "Obstacle courses over water: sweeper arms, big balls and a fight at the finish.",
     summary: [
       "Race across obstacle courses built over water: sweeping arms, big balls, rolling logs, hammers and floors that drop away. Falling in sends you back to the last checkpoint.",
-      "If more than one player finishes, they fight it out in a random arena until one is left. Inspired by the classic TV show.",
+      "If more than one player finishes, they fight it out in a random arena until one is left. Inspired by the classic TV show and by course maps from Counter-Strike: Source.",
     ],
     howToPlay: [
       "Time your jumps past each obstacle.",
@@ -211,7 +211,7 @@ export const en: Record<GameSlug, GameText> = {
       "Obstacle race",
       "Arena final",
     ],
-    inspiredBy: "Wipeout, the TV show",
+    inspiredBy: "Wipeout, the TV show, and Counter-Strike: Source course maps",
   },
   'dangerous-delivery': {
     tagline: "Haul loads up mountain roads with no guard rails. Riskier runs pay more.",
@@ -229,15 +229,15 @@ export const en: Record<GameSlug, GameText> = {
     ],
   },
   'look-at-me': {
-    tagline: "A dark house, 32 levels deep, and the witches walking its rooms.",
+    tagline: "Two dark houses, fifty levels, and witches walking every room.",
     summary: [
-      "A semi-horror game. Make your way through a dark house, 32 levels deep, while witches walk its rooms. They are NPCs that patrol each level, and every level is harder than the last.",
-      "Find what opens the next door before one of them looks at you for too long. Custom maps are supported.",
+      "A semi-horror game. Make your way through two dark houses, The House (32 levels) and The Asylum (18), while witches walk their rooms. Every level is a different map with its own rooms, locked doors and witch patrols, and each one is harder than the last: one witch at the start, six faster, sharper-eyed ones at the end.",
+      "Find what opens the next door (a key, a fuse, a code from a note, water for a fire) before one of them looks at you for too long. A server plays one house at a time, and the players vote on the next. Custom maps are supported.",
     ],
     howToPlay: [
-      "Find the objective that opens the next door.",
+      "Find what opens the next door: a key, a fuse, a tool or a code.",
       "Stay out of the witches' sight; do not let one look at you for long.",
-      "Clear all 32 levels.",
+      "Clear every level of a house to earn a crown.",
     ],
     modes: [
       "Level progression",

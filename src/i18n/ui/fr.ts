@@ -47,6 +47,10 @@ export const fr: Messages = {
     sourceCode: 'Code source',
     madeWithGodot: 'Créé avec Godot',
     discord: "Serveur Discord",
+    youtube: "Zee's Games sur YouTube",
+    instagram: "Zee's Games sur Instagram",
+    facebook: "Zee's Games sur Facebook",
+    email: "Écrire à Zee's Games",
     sourceOnGithub: 'Code source sur GitHub',
     disclaimer:
       "Zee's Games est un projet personnel et non un produit officiel de The Modding Community. Les cartes originales appartiennent à leurs auteurs ; consultez les crédits de chaque carte.",
@@ -90,6 +94,7 @@ export const fr: Messages = {
     discordTitle: "Rejoignez-nous sur Discord",
     discordBody: "Trouvez des partenaires de jeu, signalez des bugs, proposez des cartes et découvrez ce qui arrive.",
     discordCta: "Rejoindre le Discord",
+    followOn: "Suivez-nous sur",
     features: [
       { title: 'Serveurs communautaires', body: 'Chacun peut héberger un serveur, régler ses paramètres et le référencer.' },
       { title: 'Jouez partout', body: 'Navigateur, application de bureau ou téléphone, sur les mêmes serveurs.' },
@@ -321,7 +326,7 @@ export const fr: Messages = {
       { name: "Mappeurs et moddeurs", body: "Les personnes qui ont créé les cartes et les mods, souvent gratuitement et pendant des années : cartes de surf et de bhop, de mini-jeux, de zombies et conversions totales, souvent plus inventives que les jeux qui les faisaient tourner." },
       { name: "Serveurs communautaires", body: "Les propriétaires de serveurs et les communautés qui ont fait vivre ces modes, fixé leurs propres règles et donné aux joueurs un endroit où revenir, soir après soir." },
     ],
-    also: "Tout ne vient pas de Source : Hungario s’inspire d’Agar.io, et Wipeout de l’émission de télévision.",
+    also: "Tout ne vient pas uniquement de Source : Hungario s’inspire d’Agar.io, et Wipeout de l’émission télévisée comme des cartes de parcours de Counter-Strike: Source.",
     classicTitle: "Des modes qui existent depuis toujours",
     classicBody: ["Beaucoup de ces modes sont des originaux au sens le plus vrai : ils existent presque depuis les débuts du jeu en ligne. DeathRun, le surf, le bunny hop, la survie zombie, le cache-cache et le prop hunt ont été reconstruits de moteur en moteur, et ils n’appartiennent à personne.", "Zee's Games ne prétend en avoir inventé aucun. Chaque jeu présenté ici est la prochaine reconstruction d’un mode que les gens aiment déjà, conçu pour tourner sur une plateforme moderne et ouverte."],
     modes: ["DeathRun", "Surf", "Bunny hop", "Survie zombie", "Cache-cache", "Prop hunt", "Murder", "GunGame", "Mini-jeux"],

@@ -158,7 +158,7 @@ export const de: Record<GameSlug, GameText> = {
     tagline: 'Hindernisparcours über Wasser: Schwenkarme, riesige Bälle und ein Kampf im Ziel.',
     summary: [
       'Rennen Sie über Hindernisparcours über dem Wasser: Schwenkarme, riesige Bälle, rollende Baumstämme, Hämmer und Böden, die wegbrechen. Wer hineinfällt, startet am letzten Checkpoint neu.',
-      'Erreichen mehrere Spieler das Ziel, kämpfen sie in einer zufälligen Arena, bis nur noch einer übrig ist. Inspiriert von der klassischen Fernsehshow.',
+      "Erreichen mehrere Spieler das Ziel, kämpfen sie in einer zufälligen Arena, bis nur noch einer übrig ist. Inspiriert von der klassischen Fernsehshow und den Parcours-Maps aus Counter-Strike: Source.",
     ],
     howToPlay: [
       'Timen Sie Ihre Sprünge an jedem Hindernis vorbei.',
@@ -166,7 +166,7 @@ export const de: Record<GameSlug, GameText> = {
       'Erreichen Sie das Ziel und gewinnen Sie dann das Arena-Finale.',
     ],
     modes: ['Hindernisrennen', 'Arena-Finale'],
-    inspiredBy: 'Wipeout, die Fernsehshow',
+    inspiredBy: "Wipeout, die Fernsehshow, und Parcours-Maps aus Counter-Strike: Source",
   },
   'dangerous-delivery': {
     tagline: 'Transportieren Sie Ladungen über Bergstraßen ohne Leitplanken. Riskantere Fahrten zahlen mehr.',
@@ -182,15 +182,15 @@ export const de: Record<GameSlug, GameText> = {
     modes: ['Lieferfahrten'],
   },
   'look-at-me': {
-    tagline: 'Ein dunkles Haus mit 32 Ebenen und die Hexen, die durch seine Räume wandern.',
+    tagline: "Zwei dunkle Häuser, fünfzig Ebenen und Hexen, die durch jeden Raum wandern.",
     summary: [
-      'Ein Semi-Horror-Spiel. Kämpfen Sie sich durch ein dunkles Haus mit 32 Ebenen, während Hexen durch die Räume wandern. Sie sind NPCs, die jede Ebene patrouillieren, und jede Ebene ist schwerer als die vorige.',
-      'Finden Sie, was die nächste Tür öffnet, bevor eine von ihnen Sie zu lange ansieht. Eigene Maps werden unterstützt.',
+      "Ein Semi-Horror-Spiel. Kämpfen Sie sich durch zwei dunkle Häuser, The House (32 Ebenen) und The Asylum (18), während Hexen durch die Räume wandern. Jede Ebene ist eine eigene Map mit eigenen Räumen, verschlossenen Türen und Hexenrunden, und jede ist schwerer als die vorige: zu Beginn eine Hexe, am Ende sechs schnellere mit schärferem Blick.",
+      "Finden Sie, was die nächste Tür öffnet (einen Schlüssel, eine Sicherung, einen Code von einem Zettel, Wasser für ein Feuer), bevor eine von ihnen Sie zu lange ansieht. Ein Server spielt jeweils ein Haus, und die Spieler stimmen über das nächste ab. Eigene Maps werden unterstützt.",
     ],
     howToPlay: [
-      'Finden Sie das Ziel, das die nächste Tür öffnet.',
+      "Finden Sie, was die nächste Tür öffnet: einen Schlüssel, eine Sicherung, ein Werkzeug oder einen Code.",
       'Bleiben Sie außer Sicht der Hexen; lassen Sie nicht zu, dass eine Sie lange ansieht.',
-      'Schaffen Sie alle 32 Ebenen.',
+      "Schaffen Sie alle Ebenen eines Hauses und verdienen Sie sich eine Krone.",
     ],
     modes: ['Ebenenfortschritt'],
   },

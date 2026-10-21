@@ -47,6 +47,10 @@ export const ja: Messages = {
     sourceCode: "ソースコード",
     madeWithGodot: "Godot 製",
     discord: "Discord サーバー",
+    youtube: "YouTube の Zee's Games",
+    instagram: "Instagram の Zee's Games",
+    facebook: "Facebook の Zee's Games",
+    email: "Zee's Games にメールする",
     sourceOnGithub: "GitHub のソースコード",
     disclaimer:
       "Zee's Games は個人プロジェクトであり、The Modding Community の公式製品ではありません。オリジナルのマップは各作者に帰属します。各マップのクレジットをご覧ください。",
@@ -90,6 +94,7 @@ export const ja: Messages = {
     discordTitle: "Discord で会いましょう",
     discordBody: "一緒に遊ぶ仲間を探したり、バグを報告したり、マップを提案したり、今後の予定をチェックしたりできます。",
     discordCta: "Discord に参加",
+    followOn: "フォローはこちら",
     features: [
       { title: "コミュニティサーバー", body: "誰でもサーバーを立て、設定を調整して公開できます。" },
       { title: "どこでも遊べる", body: "ブラウザー、デスクトップアプリ、スマートフォンから、同じサーバーで遊べます。" },
@@ -321,7 +326,7 @@ export const ja: Messages = {
       { name: "マッパーとモッダー", body: "マップや MOD を、多くの場合は無償で何年もかけて作ってきた人たち。サーフやバニーホップのマップ、ミニゲームマップ、ゾンビマップ、トータルコンバージョン。その多くは、動いていたゲームそのものより独創的でした。" },
       { name: "コミュニティサーバー", body: "これらのモードを生かし続け、独自のルールを決め、プレイヤーが毎晩戻ってこられる場所を作ってきたサーバー運営者とコミュニティ。" },
     ],
-    also: "すべてが Source 由来というわけではありません。Hungario は Agar.io、Wipeout はテレビ番組がもとになっています。",
+    also: "すべてが Source だけに由来するわけではありません。Hungario は Agar.io、Wipeout はテレビ番組と Counter-Strike: Source のコースマップがもとになっています。",
     classicTitle: "ずっと昔からあるモード",
     classicBody: ["これらのゲームモードの多くは、本当の意味でのオリジナルです。オンラインゲームとほぼ同じくらい昔から存在しています。DeathRun、サーフ、バニーホップ、ゾンビサバイバル、かくれんぼ、プロップハントは、エンジンからエンジンへと何度も作り直されてきたもので、誰のものでもありません。", "Zee's Games は、そのどれかを発明したとは考えていません。ここにあるゲームはどれも、みんながすでに愛しているモードを、モダンでオープンなプラットフォーム向けに作り直した最新版です。"],
     modes: ["DeathRun", "サーフ", "バニーホップ", "ゾンビサバイバル", "かくれんぼ", "プロップハント", "Murder", "GunGame", "ミニゲーム"],

@@ -158,7 +158,7 @@ export const es: Record<GameSlug, GameText> = {
     tagline: 'Circuitos de obstáculos sobre el agua: brazos giratorios, bolas enormes y una pelea en la meta.',
     summary: [
       'Compite en circuitos de obstáculos construidos sobre el agua: brazos giratorios, bolas enormes, troncos rodantes, martillos y suelos que se hunden. Si caes al agua, vuelves al último punto de control.',
-      'Si más de un jugador llega a la meta, se enfrentan en una arena aleatoria hasta que solo queda uno. Inspirado en el clásico programa de televisión.',
+      "Si más de un jugador llega a la meta, se enfrentan en una arena aleatoria hasta que solo queda uno. Inspirado en el clásico programa de televisión y en los mapas de recorrido de Counter-Strike: Source.",
     ],
     howToPlay: [
       'Calcula tus saltos para pasar cada obstáculo.',
@@ -166,7 +166,7 @@ export const es: Record<GameSlug, GameText> = {
       'Llega a la meta y gana la final en la arena.',
     ],
     modes: ['Carrera de obstáculos', 'Final en la arena'],
-    inspiredBy: 'Wipeout, el programa de televisión',
+    inspiredBy: "Wipeout, el programa de televisión, y los mapas de recorrido de Counter-Strike: Source",
   },
   'dangerous-delivery': {
     tagline: 'Transporta cargas por carreteras de montaña sin barandillas. Cuanto más riesgo, más paga.',
@@ -182,15 +182,15 @@ export const es: Record<GameSlug, GameText> = {
     modes: ['Entregas'],
   },
   'look-at-me': {
-    tagline: 'Una casa oscura, de 32 niveles de profundidad, y las brujas que recorren sus habitaciones.',
+    tagline: "Dos casas oscuras, cincuenta niveles y brujas recorriendo cada habitación.",
     summary: [
-      'Un juego de semiterror. Avanza por una casa oscura de 32 niveles de profundidad mientras las brujas recorren sus habitaciones. Son NPC que patrullan cada nivel, y cada nivel es más difícil que el anterior.',
-      'Encuentra lo que abre la siguiente puerta antes de que una de ellas te mire demasiado tiempo. Admite mapas personalizados.',
+      "Un juego de semiterror. Abre camino por dos casas oscuras, The House (32 niveles) y The Asylum (18), mientras las brujas recorren sus habitaciones. Cada nivel es un mapa distinto, con sus propias habitaciones, puertas cerradas y rondas de brujas, y cada uno es más difícil que el anterior: una bruja al principio, seis más rápidas y con mejor vista al final.",
+      "Encuentra lo que abre la siguiente puerta (una llave, un fusible, el código de una nota, agua para un fuego) antes de que una de ellas te mire demasiado tiempo. Un servidor juega una casa a la vez, y los jugadores votan la siguiente. Se admiten mapas personalizados.",
     ],
     howToPlay: [
-      'Encuentra el objetivo que abre la siguiente puerta.',
+      "Encuentra lo que abre la siguiente puerta: una llave, un fusible, una herramienta o un código.",
       'Mantente fuera de la vista de las brujas; no dejes que una te mire durante mucho rato.',
-      'Supera los 32 niveles.',
+      "Supera todos los niveles de una casa para ganar una corona.",
     ],
     modes: ['Progresión por niveles'],
   },

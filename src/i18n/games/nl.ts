@@ -188,7 +188,7 @@ export const nl: Record<GameSlug, GameText> = {
     tagline: "Hindernisbanen boven water: zwaaiende armen, grote ballen en een gevecht bij de finish.",
     summary: [
       "Race over hindernisbanen boven water: zwaaiende armen, grote ballen, rollende boomstammen, hamers en vloeren die wegvallen. Wie erin valt, begint weer bij het laatste checkpoint.",
-      "Als meer dan een speler finisht, vechten ze het uit in een willekeurige arena tot er nog een over is. Geïnspireerd door de klassieke tv-show.",
+      "Als meer dan een speler finisht, vechten ze het uit in een willekeurige arena tot er nog een over is. Geïnspireerd door de klassieke tv-show en door de parcoursmaps uit Counter-Strike: Source.",
     ],
     howToPlay: [
       "Stem je sprongen af op elke hindernis.",
@@ -199,7 +199,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Hindernisrace",
       "Arenafinale",
     ],
-    inspiredBy: "Wipeout, de tv-show",
+    inspiredBy: "Wipeout, de tv-show, en parcoursmaps uit Counter-Strike: Source",
   },
   'dangerous-delivery': {
     tagline: "Vervoer lading over bergwegen zonder vangrails. Riskantere ritten betalen meer.",
@@ -217,15 +217,15 @@ export const nl: Record<GameSlug, GameText> = {
     ],
   },
   'look-at-me': {
-    tagline: "Een donker huis, 32 levels diep, en de heksen die door de kamers lopen.",
+    tagline: "Twee donkere huizen, vijftig levels en heksen in elke kamer.",
     summary: [
-      "Een semi-horrorgame. Baan je een weg door een donker huis van 32 levels diep terwijl heksen door de kamers lopen. Het zijn NPC's die elk level patrouilleren, en elk level is moeilijker dan het vorige.",
-      "Vind wat de volgende deur opent voordat een van hen je te lang aankijkt. Eigen maps worden ondersteund.",
+      "Een semi-horrorspel. Baan je een weg door twee donkere huizen, The House (32 levels) en The Asylum (18), terwijl heksen door de kamers lopen. Elk level is een andere map met eigen kamers, gesloten deuren en heksenrondes, en elk is moeilijker dan het vorige: aan het begin één heks, aan het eind zes snellere met scherpere ogen.",
+      "Vind wat de volgende deur opent (een sleutel, een zekering, een code van een briefje, water voor een brand) voordat een van hen je te lang aankijkt. Een server speelt één huis tegelijk, en de spelers stemmen over het volgende. Eigen maps worden ondersteund.",
     ],
     howToPlay: [
-      "Vind het doel dat de volgende deur opent.",
+      "Vind wat de volgende deur opent: een sleutel, een zekering, gereedschap of een code.",
       "Blijf uit het zicht van de heksen; laat er geen lang naar je kijken.",
-      "Speel alle 32 levels uit.",
+      "Haal alle levels van een huis en verdien een kroon.",
     ],
     modes: [
       "Levelprogressie",

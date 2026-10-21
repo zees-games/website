@@ -9,6 +9,10 @@ PUBLIC_SITE_URL=https://zeesgames.com
 PUBLIC_TMC_URL=https://moddingcommunity.com
 # The Discord invite every Discord link points at.
 PUBLIC_DISCORD_URL=https://dis.zeesgames.com
+# The social accounts in the footer and the home page's Discord section.
+PUBLIC_YOUTUBE_URL=https://www.youtube.com/@zees_games
+PUBLIC_INSTAGRAM_URL=https://www.instagram.com/zeesgames
+PUBLIC_FACEBOOK_URL=https://www.facebook.com/zeesgames
 
 # Umami analytics, read when the container starts (a restart applies a change,
 # no rebuild needed). Both must be set, or the pages carry no analytics at all.

@@ -15,6 +15,11 @@ export const TMC_URL = trim(import.meta.env.PUBLIC_TMC_URL ?? 'https://moddingco
 /** Zee's Games' Discord server (an invite redirect we own, so the invite can change). */
 export const DISCORD_URL = trim(import.meta.env.PUBLIC_DISCORD_URL ?? 'https://dis.zeesgames.com')
 
+/** Zee's Games' social accounts. TikTok and X are left out on purpose. */
+export const YOUTUBE_URL = trim(import.meta.env.PUBLIC_YOUTUBE_URL ?? 'https://www.youtube.com/@zees_games')
+export const INSTAGRAM_URL = trim(import.meta.env.PUBLIC_INSTAGRAM_URL ?? 'https://www.instagram.com/zeesgames')
+export const FACEBOOK_URL = trim(import.meta.env.PUBLIC_FACEBOOK_URL ?? 'https://www.facebook.com/zeesgames')
+
 export const GITHUB_ORG = 'https://github.com/zees-games'
 export const SITE_REPO = `${GITHUB_ORG}/website`
 

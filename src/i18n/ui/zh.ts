@@ -47,6 +47,10 @@ export const zh: Messages = {
     sourceCode: "源代码",
     madeWithGodot: "使用 Godot 制作",
     discord: "Discord 服务器",
+    youtube: "Zee's Games 的 YouTube",
+    instagram: "Zee's Games 的 Instagram",
+    facebook: "Zee's Games 的 Facebook",
+    email: "给 Zee's Games 发邮件",
     sourceOnGithub: "GitHub 上的源代码",
     disclaimer:
       "Zee's Games 是个人项目，并非 The Modding Community 的官方产品。原版地图归其作者所有，请参阅各地图的署名信息。",
@@ -90,6 +94,7 @@ export const zh: Messages = {
     discordTitle: "来 Discord 一起玩",
     discordBody: "寻找一起玩的伙伴、报告错误、推荐地图，并了解接下来的计划。",
     discordCta: "加入 Discord",
+    followOn: "关注我们",
     features: [
       { title: "社区服务器", body: "任何人都可以架设服务器、调整设置并将其上架。" },
       { title: "随处可玩", body: "浏览器、桌面应用或手机，都在同一批服务器上。" },
@@ -321,7 +326,7 @@ export const zh: Messages = {
       { name: "地图作者与模组作者", body: "制作地图和模组的人们，往往是无偿付出、持续多年：滑翔和连跳地图、小游戏地图、僵尸地图和全面改造模组，其中许多比承载它们的游戏本身更有创意。" },
       { name: "社区服务器", body: "让这些模式延续下去的服主和社区，他们制定自己的规则，给玩家一个夜复一夜都想回来的地方。" },
     ],
-    also: "并非一切都来自 Source：Hungario 借鉴了 Agar.io，Wipeout 则来自同名电视节目。",
+    also: "并非一切都只来自 Source：Hungario 借鉴了 Agar.io，Wipeout 则借鉴了那档电视节目和 Counter-Strike: Source 的闯关地图。",
     classicTitle: "早已存在的经典模式",
     classicBody: ["这些游戏模式中，很多都是最纯粹意义上的原创：它们几乎和网络游戏一样古老。DeathRun、滑翔、连跳、僵尸生存、捉迷藏和道具躲猫猫，在一款又一款引擎中被反复重建，不属于任何人。", "Zee's Games 并不声称发明了其中任何一个。这里的每款游戏，都是对大家早已喜爱的模式的又一次重建，为现代、开放的平台而做。"],
     modes: ["DeathRun", "滑翔", "连跳", "僵尸生存", "捉迷藏", "道具躲猫猫", "Murder", "GunGame", "小游戏"],

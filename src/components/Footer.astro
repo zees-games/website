@@ -3,6 +3,7 @@ import { DISCORD_URL, GITHUB_ORG, SITE_REPO, TmcHref } from '../lib/site'
 import type { Locale } from '../i18n/config'
 import { Escape, Rich, UseI18n } from '../i18n'
 import { Ev } from '../lib/umami'
+import Socials from './Socials.astro'
 
 interface Props { locale: Locale }
 const { locale } = Astro.props
@@ -15,6 +16,7 @@ const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline de
     <div class="col-span-2 max-w-md md:col-span-1">
       <p class="font-display text-lg font-bold"><span class="neon-cyan">Zee's</span> <span class="neon-amber">Games</span></p>
       <p class="mt-3 text-sm leading-relaxed text-muted" set:html={Rich(t.footer.blurb, { tmc: tmcLink })} />
+      <div class="-ml-2 mt-4"><Socials locale={locale} place="footer" /></div>
     </div>
     <div>
       <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.footer.explore}</p>

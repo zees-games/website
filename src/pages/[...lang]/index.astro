@@ -3,6 +3,7 @@ import { Asset } from '../../lib/asset'
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../layouts/Layout.astro'
 import GameCard from '../../components/GameCard.astro'
+import Socials from '../../components/Socials.astro'
 import { GAMES, type GameKind } from '../../data/games'
 import { SERVERS, ServersFor } from '../../data/servers'
 import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../lib/site'
@@ -91,23 +92,6 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
     </div>
   </section>
 
-  <!-- Discord -->
-  <section class="mx-auto mt-28 max-w-7xl px-4 sm:px-6">
-    <div class="relative isolate overflow-hidden rounded-2xl border border-discord/40 bg-gradient-to-br from-discord/25 via-panel to-night p-8 sm:p-10">
-      <div class="absolute -right-16 -top-24 -z-10 size-80 rounded-full bg-discord/30 blur-3xl" aria-hidden="true"></div>
-      <FaDiscord className="absolute -bottom-10 right-6 -z-10 size-56 rotate-12 text-discord/15 max-sm:hidden" aria-hidden="true" />
-      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-        <div class="max-w-xl">
-          <h2 class="flex items-center gap-3 text-3xl font-bold"><FaDiscord className="size-8 shrink-0 text-discord" aria-hidden="true" /> {t.home.discordTitle}</h2>
-          <p class="mt-3 text-pretty leading-relaxed text-muted">{t.home.discordBody}</p>
-        </div>
-        <a href={DISCORD_URL} {...Ev('discord', { place: 'home' })} class="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-discord px-6 py-3 font-semibold text-white shadow-[0_0_28px_-6px_var(--color-discord)] transition hover:brightness-110 sm:self-center">
-          <FaDiscord className="size-5" aria-hidden="true" /> {t.home.discordCta}
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Powered by TMC -->
   <section class="mx-auto mt-28 max-w-7xl px-4 sm:px-6">
     <div class="glow-card relative overflow-hidden p-8 sm:p-12">
@@ -130,6 +114,27 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
             )
           })}
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discord -->
+  <section class="mx-auto mt-28 max-w-7xl px-4 sm:px-6">
+    <div class="relative isolate overflow-hidden rounded-2xl border border-discord/40 bg-gradient-to-br from-discord/25 via-panel to-night p-8 sm:p-10">
+      <div class="absolute -right-16 -top-24 -z-10 size-80 rounded-full bg-discord/30 blur-3xl" aria-hidden="true"></div>
+      <FaDiscord className="absolute -bottom-10 right-6 -z-10 size-56 rotate-12 text-discord/15 max-sm:hidden" aria-hidden="true" />
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+        <div class="max-w-xl">
+          <h2 class="flex items-center gap-3 text-3xl font-bold"><FaDiscord className="size-8 shrink-0 text-discord" aria-hidden="true" /> {t.home.discordTitle}</h2>
+          <p class="mt-3 text-pretty leading-relaxed text-muted">{t.home.discordBody}</p>
+          <div class="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-muted">
+            <span>{t.home.followOn}</span>
+            <Socials locale={locale} place="home" discord={false} />
+          </div>
+        </div>
+        <a href={DISCORD_URL} {...Ev('discord', { place: 'home' })} class="inline-flex shrink-0 items-center justify-center gap-2 self-start rounded-xl bg-discord px-6 py-3 font-semibold text-white shadow-[0_0_28px_-6px_var(--color-discord)] transition hover:brightness-110 sm:self-center">
+          <FaDiscord className="size-5" aria-hidden="true" /> {t.home.discordCta}
+        </a>
       </div>
     </div>
   </section>

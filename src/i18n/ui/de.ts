@@ -47,6 +47,10 @@ export const de: Messages = {
     sourceCode: 'Quellcode',
     madeWithGodot: 'Mit Godot entwickelt',
     discord: "Discord-Server",
+    youtube: "Zee's Games auf YouTube",
+    instagram: "Zee's Games auf Instagram",
+    facebook: "Zee's Games auf Facebook",
+    email: "Zee's Games eine E-Mail schreiben",
     sourceOnGithub: 'Quellcode auf GitHub',
     disclaimer:
       "Zee's Games ist ein privates Projekt und kein offizielles Produkt von The Modding Community. Die Original-Maps gehören ihren Autoren; die Credits finden Sie bei der jeweiligen Map.",
@@ -90,6 +94,7 @@ export const de: Messages = {
     discordTitle: "Treffen Sie uns auf Discord",
     discordBody: "Finden Sie Mitspieler, melden Sie Fehler, schlagen Sie Maps vor und erfahren Sie, was als Nächstes kommt.",
     discordCta: "Discord beitreten",
+    followOn: "Folgen Sie uns auf",
     features: [
       { title: 'Community-Server', body: 'Jeder kann einen Server hosten, seine Einstellungen anpassen und ihn listen.' },
       { title: 'Überall spielen', body: 'Browser, Desktop-App oder Smartphone, alles auf denselben Servern.' },
@@ -321,7 +326,7 @@ export const de: Messages = {
       { name: "Mapper und Modder", body: "Die Menschen, die die Maps und Mods gebaut haben, oft unentgeltlich und über viele Jahre: Surf- und Bhop-Maps, Minispiel-Maps, Zombie-Maps und Total Conversions, viele davon einfallsreicher als die Spiele, in denen sie liefen." },
       { name: "Community-Server", body: "Die Serverbetreiber und Communities, die diese Modi am Leben hielten, ihre eigenen Regeln aufstellten und Spielern einen Ort gaben, an den sie Abend für Abend zurückkehrten." },
     ],
-    also: "Nicht alles stammt aus Source: Hungario ist an Agar.io angelehnt, Wipeout an die TV-Show.",
+    also: "Nicht alles stammt nur aus Source: Hungario ist an Agar.io angelehnt, Wipeout an die TV-Show und an die Parcours-Maps aus Counter-Strike: Source.",
     classicTitle: "Modi, die es schon ewig gibt",
     classicBody: ["Viele dieser Spielmodi sind Originale im wahrsten Sinne: Es gibt sie fast so lange wie Onlinespiele selbst. DeathRun, Surf, Bunny Hop, Zombie-Überleben, Verstecken und Prop Hunt wurden in einer Engine nach der anderen neu gebaut, und niemandem gehören sie.", "Zee's Games behauptet nicht, einen davon erfunden zu haben. Jedes Spiel hier ist der nächste Neubau eines Modus, den die Leute schon lieben, gemacht für eine moderne, offene Plattform."],
     modes: ["DeathRun", "Surf", "Bunny Hop", "Zombie-Überleben", "Verstecken", "Prop Hunt", "Murder", "GunGame", "Minispiele"],

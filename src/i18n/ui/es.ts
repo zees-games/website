@@ -47,6 +47,10 @@ export const es: Messages = {
     sourceCode: 'Código fuente',
     madeWithGodot: 'Hecho con Godot',
     discord: "Servidor de Discord",
+    youtube: "Zee's Games en YouTube",
+    instagram: "Zee's Games en Instagram",
+    facebook: "Zee's Games en Facebook",
+    email: "Escribir a Zee's Games",
     sourceOnGithub: 'Código fuente en GitHub',
     disclaimer:
       "Zee's Games es un proyecto personal y no un producto oficial de The Modding Community. Los mapas originales pertenecen a sus autores; consulta los créditos de cada mapa.",
@@ -90,6 +94,7 @@ export const es: Messages = {
     discordTitle: "Únase a nosotros en Discord",
     discordBody: "Encuentre gente con quien jugar, informe de errores, sugiera mapas y vea lo que viene.",
     discordCta: "Unirse al Discord",
+    followOn: "Síguenos en",
     features: [
       { title: 'Servidores de la comunidad', body: 'Cualquiera puede alojar un servidor, ajustar su configuración y publicarlo.' },
       { title: 'Juega en cualquier parte', body: 'Navegador, aplicación de escritorio o móvil, todos en los mismos servidores.' },
@@ -321,7 +326,7 @@ export const es: Messages = {
       { name: "Creadores de mapas y mods", body: "Las personas que crearon los mapas y los mods, a menudo gratis y durante años: mapas de surf y bhop, de minijuegos, de zombis y conversiones totales, muchos más ingeniosos que los juegos en los que funcionaban." },
       { name: "Servidores de la comunidad", body: "Los dueños de servidores y las comunidades que mantuvieron vivos estos modos, pusieron sus propias reglas y dieron a los jugadores un lugar al que volver noche tras noche." },
     ],
-    also: "No todo viene de Source: Hungario se inspira en Agar.io, y Wipeout en el programa de televisión.",
+    also: "No todo viene solo de Source: Hungario se inspira en Agar.io, y Wipeout en el programa de televisión y en los mapas de recorrido de Counter-Strike: Source.",
     classicTitle: "Modos que existen desde siempre",
     classicBody: ["Muchos de estos modos son originales en el sentido más puro: existen casi desde que existen los juegos en línea. DeathRun, surf, bunny hop, supervivencia zombi, el escondite y prop hunt se han reconstruido en un motor tras otro, y no son de nadie.", "Zee's Games no pretende haber inventado ninguno. Cada juego de aquí es la siguiente reconstrucción de un modo que la gente ya adora, hecho para funcionar en una plataforma moderna y abierta."],
     modes: ["DeathRun", "Surf", "Bunny hop", "Supervivencia zombi", "Escondite", "Prop hunt", "Murder", "GunGame", "Minijuegos"],
