@@ -27,7 +27,7 @@ const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline de
 const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, 'text-violet'], [Code2, 'text-cyan']] as const
 ---
 
-<Layout locale={locale} title="Zee's Games" description={t.meta.siteDescription} imageAlt={t.meta.ogAlt} jsonLd={SiteLd(locale, t.meta.siteDescription)}>
+<Layout locale={locale} title={t.meta.siteTitle} description={t.meta.siteDescription} imageAlt={t.meta.ogAlt} jsonLd={SiteLd(locale, t.meta.siteDescription)}>
   <!-- Hero -->
   <section class="relative isolate overflow-hidden">
     <div class="pointer-events-none absolute inset-x-0 bottom-0 -z-10 h-[55%] overflow-hidden" aria-hidden="true">

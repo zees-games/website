@@ -2,6 +2,7 @@ import type { Messages } from './en'
 
 export const ja: Messages = {
   meta: {
+    siteTitle: "Zee's Games：Godot製の無料オープンソース・マルチプレイヤーゲーム",
     siteDescription:
       "Godot で作られ、The Modding Community のゲームプラットフォームで動くオープンソースのマルチプレイヤーゲーム。デスマッチ、サーフ、バニーホップ、サンドボックス、ミニゲームなど。",
     gameDescription: "{title}：{tagline} 無料のオープンソース。The Modding Community で遊べます。",

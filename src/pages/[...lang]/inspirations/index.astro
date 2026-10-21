@@ -131,7 +131,7 @@ const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_s
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {GAMES.map((game) => (
           <a href={p(`/${game.slug}`)} class="glow-card group flex items-center gap-4 p-3 transition hover:border-cyan/60">
-            <img src={Asset(`/images/games/${game.slug}.webp`)} alt="" loading="lazy" class="aspect-video w-28 shrink-0 rounded-lg object-cover" />
+            <img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-28 shrink-0 rounded-lg object-cover" />
             <div class="min-w-0">
               <p class="font-semibold group-hover:text-cyan">{game.title} <span class="ml-1 text-xs font-normal text-muted">{t.kind[game.kind]}</span></p>
               {g(game.slug).inspiredBy

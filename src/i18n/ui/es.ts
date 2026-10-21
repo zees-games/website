@@ -2,21 +2,24 @@ import type { Messages } from './en'
 
 export const es: Messages = {
   meta: {
+    siteTitle: "Zee's Games: juegos multijugador gratuitos de código abierto con Godot",
     siteDescription:
-      "Juegos multijugador de código abierto hechos con Godot y alojados en la plataforma de juegos de The Modding Community: deathmatch, surf y bhop, sandbox, minijuegos y mucho más.",
+      "Juegos multijugador de código abierto hechos con Godot y alojados en la plataforma de The Modding Community: deathmatch, surf, bhop, sandbox y más.",
     gameDescription: '{title}: {tagline} Gratis y de código abierto, juégalo en The Modding Community.',
     mapsTitle: 'Mapas de {title}',
     mapsDescription: "Todos los mapas de {title}, mostrados en Zee's Games junto al mapa original del que se portaron.",
     mapsDescriptionOwn: "Todos los mapas de {title}, tal como se ven en Zee's Games.",
     goalsTitle: 'Objetivos',
     goalsDescription:
-      "Por qué existe Zee's Games: juegos reales, hechos por diversión, que muestran lo que puede hacer la plataforma de juegos de The Modding Community, desde servidores de la comunidad hasta servidores multijuego que cambian de juego sin expulsar a los jugadores.",
+      "Por qué existe Zee's Games: juegos reales, hechos por diversión, que muestran lo que puede hacer la plataforma de The Modding Community.",
     inspirationsTitle: "Inspiraciones",
     inspirationsDescription:
-      "De dónde viene Zee's Games: los juegos Source de Valve, Garry's Mod de Facepunch, los servidores de la comunidad y los creadores de mapas y mods detrás de modos clásicos como DeathRun, surf y Prop Hunt.",
+      "De dónde viene Zee's Games: los juegos Source de Valve, Garry's Mod, los servidores de la comunidad y los modders tras DeathRun, surf y Prop Hunt.",
     serversTitle: "Servidores",
-    serversDescription: "Los servidores de Zee para cada juego, mantenidos por diversión para que cualquiera pueda jugarlos en multijugador en The Modding Community. Cualquiera puede montar su propio servidor, también.",
-    serverDescription: "{name}: el servidor de {title} de Zee en {address}, mantenido por diversión para que cualquiera pueda jugar a {title} en multijugador. Únete en The Modding Community.",
+    serversDescription:
+      "Los servidores de Zee para cada juego, mantenidos por diversión: juega en multijugador en The Modding Community o monta tu propio servidor.",
+    serverDescription:
+      "{name}: el servidor de {title} de Zee en {address}, mantenido por diversión. Únete en The Modding Community.",
     serverMultiDescription: "{name}: el servidor multijuego de Zee en {address}, que alterna entre varios juegos. Únete en The Modding Community.",
     notFoundTitle: 'No encontrado',
     notFoundDescription: 'Esta página no existe.',

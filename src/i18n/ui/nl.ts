@@ -2,20 +2,22 @@ import type { Messages } from './en'
 
 export const nl: Messages = {
   meta: {
+    siteTitle: "Zee's Games: gratis open source multiplayergames met Godot",
     siteDescription:
-      "Open source multiplayergames, gemaakt met Godot en draaiend op het gamingplatform van The Modding Community: deathmatch, surf en bhop, sandbox, minigames en meer.",
+      "Open source multiplayergames, gemaakt met Godot, op het platform van The Modding Community: deathmatch, surf, bhop, sandbox, minigames en meer.",
     gameDescription: "{title}: {tagline} Gratis en open source, speel het op The Modding Community.",
     mapsTitle: "{title}-maps",
     mapsDescription: "Alle maps van {title}, in Zee's Games naast de originele map waarvan ze zijn overgezet.",
     mapsDescriptionOwn: "Alle maps van {title}, zoals ze eruitzien in Zee's Games.",
     goalsTitle: "Doelen",
     goalsDescription:
-      "Waarom Zee's Games bestaat: echte games, voor de lol gemaakt, die laten zien wat het gamingplatform van The Modding Community kan, van communityservers tot multigameservers die van game wisselen zonder spelers te verliezen.",
+      "Waarom Zee's Games bestaat: echte games, voor de lol gemaakt, die laten zien wat het platform van The Modding Community kan.",
     inspirationsTitle: "Inspiratie",
     inspirationsDescription:
-      "Waar Zee's Games uit voortkomt: de Source-games van Valve, Garry's Mod van Facepunch, communityservers, en de mappers en modders achter klassieke spelmodi zoals DeathRun, surf en Prop Hunt.",
+      "Waar Zee's Games uit voortkomt: de Source-games van Valve, Garry's Mod, communityservers en de modders achter DeathRun, surf en Prop Hunt.",
     serversTitle: "Servers",
-    serversDescription: "Zee's eigen servers voor elke game, voor de lol gedraaid zodat iedereen ze in multiplayer kan spelen op The Modding Community. Iedereen kan ook zelf een server draaien.",
+    serversDescription:
+      "Zee's eigen servers voor elke game, voor de lol gedraaid: speel multiplayer op The Modding Community of draai zelf een server.",
     serverDescription: "{name}: Zee's {title}-server op {address}, voor de lol gedraaid zodat iedereen {title} in multiplayer kan spelen. Doe mee op The Modding Community.",
     serverMultiDescription: "{name}: Zee's multigame-server op {address}, die tussen meerdere games wisselt. Doe mee op The Modding Community.",
     notFoundTitle: "Niet gevonden",

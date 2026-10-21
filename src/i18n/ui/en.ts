@@ -12,6 +12,7 @@
  */
 export const en = {
   meta: {
+    siteTitle: "Zee's Games: Free Open Source Godot Multiplayer Games",
     siteDescription:
       "Open source multiplayer games made with Godot and run on The Modding Community's gaming platform: deathmatch, surf and bhop, sandbox, minigames and more.",
     gameDescription: '{title}: {tagline} Free and open source, play it on The Modding Community.',
@@ -20,10 +21,10 @@ export const en = {
     mapsDescriptionOwn: "Every {title} map, as it looks in Zee's Games.",
     goalsTitle: 'Goals',
     goalsDescription:
-      "Why Zee's Games exist: real games, made for fun, that show what The Modding Community's gaming platform can do, from community servers to multi-game servers that switch games without dropping players.",
+      "Why Zee's Games exist: real games, made for fun, that show what The Modding Community's platform can do, from community servers to multi-game servers.",
     inspirationsTitle: "Inspirations",
     inspirationsDescription:
-      "What Zee's Games grew out of: Valve's Source games, Facepunch's Garry's Mod, community servers, and the mappers and modders behind classic game modes like DeathRun, surf and Prop Hunt.",
+      "What Zee's Games grew out of: Valve's Source games, Garry's Mod, community servers and the modders behind DeathRun, surf and Prop Hunt.",
     serversTitle: 'Servers',
     serversDescription:
       "Zee's own servers for every game, run for fun so anyone can play them in multiplayer on The Modding Community. Anyone can run a server of their own, too.",

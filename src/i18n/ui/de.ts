@@ -2,21 +2,24 @@ import type { Messages } from './en'
 
 export const de: Messages = {
   meta: {
+    siteTitle: "Zee's Games: Kostenlose Open-Source-Multiplayerspiele mit Godot",
     siteDescription:
-      'Open-Source-Multiplayerspiele, entwickelt mit Godot und betrieben auf der Spieleplattform von The Modding Community: Deathmatch, Surf und Bhop, Sandbox, Minispiele und mehr.',
+      "Open-Source-Multiplayerspiele mit Godot auf der Spieleplattform von The Modding Community: Deathmatch, Surf und Bhop, Sandbox, Minispiele und mehr.",
     gameDescription: '{title}: {tagline} Kostenlos und Open Source, spielbar auf The Modding Community.',
     mapsTitle: '{title}-Maps',
     mapsDescription: "Alle Maps von {title}, in Zee's Games neben der Original-Map gezeigt, von der sie portiert wurden.",
     mapsDescriptionOwn: "Alle Maps von {title}, so wie sie in Zee's Games aussehen.",
     goalsTitle: 'Ziele',
     goalsDescription:
-      "Warum es Zee's Games gibt: echte Spiele, aus Spaß gemacht, die zeigen, was die Spieleplattform von The Modding Community leisten kann, von Community-Servern bis zu Multispiel-Servern, die das Spiel wechseln, ohne Spieler zu verlieren.",
+      "Warum es Zee's Games gibt: echte Spiele, aus Spaß gemacht, die zeigen, was die Plattform von The Modding Community leisten kann.",
     inspirationsTitle: "Inspirationen",
     inspirationsDescription:
-      "Woraus Zee's Games entstanden ist: Valves Source-Spiele, Facepunchs Garry's Mod, Community-Server und die Mapper und Modder hinter klassischen Spielmodi wie DeathRun, Surf und Prop Hunt.",
+      "Woraus Zee's Games entstanden ist: Valves Source-Spiele, Garry's Mod, Community-Server und die Modder hinter DeathRun, Surf und Prop Hunt.",
     serversTitle: "Server",
-    serversDescription: "Zees eigene Server für jedes Spiel, aus Spaß betrieben, damit jeder sie auf The Modding Community im Mehrspielermodus spielen kann. Jeder kann auch einen eigenen Server betreiben.",
-    serverDescription: "{name}: Zees {title}-Server unter {address}, aus Spaß betrieben, damit jeder {title} im Mehrspielermodus spielen kann. Treten Sie ihm auf The Modding Community bei.",
+    serversDescription:
+      "Zees eigene Server für jedes Spiel, aus Spaß betrieben: spiele im Mehrspielermodus auf The Modding Community oder starte einen eigenen Server.",
+    serverDescription:
+      "{name}: Zees {title}-Server unter {address}, aus Spaß betrieben. Treten Sie ihm auf The Modding Community bei.",
     serverMultiDescription: "{name}: Zees Multi-Game-Server unter {address}, der zwischen mehreren Spielen wechselt. Treten Sie ihm auf The Modding Community bei.",
     notFoundTitle: 'Nicht gefunden',
     notFoundDescription: 'Diese Seite existiert nicht.',

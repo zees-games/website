@@ -40,7 +40,7 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
 <Layout locale={locale} title={game.title} description={Fmt(t.meta.gameDescription, { title: game.title, tagline: text.tagline })} image={`/og/${game.slug}.jpg`} imageAlt={Fmt(t.meta.ogGameAlt, { title: game.title })} jsonLd={[GameLd(game, text, locale), BreadcrumbLd(locale, [[game.title, `/${game.slug}`]])]}>
   <!-- Hero -->
   <section class="relative isolate overflow-hidden border-b border-line/60">
-    <img src={cover} alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-45" />
+    <img src={cover} width="1920" height="1080" alt="" class="absolute inset-0 -z-20 size-full object-cover opacity-45" />
     <div class="absolute inset-0 -z-10 bg-gradient-to-r from-ink via-ink/85 to-ink/30"></div>
     <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-transparent to-transparent"></div>
     <div class="mx-auto max-w-7xl px-4 pb-16 pt-20 sm:px-6 sm:pt-28">
@@ -90,7 +90,7 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
             <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {preview.map((m) => (
                 <a href={`${mapsPath}#${m.id}`} {...Ev('map_preview', { game: game.slug, map: m.id })} class="group relative overflow-hidden rounded-xl border border-line">
-                  <img src={m.image!} alt={Fmt(t.game.mapAlt, { map: m.name, title: game.title })} loading="lazy" class="aspect-video w-full object-cover transition duration-500 group-hover:scale-105" />
+                  <img src={m.image!} width="960" height="540" alt={Fmt(t.game.mapAlt, { map: m.name, title: game.title })} loading="lazy" class="aspect-video w-full object-cover transition duration-500 group-hover:scale-105" />
                   <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/90 to-transparent px-3 pb-2 pt-6 text-sm font-semibold">{m.name}</span>
                 </a>
               ))}

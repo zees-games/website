@@ -24,8 +24,10 @@ interface Props {
   jsonLd?: JsonLd[]
 }
 
-const { locale, title, description, image = '/og/site.jpg', imageAlt, noAlternates = false, noindex = false, jsonLd = [] } = Astro.props
-const fullTitle = title === "Zee's Games" ? title : `${title} · Zee's Games`
+const { locale, title, description: fullDescription, image = '/og/site.jpg', imageAlt, noAlternates = false, noindex = false, jsonLd = [] } = Astro.props
+// Search results cut a description near 160 characters: end long ones at a word instead.
+const description = fullDescription.length <= 160 ? fullDescription : `${fullDescription.slice(0, 157).replace(/\s+\S*$/, '')}…`
+const fullTitle = title.includes("Zee's Games") ? title : `${title} · Zee's Games`
 const canonical = new URL(Astro.url.pathname, SITE_URL).href
 const ogImage = new URL(Asset(image), SITE_URL).href
 const base = StripLocale(Astro.url.pathname)

@@ -2,6 +2,7 @@ import type { Messages } from './en'
 
 export const zh: Messages = {
   meta: {
+    siteTitle: "Zee's Games：免费开源的 Godot 多人游戏",
     siteDescription:
       "使用 Godot 制作、运行在 The Modding Community 游戏平台上的开源多人游戏：死亡竞赛、Surf 与 Bhop、沙盒、小游戏等。",
     gameDescription: "{title}：{tagline} 免费开源，在 The Modding Community 上畅玩。",

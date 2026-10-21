@@ -2,21 +2,24 @@ import type { Messages } from './en'
 
 export const ru: Messages = {
   meta: {
+    siteTitle: "Zee's Games: бесплатные мультиплеерные игры на Godot с открытым кодом",
     siteDescription:
-      "Мультиплеерные игры с открытым исходным кодом, созданные на Godot и работающие на игровой платформе The Modding Community: дезматч, сёрф и банихоп, песочница, миниигры и многое другое.",
+      "Мультиплеерные игры с открытым кодом на Godot для игровой платформы The Modding Community: дезматч, сёрф, банихоп, песочница, миниигры и другое.",
     gameDescription: "{title}: {tagline} Бесплатно, с открытым исходным кодом. Играйте на The Modding Community.",
     mapsTitle: "Карты {title}",
     mapsDescription: "Все карты {title} в Zee's Games рядом с оригинальной картой, с которой они были портированы.",
     mapsDescriptionOwn: "Все карты {title} так, как они выглядят в Zee's Games.",
     goalsTitle: "Цели",
     goalsDescription:
-      "Зачем существует Zee's Games: настоящие игры, сделанные ради удовольствия, которые показывают, на что способна игровая платформа The Modding Community, от серверов сообщества до серверов с несколькими играми, которые переключают игры, не отключая игроков.",
+      "Зачем существует Zee's Games: настоящие игры, сделанные ради удовольствия, которые показывают, на что способна платформа The Modding Community.",
     inspirationsTitle: "Вдохновение",
     inspirationsDescription:
-      "Из чего выросла Zee's Games: игры Valve на Source, Garry's Mod от Facepunch, серверы сообщества, а также мапперы и моддеры, стоящие за классическими режимами вроде DeathRun, сёрфа и Prop Hunt.",
+      "Из чего выросла Zee's Games: игры Valve на Source, Garry's Mod, серверы сообщества и моддеры, стоящие за DeathRun, сёрфом и Prop Hunt.",
     serversTitle: "Серверы",
-    serversDescription: "Собственные серверы Zee для каждой игры, запущенные ради удовольствия, чтобы любой мог играть в них по сети на The Modding Community. Свой сервер может запустить кто угодно.",
-    serverDescription: "{name}: сервер Zee для {title} по адресу {address}, запущенный ради удовольствия, чтобы любой мог играть в {title} по сети. Подключайтесь на The Modding Community.",
+    serversDescription:
+      "Собственные серверы Zee для каждой игры, запущенные ради удовольствия: играйте по сети на The Modding Community или запустите свой сервер.",
+    serverDescription:
+      "{name}: сервер Zee для {title} по адресу {address}, запущенный ради удовольствия. Подключайтесь на The Modding Community.",
     serverMultiDescription: "{name}: мультиигровой сервер Zee по адресу {address}, который переключается между несколькими играми. Подключайтесь на The Modding Community.",
     notFoundTitle: "Не найдено",
     notFoundDescription: "Такой страницы не существует.",

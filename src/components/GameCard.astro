@@ -21,6 +21,8 @@ const hasServer = ServersFor(game.slug).length > 0
   <div class="relative aspect-[16/10] overflow-hidden">
     <img
       src={Asset(`/images/games/${game.slug}.webp`)}
+      width="1920"
+      height="1080"
       alt={Fmt(t.card.coverAlt, { title: game.title })}
       loading="lazy"
       decoding="async"

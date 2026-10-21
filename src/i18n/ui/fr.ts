@@ -2,21 +2,24 @@ import type { Messages } from './en'
 
 export const fr: Messages = {
   meta: {
+    siteTitle: "Zee's Games : jeux multijoueurs open source gratuits avec Godot",
     siteDescription:
-      'Des jeux multijoueurs open source créés avec Godot et hébergés sur la plateforme de jeux de The Modding Community : deathmatch, surf et bhop, sandbox, mini-jeux et bien plus.',
+      "Des jeux multijoueurs open source créés avec Godot et hébergés sur la plateforme de The Modding Community : deathmatch, surf, bhop, sandbox et plus.",
     gameDescription: '{title} : {tagline} Gratuit et open source, jouez-y sur The Modding Community.',
     mapsTitle: 'Cartes de {title}',
     mapsDescription: "Toutes les cartes de {title}, présentées dans Zee's Games à côté de la carte d’origine dont elles sont issues.",
     mapsDescriptionOwn: "Toutes les cartes de {title}, telles qu’elles apparaissent dans Zee's Games.",
     goalsTitle: 'Objectifs',
     goalsDescription:
-      "Pourquoi Zee's Games existe : de vrais jeux, faits pour le plaisir, qui montrent ce que la plateforme de jeux de The Modding Community sait faire, des serveurs communautaires aux serveurs multijeux qui changent de jeu sans déconnecter les joueurs.",
+      "Pourquoi Zee's Games existe : de vrais jeux, faits pour le plaisir, qui montrent ce que la plateforme de The Modding Community sait faire.",
     inspirationsTitle: "Inspirations",
     inspirationsDescription:
-      "D’où vient Zee's Games : les jeux Source de Valve, Garry's Mod de Facepunch, les serveurs communautaires, et les mappeurs et moddeurs derrière des modes classiques comme DeathRun, le surf et Prop Hunt.",
+      "D’où vient Zee's Games : les jeux Source de Valve, Garry's Mod, les serveurs communautaires et les moddeurs derrière DeathRun, le surf et Prop Hunt.",
     serversTitle: "Serveurs",
-    serversDescription: "Les serveurs de Zee pour chaque jeu, tenus pour le plaisir afin que tout le monde puisse y jouer en multijoueur sur The Modding Community. Tout le monde peut aussi lancer son propre serveur.",
-    serverDescription: "{name} : le serveur {title} de Zee à l’adresse {address}, tenu pour le plaisir afin que tout le monde puisse jouer à {title} en multijoueur. Rejoignez-le sur The Modding Community.",
+    serversDescription:
+      "Les serveurs de Zee pour chaque jeu, tenus pour le plaisir : jouez en multijoueur sur The Modding Community ou lancez le vôtre.",
+    serverDescription:
+      "{name} : le serveur {title} de Zee à l’adresse {address}, tenu pour le plaisir. Rejoignez-le sur The Modding Community.",
     serverMultiDescription: "{name} : le serveur multi-jeux de Zee à l’adresse {address}, qui alterne entre plusieurs jeux. Rejoignez-le sur The Modding Community.",
     notFoundTitle: 'Introuvable',
     notFoundDescription: 'Cette page n’existe pas.',
