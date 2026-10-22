@@ -36,16 +36,16 @@
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    0,
-   300,
-   -218
+   305,
+   -100
   ],
   "at": [
-   55.7,
-   250.0,
-   -151.7
+   0,
+   0,
+   100
   ],
-  "fov": 80,
-  "note": "Spawn room from a high corner. Missing: hologram emissive textures and skybox (CS2 prototype/untextured materials), props."
+  "fov": 85,
+  "note": "Spawn hall looking down the main ramp at the title sign. Missing: hologram emissive textures, props."
  },
  "surf_greensway": {
   "game": "g2gfast",
@@ -67,17 +67,17 @@
   "game": "g2gfast",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
-   139,
-   -44,
-   -36
+   150,
+   -40,
+   0
   ],
   "at": [
-   115.0,
-   -81.5,
-   -125.6
+   -100,
+   -100,
+   -100
   ],
-  "fov": 70,
-  "note": "Fallback corridor: the original's (hard variant) area was not found in the port. Untextured prototype materials, no sky."
+  "fov": 75,
+  "note": "Outside the first building, sky visible over the maze of corridors. Untextured prototype materials."
  },
  "surf_kitsune": {
   "game": "g2gfast",
@@ -94,5 +94,101 @@
   ],
   "fov": 70,
   "note": "Prototype/untextured CS2 materials, no skybox, foliage and lanterns missing."
+ },
+ "bhop_aztec": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -6.4,
+   11.4,
+   3.3
+  ],
+  "at": [
+   61.6,
+   5.4,
+   3.3
+  ],
+  "fov": 75,
+  "note": "Spawn, looking along the water channels and stone walls."
+ },
+ "surf_mesa": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   0,
+   202,
+   23
+  ],
+  "at": [
+   0,
+   196,
+   -45
+  ],
+  "fov": 75,
+  "note": "Spawn ramp into the canyon under clouds."
+ },
+ "surf_summit": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   38,
+   228,
+   0
+  ],
+  "at": [
+   -30,
+   222,
+   0
+  ],
+  "fov": 75,
+  "note": "Spawn terrace over the lake and mountains."
+ },
+ "surf_beginner2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -298,
+   296,
+   -280
+  ],
+  "at": [
+   -230,
+   290,
+   -280
+  ],
+  "fov": 75,
+  "note": "Spawn ramp towards the sunset over the sea."
+ },
+ "bhop_pit": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   21,
+   3.9,
+   10.4
+  ],
+  "at": [
+   89,
+   -2.1,
+   10.4
+  ],
+  "fov": 75,
+  "note": "Start of the canyon pit with the brick walls."
+ },
+ "bhop_grove": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   89.6,
+   8.6,
+   309
+  ],
+  "at": [
+   89.6,
+   2.6,
+   241
+  ],
+  "fov": 75,
+  "note": "Spawn grove under the dusk sky and sun."
  }
 }

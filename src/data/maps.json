@@ -353,7 +353,7 @@
         "id": "bhop_aztec",
         "name": "Aztec",
         "image": "/images/maps/g2gfast/bhop_aztec.webp",
-        "score": 7,
+        "score": 67,
         "author": "Teho-Killeri (mapper), with Touch (design) and Veikko (textures)",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "bhop_aztec"
@@ -470,7 +470,7 @@
         "id": "bhop_grove",
         "name": "Grove",
         "image": "/images/maps/g2gfast/bhop_grove.webp",
-        "score": 43,
+        "score": 57,
         "author": "Tony Montana",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "bhop_grove"
@@ -560,7 +560,7 @@
         "id": "bhop_pit",
         "name": "Pit",
         "image": "/images/maps/g2gfast/bhop_pit.webp",
-        "score": 16,
+        "score": 46,
         "author": "Roady",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "bhop_pit"
@@ -578,7 +578,7 @@
         "id": "bhop_sqee",
         "name": "Sqee",
         "image": "/images/maps/g2gfast/bhop_sqee.webp",
-        "score": 42,
+        "score": 69,
         "author": "sQee, QuiSt, KorYouZ, lólmarcel, dawn, Ray-on.NoOb, nairda",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "bhop_sqee"
@@ -695,7 +695,7 @@
         "id": "surf_beginner2",
         "name": "Beginner2",
         "image": "/images/maps/g2gfast/surf_beginner2.webp",
-        "score": 80,
+        "score": 36,
         "author": "Kiiru",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_beginner2"
@@ -722,7 +722,7 @@
         "id": "surf_hologram",
         "name": "Hologram",
         "image": "/images/maps/g2gfast/surf_hologram.webp",
-        "score": 49,
+        "score": 37,
         "author": "Chent",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_hologram"
@@ -785,7 +785,7 @@
         "id": "surf_mesa",
         "name": "Mesa",
         "image": "/images/maps/g2gfast/surf_mesa.webp",
-        "score": 74,
+        "score": 77,
         "author": "Arblarg",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_mesa"
@@ -830,7 +830,7 @@
         "id": "surf_summit",
         "name": "Summit",
         "image": "/images/maps/g2gfast/surf_summit.webp",
-        "score": 84,
+        "score": 74,
         "author": "Juxtapo and Phurix",
         "originalGame": "Counter-Strike: Source",
         "originalMap": "surf_summit"
