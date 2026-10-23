@@ -17,7 +17,7 @@ export const DISCORD_URL = trim(import.meta.env.PUBLIC_DISCORD_URL ?? 'https://d
 
 /** Zee's Games' social accounts. TikTok and X are left out on purpose. */
 export const YOUTUBE_URL = trim(import.meta.env.PUBLIC_YOUTUBE_URL ?? 'https://www.youtube.com/@zees_games')
-export const X_URL = trim(import.meta.env.PUBLIC_X_URL ?? 'https://x.com/zee_games')
+export const X_URL = trim(import.meta.env.PUBLIC_X_URL ?? 'https://x.com/zees_games')
 export const FACEBOOK_URL = trim(import.meta.env.PUBLIC_FACEBOOK_URL ?? 'https://www.facebook.com/zeesgames')
 
 export const GITHUB_ORG = 'https://github.com/zees-games'

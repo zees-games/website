@@ -11,7 +11,7 @@ PUBLIC_TMC_URL=https://moddingcommunity.com
 PUBLIC_DISCORD_URL=https://dis.zeesgames.com
 # The social accounts in the footer and the home page's Discord section.
 PUBLIC_YOUTUBE_URL=https://www.youtube.com/@zees_games
-PUBLIC_X_URL=https://x.com/zee_games
+PUBLIC_X_URL=https://x.com/zees_games
 PUBLIC_FACEBOOK_URL=https://www.facebook.com/zeesgames
 
 # Umami analytics, read when the container starts (a restart applies a change,
