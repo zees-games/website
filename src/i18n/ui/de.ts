@@ -187,7 +187,7 @@ export const de: Messages = {
       byNumber: "Spieler 3 aus dieser Liste stummschalten",
       byName: "Einen Spieler nach Namen stummschalten; ein Teil reicht, wenn nur ein Spieler passt",
       byId: "Einen Spieler nach seiner Benutzer-ID stummschalten",
-      lookAtMe: "In {game} können Sie auch einen Spieler ansehen und {g} drücken, um ihn nicht mehr zu hören, oder {k}, um seine Stimme und seinen Chat stummzuschalten.",
+      lookAt: "In jedem Spiel können Sie auch einen Spieler ansehen und {g} drücken, um ihn nicht mehr zu hören, oder {k}, um seine Stimme und seinen Chat stummzuschalten.",
     },
   },
   server: {

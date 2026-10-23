@@ -10,7 +10,7 @@ import { UseI18n } from '../i18n'
  */
 interface Props { locale: Locale }
 const { locale } = Astro.props
-const { t, p } = UseI18n(locale)
+const { t } = UseI18n(locale)
 const C = t.servers.cmd
 const ROWS: [string, string][] = [['sm', C.list], ['sm 3', C.byNumber], ['sm zee', C.byName], ['sm #1042', C.byId]]
 const CODE = 'rounded-md border border-line bg-night px-1.5 py-0.5 font-mono text-sm text-text'
@@ -30,9 +30,8 @@ const parts = (msg: string) => msg.split(/(\{\w+\})/)
   ))}
 </dl>
 <p class="mt-4 text-sm leading-relaxed text-muted">
-  {parts(C.lookAtMe).map((s) =>
-    s === '{game}' ? <a href={p('/look-at-me#controls')} class="text-text underline decoration-amber/50 underline-offset-4 hover:decoration-amber">Look At Me</a>
-    : s === '{g}' ? <Key k="G" locale={locale} size="sm" />
+  {parts(C.lookAt).map((s) =>
+    s === '{g}' ? <Key k="G" locale={locale} size="sm" />
     : s === '{k}' ? <Key k="K" locale={locale} size="sm" />
     : s)}
 </p>

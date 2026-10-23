@@ -187,7 +187,7 @@ export const pt: Messages = {
       byNumber: "Silenciar o jogador 3 dessa lista",
       byName: "Silenciar um jogador pelo nome; basta uma parte quando só um jogador corresponde",
       byId: "Silenciar um jogador pelo id de utilizador",
-      lookAtMe: "Em {game}, também pode olhar para um jogador e carregar em {g} para deixar de o ouvir, ou em {k} para silenciar a voz e o chat dele.",
+      lookAt: "Em todos os jogos, também pode olhar para um jogador e carregar em {g} para deixar de o ouvir, ou em {k} para silenciar a voz e o chat dele.",
     },
   },
   server: {

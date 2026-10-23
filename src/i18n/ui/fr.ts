@@ -187,7 +187,7 @@ export const fr: Messages = {
       byNumber: "Rendre muet le joueur 3 de cette liste",
       byName: "Rendre muet un joueur par son nom ; une partie suffit si un seul joueur correspond",
       byId: "Rendre muet un joueur par son identifiant",
-      lookAtMe: "Dans {game}, vous pouvez aussi regarder un joueur et appuyer sur {g} pour ne plus l'entendre, ou sur {k} pour couper sa voix et son chat.",
+      lookAt: "Dans chaque jeu, vous pouvez aussi regarder un joueur et appuyer sur {g} pour ne plus l'entendre, ou sur {k} pour couper sa voix et son chat.",
     },
   },
   server: {

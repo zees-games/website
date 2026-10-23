@@ -187,7 +187,7 @@ export const es: Messages = {
       byNumber: "Silencia al jugador 3 de esa lista",
       byName: "Silencia a un jugador por su nombre; basta con una parte si solo coincide un jugador",
       byId: "Silencia a un jugador por su id de usuario",
-      lookAtMe: "En {game}, también puedes mirar a un jugador y pulsar {g} para dejar de oírlo, o {k} para silenciar su voz y su chat.",
+      lookAt: "En todos los juegos, también puedes mirar a un jugador y pulsar {g} para dejar de oírlo, o {k} para silenciar su voz y su chat.",
     },
   },
   server: {

@@ -186,7 +186,7 @@ export const nl: Messages = {
       byNumber: "Speler 3 uit die lijst dempen",
       byName: "Een speler dempen op naam; een deel is genoeg als maar één speler past",
       byId: "Een speler dempen op gebruikers-id",
-      lookAtMe: "In {game} kun je ook naar een speler kijken en op {g} drukken om hem niet meer te horen, of op {k} om zijn stem en chat te dempen.",
+      lookAt: "In elk spel kun je ook naar een speler kijken en op {g} drukken om hem niet meer te horen, of op {k} om zijn stem en chat te dempen.",
     },
   },
   server: {

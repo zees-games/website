@@ -193,7 +193,7 @@ export const en = {
       byNumber: 'Mute player 3 from that list',
       byName: 'Mute a player by name; part of it is enough when only one player matches',
       byId: 'Mute a player by their user id',
-      lookAtMe: 'In {game}, you can also look at a player and press {g} to stop hearing them, or {k} to mute their voice and chat.',
+      lookAt: 'In every game, you can also look at a player and press {g} to stop hearing them, or {k} to mute their voice and chat.',
     },
   },
   server: {
