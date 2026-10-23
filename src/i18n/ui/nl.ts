@@ -50,7 +50,7 @@ export const nl: Messages = {
     madeWithGodot: "Gemaakt met Godot",
     discord: "Discord-server",
     youtube: "Zee's Games op YouTube",
-    instagram: "Zee's Games op Instagram",
+    x: "Zee's Games op X",
     facebook: "Zee's Games op Facebook",
     email: "Mail Zee's Games",
     sourceOnGithub: "Broncode op GitHub",

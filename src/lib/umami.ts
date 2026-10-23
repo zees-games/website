@@ -39,7 +39,7 @@ export const UMAMI_EVENTS = [
 
   /** The Discord invite (`place`: header, menu, home, game, goals, footer). */
   'discord',
-  /** A social account (`network`: youtube | instagram | facebook; `place`: home, footer). */
+  /** A social account (`network`: youtube | x | facebook; `place`: home, footer). */
   'social',
   /** The contact email button (`place`: home, footer); the address is never in the event. */
   'contact',

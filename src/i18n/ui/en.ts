@@ -60,7 +60,7 @@ export const en = {
     madeWithGodot: 'Made with Godot',
     discord: "Discord server",
     youtube: "Zee's Games on YouTube",
-    instagram: "Zee's Games on Instagram",
+    x: "Zee's Games on X",
     facebook: "Zee's Games on Facebook",
     email: "Email Zee's Games",
     sourceOnGithub: 'Source code on GitHub',

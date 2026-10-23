@@ -51,7 +51,7 @@ export const fr: Messages = {
     madeWithGodot: 'Créé avec Godot',
     discord: "Serveur Discord",
     youtube: "Zee's Games sur YouTube",
-    instagram: "Zee's Games sur Instagram",
+    x: "Zee's Games sur X",
     facebook: "Zee's Games sur Facebook",
     email: "Écrire à Zee's Games",
     sourceOnGithub: 'Code source sur GitHub',

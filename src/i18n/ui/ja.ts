@@ -49,7 +49,7 @@ export const ja: Messages = {
     madeWithGodot: "Godot 製",
     discord: "Discord サーバー",
     youtube: "YouTube の Zee's Games",
-    instagram: "Instagram の Zee's Games",
+    x: "X の Zee's Games",
     facebook: "Facebook の Zee's Games",
     email: "Zee's Games にメールする",
     sourceOnGithub: "GitHub のソースコード",

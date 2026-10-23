@@ -49,7 +49,7 @@ export const zh: Messages = {
     madeWithGodot: "使用 Godot 制作",
     discord: "Discord 服务器",
     youtube: "Zee's Games 的 YouTube",
-    instagram: "Zee's Games 的 Instagram",
+    x: "Zee's Games 的 X",
     facebook: "Zee's Games 的 Facebook",
     email: "给 Zee's Games 发邮件",
     sourceOnGithub: "GitHub 上的源代码",
