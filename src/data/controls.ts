@@ -15,8 +15,9 @@ import type { ControlGroupId, ControlLabelId } from '../i18n/controls/en'
  * wheel's two halves are one, and five weapon slots are one.
  *
  * Every game has self-mute (dot-chat) with the same keys as Look At Me: the menu,
- * and G / K while looking at a player. A game whose own table already uses G or K
- * has no `voice` group until that is settled, never a silently changed binding.
+ * and G / K while looking at a player. In arena, g2gfast, playground, zombie-zone
+ * and dangerous-delivery G or K is also another row of the table; the site states
+ * the self-mute keys for them regardless (Christian's call), the table is unchanged.
  */
 export interface ControlRow { keys: string[][]; label: ControlLabelId }
 export interface ControlGroup { group: ControlGroupId; rows: ControlRow[] }
@@ -60,6 +61,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["M"]], label: 'changeMap' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
     ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
+    ] },
   ],
   'g2gfast': [
     { group: 'movement', rows: [
@@ -91,6 +97,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["F3"]], label: 'serverList' },
       { keys: [["P"]], label: 'nextHudTheme' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'playground': [
@@ -133,6 +144,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["H"]], label: 'helpAndControls' },
       { keys: [["B"]], label: 'loadout' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'hungario': [
@@ -271,6 +287,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["Mouse1"]], label: 'fire' },
       { keys: [["Mouse2"]], label: 'shove' },
       { keys: [["Wheel"]], label: 'nextOrPreviousWeapon' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'hide-n-seek': [
@@ -469,6 +490,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
     { group: 'communication', rows: [
       { keys: [["V"]], label: 'pushToTalk' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'look-at-me': [
