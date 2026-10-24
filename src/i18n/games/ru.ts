@@ -19,7 +19,7 @@ export const ru: Record<GameSlug, GameText> = {
       "GunGame",
       "Surf Deathmatch",
     ],
-    inspiredBy: "Дезматч- и сёрф-серверы Counter-Strike: Source",
+    inspirations: ["Дезматч- и сёрф-серверы."],
   },
   'g2gfast': {
     tagline: "Забеги на время в банихопе и сёрфе с движением как в Source и таблицами лидеров.",
@@ -37,7 +37,7 @@ export const ru: Record<GameSlug, GameText> = {
       "Bunny Hop",
       "KZ",
     ],
-    inspiredBy: "Серверы Surf Timer и Bunny Hop из Counter-Strike: Source",
+    inspirations: ["Серверы Surf Timer и Bunny Hop."],
   },
   'playground': {
     tagline: "Физическая песочница: создавайте предметы, NPC и оружие и стройте что угодно.",
@@ -53,7 +53,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Песочница",
     ],
-    inspiredBy: "Garry's Mod",
+    inspirations: ["«Песочница» без правил, на которую опирается Playground."],
   },
   'hungario': {
     tagline: "Управляйте голодным монстром, ешьте, чтобы расти, и переживите всех остальных.",
@@ -70,7 +70,7 @@ export const ru: Record<GameSlug, GameText> = {
       "Каждый сам за себя",
       "Деление",
     ],
-    inspiredBy: "Agar.io",
+    inspirations: ["Игра, по образцу которой сделана Hungario."],
   },
   'buses-from-hell': {
     tagline: "Переживите нападение одного или нескольких безумных водителей автобусов, которые хотят вас задавить.",
@@ -85,7 +85,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Водители против бегунов",
     ],
-    inspiredBy: "buses_from_hell, миниигровая карта Counter-Strike: Source",
+    inspirations: ["Миниигровая карта Counter-Strike: Source."],
   },
   'smash-copter': {
     tagline: "Удержитесь на шатких платформах, пока пушка осыпает вас предметами.",
@@ -102,7 +102,7 @@ export const ru: Record<GameSlug, GameText> = {
       "Выживание в одиночку",
       "Командное выживание",
     ],
-    inspiredBy: "mg_3k_smash_lego_copter, миниигровая карта Counter-Strike: Source",
+    inspirations: ["Миниигровая карта Counter-Strike: Source."],
   },
   'zombie-zone': {
     tagline: "Кооперативное выживание среди зомби: спасайтесь через город или переживите волны.",
@@ -119,7 +119,7 @@ export const ru: Record<GameSlug, GameText> = {
       "Кооперативное выживание",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead и зомби-серверы Counter-Strike: Source, но с сильно переработанными идеями и целями",
+    inspirations: ["Сильно вдохновил концепцию открываемого ящика со случайными эффектами и хаос, который за ней следует.", "Одна из моих любимых игр в своё время; я хотел воссоздать часть хаоса и атмосферы больших серверов с модами, на которых я играл."],
   },
   'hide-n-seek': {
     tagline: "Прячьтесь в своём облике; каждый пойманный игрок присоединяется к охоте.",
@@ -135,7 +135,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Прятки",
     ],
-    inspiredBy: "Hide and Seek — режим Garry's Mod, который так и не стал таким популярным, как заслуживал, но был очень весёлым",
+    inspirations: ["Режим Garry's Mod, который так и не стал таким популярным, как заслуживал, но был очень весёлым."],
   },
   'prop-hunt': {
     tagline: "Замаскируйтесь под мебель и замрите, пока охотники с завязанными глазами ищут вас.",
@@ -150,7 +150,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Предметы против охотников",
     ],
-    inspiredBy: "Prop Hunt из Garry's Mod",
+    inspirations: ["Режим игры Garry's Mod."],
   },
   'murder-mystery': {
     tagline: "Все выглядят одинаково. У одного из них нож.",
@@ -166,7 +166,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Социальная дедукция",
     ],
-    inspiredBy: "Murder, режим игры Garry's Mod",
+    inspirations: ["Режим игры Garry's Mod."],
   },
   'deathrun': {
     tagline: "Пробегите трассу, полную ловушек, пока активаторы нажимают все свои кнопки.",
@@ -182,7 +182,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Бегуны против активаторов",
     ],
-    inspiredBy: "DeathRun, мод для Counter-Strike",
+    inspirations: ["Мод для Counter-Strike."],
   },
   'wipeout': {
     tagline: "Полосы препятствий над водой: качающиеся рычаги, огромные шары и схватка на финише.",
@@ -199,7 +199,7 @@ export const ru: Record<GameSlug, GameText> = {
       "Гонка с препятствиями",
       "Финал на арене",
     ],
-    inspiredBy: "Wipeout, телешоу, и карты с полосами препятствий из Counter-Strike: Source",
+    inspirations: ["Телешоу.", "Карты с полосами препятствий из неё."],
   },
   'dangerous-delivery': {
     tagline: "Перевозите грузы по горным дорогам без ограждений. Чем рискованнее рейс, тем выше плата.",

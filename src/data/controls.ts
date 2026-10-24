@@ -13,6 +13,10 @@ import type { ControlGroupId, ControlLabelId } from '../i18n/controls/en'
  * `WASD` (the four movement keys as a cluster) and `1-5` (the number row).
  * The rows are tidied for the web, not changed: W, A, S and D are one row, the
  * wheel's two halves are one, and five weapon slots are one.
+ *
+ * Every game has self-mute (dot-chat) with the same keys as Look At Me: the menu,
+ * and G / K while looking at a player. A game whose own table already uses G or K
+ * has no `voice` group until that is settled, never a silently changed binding.
  */
 export interface ControlRow { keys: string[][]; label: ControlLabelId }
 export interface ControlGroup { group: ControlGroupId; rows: ControlRow[] }
@@ -154,6 +158,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
     { group: 'mouse', rows: [
       { keys: [["Point"]], label: 'steerTheFurtherThe' },
     ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
+    ] },
   ],
   'buses-from-hell': [
     { group: 'movement', rows: [
@@ -180,6 +189,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["Mouse1"]], label: 'swingTheHammerOr' },
       { keys: [["Mouse2"]], label: 'watchTheOneBefore' },
       { keys: [["Mouse3"]], label: 'theirEyesOrBehind' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'smash-copter': [
@@ -211,6 +225,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["H"]], label: 'helpAndControls' },
       { keys: [["M"]], label: 'changeMap' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'zombie-zone': [
@@ -279,6 +298,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["U"]], label: 'teamChat' },
       { keys: [["V"]], label: 'pushToTalk' },
     ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
+    ] },
   ],
   'prop-hunt': [
     { group: 'movement', rows: [
@@ -318,6 +342,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["M"]], label: 'changeMap' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
     ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
+    ] },
   ],
   'murder-mystery': [
     { group: 'movement', rows: [
@@ -342,6 +371,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
     { group: 'communication', rows: [
       { keys: [["Y"]], label: 'chat' },
       { keys: [["V"]], label: 'pushToTalk' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'deathrun': [
@@ -369,6 +403,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["M"]], label: 'changeMap' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
     ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
+    ] },
   ],
   'wipeout': [
     { group: 'movement', rows: [
@@ -394,6 +433,11 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["H"]], label: 'helpAndControls' },
       { keys: [["M"]], label: 'changeMap' },
       { keys: [["Esc"]], label: 'menuAndSettings' },
+    ] },
+    { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
+      { keys: [["G"]], label: 'lookAtAPlayer' },
+      { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
   'dangerous-delivery': [
@@ -445,6 +489,7 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["M"]], label: 'changeMap' },
     ] },
     { group: 'voice', rows: [
+      { keys: [["Esc"]], label: 'selfMuteMenu' },
       { keys: [["G"]], label: 'lookAtAPlayer' },
       { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },

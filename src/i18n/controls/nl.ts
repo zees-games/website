@@ -162,5 +162,6 @@ export const nl: ControlsText = {
     aCommandRTo: "Een commando: /r naar de lobby, /l3 naar een bereikt level (ook Enter)",
     lookAtAPlayer: "Naar een speler kijken: stoppen (of hervatten) met horen",
     lookAtAPlayer2: "Naar een speler kijken: zijn stem en chat dempen (of weer aanzetten)",
+    selfMuteMenu: "Dempmenu: een speler kiezen om te dempen (of weer aan te zetten)",
   },
 }

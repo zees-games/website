@@ -162,5 +162,6 @@ export const fr: ControlsText = {
     aCommandRTo: "Une commande : /r vers le lobby, /l3 vers un niveau atteint (Enter aussi)",
     lookAtAPlayer: "Regarder un joueur : ne plus l'entendre (ou le réentendre)",
     lookAtAPlayer2: "Regarder un joueur : couper (ou rétablir) sa voix et son chat",
+    selfMuteMenu: "Menu de mise en sourdine : choisir un joueur à couper (ou rétablir)",
   },
 }

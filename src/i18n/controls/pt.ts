@@ -162,5 +162,6 @@ export const pt: ControlsText = {
     aCommandRTo: "Um comando: /r para o lobby, /l3 para um nível que alcançou (também Enter)",
     lookAtAPlayer: "Olhar para um jogador: deixar de o ouvir (ou voltar a ouvir)",
     lookAtAPlayer2: "Olhar para um jogador: silenciar (ou reativar) a voz e o chat dele",
+    selfMuteMenu: "Menu de silenciar: escolher um jogador para silenciar (ou reativar)",
   },
 }

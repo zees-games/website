@@ -19,7 +19,7 @@ export const ja: Record<GameSlug, GameText> = {
       "GunGame",
       "Surf Deathmatch",
     ],
-    inspiredBy: "Counter-Strike: Source のデスマッチ／サーフ戦闘サーバー",
+    inspirations: ["デスマッチ／サーフ戦闘サーバー。"],
   },
   'g2gfast': {
     tagline: "Source 風の移動とリーダーボードを備えた、バニーホップとサーフのタイムアタック。",
@@ -37,7 +37,7 @@ export const ja: Record<GameSlug, GameText> = {
       "Bunny Hop",
       "KZ",
     ],
-    inspiredBy: "Counter-Strike: Source の Surf Timer／Bunny Hop サーバー",
+    inspirations: ["Surf Timer／Bunny Hop サーバー。"],
   },
   'playground': {
     tagline: "プロップ、NPC、武器を出して好きなものを作れる物理サンドボックス。",
@@ -53,7 +53,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "サンドボックス",
     ],
-    inspiredBy: "Garry's Mod",
+    inspirations: ["ルールのないサンドボックス。Playground はその自分なりの解釈です。"],
   },
   'hungario': {
     tagline: "腹ペコのモンスターを操り、食べて大きくなり、最後まで生き残ろう。",
@@ -70,7 +70,7 @@ export const ja: Record<GameSlug, GameText> = {
       "フリーフォーオール",
       "分裂",
     ],
-    inspiredBy: "Agar.io",
+    inspirations: ["Hungario のお手本になったゲーム。"],
   },
   'buses-from-hell': {
     tagline: "あなたを轢こうとする、狂ったバス運転手たちから生き延びよう。",
@@ -85,7 +85,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "ドライバー対ランナー",
     ],
-    inspiredBy: "buses_from_hell（Counter-Strike: Source のミニゲームマップ）",
+    inspirations: ["Counter-Strike: Source のミニゲームマップ。"],
   },
   'smash-copter': {
     tagline: "大砲がプロップを降らせる中、ぐらぐらの足場に乗り続けよう。",
@@ -102,7 +102,7 @@ export const ja: Record<GameSlug, GameText> = {
       "ソロサバイバル",
       "チームサバイバル",
     ],
-    inspiredBy: "mg_3k_smash_lego_copter（Counter-Strike: Source のミニゲームマップ）",
+    inspirations: ["Counter-Strike: Source のミニゲームマップ。"],
   },
   'zombie-zone': {
     tagline: "協力型ゾンビサバイバル：街を抜けて脱出するか、ウェーブを生き延びよう。",
@@ -119,7 +119,7 @@ export const ja: Record<GameSlug, GameText> = {
       "協力サバイバル",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead と Counter-Strike: Source のゾンビサーバー。ただしコンセプトと目的は大きく作り直しています",
+    inspirations: ["ランダムな効果が出るオープンボックスというコンセプトと、それに伴う混乱に大きな影響を与えました。", "当時のお気に入りのゲームの一つで、よく遊んでいた大規模な MOD サーバーの混沌とした雰囲気を再現したいと思いました。"],
   },
   'hide-n-seek': {
     tagline: "自分の姿のまま隠れよう。見つかった隠れ役は、鬼に加わる。",
@@ -135,7 +135,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "かくれんぼ",
     ],
-    inspiredBy: "Hide and Seek。人気はそれほど出なかったものの、とても楽しかった Garry's Mod のゲームモード",
+    inspirations: ["人気はそれほど出なかったものの、とても楽しかった Garry's Mod のゲームモード。"],
   },
   'prop-hunt': {
     tagline: "家具に化けてじっとしていよう。目隠しされたハンターが探しに来る。",
@@ -150,7 +150,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "プロップ対ハンター",
     ],
-    inspiredBy: "Garry's Mod の Prop Hunt",
+    inspirations: ["Garry's Mod のゲームモード。"],
   },
   'murder-mystery': {
     tagline: "みんな同じ見た目。その中の 1 人がナイフを持っている。",
@@ -166,7 +166,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "ソーシャルディダクション",
     ],
-    inspiredBy: "Murder（Garry's Mod のゲームモード）",
+    inspirations: ["Garry's Mod のゲームモード。"],
   },
   'deathrun': {
     tagline: "アクティベーターがあらゆるボタンを押す中、罠だらけのコースを駆け抜けよう。",
@@ -182,7 +182,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "ランナー対アクティベーター",
     ],
-    inspiredBy: "DeathRun（Counter-Strike の MOD）",
+    inspirations: ["Counter-Strike の MOD。"],
   },
   'wipeout': {
     tagline: "水上の障害物コース：回転アーム、巨大ボール、そしてゴール前の乱闘。",
@@ -199,7 +199,7 @@ export const ja: Record<GameSlug, GameText> = {
       "障害物レース",
       "アリーナ決勝",
     ],
-    inspiredBy: "Wipeout（テレビ番組）と Counter-Strike: Source のコースマップ",
+    inspirations: ["テレビ番組。", "そのコースマップ。"],
   },
   'dangerous-delivery': {
     tagline: "ガードレールのない山道で荷物を運ぼう。危険な配達ほど報酬は高い。",

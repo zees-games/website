@@ -8,8 +8,8 @@ export interface GameText {
   /** How a round plays, as short steps. */
   howToPlay: string[]
   modes: string[]
-  /** What it is a take on, if anything. */
-  inspiredBy?: string
+  /** One description per entry of the game's `inspirations` in `src/data/games.ts`, in the same order. */
+  inspirations?: string[]
 }
 
 /** The reference copy. Written from each game's README: what it does today. */
@@ -31,7 +31,7 @@ export const en: Record<GameSlug, GameText> = {
       "GunGame",
       "Surf Deathmatch",
     ],
-    inspiredBy: "Counter-Strike: Source deathmatch and surf combat servers",
+    inspirations: ["Deathmatch and surf combat servers."],
   },
   'g2gfast': {
     tagline: "Bunny hop and surf timer runs with Source-style movement and leaderboards.",
@@ -49,7 +49,7 @@ export const en: Record<GameSlug, GameText> = {
       "Bunny Hop",
       "KZ",
     ],
-    inspiredBy: "Counter-Strike: Source Surf Timer and Bunny Hop servers",
+    inspirations: ["Surf Timer and Bunny Hop servers."],
   },
   'playground': {
     tagline: "A physics sandbox: spawn props, NPCs and weapons and build whatever you like.",
@@ -65,7 +65,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Sandbox",
     ],
-    inspiredBy: "Garry's Mod",
+    inspirations: ["The sandbox with no rules that Playground is a take on."],
   },
   'hungario': {
     tagline: "Steer a hungry monster, eat to grow and outlast everyone else.",
@@ -82,7 +82,7 @@ export const en: Record<GameSlug, GameText> = {
       "Free-for-all",
       "Split",
     ],
-    inspiredBy: "Agar.io",
+    inspirations: ["The game Hungario takes after."],
   },
   'buses-from-hell': {
     tagline: "Survive one or more crazy bus drivers trying to run you over.",
@@ -97,7 +97,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Drivers vs runners",
     ],
-    inspiredBy: "buses_from_hell, a Counter-Strike: Source minigame map",
+    inspirations: ["A Counter-Strike: Source minigame map."],
   },
   'smash-copter': {
     tagline: "Stay on wobbly platforms while a cannon rains props down on you.",
@@ -114,7 +114,7 @@ export const en: Record<GameSlug, GameText> = {
       "Solo survival",
       "Team survival",
     ],
-    inspiredBy: "mg_3k_smash_lego_copter, a Counter-Strike: Source minigame map",
+    inspirations: ["A Counter-Strike: Source minigame map."],
   },
   'zombie-zone': {
     tagline: "Co-op zombie survival: escape through the city or survive waves.",
@@ -131,7 +131,7 @@ export const en: Record<GameSlug, GameText> = {
       "Co-op Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead and Counter-Strike: Source zombie servers, with the concepts and objectives heavily reworked",
+    inspirations: ["Heavily inspired the open box with random effects concept and the chaos that comes with it.", "One of my favorite games back in the day and wanted to replicate some of the chaos and feel from large modded servers I used to play on."],
   },
   'hide-n-seek': {
     tagline: "Hide as yourself; every hider caught joins the hunt.",
@@ -147,7 +147,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Hide and seek",
     ],
-    inspiredBy: "Hide and Seek, a Garry's Mod game mode that never got as popular as it deserved, but was a lot of fun",
+    inspirations: ["A Garry's Mod game mode that never got as popular as it deserved, but was a lot of fun."],
   },
   'prop-hunt': {
     tagline: "Disguise as furniture and keep still while blindfolded hunters search.",
@@ -162,7 +162,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Props vs hunters",
     ],
-    inspiredBy: "Garry's Mod Prop Hunt",
+    inspirations: ["The Garry's Mod game mode."],
   },
   'murder-mystery': {
     tagline: "Everybody looks the same. One of them has a knife.",
@@ -178,7 +178,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Social deduction",
     ],
-    inspiredBy: "Murder, a Garry's Mod game mode",
+    inspirations: ["A Garry's Mod game mode."],
   },
   'deathrun': {
     tagline: "Run a trap-filled course while the activators press every button they have.",
@@ -194,7 +194,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Runners vs activators",
     ],
-    inspiredBy: "DeathRun, a Counter-Strike mod",
+    inspirations: ["A Counter-Strike mod."],
   },
   'wipeout': {
     tagline: "Obstacle courses over water: sweeper arms, big balls and a fight at the finish.",
@@ -211,7 +211,7 @@ export const en: Record<GameSlug, GameText> = {
       "Obstacle race",
       "Arena final",
     ],
-    inspiredBy: "Wipeout, the TV show, and Counter-Strike: Source course maps",
+    inspirations: ["The TV show.", "Its course maps."],
   },
   'dangerous-delivery': {
     tagline: "Haul loads up mountain roads with no guard rails. Riskier runs pay more.",

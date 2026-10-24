@@ -1,0 +1,24 @@
+---
+import { ExternalLink } from 'lucide-react'
+import type { Game } from '../data/games'
+
+/** A game's inspirations: title (a link when the source has a page), description beneath. */
+interface Props { game: Game; descriptions: string[] | undefined; compact?: boolean }
+const { game, descriptions = [], compact = false } = Astro.props
+const entries = (game.inspirations ?? []).map((e, i) => ({ ...e, description: descriptions[i] ?? '' }))
+---
+
+{entries.length > 0 && (
+  <ul class:list={[compact ? 'mt-1 space-y-1.5' : 'mt-2 space-y-3']}>
+    {entries.map((e) => (
+      <li>
+        <p class:list={['font-semibold', compact ? 'text-sm' : 'text-sm']}>
+          {e.link
+            ? <a href={e.link} rel="nofollow noopener" class="inline-flex items-center gap-1 underline decoration-line underline-offset-2 hover:text-cyan">{e.title} <ExternalLink className="size-3" aria-hidden="true" /></a>
+            : e.title}
+        </p>
+        <p class:list={['text-muted', compact ? 'text-xs' : 'text-sm']}>{e.description}</p>
+      </li>
+    ))}
+  </ul>
+)}

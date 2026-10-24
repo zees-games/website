@@ -162,5 +162,6 @@ export const de: ControlsText = {
     aCommandRTo: "Ein Befehl: /r in die Lobby, /l3 zu einem erreichten Level (auch Enter)",
     lookAtAPlayer: "Einen Spieler ansehen: nicht mehr (oder wieder) hören",
     lookAtAPlayer2: "Einen Spieler ansehen: seine Stimme und seinen Chat stummschalten (oder wieder aktivieren)",
+    selfMuteMenu: "Stummschalt-Menü: einen Spieler zum Stummschalten (oder Aktivieren) wählen",
   },
 }

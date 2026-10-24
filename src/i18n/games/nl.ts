@@ -19,7 +19,7 @@ export const nl: Record<GameSlug, GameText> = {
       "GunGame",
       "Surf Deathmatch",
     ],
-    inspiredBy: "Deathmatch- en surfgevechtservers van Counter-Strike: Source",
+    inspirations: ["Deathmatch- en surfgevechtservers."],
   },
   'g2gfast': {
     tagline: "Bunny hop- en surftimerruns met Source-achtige besturing en leaderboards.",
@@ -37,7 +37,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Bunny Hop",
       "KZ",
     ],
-    inspiredBy: "Surf Timer- en Bunny Hop-servers van Counter-Strike: Source",
+    inspirations: ["Surf Timer- en Bunny Hop-servers."],
   },
   'playground': {
     tagline: "Een physics-sandbox: spawn props, NPC's en wapens en bouw wat je maar wilt.",
@@ -53,7 +53,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Sandbox",
     ],
-    inspiredBy: "Garry's Mod",
+    inspirations: ["De sandbox zonder regels waar Playground een eigen versie van is."],
   },
   'hungario': {
     tagline: "Bestuur een hongerig monster, eet om te groeien en overleef iedereen.",
@@ -70,7 +70,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Free-for-all",
       "Splitsen",
     ],
-    inspiredBy: "Agar.io",
+    inspirations: ["Het spel waar Hungario op voortbouwt."],
   },
   'buses-from-hell': {
     tagline: "Overleef een of meer gekke buschauffeurs die je proberen te overrijden.",
@@ -85,7 +85,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Chauffeurs tegen lopers",
     ],
-    inspiredBy: "buses_from_hell, een Counter-Strike: Source-minigamemap",
+    inspirations: ["Een Counter-Strike: Source-minigamemap."],
   },
   'smash-copter': {
     tagline: "Blijf op wankele platforms staan terwijl een kanon props op je laat regenen.",
@@ -102,7 +102,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Solo overleven",
       "Teamoverleving",
     ],
-    inspiredBy: "mg_3k_smash_lego_copter, een Counter-Strike: Source-minigamemap",
+    inspirations: ["Een Counter-Strike: Source-minigamemap."],
   },
   'zombie-zone': {
     tagline: "Coöp zombieoverleving: ontsnap door de stad of overleef golven.",
@@ -119,7 +119,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Coöp Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead en zombieservers van Counter-Strike: Source, met sterk herwerkte concepten en doelen",
+    inspirations: ["Heeft het concept van de doos die opengaat met willekeurige effecten en de chaos die daarbij hoort sterk geïnspireerd.", "Een van mijn favoriete spellen van vroeger; ik wilde een deel van de chaos en het gevoel van de grote gemodde servers waarop ik speelde nabootsen."],
   },
   'hide-n-seek': {
     tagline: "Verstop je als jezelf; elke betrapte verstopper doet mee aan de jacht.",
@@ -135,7 +135,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Verstoppertje",
     ],
-    inspiredBy: "Hide and Seek, een Garry's Mod-spelmodus die nooit zo populair werd als hij verdiende, maar wel heel leuk was",
+    inspirations: ["Een Garry's Mod-spelmodus die nooit zo populair werd als hij verdiende, maar wel heel leuk was."],
   },
   'prop-hunt': {
     tagline: "Vermom je als meubilair en blijf stilstaan terwijl geblinddoekte jagers zoeken.",
@@ -150,7 +150,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Props tegen jagers",
     ],
-    inspiredBy: "Prop Hunt uit Garry's Mod",
+    inspirations: ["De spelmodus van Garry's Mod."],
   },
   'murder-mystery': {
     tagline: "Iedereen ziet er hetzelfde uit. Een van hen heeft een mes.",
@@ -166,7 +166,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Sociale deductie",
     ],
-    inspiredBy: "Murder, een spelmodus van Garry's Mod",
+    inspirations: ["Een spelmodus van Garry's Mod."],
   },
   'deathrun': {
     tagline: "Ren over een parcours vol vallen terwijl de activators elke knop indrukken die ze hebben.",
@@ -182,7 +182,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Lopers tegen activators",
     ],
-    inspiredBy: "DeathRun, een Counter-Strike-mod",
+    inspirations: ["Een Counter-Strike-mod."],
   },
   'wipeout': {
     tagline: "Hindernisbanen boven water: zwaaiende armen, grote ballen en een gevecht bij de finish.",
@@ -199,7 +199,7 @@ export const nl: Record<GameSlug, GameText> = {
       "Hindernisrace",
       "Arenafinale",
     ],
-    inspiredBy: "Wipeout, de tv-show, en parcoursmaps uit Counter-Strike: Source",
+    inspirations: ["De tv-show.", "Parcoursmaps daaruit."],
   },
   'dangerous-delivery': {
     tagline: "Vervoer lading over bergwegen zonder vangrails. Riskantere ritten betalen meer.",

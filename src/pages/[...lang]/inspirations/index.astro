@@ -1,5 +1,6 @@
 ---
 import { Asset } from '../../../lib/asset'
+import InspirationList from '../../../components/InspirationList.astro'
 import Layout from '../../../layouts/Layout.astro'
 import {
   Lightbulb, Cpu, Boxes, Map, Server, History, Ghost, ArrowRight, GitBranch, CircleOff, Sparkles,
@@ -23,7 +24,7 @@ const SOURCE_STYLE = [
   [Server, 'text-text'],
 ] as const
 const MODE_COLOR = (i: number) => (i % 3 === 0 ? 'text-cyan border-cyan/40 bg-cyan/10' : i % 3 === 1 ? 'text-amber border-amber/40 bg-amber/10' : 'text-violet border-violet/40 bg-violet/10')
-// Maps that became games here (each game's `inspiredBy` names them), then the next one.
+// Maps that became games here (each game's `inspirations` name them), then the next one.
 const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_smash_lego_copter', 'Smash Copter', 'text-violet']] as const
 ---
 
@@ -130,15 +131,15 @@ const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_s
       <p class="mt-2 text-muted">{I.gamesBody}</p>
       <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {GAMES.map((game) => (
-          <a href={p(`/${game.slug}`)} class="glow-card group flex items-center gap-4 p-3 transition hover:border-cyan/60">
-            <img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-28 shrink-0 rounded-lg object-cover" />
+          <div class="glow-card flex items-start gap-4 p-3">
+            <a href={p(`/${game.slug}`)} class="shrink-0" tabindex="-1" aria-hidden="true"><img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-28 rounded-lg object-cover" /></a>
             <div class="min-w-0">
-              <p class="font-semibold group-hover:text-cyan">{game.title} <span class="ml-1 text-xs font-normal text-muted">{t.kind[game.kind]}</span></p>
-              {g(game.slug).inspiredBy
-                ? <p class="mt-1 text-sm text-muted">{g(game.slug).inspiredBy}</p>
+              <a href={p(`/${game.slug}`)} class="font-semibold hover:text-cyan">{game.title} <span class="ml-1 text-xs font-normal text-muted">{t.kind[game.kind]}</span></a>
+              {game.inspirations?.length
+                ? <InspirationList game={game} descriptions={g(game.slug).inspirations} compact />
                 : <p class="mt-1 flex items-center gap-1.5 text-sm text-amber"><Lightbulb className="size-3.5 shrink-0" aria-hidden="true" />{I.ownIdea}</p>}
             </div>
-          </a>
+          </div>
         ))}
       </div>
       <p class="mt-10 text-xs leading-relaxed text-muted">{I.disclaimer}</p>

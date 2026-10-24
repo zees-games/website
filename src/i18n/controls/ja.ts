@@ -162,5 +162,6 @@ export const ja: ControlsText = {
     aCommandRTo: "コマンド: /r でロビーへ、/l3 で到達済みのレベルへ(Enterでも可)",
     lookAtAPlayer: "プレイヤーを見る: 声を聞かない(または再び聞く)",
     lookAtAPlayer2: "プレイヤーを見る: ボイスとチャットをミュート(またはミュート解除)",
+    selfMuteMenu: "セルフミュートメニュー: プレイヤーを選んでミュート(またはミュート解除)",
   },
 }

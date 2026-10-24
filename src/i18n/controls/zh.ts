@@ -162,5 +162,6 @@ export const zh: ControlsText = {
     aCommandRTo: "命令:/r 回大厅,/l3 去已到达的关卡(也可按 Enter)",
     lookAtAPlayer: "看向玩家:不再听到(或重新听到)他们",
     lookAtAPlayer2: "看向玩家:屏蔽(或取消屏蔽)他们的语音和聊天",
+    selfMuteMenu: "自我屏蔽菜单:选择要屏蔽(或取消屏蔽)的玩家",
   },
 }

@@ -19,7 +19,7 @@ export const zh: Record<GameSlug, GameText> = {
       "GunGame",
       "Surf Deathmatch",
     ],
-    inspiredBy: "Counter-Strike: Source 的死亡竞赛与 Surf 战斗服务器",
+    inspirations: ["死亡竞赛与 Surf 战斗服务器。"],
   },
   'g2gfast': {
     tagline: "采用 Source 风格移动和排行榜的 Bunny Hop 与 Surf 计时跑图。",
@@ -37,7 +37,7 @@ export const zh: Record<GameSlug, GameText> = {
       "Bunny Hop",
       "KZ",
     ],
-    inspiredBy: "Counter-Strike: Source 的 Surf Timer 与 Bunny Hop 服务器",
+    inspirations: ["Surf Timer 与 Bunny Hop 服务器。"],
   },
   'playground': {
     tagline: "物理沙盒：生成道具、NPC 和武器，想建什么就建什么。",
@@ -53,7 +53,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "沙盒",
     ],
-    inspiredBy: "Garry's Mod",
+    inspirations: ["没有规则的沙盒，Playground 是对它的一次自己的演绎。"],
   },
   'hungario': {
     tagline: "操控一只饥饿的怪物，吃东西成长，比所有人活得更久。",
@@ -70,7 +70,7 @@ export const zh: Record<GameSlug, GameText> = {
       "自由混战",
       "分裂",
     ],
-    inspiredBy: "Agar.io",
+    inspirations: ["Hungario 所参照的游戏。"],
   },
   'buses-from-hell': {
     tagline: "在一名或多名疯狂巴士司机的追杀中活下来。",
@@ -85,7 +85,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "司机对逃跑者",
     ],
-    inspiredBy: "buses_from_hell，一张 Counter-Strike: Source 小游戏地图",
+    inspirations: ["一张 Counter-Strike: Source 小游戏地图。"],
   },
   'smash-copter': {
     tagline: "大炮向你倾泻道具，你要稳稳站在摇摇晃晃的平台上。",
@@ -102,7 +102,7 @@ export const zh: Record<GameSlug, GameText> = {
       "单人生存",
       "团队生存",
     ],
-    inspiredBy: "mg_3k_smash_lego_copter，一张 Counter-Strike: Source 小游戏地图",
+    inspirations: ["一张 Counter-Strike: Source 小游戏地图。"],
   },
   'zombie-zone': {
     tagline: "合作僵尸生存：穿越城市逃生，或在一波波进攻中生存。",
@@ -119,7 +119,7 @@ export const zh: Record<GameSlug, GameText> = {
       "合作 Survival",
       "Exodus",
     ],
-    inspiredBy: "Left 4 Dead 和 Counter-Strike: Source 僵尸服务器，但概念和目标都经过了大幅改造",
+    inspirations: ["极大地启发了“随机效果开箱”的概念，以及随之而来的混乱。", "我当年最喜欢的游戏之一，想复刻我曾经玩过的大型模组服务器里的那种混乱和感觉。"],
   },
   'hide-n-seek': {
     tagline: "以自己的模样藏起来；每个被抓到的躲藏者都会加入搜捕。",
@@ -135,7 +135,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "捉迷藏",
     ],
-    inspiredBy: "Hide and Seek，一个没有它应得的那么火、但非常好玩的 Garry's Mod 游戏模式",
+    inspirations: ["一个没有它应得的那么火、但非常好玩的 Garry's Mod 游戏模式。"],
   },
   'prop-hunt': {
     tagline: "伪装成家具一动不动，躲避蒙眼猎人的搜寻。",
@@ -150,7 +150,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "道具对猎人",
     ],
-    inspiredBy: "Garry's Mod 的 Prop Hunt",
+    inspirations: ["Garry's Mod 的游戏模式。"],
   },
   'murder-mystery': {
     tagline: "所有人看起来都一样，其中一人带着刀。",
@@ -166,7 +166,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "社交推理",
     ],
-    inspiredBy: "Murder，一种 Garry's Mod 游戏模式",
+    inspirations: ["一种 Garry's Mod 游戏模式。"],
   },
   'deathrun': {
     tagline: "闯过布满陷阱的赛道，而激活者会按下他们手里的每一个按钮。",
@@ -182,7 +182,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "跑者对激活者",
     ],
-    inspiredBy: "DeathRun，一个 Counter-Strike 模组",
+    inspirations: ["一个 Counter-Strike 模组。"],
   },
   'wipeout': {
     tagline: "水上障碍赛道：横扫的转臂、巨大的球，以及终点前的混战。",
@@ -199,7 +199,7 @@ export const zh: Record<GameSlug, GameText> = {
       "障碍赛",
       "竞技场决赛",
     ],
-    inspiredBy: "Wipeout 电视节目，以及 Counter-Strike: Source 的闯关地图",
+    inspirations: ["电视节目。", "其中的闯关地图。"],
   },
   'dangerous-delivery': {
     tagline: "在没有护栏的山路上运货。越危险的任务报酬越高。",

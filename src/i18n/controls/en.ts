@@ -165,6 +165,7 @@ export const en = {
     aCommandRTo: "A command: /r to the lobby, /l3 to a level you reached (Enter too)",
     lookAtAPlayer: "Look at a player: stop (or resume) hearing them",
     lookAtAPlayer2: "Look at a player: mute (or unmute) their voice and chat",
+    selfMuteMenu: "Self-mute menu: choose a player to mute (or unmute)",
   },
 }
 
