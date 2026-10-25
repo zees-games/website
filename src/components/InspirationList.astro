@@ -9,15 +9,15 @@ const entries = (game.inspirations ?? []).map((e, i) => ({ ...e, description: de
 ---
 
 {entries.length > 0 && (
-  <ul class:list={[compact ? 'mt-1 space-y-1.5' : 'mt-2 space-y-3']}>
+  <ul class:list={[compact ? 'mt-3 space-y-2' : 'mt-2 space-y-3']}>
     {entries.map((e) => (
-      <li>
-        <p class:list={['font-semibold', compact ? 'text-sm' : 'text-sm']}>
+      <li class:list={[compact ? 'rounded-lg border border-line bg-night/60 px-3 py-2' : '']}>
+        <p class="text-sm font-semibold">
           {e.link
-            ? <a href={e.link} rel="nofollow noopener" class="inline-flex items-center gap-1 underline decoration-line underline-offset-2 hover:text-cyan">{e.title} <ExternalLink className="size-3" aria-hidden="true" /></a>
+            ? <a href={e.link} target="_blank" rel="nofollow noopener noreferrer" class="inline-flex items-center gap-1.5 text-text hover:text-cyan">{e.title} <ExternalLink className="size-3 shrink-0 text-cyan" aria-hidden="true" /></a>
             : e.title}
         </p>
-        <p class:list={['text-muted', compact ? 'text-xs' : 'text-sm']}>{e.description}</p>
+        {e.description && <p class:list={['mt-0.5 text-muted', compact ? 'text-xs leading-relaxed' : 'text-sm']}>{e.description}</p>}
       </li>
     ))}
   </ul>

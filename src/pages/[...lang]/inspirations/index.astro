@@ -129,15 +129,18 @@ const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_s
     <section>
       <h2 class="text-3xl font-bold">{I.gamesTitle}</h2>
       <p class="mt-2 text-muted">{I.gamesBody}</p>
-      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {GAMES.map((game) => (
-          <div class="glow-card flex items-start gap-4 p-3">
-            <a href={p(`/${game.slug}`)} class="shrink-0" tabindex="-1" aria-hidden="true"><img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-28 rounded-lg object-cover" /></a>
-            <div class="min-w-0">
-              <a href={p(`/${game.slug}`)} class="font-semibold hover:text-cyan">{game.title} <span class="ml-1 text-xs font-normal text-muted">{t.kind[game.kind]}</span></a>
+          <div class="glow-card flex flex-col overflow-hidden">
+            <a href={p(`/${game.slug}`)} class="block" tabindex="-1" aria-hidden="true"><img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-full object-cover" /></a>
+            <div class="flex flex-1 flex-col p-4">
+              <div class="flex flex-wrap items-baseline justify-between gap-x-2">
+                <a href={p(`/${game.slug}`)} class="text-lg font-bold hover:text-cyan">{game.title}</a>
+                <span class="rounded-full border border-line px-2 py-0.5 text-xs text-muted">{t.kind[game.kind]}</span>
+              </div>
               {game.inspirations?.length
                 ? <InspirationList game={game} descriptions={g(game.slug).inspirations} compact />
-                : <p class="mt-1 flex items-center gap-1.5 text-sm text-amber"><Lightbulb className="size-3.5 shrink-0" aria-hidden="true" />{I.ownIdea}</p>}
+                : <p class="mt-3 flex items-center gap-1.5 rounded-lg border border-amber/40 bg-amber/10 px-3 py-2 text-sm font-semibold text-amber"><Lightbulb className="size-4 shrink-0" aria-hidden="true" />{I.ownIdea}</p>}
             </div>
           </div>
         ))}
