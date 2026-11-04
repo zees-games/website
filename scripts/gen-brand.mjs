@@ -119,7 +119,8 @@ function GameBanner(game) {
   const accent = C[game.accent]
   return `<!doctype html><html><head><style>${BASE_CSS}
   .cover { position:absolute; inset:0; background:url('${asset(`images/games/${game.slug}.webp`)}') center/cover; }
-  .shade { position:absolute; inset:0; background:linear-gradient(90deg, ${C.ink} 0%, ${C.ink}e8 32%, ${C.ink}70 62%, ${C.ink}10 100%), linear-gradient(0deg, ${C.ink}e0 0%, transparent 45%); }
+  /* Light on the left: a heavy shade hid Arena's opponent and Hungario's rival. */
+  .shade { position:absolute; inset:0; background:linear-gradient(90deg, ${C.ink}cc 0%, ${C.ink}66 30%, ${C.ink}00 55%), linear-gradient(0deg, ${C.ink}d0 0%, transparent 40%); }
   </style></head><body>
   <div class="cover"></div><div class="shade"></div>
   <div style="position:absolute;left:72px;top:64px;display:flex;align-items:center;gap:18px">
@@ -128,7 +129,7 @@ function GameBanner(game) {
   </div>
   <div style="position:absolute;left:72px;bottom:150px;width:760px">
     <div style="width:96px;height:8px;border-radius:4px;background:${accent};box-shadow:0 0 22px ${accent}"></div>
-    <h1 class="display" style="font-size:${game.title.length > 14 ? 92 : 116}px;line-height:1;margin-top:28px;text-shadow:0 4px 30px #000c">${game.title}</h1>
+    <h1 class="display" style="font-size:${game.title.length > 14 ? 92 : 116}px;line-height:1;margin-top:28px;text-shadow:0 2px 6px #000, 0 4px 34px #000">${game.title}</h1>
   </div>
   <p class="display" style="position:absolute;left:72px;bottom:72px;font-size:30px;font-weight:500;color:${accent};text-shadow:0 0 18px ${accent}80">zeesgames.com/${game.slug}</p>
   </body></html>`
