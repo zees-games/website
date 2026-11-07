@@ -190,5 +190,1159 @@
   ],
   "fov": 75,
   "note": "Spawn grove under the dusk sky and sun."
+ },
+ "surf_10x_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -325.8,
+   16.0,
+   -19.2
+  ],
+  "at": [
+   -101.6,
+   -54.6,
+   -19.2
+  ],
+  "fov": 70,
+  "note": "Overview from the -x side over the floating sections; original is a high oblique view of the same layout."
+ },
+ "surf_10x_reloaded_fixed": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -278.6,
+   76.8,
+   -17.9
+  ],
+  "at": [
+   -1.0,
+   -2.4,
+   -17.9
+  ],
+  "fov": 70,
+  "note": "Overview from -x where the two curved ramps meet the pyramid, as in the original."
+ },
+ "surf_29_12_06": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   0.0,
+   69.3,
+   -177.0
+  ],
+  "at": [
+   0.0,
+   -4.3,
+   -0.0
+  ],
+  "fov": 70,
+  "note": "Overview from -z looking across the arched ramps toward the centre dome, raised a little."
+ },
+ "surf_adverse": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   28.2,
+   20.8,
+   55.1
+  ],
+  "at": [
+   28.2,
+   -7.9,
+   -44.9
+  ],
+  "fov": 70,
+  "note": "Overview from +z over the sci-fi hall. Original is an interior view; this is the closest outer angle."
+ },
+ "surf_akai_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -288.7,
+   -34.6,
+   -25.7
+  ],
+  "at": [
+   26.0,
+   -140.3,
+   -25.7
+  ],
+  "fov": 70,
+  "note": "Overview from -x along the orange ramp chain. Original is the starting room interior, not matched."
+ },
+ "surf_buck_wild": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -173.7,
+   54.8,
+   -38.6
+  ],
+  "at": [
+   38.9,
+   -16.0,
+   -38.6
+  ],
+  "fov": 70,
+  "note": "Overview from -x over the central platform and ring ramps, like the original."
+ },
+ "surf_dust2_2008_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -105.5,
+   43.7,
+   9.4
+  ],
+  "at": [
+   -5.2,
+   14.4,
+   9.4
+  ],
+  "fov": 70,
+  "note": "Overview from -x over the platform with the mountain backdrop, like the original."
+ },
+ "surf_greatriver_v4": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   5.5,
+   -0.7,
+   90.9
+  ],
+  "at": [
+   5.5,
+   -40.4,
+   9.7
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_greatriver_xdre4m": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   84.9,
+   25.4,
+   9.8
+  ],
+  "at": [
+   9.8,
+   -6.0,
+   9.8
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_machine2": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   73.4,
+   204.3,
+   -25.9
+  ],
+  "at": [
+   -116.7,
+   146.5,
+   -25.9
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_machine_remix_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   201.9,
+   40.1,
+   -7.3
+  ],
+  "at": [
+   -7.0,
+   -27.3,
+   -7.3
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_matrix_v8": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   45.8,
+   52.8,
+   -125.7
+  ],
+  "at": [
+   45.8,
+   2.7,
+   17.1
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_ny_bigloop_2008a": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   44.5,
+   102.1,
+   121.0
+  ],
+  "at": [
+   44.5,
+   72.6,
+   9.3
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_rebel_resistance_final3": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -178.2,
+   209.8,
+   -65.2
+  ],
+  "at": [
+   -30.9,
+   39.8,
+   96.7
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_ski_2_source": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -26.5,
+   29.5,
+   96.7
+  ],
+  "at": [
+   -26.5,
+   -1.0,
+   -1.2
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_the_gloaming": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   277.4,
+   99.2,
+   -43.7
+  ],
+  "at": [
+   -20.9,
+   -21.6,
+   -43.7
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_thriller": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   197.3,
+   -56.4,
+   -81.8
+  ],
+  "at": [
+   0.0,
+   -130.8,
+   -81.8
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_ski_2": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -23.7,
+   47.2,
+   92.0
+  ],
+  "at": [
+   -23.7,
+   11.8,
+   -13.3
+  ],
+  "fov": 70,
+  "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
+ },
+ "surf_greatriver": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   46.5,
+   -12.7,
+   44.1
+  ],
+  "at": [
+   -7.3,
+   -7.1,
+   -15.5
+  ],
+  "fov": 70,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_torque2": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   83.4,
+   71.6,
+   122.4
+  ],
+  "at": [
+   -38.2,
+   -46.4,
+   9.6
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_velocity": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -153.0,
+   -34.6,
+   131.7
+  ],
+  "at": [
+   14.8,
+   -137.0,
+   4.1
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_xiv_v2a": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   241.4,
+   179.1,
+   247.5
+  ],
+  "at": [
+   18.2,
+   -41.3,
+   36.6
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_parrot_selector": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -204.0,
+   9.4,
+   236.6
+  ],
+  "at": [
+   5.2,
+   -165.6,
+   113.9
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_ny_advance": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -58.0,
+   111.8,
+   -160.3
+  ],
+  "at": [
+   24.4,
+   -17.3,
+   6.8
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_mai_remix": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -147.8,
+   -18.6,
+   6.2
+  ],
+  "at": [
+   -81.7,
+   -64.7,
+   -24.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_forbidden_ways_reloaded": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   208.1,
+   85.0,
+   -158.3
+  ],
+  "at": [
+   25.3,
+   -27.1,
+   34.6
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_legends": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   75,
+   -45,
+   -12
+  ],
+  "at": [
+   37,
+   -88,
+   -12
+  ],
+  "fov": 75,
+  "note": "surf_legends: the map's own fog washes the frame out, so the environment is dropped; the sky cube around the map hides it from outside, so the camera sits inside. Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's).",
+  "env": false
+ },
+ "bhop_ananas": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   235.4,
+   58.1,
+   216.9
+  ],
+  "at": [
+   134.4,
+   -73.7,
+   126.5
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_beginner": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   41.8,
+   83.8,
+   24.6
+  ],
+  "at": [
+   -36.3,
+   3.1,
+   -50.8
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_rookie": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -228.1,
+   232.6,
+   158.6
+  ],
+  "at": [
+   -8.9,
+   -93.1,
+   -29.6
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_animals": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -205.7,
+   146.8,
+   131.9
+  ],
+  "at": [
+   -52.0,
+   -11.0,
+   -39.7
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_eclipse": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -238.0,
+   116.5,
+   198.8
+  ],
+  "at": [
+   -68.6,
+   -186.8,
+   7.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_year3000": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   156.0,
+   182.8,
+   222.3
+  ],
+  "at": [
+   -4.4,
+   -81.6,
+   15.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_badges": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -199.8,
+   90.5,
+   -251.1
+  ],
+  "at": [
+   -19.5,
+   -178.2,
+   -73.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_eazy": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   42.8,
+   33.5,
+   31.5
+  ],
+  "at": [
+   5.3,
+   1.1,
+   12.1
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_elate": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -176.3,
+   142.4,
+   200.3
+  ],
+  "at": [
+   -26.4,
+   6.9,
+   103.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_evolve": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -14.6,
+   16.3,
+   -142.1
+  ],
+  "at": [
+   36.9,
+   -111.6,
+   -24.1
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_exodus": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -204.6,
+   161.7,
+   92.6
+  ],
+  "at": [
+   -28.9,
+   -85.9,
+   -53.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_fur": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -230.7,
+   190.0,
+   1.0
+  ],
+  "at": [
+   -8.2,
+   -10.2,
+   -128.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_japan": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -128.1,
+   64.7,
+   -72.3
+  ],
+  "at": [
+   -14.2,
+   4.4,
+   28.9
+  ],
+  "fov": 80,
+  "note": "Third attempt: low oblique from the far side; still reads as a distant overview (the original is a ground-level cherry-tree park). Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_nature": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -3.2,
+   218.2,
+   153.8
+  ],
+  "at": [
+   -79.5,
+   74.8,
+   9.3
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_ocean": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   152.5,
+   103.9,
+   51.1
+  ],
+  "at": [
+   111.2,
+   7.2,
+   154.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_aquaflow": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -197.3,
+   149.6,
+   216.7
+  ],
+  "at": [
+   -7.2,
+   -116.9,
+   9.8
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_interference": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   182.1,
+   164.5,
+   213.9
+  ],
+  "at": [
+   -23.4,
+   -168.0,
+   0.6
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_lore": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   251.1,
+   135.7,
+   55.2
+  ],
+  "at": [
+   37.6,
+   -73.6,
+   -80.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_omnibus": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -209.9,
+   229.3,
+   50.3
+  ],
+  "at": [
+   11.3,
+   -100.0,
+   -98.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_vegetables": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   181.5,
+   150.0,
+   169.4
+  ],
+  "at": [
+   7.6,
+   -27.1,
+   61.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_arcade": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -133.7,
+   16.5,
+   -212.7
+  ],
+  "at": [
+   13.2,
+   -61.8,
+   82.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_arcane_v2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -160.8,
+   219.9,
+   190.8
+  ],
+  "at": [
+   6.8,
+   -91.3,
+   -14.3
+  ],
+  "fov": 75,
+  "note": "bhop_arcane_v2: the map's own environment washes the frame out to pale blue, so it is dropped (grey stage). Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's).",
+  "env": false
+ },
+ "bhop_badges2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -196.9,
+   -8.1,
+   103.5
+  ],
+  "at": [
+   -68.9,
+   -200.9,
+   -6.1
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_badges_mini": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   239.2,
+   259.0,
+   40.6
+  ],
+  "at": [
+   122.2,
+   85.8,
+   157.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_crash_egypt": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -110.3,
+   154.9,
+   -32.2
+  ],
+  "at": [
+   70.7,
+   -4.6,
+   -148.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_eazy_v2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   9.4,
+   43.1,
+   -5.4
+  ],
+  "at": [
+   59.6,
+   -0.5,
+   -37.0
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_frotinity2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -2695.5,
+   1951.2,
+   443.7
+  ],
+  "at": [
+   -1041.8,
+   186.3,
+   -516.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_fury_2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -225.9,
+   104.4,
+   -226.3
+  ],
+  "at": [
+   -29.8,
+   -172.0,
+   -24.5
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_interloper": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -232.9,
+   259.8,
+   198.0
+  ],
+  "at": [
+   -31.7,
+   17.8,
+   -15.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_lego2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -149.9,
+   97.7,
+   238.4
+  ],
+  "at": [
+   -31.2,
+   -24.1,
+   152.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_lego3": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -181.9,
+   123.5,
+   39.6
+  ],
+  "at": [
+   -9.9,
+   -40.5,
+   -74.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_monster_jam": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -132.8,
+   244.2,
+   137.4
+  ],
+  "at": [
+   22.2,
+   88.5,
+   35.9
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_overthinker": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   188.7,
+   168.1,
+   208.8
+  ],
+  "at": [
+   -10.9,
+   -132.3,
+   -12.3
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_supernova": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -148,
+   60,
+   287
+  ],
+  "at": [
+   -148,
+   0,
+   100
+  ],
+  "fov": 75,
+  "note": "bhop_supernova: camera sits above the spawn platform, looking over the purple asteroid track (the earlier black frames were exterior cameras 5000 units away). Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_tesquo_v2": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -98.5,
+   122.2,
+   67.6
+  ],
+  "at": [
+   13.5,
+   -16.6,
+   -30.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bhop_underground_crypt": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -217.4,
+   120.8,
+   -186.6
+  ],
+  "at": [
+   -4.5,
+   -96.8,
+   -2.8
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "bunnyhop_pro": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -23.9,
+   37.0,
+   19.1
+  ],
+  "at": [
+   0.4,
+   2.5,
+   -20.2
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "kz_bhop_badg3s": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -27.9,
+   214.3,
+   179.3
+  ],
+  "at": [
+   80.3,
+   38.3,
+   12.5
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "kz_bhop_lucid": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -169.5,
+   85.1,
+   58.5
+  ],
+  "at": [
+   -81.7,
+   0.7,
+   -19.8
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "kz_bhop_yonkoma": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   62.1,
+   25.0,
+   -244.8
+  ],
+  "at": [
+   -74.9,
+   -151.6,
+   -150.5
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_life_of_duck": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   166.0,
+   144.2,
+   87.5
+  ],
+  "at": [
+   -12.2,
+   -135.6,
+   -67.7
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_lt_omnific": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -224.2,
+   155.6,
+   217.4
+  ],
+  "at": [
+   -3.1,
+   -175.3,
+   -1.3
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_lt_unicorn": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -221.6,
+   173.9,
+   235.3
+  ],
+  "at": [
+   7.7,
+   -172.9,
+   8.4
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_quilavar": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -184.3,
+   68.8,
+   20.3
+  ],
+  "at": [
+   -45.9,
+   -190.4,
+   -78.1
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
+ },
+ "surf_stonework3": {
+  "game": "g2gfast",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   201.8,
+   243.2,
+   236.3
+  ],
+  "at": [
+   -4.7,
+   -75.2,
+   6.7
+  ],
+  "fov": 75,
+  "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  }
 }
