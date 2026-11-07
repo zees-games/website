@@ -190,5 +190,117 @@
   ],
   "fov": 75,
   "note": "Spawn grove under the dusk sky and sun."
+ },
+ "surf_10x_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -325.8,
+   16.0,
+   -19.2
+  ],
+  "at": [
+   -101.6,
+   -54.6,
+   -19.2
+  ],
+  "fov": 70,
+  "note": "Overview from the -x side over the floating sections; original is a high oblique view of the same layout."
+ },
+ "surf_10x_reloaded_fixed": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -278.6,
+   76.8,
+   -17.9
+  ],
+  "at": [
+   -1.0,
+   -2.4,
+   -17.9
+  ],
+  "fov": 70,
+  "note": "Overview from -x where the two curved ramps meet the pyramid, as in the original."
+ },
+ "surf_29_12_06": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   0.0,
+   69.3,
+   -177.0
+  ],
+  "at": [
+   0.0,
+   -4.3,
+   -0.0
+  ],
+  "fov": 70,
+  "note": "Overview from -z looking across the arched ramps toward the centre dome, raised a little."
+ },
+ "surf_adverse": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   28.2,
+   20.8,
+   55.1
+  ],
+  "at": [
+   28.2,
+   -7.9,
+   -44.9
+  ],
+  "fov": 70,
+  "note": "Overview from +z over the sci-fi hall. Original is an interior view; this is the closest outer angle."
+ },
+ "surf_akai_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -288.7,
+   -34.6,
+   -25.7
+  ],
+  "at": [
+   26.0,
+   -140.3,
+   -25.7
+  ],
+  "fov": 70,
+  "note": "Overview from -x along the orange ramp chain. Original is the starting room interior, not matched."
+ },
+ "surf_buck_wild": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -173.7,
+   54.8,
+   -38.6
+  ],
+  "at": [
+   38.9,
+   -16.0,
+   -38.6
+  ],
+  "fov": 70,
+  "note": "Overview from -x over the central platform and ring ramps, like the original."
+ },
+ "surf_dust2_2008_final": {
+  "game": "arena",
+  "tool": "scripts/map-shot/run.sh (shot.gd)",
+  "from": [
+   -105.5,
+   43.7,
+   9.4
+  ],
+  "at": [
+   -5.2,
+   14.4,
+   9.4
+  ],
+  "fov": 70,
+  "note": "Overview from -x over the platform with the mountain backdrop, like the original."
  }
 }
