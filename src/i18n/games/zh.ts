@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const zh: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: "节奏飞快的第一人称死亡竞赛，包含 GunGame 和经典的 Surf Deathmatch 地图。",
     summary: [
       "一款节奏飞快的第一人称死亡竞赛射击游戏。选择装备，在购买区购买武器，然后投入团队死亡竞赛、自由混战或 GunGame 对局。",
@@ -21,7 +21,7 @@ export const zh: Record<GameSlug, GameText> = {
     ],
     inspirations: ["死亡竞赛与 Surf 战斗服务器。"],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: "采用 Source 风格移动和排行榜的 Bunny Hop 与 Surf 计时跑图。",
     summary: [
       "一款 Bunny Hop 与 Surf 计时游戏，拥有 Source 风格的移动、起点和终点区域以及排行榜。在经典地图中与时间赛跑，冲击世界纪录。",
@@ -39,7 +39,7 @@ export const zh: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Surf Timer 与 Bunny Hop 服务器。"],
   },
-  'playground': {
+  'playlot': {
     tagline: "物理沙盒：生成道具、NPC 和武器，想建什么就建什么。",
     summary: [
       "一款物理沙盒游戏。按住 Q 打开生成菜单，放入道具、NPC 和武器，再用物理枪和重力枪把它们拿起来，想建什么就建什么。",

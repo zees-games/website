@@ -15,7 +15,7 @@ import type { ControlGroupId, ControlLabelId } from '../i18n/controls/en'
  * wheel's two halves are one, and five weapon slots are one.
  *
  * Every game has self-mute (dot-chat) with the same keys as Look At Me: the menu,
- * and G / K while looking at a player. In arena, g2gfast, playground, zombie-zone
+ * and G / K while looking at a player. In fatal-contact, airdrift, playlot, zombie-zone
  * and dangerous-delivery G or K is also another row of the table; the site states
  * the self-mute keys for them regardless (Christian's call), the table is unchanged.
  */
@@ -23,7 +23,7 @@ export interface ControlRow { keys: string[][]; label: ControlLabelId }
 export interface ControlGroup { group: ControlGroupId; rows: ControlRow[] }
 
 export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
-  'arena': [
+  'fatal-contact': [
     { group: 'movement', rows: [
       { keys: [["WASD"]], label: 'move' },
       { keys: [["Space"]], label: 'jump' },
@@ -67,7 +67,7 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
-  'g2gfast': [
+  'airdrift': [
     { group: 'movement', rows: [
       { keys: [["WASD"]], label: 'move' },
       { keys: [["Space"], ["Wheel"]], label: 'jump' },
@@ -104,7 +104,7 @@ export const CONTROLS: Record<GameSlug, ControlGroup[]> = {
       { keys: [["K"]], label: 'lookAtAPlayer2' },
     ] },
   ],
-  'playground': [
+  'playlot': [
     { group: 'movement', rows: [
       { keys: [["WASD"]], label: 'move' },
       { keys: [["Space"]], label: 'jump' },

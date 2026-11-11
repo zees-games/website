@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const nl: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: "Snelle first-person deathmatch met GunGame en klassieke Surf Deathmatch-maps.",
     summary: [
       "Een snelle first-person deathmatchshooter. Kies een loadout, koop wapens in de koopzones en stort je in een potje team deathmatch, free-for-all of GunGame.",
@@ -21,7 +21,7 @@ export const nl: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Deathmatch- en surfgevechtservers."],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: "Bunny hop- en surftimerruns met Source-achtige besturing en leaderboards.",
     summary: [
       "Een bunny hop- en surftimergame met Source-achtige besturing, start- en eindzones en leaderboards. Race tegen de klok door klassieke maps en jaag op wereldrecords.",
@@ -39,7 +39,7 @@ export const nl: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Surf Timer- en Bunny Hop-servers."],
   },
-  'playground': {
+  'playlot': {
     tagline: "Een physics-sandbox: spawn props, NPC's en wapens en bouw wat je maar wilt.",
     summary: [
       "Een physics-sandbox. Houd Q ingedrukt om het spawnmenu te openen en laat props, NPC's en wapens verschijnen. Pak dingen daarna op met het physics- en het gravity-geweer en bouw wat je maar wilt.",

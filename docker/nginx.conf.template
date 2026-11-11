@@ -48,6 +48,19 @@ server {
         add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     }
 
+    # Renamed games keep their old addresses: every page under the old slug, in
+    # every locale, and the old cover, share-banner and map-shot names move
+    # permanently to the new slug (the query string carries over).
+    rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/(?:arena|fatalcontact)(/.*)?$ $1/fatal-contact$2 permanent;
+    rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/g2gfast(/.*)?$ $1/airdrift$2 permanent;
+    rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/playground(/.*)?$ $1/playlot$2 permanent;
+    rewrite ^/(og|images/games)/arena\.(jpg|webp)$ /$1/fatal-contact.$2 permanent;
+    rewrite ^/(og|images/games)/g2gfast\.(jpg|webp)$ /$1/airdrift.$2 permanent;
+    rewrite ^/(og|images/games)/playground\.(jpg|webp)$ /$1/playlot.$2 permanent;
+    rewrite ^/images/maps/arena/(.*)$ /images/maps/fatal-contact/$1 permanent;
+    rewrite ^/images/maps/g2gfast/(.*)$ /images/maps/airdrift/$1 permanent;
+    rewrite ^/images/maps/playground/(.*)$ /images/maps/playlot/$1 permanent;
+
     location / {
         try_files $uri $uri/ $uri.html =404;
     }

@@ -25,9 +25,9 @@ export interface ZeeServer {
 export const SERVER_DOMAIN = 'zeesgames.com'
 
 export const SERVERS: ZeeServer[] = [
-  { id: 'ar01', app: 'arena', tmcId: '3803239', name: "Zee's Fatal Contact #1", port: 6020 },
-  { id: 'g2gfast01', app: 'g2gfast', tmcId: '3550523', name: "Zee's G2gfast #1", port: 6005 },
-  { id: 'pg01', app: 'playground', tmcId: '3803266', name: "Zee's Playlot #1", port: 6010 },
+  { id: 'ar01', app: 'fatal-contact', tmcId: '3803239', name: "Zee's Fatal Contact #1", port: 6020 },
+  { id: 'g2gfast01', app: 'airdrift', tmcId: '3550523', name: "Zee's Airdrift #1", port: 6005 },
+  { id: 'pg01', app: 'playlot', tmcId: '3803266', name: "Zee's Playlot #1", port: 6010 },
   { id: 'hg01', app: 'hungario', tmcId: '3803240', name: "Zee's Hungario #1", port: 6030 },
   { id: 'zz01', app: 'zombie-zone', tmcId: '3803271', name: "Zee's Zombie Zone #1", port: 6050 },
   { id: 'hns01', app: 'hide-n-seek', tmcId: '4687427', name: "Zee's Hide n Seek #1", port: 6080 },

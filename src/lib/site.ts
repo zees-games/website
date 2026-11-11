@@ -57,3 +57,12 @@ export const TmcServerPlayHref = (s: ZeeServer, locale: Locale) => TmcHref(`/${s
 export const DEPLOY_REPO = 'https://github.com/modcommunity/dot-server-deploy'
 
 export const RepoHref = (repo: string) => `${GITHUB_ORG}/${repo}`
+
+/** Standout Servers, TMC's per-game server rankings (a TMC hotspot; its app pages use TMC's app url). */
+export const STANDOUT_URL = trim(import.meta.env.PUBLIC_STANDOUT_URL ?? 'https://standoutservers.com')
+
+/** A game's server ranking on Standout Servers. */
+export const StandoutHref = (slug: string) => `${STANDOUT_URL}/${slug}`
+
+/** A site's bare host for a label: `https://fatalcontact.net` -> `fatalcontact.net`. */
+export const HostOf = (url: string) => new URL(url).host

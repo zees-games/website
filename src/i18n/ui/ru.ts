@@ -121,6 +121,8 @@ export const ru: Messages = {
     changelog: "Список изменений",
     bugs: "Сообщения об ошибках",
     mapPack: "Набор карт на GitHub",
+    playOnSite: "Играть на {host}",
+    serverRankings: "Рейтинг серверов на Standout Servers",
     moreGames: "Другие игры",
     controls: "Управление",
     controlsIntro: "Клавиши по умолчанию, как их показывает экран помощи в игре. Нажмите {key} в игре, чтобы открыть его; любую клавишу можно переназначить в настройках.",
@@ -162,6 +164,7 @@ export const ru: Messages = {
     tmc: "The Modding Community",
     gameTitle: "Игровые серверы",
     gameBody: "Один сервер на игру, всегда с этой игрой.",
+    rankings: "Все серверы The Modding Community, включая наши, ранжируются по играм на {standout}.",
     multiTitle: "Мультиигровые серверы",
     multiBody: "Они переключаются между несколькими играми, а игроки остаются подключены.",
     multi: {

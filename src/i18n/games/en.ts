@@ -14,7 +14,7 @@ export interface GameText {
 
 /** The reference copy. Written from each game's README: what it does today. */
 export const en: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: "Fast first-person deathmatch with GunGame and classic Surf Deathmatch maps.",
     summary: [
       "A fast first-person deathmatch shooter. Pick a loadout, buy weapons in the buy zones and jump into a match of team deathmatch, free-for-all or GunGame.",
@@ -33,7 +33,7 @@ export const en: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Deathmatch and surf combat servers."],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: "Bunny hop and surf timer runs with Source-style movement and leaderboards.",
     summary: [
       "A bunny hop and surf timer game with Source-style movement, start and end zones, and leaderboards. Race the clock through classic maps and chase world records.",
@@ -51,7 +51,7 @@ export const en: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Surf Timer and Bunny Hop servers."],
   },
-  'playground': {
+  'playlot': {
     tagline: "A physics sandbox: spawn props, NPCs and weapons and build whatever you like.",
     summary: [
       "A physics sandbox. Hold Q to open the spawn menu and drop in props, NPCs and weapons, then pick things up with the physics and gravity guns and build whatever you like.",

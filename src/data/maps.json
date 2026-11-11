@@ -1,11 +1,11 @@
 {
-  "arena": {
-    "repo": "arena-surf-dm-maps",
+  "fatal-contact": {
+    "repo": "fc-surf-dm-maps",
     "maps": [
       {
         "id": "surf_10x_final",
         "name": "10x Final",
-        "image": "/images/maps/arena/surf_10x_final.webp",
+        "image": "/images/maps/fatal-contact/surf_10x_final.webp",
         "score": 63,
         "author": "Wof-",
         "originalGame": "Counter-Strike: Source",
@@ -14,7 +14,7 @@
       {
         "id": "surf_10x_reloaded_fixed",
         "name": "10x Reloaded Fixed",
-        "image": "/images/maps/arena/surf_10x_reloaded_fixed.webp",
+        "image": "/images/maps/fatal-contact/surf_10x_reloaded_fixed.webp",
         "score": 78,
         "author": "Buck Nasty",
         "originalGame": "Counter-Strike: Source",
@@ -23,7 +23,7 @@
       {
         "id": "surf_110b_austinpowers",
         "name": "110b Austinpowers",
-        "image": "/images/maps/arena/surf_110b_austinpowers.webp",
+        "image": "/images/maps/fatal-contact/surf_110b_austinpowers.webp",
         "score": 73,
         "author": "TheInvoker",
         "originalGame": "Counter-Strike: Source",
@@ -32,7 +32,7 @@
       {
         "id": "surf_29_12_06",
         "name": "29 12 06",
-        "image": "/images/maps/arena/surf_29_12_06.webp",
+        "image": "/images/maps/fatal-contact/surf_29_12_06.webp",
         "score": 69,
         "author": "matrix-hetman",
         "originalGame": "Counter-Strike: Source",
@@ -41,7 +41,7 @@
       {
         "id": "surf_adverse",
         "name": "Adverse",
-        "image": "/images/maps/arena/surf_adverse.webp",
+        "image": "/images/maps/fatal-contact/surf_adverse.webp",
         "score": 6,
         "author": "target practice, Archangel",
         "originalGame": "Counter-Strike: Source",
@@ -50,7 +50,7 @@
       {
         "id": "surf_akai_final",
         "name": "Akai Final",
-        "image": "/images/maps/arena/surf_akai_final.webp",
+        "image": "/images/maps/fatal-contact/surf_akai_final.webp",
         "score": 42,
         "author": "akai",
         "originalGame": "Counter-Strike: Source",
@@ -59,7 +59,7 @@
       {
         "id": "surf_bathroom_final",
         "name": "Bathroom Final",
-        "image": "/images/maps/arena/surf_bathroom_final.webp",
+        "image": "/images/maps/fatal-contact/surf_bathroom_final.webp",
         "score": 60,
         "author": "smooth",
         "originalGame": "Counter-Strike: Source",
@@ -68,7 +68,7 @@
       {
         "id": "surf_buck_wild",
         "name": "Buck Wild",
-        "image": "/images/maps/arena/surf_buck_wild.webp",
+        "image": "/images/maps/fatal-contact/surf_buck_wild.webp",
         "score": 68,
         "author": "buck nasty",
         "originalGame": "Counter-Strike: Source",
@@ -77,7 +77,7 @@
       {
         "id": "surf_dust2_2008_final",
         "name": "Dust2 2008 Final",
-        "image": "/images/maps/arena/surf_dust2_2008_final.webp",
+        "image": "/images/maps/fatal-contact/surf_dust2_2008_final.webp",
         "score": 63,
         "author": "Matrix Hetman, Karatekäfer",
         "originalGame": "Counter-Strike: Source",
@@ -86,7 +86,7 @@
       {
         "id": "surf_forbidden_ways_2nd",
         "name": "Forbidden Ways 2nd",
-        "image": "/images/maps/arena/surf_forbidden_ways_2nd.webp",
+        "image": "/images/maps/fatal-contact/surf_forbidden_ways_2nd.webp",
         "score": 92,
         "author": "krusty",
         "originalGame": "Counter-Strike: Source",
@@ -95,7 +95,7 @@
       {
         "id": "surf_forbidden_ways_reloaded",
         "name": "Forbidden Ways Reloaded",
-        "image": "/images/maps/arena/surf_forbidden_ways_reloaded.webp",
+        "image": "/images/maps/fatal-contact/surf_forbidden_ways_reloaded.webp",
         "score": 41,
         "author": "Krusty, sky by Karatekäfer",
         "originalGame": "Counter-Strike: Source",
@@ -104,7 +104,7 @@
       {
         "id": "surf_fruits",
         "name": "Fruits",
-        "image": "/images/maps/arena/surf_fruits.webp",
+        "image": "/images/maps/fatal-contact/surf_fruits.webp",
         "score": 75,
         "author": "Sangre, Hellraisedsurfer, Robsonfire, Machine, Jaden, Komaokc, Icecreamlock, Shahzam, SKAR, JackTheStripper (copy-mark), Linus",
         "originalGame": "Counter-Strike: Source",
@@ -113,7 +113,7 @@
       {
         "id": "surf_grave_reloaded",
         "name": "Grave Reloaded",
-        "image": "/images/maps/arena/surf_grave_reloaded.webp",
+        "image": "/images/maps/fatal-contact/surf_grave_reloaded.webp",
         "score": 74,
         "author": "xblah",
         "originalGame": "Counter-Strike: Source",
@@ -122,7 +122,7 @@
       {
         "id": "surf_greatriver",
         "name": "Greatriver",
-        "image": "/images/maps/arena/surf_greatriver.webp",
+        "image": "/images/maps/fatal-contact/surf_greatriver.webp",
         "score": 67,
         "author": "Ace Of Spades13",
         "originalGame": "Counter-Strike: Source",
@@ -131,7 +131,7 @@
       {
         "id": "surf_greatriver_v4",
         "name": "Greatriver V4",
-        "image": "/images/maps/arena/surf_greatriver_v4.webp",
+        "image": "/images/maps/fatal-contact/surf_greatriver_v4.webp",
         "score": 67,
         "author": "BeNnY",
         "originalGame": "Counter-Strike: Source",
@@ -140,7 +140,7 @@
       {
         "id": "surf_greatriver_xdre4m",
         "name": "Greatriver Xdre4m",
-        "image": "/images/maps/arena/surf_greatriver_xdre4m.webp",
+        "image": "/images/maps/fatal-contact/surf_greatriver_xdre4m.webp",
         "score": 68,
         "author": "!Black, with Ace Of Spades13 and Junior",
         "originalGame": "Counter-Strike: Source",
@@ -149,7 +149,7 @@
       {
         "id": "surf_japan_ptad",
         "name": "Japan Ptad",
-        "image": "/images/maps/arena/surf_japan_ptad.webp",
+        "image": "/images/maps/fatal-contact/surf_japan_ptad.webp",
         "score": 70,
         "author": "ptad, monkeydie",
         "originalGame": "Counter-Strike: Source",
@@ -158,7 +158,7 @@
       {
         "id": "surf_legends",
         "name": "Legends",
-        "image": "/images/maps/arena/surf_legends.webp",
+        "image": "/images/maps/fatal-contact/surf_legends.webp",
         "score": 90,
         "author": "SintaxError",
         "originalGame": "Counter-Strike: Source",
@@ -167,7 +167,7 @@
       {
         "id": "surf_machine2",
         "name": "Machine2",
-        "image": "/images/maps/arena/surf_machine2.webp",
+        "image": "/images/maps/fatal-contact/surf_machine2.webp",
         "score": 68,
         "author": "Z-machine",
         "originalGame": "Counter-Strike: Source",
@@ -176,7 +176,7 @@
       {
         "id": "surf_machine_remix_final",
         "name": "Machine Remix Final",
-        "image": "/images/maps/arena/surf_machine_remix_final.webp",
+        "image": "/images/maps/fatal-contact/surf_machine_remix_final.webp",
         "score": 40,
         "author": "paper-cut, z-machine(original)",
         "originalGame": "Counter-Strike: Source",
@@ -185,7 +185,7 @@
       {
         "id": "surf_mai_remix",
         "name": "Mai Remix",
-        "image": "/images/maps/arena/surf_mai_remix.webp",
+        "image": "/images/maps/fatal-contact/surf_mai_remix.webp",
         "score": 70,
         "author": "Krusty",
         "originalGame": "Counter-Strike: Source",
@@ -194,7 +194,7 @@
       {
         "id": "surf_matrix_v8",
         "name": "Matrix V8",
-        "image": "/images/maps/arena/surf_matrix_v8.webp",
+        "image": "/images/maps/fatal-contact/surf_matrix_v8.webp",
         "score": 105,
         "author": "Flippi273",
         "originalGame": "Counter-Strike: Source",
@@ -203,7 +203,7 @@
       {
         "id": "surf_ny_advance",
         "name": "Ny Advance",
-        "image": "/images/maps/arena/surf_ny_advance.webp",
+        "image": "/images/maps/fatal-contact/surf_ny_advance.webp",
         "score": 65,
         "author": "faj",
         "originalGame": "Counter-Strike: Source",
@@ -212,7 +212,7 @@
       {
         "id": "surf_ny_bigloop_2008a",
         "name": "Ny Bigloop 2008a",
-        "image": "/images/maps/arena/surf_ny_bigloop_2008a.webp",
+        "image": "/images/maps/fatal-contact/surf_ny_bigloop_2008a.webp",
         "score": 43,
         "author": "Paper-Cut, FAJ",
         "originalGame": "Counter-Strike: Source",
@@ -221,7 +221,7 @@
       {
         "id": "surf_parrot_selector",
         "name": "Parrot Selector",
-        "image": "/images/maps/arena/surf_parrot_selector.webp",
+        "image": "/images/maps/fatal-contact/surf_parrot_selector.webp",
         "score": 26,
         "author": "ptad",
         "originalGame": "Counter-Strike: Source",
@@ -230,7 +230,7 @@
       {
         "id": "surf_pavilion",
         "name": "Pavilion",
-        "image": "/images/maps/arena/surf_pavilion.webp",
+        "image": "/images/maps/fatal-contact/surf_pavilion.webp",
         "score": 88,
         "author": "Black Sheep",
         "originalGame": "Counter-Strike: Source",
@@ -239,7 +239,7 @@
       {
         "id": "surf_pox",
         "name": "Pox",
-        "image": "/images/maps/arena/surf_pox.webp",
+        "image": "/images/maps/fatal-contact/surf_pox.webp",
         "score": 45,
         "author": "Krusty, Pariah, Karatekäfer, Korr",
         "originalGame": "Counter-Strike: Source",
@@ -248,7 +248,7 @@
       {
         "id": "surf_rebel_resistance_final3",
         "name": "Rebel Resistance Final3",
-        "image": "/images/maps/arena/surf_rebel_resistance_final3.webp",
+        "image": "/images/maps/fatal-contact/surf_rebel_resistance_final3.webp",
         "score": 88,
         "author": "-)RR(-ArchAngel -)RR(-Lethalis",
         "originalGame": "Counter-Strike: Source",
@@ -257,7 +257,7 @@
       {
         "id": "surf_ski_2",
         "name": "Ski 2",
-        "image": "/images/maps/arena/surf_ski_2.webp",
+        "image": "/images/maps/fatal-contact/surf_ski_2.webp",
         "score": 63,
         "author": "Massive Boredom and Mario",
         "originalGame": "Counter-Strike: Source",
@@ -266,7 +266,7 @@
       {
         "id": "surf_ski_2_source",
         "name": "Ski 2 Source",
-        "image": "/images/maps/arena/surf_ski_2_source.webp",
+        "image": "/images/maps/fatal-contact/surf_ski_2_source.webp",
         "score": 35,
         "author": "Korliki ''Angel",
         "originalGame": "Counter-Strike: Source",
@@ -275,7 +275,7 @@
       {
         "id": "surf_skyworld",
         "name": "Skyworld",
-        "image": "/images/maps/arena/surf_skyworld.webp",
+        "image": "/images/maps/fatal-contact/surf_skyworld.webp",
         "score": 64,
         "author": "Goerge",
         "originalGame": "Counter-Strike: Source",
@@ -284,7 +284,7 @@
       {
         "id": "surf_the_gloaming",
         "name": "The Gloaming",
-        "image": "/images/maps/arena/surf_the_gloaming.webp",
+        "image": "/images/maps/fatal-contact/surf_the_gloaming.webp",
         "score": 47,
         "author": "Roosta, Teeth",
         "originalGame": "Counter-Strike: Source",
@@ -293,7 +293,7 @@
       {
         "id": "surf_thriller",
         "name": "Thriller",
-        "image": "/images/maps/arena/surf_thriller.webp",
+        "image": "/images/maps/fatal-contact/surf_thriller.webp",
         "score": 65,
         "author": "buck nasty",
         "originalGame": "Counter-Strike: Source",
@@ -302,7 +302,7 @@
       {
         "id": "surf_torque2",
         "name": "Torque2",
-        "image": "/images/maps/arena/surf_torque2.webp",
+        "image": "/images/maps/fatal-contact/surf_torque2.webp",
         "score": 14,
         "author": "Sangre Nueva",
         "originalGame": "Counter-Strike: Source",
@@ -311,7 +311,7 @@
       {
         "id": "surf_velocity",
         "name": "Velocity",
-        "image": "/images/maps/arena/surf_velocity.webp",
+        "image": "/images/maps/fatal-contact/surf_velocity.webp",
         "score": 49,
         "author": "copy-mark, jack the stripper, sangre, hellraisedsurfer, target practice, jesuswashomeless, skar",
         "originalGame": "Counter-Strike: Source",
@@ -320,7 +320,7 @@
       {
         "id": "surf_xiv_v2a",
         "name": "Xiv V2a",
-        "image": "/images/maps/arena/surf_xiv_v2a.webp",
+        "image": "/images/maps/fatal-contact/surf_xiv_v2a.webp",
         "score": 36,
         "author": "smooth.nl",
         "originalGame": "Counter-Strike: Source",
@@ -328,13 +328,13 @@
       }
     ]
   },
-  "g2gfast": {
-    "repo": "g2gfast-maps",
+  "airdrift": {
+    "repo": "airdrift-maps",
     "maps": [
       {
         "id": "bhop_ananas",
         "name": "Ananas",
-        "image": "/images/maps/g2gfast/bhop_ananas.webp",
+        "image": "/images/maps/airdrift/bhop_ananas.webp",
         "score": 73,
         "author": "serz",
         "originalGame": "Counter-Strike: Source",
@@ -343,7 +343,7 @@
       {
         "id": "bhop_arcane_v2",
         "name": "Arcane V2",
-        "image": "/images/maps/g2gfast/bhop_arcane_v2.webp",
+        "image": "/images/maps/airdrift/bhop_arcane_v2.webp",
         "score": 62,
         "author": "Panzerhandschuh (Panzer); v2 edit uploaded by 'roger haha lol'",
         "originalGame": "Counter-Strike: Source",
@@ -352,7 +352,7 @@
       {
         "id": "bhop_aztec",
         "name": "Aztec",
-        "image": "/images/maps/g2gfast/bhop_aztec.webp",
+        "image": "/images/maps/airdrift/bhop_aztec.webp",
         "score": 67,
         "author": "Teho-Killeri (mapper), with Touch (design) and Veikko (textures)",
         "originalGame": "Counter-Strike: Source",
@@ -370,7 +370,7 @@
       {
         "id": "bhop_badges2",
         "name": "Badges2",
-        "image": "/images/maps/g2gfast/bhop_badges2.webp",
+        "image": "/images/maps/airdrift/bhop_badges2.webp",
         "score": 22,
         "author": "Badgeslol",
         "originalGame": "Counter-Strike: Source",
@@ -379,7 +379,7 @@
       {
         "id": "bhop_badges_mini",
         "name": "Badges Mini",
-        "image": "/images/maps/g2gfast/bhop_badges_mini.webp",
+        "image": "/images/maps/airdrift/bhop_badges_mini.webp",
         "score": 10,
         "author": "GumPum",
         "originalGame": "Counter-Strike: Source",
@@ -388,7 +388,7 @@
       {
         "id": "bhop_crash_egypt",
         "name": "Crash Egypt",
-        "image": "/images/maps/g2gfast/bhop_crash_egypt.webp",
+        "image": "/images/maps/airdrift/bhop_crash_egypt.webp",
         "score": 73,
         "author": "FireWavezZ and Ghost1302672",
         "originalGame": "Counter-Strike: Source",
@@ -397,7 +397,7 @@
       {
         "id": "bhop_eazy",
         "name": "Eazy",
-        "image": "/images/maps/g2gfast/bhop_eazy.webp",
+        "image": "/images/maps/airdrift/bhop_eazy.webp",
         "score": 14,
         "author": "31K4L",
         "originalGame": "Counter-Strike: Source",
@@ -406,7 +406,7 @@
       {
         "id": "bhop_eazy_v2",
         "name": "Eazy V2",
-        "image": "/images/maps/g2gfast/bhop_eazy_v2.webp",
+        "image": "/images/maps/airdrift/bhop_eazy_v2.webp",
         "score": 56,
         "author": "31K4L",
         "originalGame": "Counter-Strike: Source",
@@ -415,7 +415,7 @@
       {
         "id": "bhop_elate",
         "name": "Elate",
-        "image": "/images/maps/g2gfast/bhop_elate.webp",
+        "image": "/images/maps/airdrift/bhop_elate.webp",
         "score": 87,
         "author": "biql",
         "originalGame": "Counter-Strike: Source",
@@ -424,7 +424,7 @@
       {
         "id": "bhop_evolve",
         "name": "Evolve",
-        "image": "/images/maps/g2gfast/bhop_evolve.webp",
+        "image": "/images/maps/airdrift/bhop_evolve.webp",
         "score": 11,
         "author": "Zyper",
         "originalGame": "Counter-Strike: Source",
@@ -433,7 +433,7 @@
       {
         "id": "bhop_exodus",
         "name": "Exodus",
-        "image": "/images/maps/g2gfast/bhop_exodus.webp",
+        "image": "/images/maps/airdrift/bhop_exodus.webp",
         "score": 81,
         "author": "Aoki",
         "originalGame": "Counter-Strike: Source",
@@ -442,7 +442,7 @@
       {
         "id": "bhop_frotinity2",
         "name": "Frotinity2",
-        "image": "/images/maps/g2gfast/bhop_frotinity2.webp",
+        "image": "/images/maps/airdrift/bhop_frotinity2.webp",
         "score": 33,
         "author": "FlowBhop (stages 1 and 6), Kotzilla (2), muhamadnjak (3), Sonia_ (4), Linirin (5, 7), ampbhop (8)",
         "originalGame": "Counter-Strike: Source",
@@ -451,7 +451,7 @@
       {
         "id": "bhop_fur",
         "name": "Fur",
-        "image": "/images/maps/g2gfast/bhop_fur.webp",
+        "image": "/images/maps/airdrift/bhop_fur.webp",
         "score": 6,
         "author": "Fur (TheFur)",
         "originalGame": "Counter-Strike: Source",
@@ -460,7 +460,7 @@
       {
         "id": "bhop_fury_2",
         "name": "Fury 2",
-        "image": "/images/maps/g2gfast/bhop_fury_2.webp",
+        "image": "/images/maps/airdrift/bhop_fury_2.webp",
         "score": 8,
         "author": "Dotty",
         "originalGame": "Counter-Strike: Source",
@@ -469,7 +469,7 @@
       {
         "id": "bhop_grove",
         "name": "Grove",
-        "image": "/images/maps/g2gfast/bhop_grove.webp",
+        "image": "/images/maps/airdrift/bhop_grove.webp",
         "score": 57,
         "author": "Tony Montana",
         "originalGame": "Counter-Strike: Source",
@@ -478,7 +478,7 @@
       {
         "id": "bhop_interloper",
         "name": "Interloper",
-        "image": "/images/maps/g2gfast/bhop_interloper.webp",
+        "image": "/images/maps/airdrift/bhop_interloper.webp",
         "score": 15,
         "author": "Tony Montana",
         "originalGame": "Counter-Strike: Source",
@@ -487,7 +487,7 @@
       {
         "id": "bhop_japan",
         "name": "Japan",
-        "image": "/images/maps/g2gfast/bhop_japan.webp",
+        "image": "/images/maps/airdrift/bhop_japan.webp",
         "score": 93,
         "author": "Tony Montana",
         "originalGame": "Counter-Strike: Source",
@@ -496,7 +496,7 @@
       {
         "id": "bhop_lego2",
         "name": "Lego2",
-        "image": "/images/maps/g2gfast/bhop_lego2.webp",
+        "image": "/images/maps/airdrift/bhop_lego2.webp",
         "score": 22,
         "author": "Tony Montana (tmontana)",
         "originalGame": "Counter-Strike: Source",
@@ -505,7 +505,7 @@
       {
         "id": "bhop_lego3",
         "name": "Lego3",
-        "image": "/images/maps/g2gfast/bhop_lego3.webp",
+        "image": "/images/maps/airdrift/bhop_lego3.webp",
         "score": 48,
         "author": "tmontana",
         "originalGame": "Counter-Strike: Source",
@@ -514,7 +514,7 @@
       {
         "id": "bhop_monster_jam",
         "name": "Monster Jam",
-        "image": "/images/maps/g2gfast/bhop_monster_jam.webp",
+        "image": "/images/maps/airdrift/bhop_monster_jam.webp",
         "score": 16,
         "author": "monster jam and Aoki",
         "originalGame": "Counter-Strike: Source",
@@ -523,7 +523,7 @@
       {
         "id": "bhop_nature",
         "name": "Nature",
-        "image": "/images/maps/g2gfast/bhop_nature.webp",
+        "image": "/images/maps/airdrift/bhop_nature.webp",
         "score": 54,
         "author": "BLENDIE",
         "originalGame": "Counter-Strike: Source",
@@ -532,7 +532,7 @@
       {
         "id": "bhop_ocean",
         "name": "Ocean",
-        "image": "/images/maps/g2gfast/bhop_ocean.webp",
+        "image": "/images/maps/airdrift/bhop_ocean.webp",
         "score": 23,
         "author": "Tony Montana (tmontana)",
         "originalGame": "Counter-Strike: Source",
@@ -541,7 +541,7 @@
       {
         "id": "bhop_overthinker",
         "name": "Overthinker",
-        "image": "/images/maps/g2gfast/bhop_overthinker.webp",
+        "image": "/images/maps/airdrift/bhop_overthinker.webp",
         "score": 95,
         "author": "Proxychains",
         "originalGame": "Counter-Strike: Source",
@@ -550,7 +550,7 @@
       {
         "id": "bhop_pandora2_fix",
         "name": "Pandora2 Fix",
-        "image": "/images/maps/g2gfast/bhop_pandora2_fix.webp",
+        "image": "/images/maps/airdrift/bhop_pandora2_fix.webp",
         "score": 64,
         "author": "Sonia_ (map); skybox Mr.Who; textures Wolves Hero and Sonia_; original bhop_pandora video/advice tmontana",
         "originalGame": "Counter-Strike: Source",
@@ -559,7 +559,7 @@
       {
         "id": "bhop_pit",
         "name": "Pit",
-        "image": "/images/maps/g2gfast/bhop_pit.webp",
+        "image": "/images/maps/airdrift/bhop_pit.webp",
         "score": 46,
         "author": "Roady",
         "originalGame": "Counter-Strike: Source",
@@ -577,7 +577,7 @@
       {
         "id": "bhop_sqee",
         "name": "Sqee",
-        "image": "/images/maps/g2gfast/bhop_sqee.webp",
+        "image": "/images/maps/airdrift/bhop_sqee.webp",
         "score": 69,
         "author": "sQee, QuiSt, KorYouZ, lólmarcel, dawn, Ray-on.NoOb, nairda",
         "originalGame": "Counter-Strike: Source",
@@ -586,7 +586,7 @@
       {
         "id": "bhop_supernova",
         "name": "Supernova",
-        "image": "/images/maps/g2gfast/bhop_supernova.webp",
+        "image": "/images/maps/airdrift/bhop_supernova.webp",
         "score": 8,
         "author": "Sonia_ (map design) and Benchmarked (gameplay); skybox Mr.Who; textures TopHATTwaffle and Sonia_; testers Juked, tricksterr, plar, samurai; Subnautica models by Unknown Worlds Entertainment",
         "originalGame": "Counter-Strike: Source",
@@ -595,7 +595,7 @@
       {
         "id": "bhop_tesquo_v2",
         "name": "Tesquo V2",
-        "image": "/images/maps/g2gfast/bhop_tesquo_v2.webp",
+        "image": "/images/maps/airdrift/bhop_tesquo_v2.webp",
         "score": 51,
         "author": "george (GeorgeRulesLOL); 'Made a stage': Jagg",
         "originalGame": "Counter-Strike: Source",
@@ -604,7 +604,7 @@
       {
         "id": "bhop_underground_crypt",
         "name": "Underground Crypt",
-        "image": "/images/maps/g2gfast/bhop_underground_crypt.webp",
+        "image": "/images/maps/airdrift/bhop_underground_crypt.webp",
         "score": 72,
         "author": "Yaznee",
         "originalGame": "Counter-Strike: Source",
@@ -613,7 +613,7 @@
       {
         "id": "bunnyhop_pro",
         "name": "Pro",
-        "image": "/images/maps/g2gfast/bunnyhop_pro.webp",
+        "image": "/images/maps/airdrift/bunnyhop_pro.webp",
         "score": 82,
         "author": "win32",
         "originalGame": "Counter-Strike: Source",
@@ -622,7 +622,7 @@
       {
         "id": "buses_from_hell_fixed",
         "name": "Buses From Hell Fixed",
-        "image": "/images/maps/g2gfast/buses_from_hell_fixed.webp",
+        "image": "/images/maps/airdrift/buses_from_hell_fixed.webp",
         "score": 8,
         "author": "siXMan",
         "originalGame": "Counter-Strike: Source",
@@ -631,7 +631,7 @@
       {
         "id": "kz_bhop_badg3s",
         "name": "Bhop Badg3s",
-        "image": "/images/maps/g2gfast/kz_bhop_badg3s.webp",
+        "image": "/images/maps/airdrift/kz_bhop_badg3s.webp",
         "score": 44,
         "author": "Badgeslol",
         "originalGame": "Counter-Strike: Source",
@@ -640,7 +640,7 @@
       {
         "id": "kz_bhop_lucid",
         "name": "Bhop Lucid",
-        "image": "/images/maps/g2gfast/kz_bhop_lucid.webp",
+        "image": "/images/maps/airdrift/kz_bhop_lucid.webp",
         "score": 8,
         "author": "Ghost1246511",
         "originalGame": "Counter-Strike: Source",
@@ -649,7 +649,7 @@
       {
         "id": "kz_bhop_yonkoma",
         "name": "Bhop Yonkoma",
-        "image": "/images/maps/g2gfast/kz_bhop_yonkoma.webp",
+        "image": "/images/maps/airdrift/kz_bhop_yonkoma.webp",
         "score": 82,
         "author": "Aoki",
         "originalGame": "Counter-Strike: Source",
@@ -658,7 +658,7 @@
       {
         "id": "surf_animals",
         "name": "Animals",
-        "image": "/images/maps/g2gfast/surf_animals.webp",
+        "image": "/images/maps/airdrift/surf_animals.webp",
         "score": 43,
         "author": "Razer, AmstaFF, Frizzlehead9, Robsonfire, Ton!x, Silverlol, Hellraisedsurfer, Nitro",
         "originalGame": "Counter-Strike: Source",
@@ -667,7 +667,7 @@
       {
         "id": "surf_aquaflow",
         "name": "Aquaflow",
-        "image": "/images/maps/g2gfast/surf_aquaflow.webp",
+        "image": "/images/maps/airdrift/surf_aquaflow.webp",
         "score": 37,
         "author": "NvC_DmN_CH",
         "originalGame": "Counter-Strike: Source",
@@ -676,7 +676,7 @@
       {
         "id": "surf_arcade",
         "name": "Arcade",
-        "image": "/images/maps/g2gfast/surf_arcade.webp",
+        "image": "/images/maps/airdrift/surf_arcade.webp",
         "score": 9,
         "author": "maz64 (maz)",
         "originalGame": "Counter-Strike: Source",
@@ -685,7 +685,7 @@
       {
         "id": "surf_beginner",
         "name": "Beginner",
-        "image": "/images/maps/g2gfast/surf_beginner.webp",
+        "image": "/images/maps/airdrift/surf_beginner.webp",
         "score": 54,
         "author": "Kiiru",
         "originalGame": "Counter-Strike: Source",
@@ -694,7 +694,7 @@
       {
         "id": "surf_beginner2",
         "name": "Beginner2",
-        "image": "/images/maps/g2gfast/surf_beginner2.webp",
+        "image": "/images/maps/airdrift/surf_beginner2.webp",
         "score": 36,
         "author": "Kiiru",
         "originalGame": "Counter-Strike: Source",
@@ -703,7 +703,7 @@
       {
         "id": "surf_eclipse",
         "name": "Eclipse",
-        "image": "/images/maps/g2gfast/surf_eclipse.webp",
+        "image": "/images/maps/airdrift/surf_eclipse.webp",
         "score": 38,
         "author": "Paper-Cut",
         "originalGame": "Counter-Strike: Source",
@@ -712,7 +712,7 @@
       {
         "id": "surf_greensway",
         "name": "Greensway",
-        "image": "/images/maps/g2gfast/surf_greensway.webp",
+        "image": "/images/maps/airdrift/surf_greensway.webp",
         "score": 79,
         "author": "NvC_DmN_CH",
         "originalGame": "Counter-Strike: Source",
@@ -721,7 +721,7 @@
       {
         "id": "surf_hologram",
         "name": "Hologram",
-        "image": "/images/maps/g2gfast/surf_hologram.webp",
+        "image": "/images/maps/airdrift/surf_hologram.webp",
         "score": 37,
         "author": "Chent",
         "originalGame": "Counter-Strike: Source",
@@ -730,7 +730,7 @@
       {
         "id": "surf_interference",
         "name": "Interference",
-        "image": "/images/maps/g2gfast/surf_interference.webp",
+        "image": "/images/maps/airdrift/surf_interference.webp",
         "score": 40,
         "author": "NvC_DmN_CH",
         "originalGame": "Counter-Strike: Source",
@@ -739,7 +739,7 @@
       {
         "id": "surf_kitsune",
         "name": "Kitsune",
-        "image": "/images/maps/g2gfast/surf_kitsune.webp",
+        "image": "/images/maps/airdrift/surf_kitsune.webp",
         "score": 29,
         "author": "Arblarg",
         "originalGame": "Counter-Strike: Source",
@@ -748,7 +748,7 @@
       {
         "id": "surf_life_of_duck",
         "name": "Life Of Duck",
-        "image": "/images/maps/g2gfast/surf_life_of_duck.webp",
+        "image": "/images/maps/airdrift/surf_life_of_duck.webp",
         "score": 31,
         "author": "SKAR",
         "originalGame": "Counter-Strike: Source",
@@ -757,7 +757,7 @@
       {
         "id": "surf_lore",
         "name": "Lore",
-        "image": "/images/maps/g2gfast/surf_lore.webp",
+        "image": "/images/maps/airdrift/surf_lore.webp",
         "score": 41,
         "author": "target practice",
         "originalGame": "Counter-Strike: Source",
@@ -766,7 +766,7 @@
       {
         "id": "surf_lt_omnific",
         "name": "Lt Omnific",
-        "image": "/images/maps/g2gfast/surf_lt_omnific.webp",
+        "image": "/images/maps/airdrift/surf_lt_omnific.webp",
         "score": 88,
         "author": "nyro (lead), qr, checkem",
         "originalGame": "Counter-Strike: Source",
@@ -775,7 +775,7 @@
       {
         "id": "surf_lt_unicorn",
         "name": "Lt Unicorn",
-        "image": "/images/maps/g2gfast/surf_lt_unicorn.webp",
+        "image": "/images/maps/airdrift/surf_lt_unicorn.webp",
         "score": 54,
         "author": "nyro",
         "originalGame": "Counter-Strike: Source",
@@ -784,7 +784,7 @@
       {
         "id": "surf_mesa",
         "name": "Mesa",
-        "image": "/images/maps/g2gfast/surf_mesa.webp",
+        "image": "/images/maps/airdrift/surf_mesa.webp",
         "score": 77,
         "author": "Arblarg",
         "originalGame": "Counter-Strike: Source",
@@ -793,7 +793,7 @@
       {
         "id": "surf_omnibus",
         "name": "Omnibus",
-        "image": "/images/maps/g2gfast/surf_omnibus.webp",
+        "image": "/images/maps/airdrift/surf_omnibus.webp",
         "score": 40,
         "author": "SKAR",
         "originalGame": "Counter-Strike: Source",
@@ -802,7 +802,7 @@
       {
         "id": "surf_quilavar",
         "name": "Quilavar",
-        "image": "/images/maps/g2gfast/surf_quilavar.webp",
+        "image": "/images/maps/airdrift/surf_quilavar.webp",
         "score": 72,
         "author": "Rapsodia, finished by Helix",
         "originalGame": "Counter-Strike: Source",
@@ -811,7 +811,7 @@
       {
         "id": "surf_rookie",
         "name": "Rookie",
-        "image": "/images/maps/g2gfast/surf_rookie.webp",
+        "image": "/images/maps/airdrift/surf_rookie.webp",
         "score": 77,
         "author": "Kiiru, Sacred91, Zeedz, Retarded brother",
         "originalGame": "Counter-Strike: Source",
@@ -820,7 +820,7 @@
       {
         "id": "surf_stonework3",
         "name": "Stonework3",
-        "image": "/images/maps/g2gfast/surf_stonework3.webp",
+        "image": "/images/maps/airdrift/surf_stonework3.webp",
         "score": 13,
         "author": "Mr.Cow",
         "originalGame": "Counter-Strike: Source",
@@ -829,7 +829,7 @@
       {
         "id": "surf_summit",
         "name": "Summit",
-        "image": "/images/maps/g2gfast/surf_summit.webp",
+        "image": "/images/maps/airdrift/surf_summit.webp",
         "score": 74,
         "author": "Juxtapo and Phurix",
         "originalGame": "Counter-Strike: Source",
@@ -838,7 +838,7 @@
       {
         "id": "surf_vegetables",
         "name": "Vegetables",
-        "image": "/images/maps/g2gfast/surf_vegetables.webp",
+        "image": "/images/maps/airdrift/surf_vegetables.webp",
         "score": 57,
         "author": "JacktheStripper, Jamz, Silverlol, Rapsodia, Coley, Skittles, Shahzam, Komaokc, Lody Blakody, Kb.Uni.Namer, Electric, Robsonfire, Machine, Hellraisedsurfer, G-Flow",
         "originalGame": "Counter-Strike: Source",
@@ -847,7 +847,7 @@
       {
         "id": "surf_year3000",
         "name": "Year3000",
-        "image": "/images/maps/g2gfast/surf_year3000.webp",
+        "image": "/images/maps/airdrift/surf_year3000.webp",
         "score": 12,
         "author": "ArchAngel",
         "originalGame": "Counter-Strike: Source",
@@ -855,13 +855,13 @@
       }
     ]
   },
-  "playground": {
-    "repo": "game-playlot-maps",
+  "playlot": {
+    "repo": "playlot-maps",
     "maps": [
       {
         "id": "pgc_bowl",
         "name": "Fling Bowl",
-        "image": "/images/maps/playground/pgc_bowl.webp",
+        "image": "/images/maps/playlot/pgc_bowl.webp",
         "score": 67,
         "author": null,
         "originalGame": null,
@@ -870,7 +870,7 @@
       {
         "id": "pgc_canyon",
         "name": "Canyon",
-        "image": "/images/maps/playground/pgc_canyon.webp",
+        "image": "/images/maps/playlot/pgc_canyon.webp",
         "score": 62,
         "author": null,
         "originalGame": null,
@@ -879,7 +879,7 @@
       {
         "id": "pgc_construct_small",
         "name": "Construct Small",
-        "image": "/images/maps/playground/pgc_construct_small.webp",
+        "image": "/images/maps/playlot/pgc_construct_small.webp",
         "score": 61,
         "author": "Wylie",
         "originalGame": "Garry's Mod",
@@ -888,7 +888,7 @@
       {
         "id": "pgc_harbour",
         "name": "Harbour",
-        "image": "/images/maps/playground/pgc_harbour.webp",
+        "image": "/images/maps/playlot/pgc_harbour.webp",
         "score": 74,
         "author": null,
         "originalGame": null,
@@ -897,7 +897,7 @@
       {
         "id": "pgc_islands",
         "name": "Sky Islands",
-        "image": "/images/maps/playground/pgc_islands.webp",
+        "image": "/images/maps/playlot/pgc_islands.webp",
         "score": 51,
         "author": null,
         "originalGame": null,
@@ -906,7 +906,7 @@
       {
         "id": "pgc_nature",
         "name": "Nature",
-        "image": "/images/maps/playground/pgc_nature.webp",
+        "image": "/images/maps/playlot/pgc_nature.webp",
         "score": 70,
         "author": null,
         "originalGame": null,
@@ -915,7 +915,7 @@
       {
         "id": "pgc_obstacle",
         "name": "Obstacle Park",
-        "image": "/images/maps/playground/pgc_obstacle.webp",
+        "image": "/images/maps/playlot/pgc_obstacle.webp",
         "score": 58,
         "author": null,
         "originalGame": null,
@@ -924,7 +924,7 @@
       {
         "id": "pgc_plots",
         "name": "Build Plots",
-        "image": "/images/maps/playground/pgc_plots.webp",
+        "image": "/images/maps/playlot/pgc_plots.webp",
         "score": 66,
         "author": null,
         "originalGame": null,
@@ -933,7 +933,7 @@
       {
         "id": "pgc_quarry",
         "name": "Quarry",
-        "image": "/images/maps/playground/pgc_quarry.webp",
+        "image": "/images/maps/playlot/pgc_quarry.webp",
         "score": 53,
         "author": null,
         "originalGame": null,
@@ -942,7 +942,7 @@
       {
         "id": "pgc_site",
         "name": "Construction Site",
-        "image": "/images/maps/playground/pgc_site.webp",
+        "image": "/images/maps/playlot/pgc_site.webp",
         "score": 55,
         "author": null,
         "originalGame": null,
@@ -951,7 +951,7 @@
       {
         "id": "pgc_slopes",
         "name": "Slide Hill",
-        "image": "/images/maps/playground/pgc_slopes.webp",
+        "image": "/images/maps/playlot/pgc_slopes.webp",
         "score": 56,
         "author": null,
         "originalGame": null,
@@ -960,7 +960,7 @@
       {
         "id": "pgc_town",
         "name": "Town",
-        "image": "/images/maps/playground/pgc_town.webp",
+        "image": "/images/maps/playlot/pgc_town.webp",
         "score": 78,
         "author": null,
         "originalGame": null,
@@ -969,7 +969,7 @@
       {
         "id": "pgc_warehouse",
         "name": "Warehouse",
-        "image": "/images/maps/playground/pgc_warehouse.webp",
+        "image": "/images/maps/playlot/pgc_warehouse.webp",
         "score": 54,
         "author": null,
         "originalGame": null,

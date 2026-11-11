@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const ja: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: "GunGame と定番の Surf Deathmatch マップを備えた、スピーディーな一人称デスマッチ。",
     summary: [
       "スピーディーな一人称デスマッチシューターです。ロードアウトを選び、購入ゾーンで武器を買って、チームデスマッチ、フリーフォーオール、GunGame の試合に飛び込みましょう。",
@@ -21,7 +21,7 @@ export const ja: Record<GameSlug, GameText> = {
     ],
     inspirations: ["デスマッチ／サーフ戦闘サーバー。"],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: "Source 風の移動とリーダーボードを備えた、バニーホップとサーフのタイムアタック。",
     summary: [
       "Source 風の移動、スタートゾーンとエンドゾーン、リーダーボードを備えた、バニーホップとサーフのタイムアタックゲームです。定番マップでタイムを競い、世界記録を狙いましょう。",
@@ -39,7 +39,7 @@ export const ja: Record<GameSlug, GameText> = {
     ],
     inspirations: ["Surf Timer／Bunny Hop サーバー。"],
   },
-  'playground': {
+  'playlot': {
     tagline: "プロップ、NPC、武器を出して好きなものを作れる物理サンドボックス。",
     summary: [
       "物理サンドボックスです。Q を長押ししてスポーンメニューを開き、プロップ、NPC、武器を出して、フィジックスガンやグラビティガンで持ち上げて、好きなものを作りましょう。",

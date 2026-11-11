@@ -119,6 +119,8 @@ export const zh: Messages = {
     changelog: "更新日志",
     bugs: "错误报告",
     mapPack: "GitHub 上的地图包",
+    playOnSite: "在 {host} 上玩",
+    serverRankings: "Standout Servers 上的服务器排行",
     moreGames: "更多游戏",
     controls: "操作",
     controlsIntro: "默认按键，与游戏内帮助界面列出的一致。在游戏中按 {key} 打开帮助；所有按键都可以在设置中修改。",
@@ -160,6 +162,7 @@ export const zh: Messages = {
     tmc: "The Modding Community",
     gameTitle: "游戏服务器",
     gameBody: "每款游戏一台服务器，始终运行这款游戏。",
+    rankings: "The Modding Community 上的所有服务器（包括我们的）都在 {standout} 上按游戏排名。",
     multiTitle: "多游戏服务器",
     multiBody: "在多款游戏之间切换，玩家全程保持连接。",
     multi: {

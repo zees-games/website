@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const de: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: 'Schnelles Ego-Deathmatch mit GunGame und klassischen Surf-Deathmatch-Maps.',
     summary: [
       'Ein schneller Deathmatch-Shooter aus der Ich-Perspektive. Wählen Sie eine Ausrüstung, kaufen Sie Waffen in den Kaufzonen und stürzen Sie sich in ein Match aus Team Deathmatch, Jeder gegen Jeden oder GunGame.',
@@ -16,7 +16,7 @@ export const de: Record<GameSlug, GameText> = {
     modes: ['Team Deathmatch', 'Jeder gegen Jeden', 'GunGame', 'Surf Deathmatch'],
     inspirations: ["Deathmatch- und Surf-Kampf-Server."],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: 'Bunny-Hop- und Surf-Zeitrennen mit Source-Bewegung und Bestenlisten.',
     summary: [
       'Ein Bunny-Hop- und Surf-Zeitspiel mit Source-Bewegung, Start- und Zielzonen und Bestenlisten. Rennen Sie auf klassischen Maps gegen die Uhr und jagen Sie Weltrekorde.',
@@ -30,7 +30,7 @@ export const de: Record<GameSlug, GameText> = {
     modes: ['Surf', 'Bunny Hop', 'KZ'],
     inspirations: ["Surf-Timer- und Bunny-Hop-Server."],
   },
-  'playground': {
+  'playlot': {
     tagline: 'Eine Physik-Sandbox: Props, NPCs und Waffen spawnen und bauen, was Sie wollen.',
     summary: [
       'Eine Physik-Sandbox. Halten Sie Q, um das Spawn-Menü zu öffnen und Props, NPCs und Waffen abzusetzen, greifen Sie dann alles mit der Physik- und der Gravitationskanone und bauen Sie, was Sie wollen.',

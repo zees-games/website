@@ -119,6 +119,8 @@ export const ja: Messages = {
     changelog: "変更履歴",
     bugs: "バグ報告",
     mapPack: "GitHub のマップパック",
+    playOnSite: "{host} でプレイ",
+    serverRankings: "Standout Servers のサーバーランキング",
     moreGames: "ほかのゲーム",
     controls: "操作方法",
     controlsIntro: "ゲーム内のヘルプ画面に表示されるデフォルトのキーです。ゲーム中に {key} を押すと開けます。キーはすべて設定で変更できます。",
@@ -160,6 +162,7 @@ export const ja: Messages = {
     tmc: "The Modding Community",
     gameTitle: "ゲームサーバー",
     gameBody: "ゲームごとに 1 台、常にそのゲームを動かしています。",
+    rankings: "The Modding Community のすべてのサーバー（私たちのものも含む）は、{standout} でゲームごとにランク付けされています。",
     multiTitle: "マルチゲームサーバー",
     multiBody: "プレイヤーの接続を保ったまま、複数のゲームを切り替えます。",
     multi: {

@@ -28,11 +28,15 @@ export const UMAMI_EVENTS = [
   'tmc_servers',
   /** A game's roadmap, changelog or bug tracker on TMC (`surface`: roadmap | changelog | bugs). */
   'tmc_surface',
+  /** A game's own site, a TMC hotspot such as prophunt.net (`game`, `host`, `place`). */
+  'game_site',
+  /** Standout Servers' rankings (`place`: game sidebar or servers page; `game` on the game page). */
+  'standout',
   /** The generic "Play on TMC" / "all games on TMC" links (`place`: header, menu, home, goals, footer). */
   'tmc_play',
 
   /*
-   * GitHub. `kind` is game | maps | site | org and `repo` the repository, so
+   * GitHub. `kind` is game | maps | pack | site | org | deploy and `repo` the repository, so
    * "do map packs get looked at" is one filter.
    */
   'repo_link',

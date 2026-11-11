@@ -5,7 +5,7 @@ import Layout from '../../../layouts/Layout.astro'
 import ServerCard from '../../../components/ServerCard.astro'
 import PlayerCommands from '../../../components/PlayerCommands.astro'
 import { SERVERS } from '../../../data/servers'
-import { DEPLOY_REPO, TmcHref } from '../../../lib/site'
+import { DEPLOY_REPO, STANDOUT_URL, TmcHref } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../../i18n'
 import { Ev } from '../../../lib/umami'
@@ -23,6 +23,7 @@ const multi = SERVERS.filter((s) => s.multi)
 const LINK = 'text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan'
 const tmcLink = `<a href="${TmcHref('/', locale)}" class="${LINK}">${Escape(S.tmc)}</a>`
 const deployLink = `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(S.deploy)}</a>`
+const standoutLink = `<a href="${STANDOUT_URL}" data-umami-event="standout" data-umami-event-place="servers" class="${LINK}">Standout Servers</a>`
 ---
 
 <Layout locale={locale} title={t.meta.serversTitle} description={t.meta.serversDescription} imageAlt={t.meta.ogAlt} jsonLd={[BreadcrumbLd(locale, [[t.meta.serversTitle, '/servers']])]}>
@@ -41,6 +42,7 @@ const deployLink = `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(S.deploy)}
     <section>
       <h2 class="flex items-center gap-2 text-2xl font-bold"><Server className="size-6 text-cyan" aria-hidden="true" /> {S.gameTitle}</h2>
       <p class="mt-2 text-muted">{S.gameBody}</p>
+      <p class="mt-1 text-sm text-muted" set:html={Rich(S.rankings, { standout: standoutLink })} />
       <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {single.map((s) => <ServerCard server={s} locale={locale} place="servers" />)}
       </div>

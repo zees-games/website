@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const es: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: 'Deathmatch rápido en primera persona con GunGame y clásicos mapas de Surf Deathmatch.',
     summary: [
       'Un shooter de deathmatch rápido en primera persona. Elige un equipamiento, compra armas en las zonas de compra y lánzate a una partida de team deathmatch, todos contra todos o GunGame.',
@@ -16,7 +16,7 @@ export const es: Record<GameSlug, GameText> = {
     modes: ['Team Deathmatch', 'Todos contra todos', 'GunGame', 'Surf Deathmatch'],
     inspirations: ["Servidores de deathmatch y de combate surf."],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: 'Carreras contrarreloj de bunny hop y surf con movimiento estilo Source y clasificaciones.',
     summary: [
       'Un juego de bunny hop y surf contrarreloj con movimiento estilo Source, zonas de inicio y fin, y clasificaciones. Compite contra el reloj en mapas clásicos y persigue récords mundiales.',
@@ -30,7 +30,7 @@ export const es: Record<GameSlug, GameText> = {
     modes: ['Surf', 'Bunny Hop', 'KZ'],
     inspirations: ["Servidores de Surf Timer y Bunny Hop."],
   },
-  'playground': {
+  'playlot': {
     tagline: 'Un sandbox de física: genera objetos, NPC y armas y construye lo que quieras.',
     summary: [
       'Un sandbox de física. Mantén Q para abrir el menú de aparición y suelta objetos, NPC y armas; luego agárralos con la pistola de física y la de gravedad y construye lo que quieras.',

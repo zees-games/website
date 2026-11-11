@@ -121,6 +121,8 @@ export const es: Messages = {
     changelog: 'Registro de cambios',
     bugs: 'Informes de errores',
     mapPack: 'Paquete de mapas en GitHub',
+    playOnSite: "Jugar en {host}",
+    serverRankings: "Clasificación de servidores en Standout Servers",
     moreGames: 'Más juegos',
     controls: "Controles",
     controlsIntro: "Las teclas por defecto, tal como las muestra la pantalla de ayuda del juego. Pulsa {key} en el juego para abrirla; cualquier tecla se puede cambiar en los ajustes.",
@@ -162,6 +164,7 @@ export const es: Messages = {
     tmc: "The Modding Community",
     gameTitle: "Servidores de juego",
     gameBody: "Un servidor por juego, siempre con ese juego.",
+    rankings: "Todos los servidores de The Modding Community, incluidos los nuestros, se clasifican por juego en {standout}.",
     multiTitle: "Servidores multijuego",
     multiBody: "Cambian entre varios juegos mientras los jugadores siguen conectados.",
     multi: {

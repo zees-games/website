@@ -91,7 +91,7 @@ html, body { width: 1200px; height: 630px; overflow: hidden; background: ${C.ink
 const ICON_DATA = `data:image/svg+xml;base64,${Buffer.from(IconSvg()).toString('base64')}`
 
 function SiteBanner() {
-  const fan = ['g2gfast', 'deathrun', 'wipeout']
+  const fan = ['airdrift', 'deathrun', 'wipeout']
   const chips = GAMES.filter((g) => g.server).map((g) => g.title)
   return `<!doctype html><html><head><style>${BASE_CSS}
   .glow1 { position:absolute; width:720px; height:720px; left:-200px; top:-260px; border-radius:50%; background:${C.violet}38; filter:blur(120px); }
@@ -119,7 +119,7 @@ function GameBanner(game) {
   const accent = C[game.accent]
   return `<!doctype html><html><head><style>${BASE_CSS}
   .cover { position:absolute; inset:0; background:url('${asset(`images/games/${game.slug}.webp`)}') center/cover; }
-  /* Light on the left: a heavy shade hid Arena's opponent and Hungario's rival. */
+  /* Light on the left: a heavy shade hid Fatal Contact's opponent and Hungario's rival. */
   .shade { position:absolute; inset:0; background:linear-gradient(90deg, ${C.ink}cc 0%, ${C.ink}66 30%, ${C.ink}00 55%), linear-gradient(0deg, ${C.ink}d0 0%, transparent 40%); }
   </style></head><body>
   <div class="cover"></div><div class="shade"></div>

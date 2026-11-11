@@ -15,7 +15,7 @@ A static [Astro](https://astro.build) site styled with Tailwind CSS.
 
 Every page also exists in Spanish, French, German, Russian, Dutch, Japanese, Chinese and Portuguese under `/es`, `/fr`, `/de`, `/ru`, `/nl`, `/ja`, `/zh` and `/pt` (English has no prefix), the same languages as The Modding Community.
 
-`<game>` is the game's app address on The Modding Community, so `zeesgames.com/arena` and `moddingcommunity.com/arena` are the same game.
+`<game>` is the game's app address on The Modding Community, so `zeesgames.com/fatal-contact` and `moddingcommunity.com/fatal-contact` are the same game.
 
 ## Develop
 

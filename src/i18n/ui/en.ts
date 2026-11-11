@@ -130,6 +130,8 @@ export const en = {
     changelog: 'Changelog',
     bugs: 'Bug reports',
     mapPack: 'Map pack on GitHub',
+    playOnSite: "Play on {host}",
+    serverRankings: "Server rankings on Standout Servers",
     moreGames: 'More games',
     controls: 'Controls',
     controlsIntro: 'The default keys, as the help screen in the game lists them. Press {key} in the game to open it; every key can be changed in the settings.',
@@ -166,6 +168,7 @@ export const en = {
     tmc: 'The Modding Community',
     gameTitle: 'Game servers',
     gameBody: 'One server per game, always running that game.',
+    rankings: "Every server on The Modding Community, ours included, is ranked per game on {standout}.",
     multiTitle: 'Multi-game servers',
     multiBody: 'These switch between several games while the players stay connected.',
     multi: {

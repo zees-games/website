@@ -2,7 +2,7 @@ import type { GameText } from './en'
 import type { GameSlug } from '../../data/games'
 
 export const fr: Record<GameSlug, GameText> = {
-  'arena': {
+  'fatal-contact': {
     tagline: 'Deathmatch nerveux en vue à la première personne, avec GunGame et les classiques cartes de Surf Deathmatch.',
     summary: [
       'Un jeu de tir deathmatch nerveux à la première personne. Choisissez un équipement, achetez des armes dans les zones d’achat et lancez-vous dans une partie de team deathmatch, de chacun pour soi ou de GunGame.',
@@ -16,7 +16,7 @@ export const fr: Record<GameSlug, GameText> = {
     modes: ['Team Deathmatch', 'Chacun pour soi', 'GunGame', 'Surf Deathmatch'],
     inspirations: ["Serveurs de deathmatch et de combat surf."],
   },
-  'g2gfast': {
+  'airdrift': {
     tagline: 'Courses chronométrées de bunny hop et de surf, avec déplacements à la Source et classements.',
     summary: [
       'Un jeu chronométré de bunny hop et de surf avec des déplacements à la Source, des zones de départ et d’arrivée et des classements. Affrontez le chrono sur des cartes classiques et visez les records du monde.',
@@ -30,7 +30,7 @@ export const fr: Record<GameSlug, GameText> = {
     modes: ['Surf', 'Bunny Hop', 'KZ'],
     inspirations: ["Serveurs Surf Timer et Bunny Hop."],
   },
-  'playground': {
+  'playlot': {
     tagline: 'Un bac à sable physique : faites apparaître des objets, des PNJ et des armes et construisez ce que vous voulez.',
     summary: [
       'Un bac à sable physique. Maintenez Q pour ouvrir le menu d’apparition et déposez des objets, des PNJ et des armes, puis saisissez-les avec les pistolets physique et gravitationnel et construisez ce que vous voulez.',

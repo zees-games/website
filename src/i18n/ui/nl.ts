@@ -120,6 +120,8 @@ export const nl: Messages = {
     changelog: "Wijzigingslogboek",
     bugs: "Bugmeldingen",
     mapPack: "Mappack op GitHub",
+    playOnSite: "Spelen op {host}",
+    serverRankings: "Serverranglijst op Standout Servers",
     moreGames: "Meer games",
     controls: "Besturing",
     controlsIntro: "De standaardtoetsen, zoals het helpscherm in de game ze toont. Druk in de game op {key} om het te openen; elke toets kun je wijzigen in de instellingen.",
@@ -161,6 +163,7 @@ export const nl: Messages = {
     tmc: "The Modding Community",
     gameTitle: "Gameservers",
     gameBody: "Eén server per game, die altijd die game draait.",
+    rankings: "Elke server op The Modding Community, ook de onze, wordt per game gerangschikt op {standout}.",
     multiTitle: "Multigame-servers",
     multiBody: "Deze wisselen tussen meerdere games terwijl de spelers verbonden blijven.",
     multi: {

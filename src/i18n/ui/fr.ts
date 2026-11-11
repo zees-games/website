@@ -121,6 +121,8 @@ export const fr: Messages = {
     changelog: 'Journal des modifications',
     bugs: 'Signalements de bugs',
     mapPack: 'Pack de cartes sur GitHub',
+    playOnSite: "Jouer sur {host}",
+    serverRankings: "Classement des serveurs sur Standout Servers",
     moreGames: 'Plus de jeux',
     controls: "Commandes",
     controlsIntro: "Les touches par défaut, telles que l'écran d'aide du jeu les affiche. Appuyez sur {key} en jeu pour l'ouvrir ; chaque touche peut être modifiée dans les paramètres.",
@@ -162,6 +164,7 @@ export const fr: Messages = {
     tmc: "The Modding Community",
     gameTitle: "Serveurs de jeu",
     gameBody: "Un serveur par jeu, qui fait toujours tourner ce jeu.",
+    rankings: "Tous les serveurs de The Modding Community, les nôtres compris, sont classés par jeu sur {standout}.",
     multiTitle: "Serveurs multi-jeux",
     multiBody: "Ils passent d’un jeu à l’autre sans déconnecter les joueurs.",
     multi: {
