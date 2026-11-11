@@ -1,0 +1,40 @@
+---
+import { ArrowRight, BookOpen, Globe, Map, Server } from 'lucide-react'
+import type { Game } from '../data/games'
+import { ACCENT } from '../lib/accent'
+import { HostOf } from '../lib/site'
+import { SiteHowToHref, SiteMapsHref, SiteServersHref } from '../lib/redirects'
+import type { Locale } from '../i18n/config'
+import { Fmt, UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
+
+/*
+ * The way to a game's own site, on its game page here: that site is where the
+ * game is played, its servers listed and its maps shown, so this page keeps the
+ * overview (translated) and sends players there for the rest.
+ */
+interface Props { game: Game & { site: string }; locale: Locale }
+const { game, locale } = Astro.props
+const { t } = UseI18n(locale)
+const a = ACCENT[game.accent]
+const host = HostOf(game.site)
+const ev = (page: string) => Ev('game_site', { game: game.slug, host, place: 'hero', page })
+const pages = [
+  { href: SiteMapsHref(game.site), label: t.game.maps, Icon: Map, page: 'maps' },
+  { href: SiteServersHref(game.site), label: t.nav.servers, Icon: Server, page: 'servers' },
+  { href: SiteHowToHref(game.site), label: t.game.howToPlay, Icon: BookOpen, page: 'how-to' },
+]
+---
+
+<div class:list={['max-w-2xl rounded-2xl border bg-ink/70 p-5 backdrop-blur', a.border]}>
+  <p class:list={['inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest', a.text]}><Globe className="size-3.5" aria-hidden="true" /> {t.game.officialSite} · {host}</p>
+  <p class="mt-2 text-muted">{Fmt(t.game.siteBlurb, { title: game.title })}</p>
+  <a href={game.site} {...ev('home')} class:list={['mt-4 inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold transition hover:brightness-110', a.button]}>
+    {Fmt(t.game.siteCta, { host })} <ArrowRight className="size-5" aria-hidden="true" />
+  </a>
+  <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold">
+    {pages.map(({ href, label, Icon, page }) => (
+      <li><a href={href} {...ev(page)} class="inline-flex items-center gap-1.5 text-muted hover:text-text"><Icon className="size-4" aria-hidden="true" /> {label}</a></li>
+    ))}
+  </ul>
+</div>

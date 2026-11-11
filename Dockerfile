@@ -33,5 +33,7 @@ COPY --chmod=755 docker/40-umami.sh /docker-entrypoint.d/40-umami.sh
 # COPY merges into a directory: clear the stock welcome page first.
 RUN rm -rf /usr/share/nginx/html/*
 COPY --from=build /app/dist /usr/share/nginx/html
+# The moved-pages table the build wrote beside dist/ (see nginx.conf.template).
+COPY --from=build /app/dist-nginx/moved.map /etc/nginx/moved.map
 
 EXPOSE ${INTERNAL_PORT}

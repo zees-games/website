@@ -6,6 +6,7 @@
 # Reinstalled and rebuilt inside the image.
 node_modules/
 dist/
+dist-nginx/
 .astro/
 
 # Reaches the build as a BuildKit secret mount, never through the context.

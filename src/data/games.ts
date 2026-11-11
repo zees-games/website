@@ -27,8 +27,14 @@ export interface Game {
   mapsRepo?: string
   /** Other content packs under zees-games (more maps, weapons), linked from the game page only. */
   packs?: string[]
-  /** The game's own site (a TMC hotspot), when it has one. */
+  /**
+   * The game's own site (a TMC hotspot), when it has one. Its maps live there
+   * (`<site>/maps`, `<site>/maps/<map id>`), so this site's maps page for the
+   * game is a 301 to it (`src/lib/redirects.ts`) and the game page links out.
+   */
   site?: string
+  /** Slugs the game had before a rename. Their pages are rewritten in `docker/nginx.conf.template`; their maps pages go straight to the game's site. */
+  formerSlugs?: string[]
   accent: 'cyan' | 'amber' | 'violet'
   /** What the game takes after; each entry's description is the same-index string of `inspirations` in the game's copy. A game with none is an original idea. */
   inspirations?: Inspiration[]
@@ -38,9 +44,9 @@ export const GAME_SLUGS = ['fatal-contact', 'airdrift', 'playlot', 'hungario', '
 export type GameSlug = (typeof GAME_SLUGS)[number]
 
 export const GAMES: Game[] = [
-  { slug: 'fatal-contact', title: "Fatal Contact", kind: 'game', repo: 'game-fatal-contact', mapsRepo: 'fc-surf-dm-maps', packs: ['fc-dm-maps', 'fc-weapons'], site: 'https://fatalcontact.net', accent: 'amber', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
-  { slug: 'airdrift', title: "Airdrift", kind: 'game', repo: 'game-airdrift', mapsRepo: 'airdrift-maps', site: 'https://airdrift.net', accent: 'cyan', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
-  { slug: 'playlot', title: "Playlot", kind: 'game', repo: 'game-playlot', mapsRepo: 'playlot-maps', site: 'https://playlot.app', accent: 'violet', inspirations: [{ title: "Garry's Mod", link: "https://store.steampowered.com/app/4000/Garrys_Mod/" }] },
+  { slug: 'fatal-contact', title: "Fatal Contact", kind: 'game', repo: 'game-fatal-contact', mapsRepo: 'fc-surf-dm-maps', packs: ['fc-dm-maps', 'fc-weapons'], site: 'https://fatalcontact.net', formerSlugs: ['arena', 'fatalcontact'], accent: 'amber', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
+  { slug: 'airdrift', title: "Airdrift", kind: 'game', repo: 'game-airdrift', mapsRepo: 'airdrift-maps', site: 'https://airdrift.net', formerSlugs: ['g2gfast'], accent: 'cyan', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
+  { slug: 'playlot', title: "Playlot", kind: 'game', repo: 'game-playlot', mapsRepo: 'playlot-maps', site: 'https://playlot.app', formerSlugs: ['playground'], accent: 'violet', inspirations: [{ title: "Garry's Mod", link: "https://store.steampowered.com/app/4000/Garrys_Mod/" }] },
   { slug: 'hungario', title: "Hungario", kind: 'game', repo: 'game-hungario', accent: 'cyan', inspirations: [{ title: "Agar.io", link: "https://agar.io/" }] },
   { slug: 'buses-from-hell', title: "Buses From Hell", kind: 'minigame', repo: 'mg-buses-from-hell', accent: 'amber', inspirations: [{ title: "buses_from_hell", link: "https://gamebanana.com/mods/127607" }] },
   { slug: 'smash-copter', title: "Smash Copter", kind: 'minigame', repo: 'mg-smash-copter', accent: 'violet', inspirations: [{ title: "mg_3k_smash_lego_copter", link: "https://gamebanana.com/mods/127650" }] },

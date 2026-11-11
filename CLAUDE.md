@@ -17,6 +17,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 | `src/lib/seo.ts`, `src/pages/{robots.txt,site.webmanifest}.ts` | JSON-LD builders (`SiteLd`, `GameLd`, `BreadcrumbLd`) that `Layout` renders from its `jsonLd` prop; robots and the install manifest |
 | `scripts/gen-brand.mjs` (`npm run brand`) | Renders the icon set into `public/` and the 1200×630 share banners into `public/og/` (`site.jpg`, one per game) with Playwright's Chromium (`npx playwright install chromium` once) |
 | `src/lib/maps.ts` | Joins `maps.json` with `originals.json` |
+| `src/lib/redirects.ts`, `scripts/test-redirects.mjs` | The maps pages that moved to a game's own site, the nginx `map` generated from them at build (`dist-nginx/moved.map`), and their test |
 | `src/data/games.ts` | The games' structural data (slug, repos, accent), by hand; their copy is in `src/i18n/games/` |
 | `src/data/servers.ts` | Zee's servers (subdomain id, app, TMC server id, name, port), by hand from TMC's server list |
 | `src/data/controls.ts` | Each game's default keys, from its in-game help screen (`*_bindings.gd` on x-tmc-dev02) |
@@ -29,6 +30,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 
 - `npm run dev`; `heavy -- npm run build` (runs `astro check`, then the static build). There is no test suite: build, then look at the pages.
 - `heavy -- docker compose build` checks the image.
+- `npm run test:redirects` after a build checks the moved maps pages (map file, fallback pages, sitemap, links); give it the running image's base URL to also check nginx's 301s.
 
 ## Rules
 
@@ -39,7 +41,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 - Only external map packs (a game's `mapsRepo`) get maps on the site. Maps that ship inside a game repo are not listed.
 - A game's `slug` is its app `url` on TMC: `/<slug>` here and `TMC_URL/<slug>` there name the same game. Never invent one; check `curl -I TMC_URL/<slug>` (an old slug answers 308 to the new one).
 - A renamed game's old slug keeps working through the `rewrite` lines in `docker/nginx.conf.template` (pages in every locale, covers, share banners, map shots): renaming a slug means renaming its files in `public/`, its key in `maps.json`, `controls.ts` and all nine `src/i18n/games/*.ts`, and adding those rewrites.
-- A game with its own site (a TMC hotspot: `site` in `games.ts`) links it from its page's sidebar; every game links its Standout Servers ranking (`StandoutHref`).
+- A game with its own site (a TMC hotspot: `site` in `games.ts`) keeps its maps and server list there, never here: its maps page in every locale (and under its `formerSlugs`) is a 301 to `<site>/maps` from the map `src/lib/redirects.ts` generates, out of the sitemap and unlinked; its game page keeps the translated overview, self-canonical, with the `OfficialSite` call to action and link-outs instead of map previews and the TMC server browser. Every game links its Standout Servers ranking (`StandoutHref`).
 - Every Play / Play Now / play-solo button goes to TMC (`TmcPlayHref` = `TMC_URL/<slug>/play`, quick play; `TmcServerPlayHref` = `TMC_URL/<app>/s/<tmcId>/play` for one of Zee's servers). This site never launches a game itself.
 - A server's page is `/<app>/s/<id>`, where `id` is its subdomain under `zeesgames.com` (its address is `<id>.zeesgames.com:<port>`) and `app` its TMC app url; multi-game servers sit under `godot`. A new server is a row in `SERVERS`, with its `tmcId` from TMC (`/api/app/v1/servers/lookup?host=&port=`).
 - The Controls section mirrors each game's help screen: when a game's key table changes, update `src/data/controls.ts` and add any new label to all nine `src/i18n/controls/*.ts`. Keys render through `Key.astro`, never as bare text.

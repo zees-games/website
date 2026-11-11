@@ -10,7 +10,8 @@
     "check": "astro check",
     "preview": "astro preview",
     "astro": "astro",
-    "brand": "node scripts/gen-brand.mjs"
+    "brand": "node scripts/gen-brand.mjs",
+    "test:redirects": "node scripts/test-redirects.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^6.0.6",

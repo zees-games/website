@@ -28,7 +28,7 @@ export const UMAMI_EVENTS = [
   'tmc_servers',
   /** A game's roadmap, changelog or bug tracker on TMC (`surface`: roadmap | changelog | bugs). */
   'tmc_surface',
-  /** A game's own site, a TMC hotspot such as prophunt.net (`game`, `host`, `place`). */
+  /** A game's own site, a TMC hotspot such as prophunt.net (`game`, `host`; `place`: hero | maps | sidebar; `page`: home | maps | servers | how-to). */
   'game_site',
   /** Standout Servers' rankings (`place`: game sidebar or servers page; `game` on the game page). */
   'standout',
@@ -51,7 +51,7 @@ export const UMAMI_EVENTS = [
   /* Moving around: which entry into a game gets used. */
   /** A game card (`place`: games | minigames | more), carrying the game. */
   'game_card',
-  /** A map thumbnail on a game page, which deep-links into its maps page. */
+  /** A map thumbnail on a game page, which deep-links into its maps page (games without their own site only). */
   'map_preview',
   /** A link to one of Zee's server pages (`place`: servers | game | server), carrying the server. */
   'server_card',

@@ -70,7 +70,7 @@ export function GameLd(game: Game, text: GameText, locale: Locale): JsonLd {
     isAccessibleForFree: true,
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
-    sameAs: [TmcGameHref(game.slug, locale), RepoHref(game.repo)],
+    sameAs: [...(game.site ? [game.site] : []), TmcGameHref(game.slug, locale), RepoHref(game.repo)],
   }
 }
 
