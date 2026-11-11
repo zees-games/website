@@ -323,7 +323,7 @@ export const zh: Messages = {
     sourcesTitle: "灵感来源",
     sources: [
       { name: "Valve 与 Source 引擎", body: "Counter-Strike、Half-Life 2: Deathmatch、Team Fortress 2 和 Left 4 Dead。Counter-Strike 从 Half-Life 和 Quake 继承的移动机制让滑翔和连跳成为可能，而 Source 引擎上的社区服务器把寥寥几款游戏变成了数以百计的游戏模式：滑翔、连跳、死亡奔跑、僵尸生存，以及各种各样的小游戏地图。" },
-      { name: "Facepunch 与 Garry's Mod", body: "一个没有规则的沙盒，后来成了游戏模式的平台：Prop Hunt、Murder、Trouble in Terrorist Town、DeathRun 以及数不清的其他模式，全部由社区制作。Playground 是我对沙盒本身的诠释。" },
+      { name: "Facepunch 与 Garry's Mod", body: "一个没有规则的沙盒，后来成了游戏模式的平台：Prop Hunt、Murder、Trouble in Terrorist Town、DeathRun 以及数不清的其他模式，全部由社区制作。Playlot 是我对沙盒本身的诠释。" },
       { name: "地图作者与模组作者", body: "制作地图和模组的人们，往往是无偿付出、持续多年：滑翔和连跳地图、小游戏地图、僵尸地图和全面改造模组，其中许多比承载它们的游戏本身更有创意。" },
       { name: "社区服务器", body: "让这些模式延续下去的服主和社区，他们制定自己的规则，给玩家一个夜复一夜都想回来的地方。" },
     ],

@@ -325,7 +325,7 @@ export const pt: Messages = {
     sourcesTitle: "O que o inspirou",
     sources: [
       { name: "A Valve e o motor Source", body: "Counter-Strike, Half-Life 2: Deathmatch, Team Fortress 2 e Left 4 Dead. O movimento que o Counter-Strike herdou de Half-Life e Quake tornou possíveis o surf e o bunny hop, e os servidores da comunidade no motor Source transformaram um punhado de jogos em centenas de modos: surf, bhop, deathrun, sobrevivência zombie e mapas de minijogos de todo o tipo." },
-      { name: "A Facepunch e o Garry's Mod", body: "Um sandbox sem regras que se tornou uma plataforma de modos de jogo: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun e inúmeros outros, todos feitos pela sua comunidade. O Playground é a minha versão do próprio sandbox." },
+      { name: "A Facepunch e o Garry's Mod", body: "Um sandbox sem regras que se tornou uma plataforma de modos de jogo: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun e inúmeros outros, todos feitos pela sua comunidade. O Playlot é a minha versão do próprio sandbox." },
       { name: "Criadores de mapas e mods", body: "As pessoas que criaram os mapas e os mods, muitas vezes de graça e durante anos: mapas de surf e bhop, de minijogos, de zombies e conversões totais, muitos deles mais criativos do que os jogos onde corriam." },
       { name: "Servidores da comunidade", body: "Os donos de servidores e as comunidades que mantiveram estes modos vivos, definiram as suas próprias regras e deram aos jogadores um sítio para onde voltar, noite após noite." },
     ],

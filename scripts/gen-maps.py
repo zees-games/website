@@ -1,8 +1,9 @@
 import json, os, subprocess, sys
 S, OUT = sys.argv[1], sys.argv[2]
 d = json.load(open(f'{S}/inventory.json'))
-PACK = {'arena-surf-dm-maps':'arena','g2gfast-maps':'g2gfast','game-playground-maps':'playground','hide-n-seek-maps':'hide-n-seek','mg-prop-hunt-maps':'prop-hunt','murder-mystery-maps':'murder-mystery','zombie-zone-maps':'zombie-zone','mg-deathrun-maps':'deathrun','mg-wipeout-maps':'wipeout'}  # external map packs only: maps that ship inside a game are not listed
-REPO = {'game-arena':'arena','game-g2gfast':'g2gfast','game-hide-n-seek':'hide-n-seek','game-hungario':'hungario','game-murder-mystery':'murder-mystery','game-playground':'playground','game-zombie-zone':'zombie-zone','mg-prop-hunt':'prop-hunt','mg-buses-from-hell':'buses-from-hell','mg-dangerous-delivery':'dangerous-delivery','mg-deathrun':'deathrun','mg-look-at-me':'look-at-me','mg-smash-copter':'smash-copter','mg-wipeout':'wipeout'}
+PACK = {'arena-surf-dm-maps':'arena','g2gfast-maps':'g2gfast','game-playlot-maps':'playground','game-playground-maps':'playground','hide-n-seek-maps':'hide-n-seek','mg-prop-hunt-maps':'prop-hunt','murder-mystery-maps':'murder-mystery','zombie-zone-maps':'zombie-zone','mg-deathrun-maps':'deathrun','mg-wipeout-maps':'wipeout'}  # external map packs only: maps that ship inside a game are not listed
+REPO = {'game-arena':'arena','game-g2gfast':'g2gfast','game-hide-n-seek':'hide-n-seek','game-hungario':'hungario','game-murder-mystery':'murder-mystery','game-playlot':'playground','game-playground':'playground','game-zombie-zone':'zombie-zone','mg-prop-hunt':'prop-hunt','mg-buses-from-hell':'buses-from-hell','mg-dangerous-delivery':'dangerous-delivery','mg-deathrun':'deathrun','mg-look-at-me':'look-at-me','mg-smash-copter':'smash-copter','mg-wipeout':'wipeout'}
+RENAMED = {'game-playground-maps': 'game-playlot-maps', 'game-playground': 'game-playlot'}  # dev02 checkouts not yet renamed after their GitHub repos
 def conv(src, dst, w):
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     if not os.path.exists(dst):
@@ -33,6 +34,6 @@ for pack, lst in d['maps'].items():
         rows.append({'id': m['id'], 'name': m['name'], 'image': img, 'score': score(OUT + '/public' + img) if img else None, 'author': author,
                      'originalGame': (m.get('originalGame') or '').replace(', inferred', '').replace(' (Source)', '').replace(' inferred','') or None,
                      'originalMap': m.get('originalMapName')})
-    maps[slug] = {'repo': pack, 'maps': rows}
+    maps[slug] = {'repo': RENAMED.get(pack, pack), 'maps': rows}
 open(f'{OUT}/src/data/maps.json', 'w').write(json.dumps(maps, indent=2, ensure_ascii=False) + '\n')
 print({k: len(v['maps']) for k, v in maps.items()})

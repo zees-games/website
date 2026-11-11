@@ -53,7 +53,7 @@ export const ja: Record<GameSlug, GameText> = {
     modes: [
       "サンドボックス",
     ],
-    inspirations: ["ルールのないサンドボックス。Playground はその自分なりの解釈です。"],
+    inspirations: ["ルールのないサンドボックス。Playlot はその自分なりの解釈です。"],
   },
   'hungario': {
     tagline: "腹ペコのモンスターを操り、食べて大きくなり、最後まで生き残ろう。",

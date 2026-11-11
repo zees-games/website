@@ -42,7 +42,7 @@ export const fr: Record<GameSlug, GameText> = {
       'Construisez, battez-vous ou amusez-vous : le serveur est à vous.',
     ],
     modes: ['Sandbox'],
-    inspirations: ["Le bac à sable sans règles dont Playground est une relecture."],
+    inspirations: ["Le bac à sable sans règles dont Playlot est une relecture."],
   },
   'hungario': {
     tagline: 'Dirigez un monstre affamé, mangez pour grandir et survivez à tous les autres.',

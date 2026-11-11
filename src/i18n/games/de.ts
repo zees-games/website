@@ -42,7 +42,7 @@ export const de: Record<GameSlug, GameText> = {
       'Bauen, kämpfen oder herumalbern: Der Server gehört Ihnen.',
     ],
     modes: ['Sandbox'],
-    inspirations: ["Die Sandbox ohne Regeln, deren Interpretation Playground ist."],
+    inspirations: ["Die Sandbox ohne Regeln, deren Interpretation Playlot ist."],
   },
   'hungario': {
     tagline: 'Steuern Sie ein hungriges Monster, fressen Sie, um zu wachsen, und überleben Sie alle anderen.',

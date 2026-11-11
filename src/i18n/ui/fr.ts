@@ -325,7 +325,7 @@ export const fr: Messages = {
     sourcesTitle: "Ce qui l’a inspiré",
     sources: [
       { name: "Valve et le moteur Source", body: "Counter-Strike, Half-Life 2: Deathmatch, Team Fortress 2 et Left 4 Dead. Les déplacements que Counter-Strike a hérités de Half-Life et de Quake ont rendu le surf et le bunny hop possibles, et les serveurs communautaires sur le moteur Source ont transformé une poignée de jeux en centaines de modes : surf, bhop, deathrun, survie zombie et cartes de mini-jeux en tout genre." },
-      { name: "Facepunch et Garry's Mod", body: "Un bac à sable sans règles devenu une plateforme pour les modes de jeu : Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun et d’innombrables autres, tous créés par sa communauté. Playground est ma version du bac à sable lui-même." },
+      { name: "Facepunch et Garry's Mod", body: "Un bac à sable sans règles devenu une plateforme pour les modes de jeu : Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun et d’innombrables autres, tous créés par sa communauté. Playlot est ma version du bac à sable lui-même." },
       { name: "Mappeurs et moddeurs", body: "Les personnes qui ont créé les cartes et les mods, souvent gratuitement et pendant des années : cartes de surf et de bhop, de mini-jeux, de zombies et conversions totales, souvent plus inventives que les jeux qui les faisaient tourner." },
       { name: "Serveurs communautaires", body: "Les propriétaires de serveurs et les communautés qui ont fait vivre ces modes, fixé leurs propres règles et donné aux joueurs un endroit où revenir, soir après soir." },
     ],

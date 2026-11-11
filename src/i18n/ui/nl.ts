@@ -324,7 +324,7 @@ export const nl: Messages = {
     sourcesTitle: "Wat het inspireerde",
     sources: [
       { name: "Valve en de Source-engine", body: "Counter-Strike, Half-Life 2: Deathmatch, Team Fortress 2 en Left 4 Dead. De beweging die Counter-Strike van Half-Life en Quake erfde, maakte surfen en bunny hoppen mogelijk, en communityservers op de Source-engine maakten van een handvol games honderden spelmodi: surf, bhop, deathrun, zombieoverleving en allerlei minigamemaps." },
-      { name: "Facepunch en Garry's Mod", body: "Een sandbox zonder regels die een platform voor spelmodi werd: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun en talloze andere, allemaal gemaakt door de community. Playground is mijn versie van de sandbox zelf." },
+      { name: "Facepunch en Garry's Mod", body: "Een sandbox zonder regels die een platform voor spelmodi werd: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun en talloze andere, allemaal gemaakt door de community. Playlot is mijn versie van de sandbox zelf." },
       { name: "Mappers en modders", body: "De mensen die de maps en mods bouwden, vaak gratis en jarenlang: surf- en bhopmaps, minigamemaps, zombiemaps en total conversions, vaak inventiever dan de games waarin ze draaiden." },
       { name: "Communityservers", body: "De serverbeheerders en community’s die deze modi levend hielden, hun eigen regels maakten en spelers een plek gaven om avond na avond naar terug te keren." },
     ],

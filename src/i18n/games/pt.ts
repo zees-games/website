@@ -42,7 +42,7 @@ export const pt: Record<GameSlug, GameText> = {
       'Construa, lute ou divirta-se à vontade; o servidor é seu para jogar.',
     ],
     modes: ['Sandbox'],
-    inspirations: ["O sandbox sem regras de que Playground é uma versão própria."],
+    inspirations: ["O sandbox sem regras de que Playlot é uma versão própria."],
   },
   'hungario': {
     tagline: 'Conduza um monstro esfomeado, coma para crescer e sobreviva a todos os outros.',

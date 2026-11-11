@@ -53,7 +53,7 @@ export const nl: Record<GameSlug, GameText> = {
     modes: [
       "Sandbox",
     ],
-    inspirations: ["De sandbox zonder regels waar Playground een eigen versie van is."],
+    inspirations: ["De sandbox zonder regels waar Playlot een eigen versie van is."],
   },
   'hungario': {
     tagline: "Bestuur een hongerig monster, eet om te groeien en overleef iedereen.",

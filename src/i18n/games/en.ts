@@ -65,7 +65,7 @@ export const en: Record<GameSlug, GameText> = {
     modes: [
       "Sandbox",
     ],
-    inspirations: ["The sandbox with no rules that Playground is a take on."],
+    inspirations: ["The sandbox with no rules that Playlot is a take on."],
   },
   'hungario': {
     tagline: "Steer a hungry monster, eat to grow and outlast everyone else.",

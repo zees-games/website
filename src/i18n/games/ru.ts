@@ -53,7 +53,7 @@ export const ru: Record<GameSlug, GameText> = {
     modes: [
       "Песочница",
     ],
-    inspirations: ["«Песочница» без правил, на которую опирается Playground."],
+    inspirations: ["«Песочница» без правил, на которую опирается Playlot."],
   },
   'hungario': {
     tagline: "Управляйте голодным монстром, ешьте, чтобы расти, и переживите всех остальных.",

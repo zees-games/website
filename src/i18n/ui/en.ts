@@ -331,7 +331,7 @@ export const en = {
     sourcesTitle: "What inspired it",
     sources: [
       { name: "Valve and the Source engine", body: "Counter-Strike, Half-Life 2: Deathmatch, Team Fortress 2 and Left 4 Dead. The movement Counter-Strike inherited from Half-Life and Quake made surfing and bunny hopping possible, and community servers on the Source engine turned a handful of games into hundreds of game modes: surf, bhop, deathrun, zombie survival and minigame maps of every kind." },
-      { name: "Facepunch and Garry's Mod", body: "A sandbox with no rules that became a platform for game modes: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun and countless more, all made by its community. Playground is my take on the sandbox itself." },
+      { name: "Facepunch and Garry's Mod", body: "A sandbox with no rules that became a platform for game modes: Prop Hunt, Murder, Trouble in Terrorist Town, DeathRun and countless more, all made by its community. Playlot is my take on the sandbox itself." },
       { name: "Mappers and modders", body: "The people who built the maps and mods, often for free and over many years: surf and bhop maps, minigame maps, zombie maps and total conversions, many of them more inventive than the games they ran in." },
       { name: "Community servers", body: "The server owners and communities who kept these modes alive, set their own rules and gave players a place to come back to, night after night." },
     ],

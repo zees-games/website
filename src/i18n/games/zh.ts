@@ -53,7 +53,7 @@ export const zh: Record<GameSlug, GameText> = {
     modes: [
       "沙盒",
     ],
-    inspirations: ["没有规则的沙盒，Playground 是对它的一次自己的演绎。"],
+    inspirations: ["没有规则的沙盒，Playlot 是对它的一次自己的演绎。"],
   },
   'hungario': {
     tagline: "操控一只饥饿的怪物，吃东西成长，比所有人活得更久。",

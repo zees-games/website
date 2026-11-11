@@ -36,7 +36,7 @@ export type GameSlug = (typeof GAME_SLUGS)[number]
 export const GAMES: Game[] = [
   { slug: 'arena', title: "Arena", kind: 'game', repo: 'game-arena', mapsRepo: 'arena-surf-dm-maps', accent: 'amber', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
   { slug: 'g2gfast', title: "G2g Fast", kind: 'game', repo: 'game-g2gfast', mapsRepo: 'g2gfast-maps', accent: 'cyan', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
-  { slug: 'playground', title: "Playground", kind: 'game', repo: 'game-playground', mapsRepo: 'game-playground-maps', accent: 'violet', inspirations: [{ title: "Garry's Mod", link: "https://store.steampowered.com/app/4000/Garrys_Mod/" }] },
+  { slug: 'playground', title: "Playlot", kind: 'game', repo: 'game-playlot', mapsRepo: 'game-playlot-maps', accent: 'violet', inspirations: [{ title: "Garry's Mod", link: "https://store.steampowered.com/app/4000/Garrys_Mod/" }] },
   { slug: 'hungario', title: "Hungario", kind: 'game', repo: 'game-hungario', accent: 'cyan', inspirations: [{ title: "Agar.io", link: "https://agar.io/" }] },
   { slug: 'buses-from-hell', title: "Buses From Hell", kind: 'minigame', repo: 'mg-buses-from-hell', accent: 'amber', inspirations: [{ title: "buses_from_hell", link: "https://gamebanana.com/mods/127607" }] },
   { slug: 'smash-copter', title: "Smash Copter", kind: 'minigame', repo: 'mg-smash-copter', accent: 'violet', inspirations: [{ title: "mg_3k_smash_lego_copter", link: "https://gamebanana.com/mods/127650" }] },

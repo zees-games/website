@@ -323,7 +323,7 @@ export const ja: Messages = {
     sourcesTitle: "着想の源",
     sources: [
       { name: "Valve と Source エンジン", body: "Counter-Strike、Half-Life 2: Deathmatch、Team Fortress 2、Left 4 Dead。Counter-Strike が Half-Life と Quake から受け継いだ移動の仕組みがサーフやバニーホップを生み、Source エンジンのコミュニティサーバーが一握りのゲームを何百ものゲームモードに変えました。サーフ、バニーホップ、デスラン、ゾンビサバイバル、そしてあらゆるミニゲームマップです。" },
-      { name: "Facepunch と Garry's Mod", body: "ルールのないサンドボックスが、ゲームモードのプラットフォームになりました。Prop Hunt、Murder、Trouble in Terrorist Town、DeathRun など、数えきれないモードがすべてコミュニティの手で作られています。Playground は、そのサンドボックス自体を私なりに作ったものです。" },
+      { name: "Facepunch と Garry's Mod", body: "ルールのないサンドボックスが、ゲームモードのプラットフォームになりました。Prop Hunt、Murder、Trouble in Terrorist Town、DeathRun など、数えきれないモードがすべてコミュニティの手で作られています。Playlot は、そのサンドボックス自体を私なりに作ったものです。" },
       { name: "マッパーとモッダー", body: "マップや MOD を、多くの場合は無償で何年もかけて作ってきた人たち。サーフやバニーホップのマップ、ミニゲームマップ、ゾンビマップ、トータルコンバージョン。その多くは、動いていたゲームそのものより独創的でした。" },
       { name: "コミュニティサーバー", body: "これらのモードを生かし続け、独自のルールを決め、プレイヤーが毎晩戻ってこられる場所を作ってきたサーバー運営者とコミュニティ。" },
     ],
