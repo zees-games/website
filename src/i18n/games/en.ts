@@ -18,7 +18,7 @@ export const en: Record<GameSlug, GameText> = {
     tagline: "Fast first-person deathmatch with GunGame and classic Surf Deathmatch maps.",
     summary: [
       "A fast first-person deathmatch shooter. Pick a loadout, buy weapons in the buy zones and jump into a match of team deathmatch, free-for-all or GunGame.",
-      "Arena also plays classic Surf Deathmatch maps from older Counter-Strike games: you fight while surfing ramps at speed.",
+      "Fatal Contact also plays classic Surf Deathmatch maps from older Counter-Strike games: you fight while surfing ramps at speed.",
     ],
     howToPlay: [
       "Pick a loadout, or buy weapons from a buy zone.",

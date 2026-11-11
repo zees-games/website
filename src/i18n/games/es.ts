@@ -6,7 +6,7 @@ export const es: Record<GameSlug, GameText> = {
     tagline: 'Deathmatch rápido en primera persona con GunGame y clásicos mapas de Surf Deathmatch.',
     summary: [
       'Un shooter de deathmatch rápido en primera persona. Elige un equipamiento, compra armas en las zonas de compra y lánzate a una partida de team deathmatch, todos contra todos o GunGame.',
-      'Arena también incluye los clásicos mapas de Surf Deathmatch de los antiguos juegos de Counter-Strike: combates mientras surfeas rampas a toda velocidad.',
+      'Fatal Contact también incluye los clásicos mapas de Surf Deathmatch de los antiguos juegos de Counter-Strike: combates mientras surfeas rampas a toda velocidad.',
     ],
     howToPlay: [
       'Elige un equipamiento o compra armas en una zona de compra.',

@@ -6,7 +6,7 @@ export const zh: Record<GameSlug, GameText> = {
     tagline: "节奏飞快的第一人称死亡竞赛，包含 GunGame 和经典的 Surf Deathmatch 地图。",
     summary: [
       "一款节奏飞快的第一人称死亡竞赛射击游戏。选择装备，在购买区购买武器，然后投入团队死亡竞赛、自由混战或 GunGame 对局。",
-      "Arena 还能玩来自早期 Counter-Strike 游戏的经典 Surf Deathmatch 地图：你要一边高速滑过斜坡，一边战斗。",
+      "Fatal Contact 还能玩来自早期 Counter-Strike 游戏的经典 Surf Deathmatch 地图：你要一边高速滑过斜坡，一边战斗。",
     ],
     howToPlay: [
       "选择装备，或在购买区购买武器。",

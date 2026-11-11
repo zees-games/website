@@ -6,7 +6,7 @@ export const de: Record<GameSlug, GameText> = {
     tagline: 'Schnelles Ego-Deathmatch mit GunGame und klassischen Surf-Deathmatch-Maps.',
     summary: [
       'Ein schneller Deathmatch-Shooter aus der Ich-Perspektive. Wählen Sie eine Ausrüstung, kaufen Sie Waffen in den Kaufzonen und stürzen Sie sich in ein Match aus Team Deathmatch, Jeder gegen Jeden oder GunGame.',
-      'Arena spielt außerdem klassische Surf-Deathmatch-Maps aus älteren Counter-Strike-Spielen: Man kämpft, während man mit hohem Tempo Rampen entlangsurft.',
+      'Fatal Contact spielt außerdem klassische Surf-Deathmatch-Maps aus älteren Counter-Strike-Spielen: Man kämpft, während man mit hohem Tempo Rampen entlangsurft.',
     ],
     howToPlay: [
       'Wählen Sie eine Ausrüstung oder kaufen Sie Waffen in einer Kaufzone.',

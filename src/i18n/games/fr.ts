@@ -6,7 +6,7 @@ export const fr: Record<GameSlug, GameText> = {
     tagline: 'Deathmatch nerveux en vue à la première personne, avec GunGame et les classiques cartes de Surf Deathmatch.',
     summary: [
       'Un jeu de tir deathmatch nerveux à la première personne. Choisissez un équipement, achetez des armes dans les zones d’achat et lancez-vous dans une partie de team deathmatch, de chacun pour soi ou de GunGame.',
-      'Arena propose aussi les cartes classiques de Surf Deathmatch des anciens jeux Counter-Strike : on se bat en surfant à toute vitesse sur des rampes.',
+      'Fatal Contact propose aussi les cartes classiques de Surf Deathmatch des anciens jeux Counter-Strike : on se bat en surfant à toute vitesse sur des rampes.',
     ],
     howToPlay: [
       'Choisissez un équipement, ou achetez des armes dans une zone d’achat.',

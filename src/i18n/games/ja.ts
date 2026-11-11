@@ -6,7 +6,7 @@ export const ja: Record<GameSlug, GameText> = {
     tagline: "GunGame と定番の Surf Deathmatch マップを備えた、スピーディーな一人称デスマッチ。",
     summary: [
       "スピーディーな一人称デスマッチシューターです。ロードアウトを選び、購入ゾーンで武器を買って、チームデスマッチ、フリーフォーオール、GunGame の試合に飛び込みましょう。",
-      "Arena では、古い Counter-Strike シリーズの定番 Surf Deathmatch マップも遊べます。ランプをスピードに乗って滑りながら戦います。",
+      "Fatal Contact では、古い Counter-Strike シリーズの定番 Surf Deathmatch マップも遊べます。ランプをスピードに乗って滑りながら戦います。",
     ],
     howToPlay: [
       "ロードアウトを選ぶか、購入ゾーンで武器を買います。",

@@ -6,7 +6,7 @@ export const nl: Record<GameSlug, GameText> = {
     tagline: "Snelle first-person deathmatch met GunGame en klassieke Surf Deathmatch-maps.",
     summary: [
       "Een snelle first-person deathmatchshooter. Kies een loadout, koop wapens in de koopzones en stort je in een potje team deathmatch, free-for-all of GunGame.",
-      "In Arena speel je ook klassieke Surf Deathmatch-maps uit oudere Counter-Strike-games: je vecht terwijl je op snelheid over ramps surft.",
+      "In Fatal Contact speel je ook klassieke Surf Deathmatch-maps uit oudere Counter-Strike-games: je vecht terwijl je op snelheid over ramps surft.",
     ],
     howToPlay: [
       "Kies een loadout, of koop wapens in een koopzone.",

@@ -34,7 +34,7 @@ export const GAME_SLUGS = ['arena', 'g2gfast', 'playground', 'hungario', 'buses-
 export type GameSlug = (typeof GAME_SLUGS)[number]
 
 export const GAMES: Game[] = [
-  { slug: 'arena', title: "Arena", kind: 'game', repo: 'game-arena', mapsRepo: 'arena-surf-dm-maps', accent: 'amber', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
+  { slug: 'arena', title: "Fatal Contact", kind: 'game', repo: 'game-arena', mapsRepo: 'arena-surf-dm-maps', accent: 'amber', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
   { slug: 'g2gfast', title: "G2g Fast", kind: 'game', repo: 'game-g2gfast', mapsRepo: 'g2gfast-maps', accent: 'cyan', inspirations: [{ title: "Counter-Strike: Source", link: "https://store.steampowered.com/app/240/Counter-Strike_Source/" }] },
   { slug: 'playground', title: "Playlot", kind: 'game', repo: 'game-playlot', mapsRepo: 'game-playlot-maps', accent: 'violet', inspirations: [{ title: "Garry's Mod", link: "https://store.steampowered.com/app/4000/Garrys_Mod/" }] },
   { slug: 'hungario', title: "Hungario", kind: 'game', repo: 'game-hungario', accent: 'cyan', inspirations: [{ title: "Agar.io", link: "https://agar.io/" }] },
