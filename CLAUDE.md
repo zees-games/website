@@ -30,7 +30,7 @@ Zee's Games' public site (zeesgames.com): a static Astro + React + Tailwind 4 si
 
 - `npm run dev`; `heavy -- npm run build` (runs `astro check`, then the static build). There is no test suite: build, then look at the pages.
 - `heavy -- docker compose build` checks the image.
-- `npm run test:redirects` after a build checks the moved maps pages (map file, fallback pages, sitemap, links); give it the running image's base URL to also check nginx's 301s.
+- `npm run test:redirects` after a build checks the moved maps pages (map file, fallback pages, sitemap, links); give it the running image's base URL (or the live host's) to also check nginx's 301s and the 404 page. It also fails on any internal link to a page the build did not write. The owner deploys by `DEPLOY.md`; agents never deploy.
 
 ## Rules
 

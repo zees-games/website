@@ -29,6 +29,8 @@ npm run dev
 
 ## Deploy (Docker)
 
+Step-by-step release commands and the post-deploy checks are in [DEPLOY.md](DEPLOY.md).
+
 The image builds the site and serves `dist/` from nginx. `.env` is read twice: at **build** time for the `PUBLIC_*` origins, which are inlined into the pages, and at **container start** for the Umami settings and compose's ports.
 
 ```sh

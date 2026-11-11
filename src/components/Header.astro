@@ -11,6 +11,9 @@ const { locale } = Astro.props
 const { t, p } = UseI18n(locale)
 
 const path = StripLocale(Astro.url.pathname)
+// The 404 page is one file served for every missing path, so it has no
+// address of its own to translate: its language menu goes to each home page.
+const switchPath = /^\/404(\.html)?\/?$/.test(path) ? '/' : path
 const links = [
   { href: p('/#games'), label: t.nav.games, Icon: Gamepad2, active: path === '/' },
   { href: p('/servers'), label: t.nav.servers, Icon: Server, active: path.startsWith('/servers') || path.includes('/s/') },
@@ -49,7 +52,7 @@ const playHref = TmcHref('/play', locale)
           {LOCALES.map((l) => (
             <li>
               <a
-                href={LocalizePath(path, l)}
+                href={LocalizePath(switchPath, l)}
                 {...Ev('locale_change', { from: locale, to: l })}
                 hreflang={LANG_TAG[l]}
                 lang={LANG_TAG[l]}
