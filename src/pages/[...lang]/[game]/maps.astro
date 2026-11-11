@@ -1,13 +1,16 @@
 ---
 import MapsList from '../../../components/MapsList.astro'
-import MovedMaps from '../../../components/MovedMaps.astro'
+import MovedPage from '../../../components/MovedPage.astro'
 import { GAMES, type Game } from '../../../data/games'
 import { MapsFor } from '../../../lib/maps'
+import { HostOf } from '../../../lib/site'
+import { MapIds, SiteMapsHref } from '../../../lib/redirects'
 import { LocalePaths, type Locale } from '../../../i18n/config'
+import { Escape, Fmt, Rich, UseI18n } from '../../../i18n'
 
 /*
  * A game's maps. A game with its own site keeps its maps there, so its page
- * here is only the fallback for the 301 nginx sends (MovedMaps); the rest get
+ * here is only the fallback for the 301 nginx sends (MovedPage); the rest get
  * the full list (MapsList).
  */
 export function getStaticPaths() {
@@ -18,7 +21,12 @@ export function getStaticPaths() {
 
 interface Props { game: Game; locale: Locale }
 const { game, locale } = Astro.props
+const { t } = UseI18n(locale)
 const site = game.site
+const to = site ? SiteMapsHref(site) : ''
+const link = site ? `<a href="${Escape(to)}">${Escape(HostOf(site))}</a>` : ''
 ---
 
-{site ? <MovedMaps game={{ ...game, site }} locale={locale} /> : <MapsList game={game} locale={locale} />}
+{site
+  ? <MovedPage locale={locale} title={Fmt(t.meta.mapsTitle, { title: game.title })} to={to} ids={MapIds(game.slug)} message={Rich(t.game.mapsMoved, { host: link }, { title: game.title })} />
+  : <MapsList game={game} locale={locale} />}

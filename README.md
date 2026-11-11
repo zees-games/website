@@ -46,7 +46,7 @@ Put a TLS-terminating reverse proxy in front of `BIND_ADDR:BIND_PORT`.
 
 ## Data
 
-- `src/data/games.ts`: the games, written by hand.
+- `src/data/games.ts`: the games, written by hand. A game with its own `site` has no pages here (its card links to the site): its game and maps pages answer with a 301 to that site (`src/lib/redirects.ts`, `dist-nginx/moved.map`).
 - `src/i18n/ui/<locale>.ts`, `src/i18n/games/<locale>.ts`: the site's text and each game's description, per language.
 - `src/data/maps.json`: maps per game, generated from the map repositories by `scripts/gen-maps.py`.
 - `src/data/originals.json`: for each ported map, a screenshot of the original and where it came from.

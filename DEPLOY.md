@@ -4,9 +4,9 @@ The site is one Docker image (`Dockerfile`): Astro builds `dist/` and `dist-ngin
 
 Run these on the web host, in the site's checkout, as the user that owns it.
 
-## Release: the moved maps pages (2026-11)
+## Release: the moved game and maps pages (2026-11)
 
-This release (`a771abd` and later) sends the maps pages of the four games with their own site (Fatal Contact, Airdrift, Playlot, Prop Hunt) to that site with a 301, in every locale and under every former slug, and fixes the 404 page's language menu. Both live in the image (the container's nginx config and the generated `moved.map`), so rebuilding the image is the whole deploy; the host's nginx config does not change.
+This release sends the game pages and maps pages of the four games with their own site (Fatal Contact, Airdrift, Playlot, Prop Hunt) to that site with a 301, in every locale and under every former slug: `/<lang>/<slug>` to `<site>/`, `/<lang>/<slug>/maps` to `<site>/maps`. Every link on this site to those games now goes straight to their site. Their server pages (`/<app>/s/<id>`, e.g. `/prop-hunt/s/ph01`) stay here. The maps redirects came with `a771abd`, the game pages with the commit after `f8d485b`; the release also fixes the 404 page's language menu. Both live in the image (the container's nginx config and the generated `moved.map`), so rebuilding the image is the whole deploy; the host's nginx config does not change.
 
 ### 1. Update and build
 
@@ -47,7 +47,7 @@ npm run build
 npm run test:redirects -- https://zeesgames.com
 ```
 
-It must end with `nginx: N of N answers right` and `ok`. For every moved path (each locale, current and former slugs, with and without the trailing slash and `index.html`) it wants exactly one 301 whose `Location` is the game site's `/maps`, with the query string kept and no fragment of its own. Because the `Location` carries no fragment, the browser keeps the visitor's `#<map id>` across the redirect, and the game site turns `/maps#<id>` into `/maps/<id>`. The test also wants a 200 from a maps page that did not move, and a 404 from a missing page whose language menu links to no `/<lang>/404`.
+It must end with `nginx: N of N answers right` and `ok`. For every moved path (each locale, current and former slugs, with and without the trailing slash and `index.html`) it wants exactly one 301 whose `Location` is the game site's home page (for a game page) or its `/maps` (for a maps page), with the query string kept and no fragment of its own. Because the `Location` carries no fragment, the browser keeps the visitor's `#<map id>` across the redirect, and the game site turns `/maps#<id>` into `/maps/<id>`. The test also wants a 200 from a game page and a maps page that did not move and from a server page of a moved game, and a 404 from a missing page whose language menu links to no `/<lang>/404`.
 
 Spot checks by hand:
 
@@ -60,9 +60,17 @@ curl -sI https://zeesgames.com/arena/maps/ | grep -iE '^(HTTP|location)'
 #   HTTP/2 301   location: https://fatalcontact.net/maps
 curl -sI https://zeesgames.com/ja/playground/maps | grep -iE '^(HTTP|location)'
 #   HTTP/2 301   location: https://playlot.app/maps
-# the game page itself stays here and is self-canonical
-curl -s https://zeesgames.com/fatal-contact/ | grep -o '<link rel="canonical"[^>]*>'
-#   <link rel="canonical" href="https://zeesgames.com/fatal-contact/">
+# a game page goes to the site's home page, in every locale and under former slugs
+curl -sI 'https://zeesgames.com/de/prop-hunt/?ref=x' | grep -iE '^(HTTP|location)'
+#   HTTP/2 301   location: https://prophunt.net/?ref=x
+curl -sI https://zeesgames.com/arena | grep -iE '^(HTTP|location)'
+#   HTTP/2 301   location: https://fatalcontact.net/
+curl -sI https://zeesgames.com/es/g2gfast/index.html | grep -iE '^(HTTP|location)'
+#   HTTP/2 301   location: https://airdrift.net/
+# the server pages stay here
+curl -s -o /dev/null -w '%{http_code}\n' https://zeesgames.com/prop-hunt/s/ph01/   # 200
+# a game without a site keeps its page
+curl -s -o /dev/null -w '%{http_code}\n' https://zeesgames.com/zombie-zone/       # 200
 # the 404 page: status 404, and its language menu goes to the home pages
 curl -s -o /dev/null -w '%{http_code}\n' https://zeesgames.com/es/nope   # 404
 curl -s https://zeesgames.com/es/nope | grep -c '/404"'                  # 0

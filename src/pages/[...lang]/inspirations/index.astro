@@ -9,6 +9,8 @@ import { GAMES } from '../../../data/games'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { UseI18n } from '../../../i18n'
 import { BreadcrumbLd } from '../../../lib/seo'
+import { GameHref } from '../../../lib/redirects'
+import { GameSiteEv } from '../../../lib/umami'
 
 export const getStaticPaths = LocalePaths
 
@@ -132,10 +134,10 @@ const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_s
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {GAMES.map((game) => (
           <div class="glow-card flex flex-col overflow-hidden">
-            <a href={p(`/${game.slug}`)} class="block" tabindex="-1" aria-hidden="true"><img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-full object-cover" /></a>
+            <a href={GameHref(game, locale)} {...GameSiteEv(game, 'inspirations')} class="block" tabindex="-1" aria-hidden="true"><img src={Asset(`/images/games/${game.slug}.webp`)} width="1920" height="1080" alt="" loading="lazy" class="aspect-video w-full object-cover" /></a>
             <div class="flex flex-1 flex-col p-4">
               <div class="flex flex-wrap items-baseline justify-between gap-x-2">
-                <a href={p(`/${game.slug}`)} class="text-lg font-bold hover:text-cyan">{game.title}</a>
+                <a href={GameHref(game, locale)} {...GameSiteEv(game, 'inspirations')} class="text-lg font-bold hover:text-cyan">{game.title}</a>
                 <span class="rounded-full border border-line px-2 py-0.5 text-xs text-muted">{t.kind[game.kind]}</span>
               </div>
               {game.inspirations?.length

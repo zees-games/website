@@ -3,7 +3,7 @@ import { Asset } from '../../../lib/asset'
 import { FaDiscord, FaGithub } from 'react-icons/fa6'
 import Layout from '../../../layouts/Layout.astro'
 import PlayButtons from '../../../components/PlayButtons.astro'
-import OfficialSite from '../../../components/OfficialSite.astro'
+import MovedPage from '../../../components/MovedPage.astro'
 import GameCard from '../../../components/GameCard.astro'
 import InspirationList from '../../../components/InspirationList.astro'
 import Controls from '../../../components/Controls.astro'
@@ -13,11 +13,11 @@ import { MapsFor } from '../../../lib/maps'
 import { ServerPath, ServersFor } from '../../../data/servers'
 import { DISCORD_URL, HostOf, RepoHref, StandoutHref, TMC_SURFACES, TmcGameHref, TmcServersHref, TmcSurfaceHref } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
-import { Fmt, UseI18n } from '../../../i18n'
+import { Escape, Fmt, Rich, UseI18n } from '../../../i18n'
 import { Ev } from '../../../lib/umami'
-import { SiteMapsHref, SiteServersHref } from '../../../lib/redirects'
+import { SiteHomeHref } from '../../../lib/redirects'
 import { BreadcrumbLd, GameLd } from '../../../lib/seo'
-import { Gamepad2, Lightbulb, Map, ArrowRight, Bug, ExternalLink, History, ListChecks, Route, Server, Globe, Trophy } from 'lucide-react'
+import { Gamepad2, Lightbulb, Map, ArrowRight, Bug, ExternalLink, History, ListChecks, Route, Server, Trophy } from 'lucide-react'
 
 export function getStaticPaths() {
   return LocalePaths().flatMap(({ params, props }) =>
@@ -37,12 +37,15 @@ const others = GAMES.filter((o) => o.slug !== game.slug).slice(0, 4)
 const cover = Asset(`/images/games/${game.slug}.webp`)
 const mapsPath = p(`/${game.slug}/maps`)
 const servers = ServersFor(game.slug)
-// A game with its own site: its maps and server list live there, so this page links out instead of repeating them.
+// A game with its own site lives there: nginx answers this address with a 301
+// (src/lib/redirects.ts), so the build writes only the fallback page for it.
 const site = game.site
-const host = site ? HostOf(site) : ''
+const to = site ? SiteHomeHref(site) : ''
+const siteLink = site ? `<a href="${Escape(to)}">${Escape(HostOf(site))}</a>` : ''
 const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
 ---
 
+{site ? <MovedPage locale={locale} title={game.title} to={to} message={Rich(t.game.gameMoved, { host: siteLink }, { title: game.title })} /> : (
 <Layout locale={locale} title={game.title} description={Fmt(t.meta.gameDescription, { title: game.title, tagline: text.tagline })} image={`/og/${game.slug}.jpg`} imageAlt={Fmt(t.meta.ogGameAlt, { title: game.title })} jsonLd={[GameLd(game, text, locale), BreadcrumbLd(locale, [[game.title, `/${game.slug}`]])]}>
   <!-- Hero -->
   <section class="relative isolate overflow-hidden border-b border-line/60">
@@ -55,7 +58,6 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
       <h1 class="mt-4 text-5xl font-bold sm:text-7xl">{game.title}</h1>
       <p class="mt-4 max-w-2xl text-xl text-muted">{text.tagline}</p>
       <div class="mt-8"><PlayButtons game={game} locale={locale} place="game" /></div>
-      {site && <div class="mt-6"><OfficialSite game={{ ...game, site }} locale={locale} /></div>}
     </div>
   </section>
 
@@ -88,17 +90,12 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
               <a href={RepoHref(maps.repo)} {...Ev('repo_link', { kind: 'maps', repo: maps.repo, game: game.slug, place: 'game' })} class="inline-flex items-center gap-1.5 text-sm font-semibold text-muted hover:text-text">
                 <FaGithub className="size-4" aria-hidden="true" /> {t.game.mapPack}
               </a>
-              {!site && <a href={mapsPath} class:list={['inline-flex items-center gap-1.5 text-sm font-semibold hover:underline', a.text]}>
+              <a href={mapsPath} class:list={['inline-flex items-center gap-1.5 text-sm font-semibold hover:underline', a.text]}>
                 {Fmt(t.game.allMaps, { n: maps.maps.length })} <ArrowRight className="size-4" />
-              </a>}
+              </a>
             </div>
           </div>
-          {site ? (
-            <a href={SiteMapsHref(site)} {...Ev('game_site', { game: game.slug, host, place: 'maps', page: 'maps' })} class:list={['mt-5 flex flex-wrap items-center justify-between gap-3 rounded-xl border bg-panel/70 p-5 transition hover:bg-panel', a.border]}>
-              <span class="text-muted">{Fmt(t.game.mapsOnSite, { n: maps.maps.length, host })}</span>
-              <span class:list={['inline-flex items-center gap-1.5 font-semibold', a.text]}>{Fmt(t.game.browseMaps, { host })} <ArrowRight className="size-4" /></span>
-            </a>
-          ) : preview.length > 0 && (
+          {preview.length > 0 && (
             <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {preview.map((m) => (
                 <a href={`${mapsPath}#${m.id}`} {...Ev('map_preview', { game: game.slug, map: m.id })} class="group relative overflow-hidden rounded-xl border border-line">
@@ -128,12 +125,9 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
       <div class="rounded-2xl border border-line bg-panel/80 p-5">
         <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.game.links}</p>
         <ul class="mt-3 space-y-2 text-sm">
-          {site && <li><a href={site} {...Ev('game_site', { game: game.slug, host, place: 'sidebar', page: 'home' })} class="flex items-center gap-2 hover:text-cyan"><Globe className="size-4 shrink-0 text-muted" /> {Fmt(t.game.playOnSite, { host })}</a></li>}
           <li><a href={TmcGameHref(game.slug, locale)} {...Ev('tmc_game', { game: game.slug, place: 'sidebar' })} class="flex items-center gap-2 hover:text-cyan"><ExternalLink className="size-4 shrink-0 text-muted" /> {Fmt(t.game.onTmcLong, { title: game.title })}</a></li>
           {servers.map((s) => <li><a href={p(ServerPath(s))} {...Ev('server_card', { server: s.id, place: 'game' })} class="flex items-center gap-2 hover:text-cyan"><Server className="size-4 shrink-0 text-emerald-400" /> {s.name}</a></li>)}
-          {site
-            ? <li><a href={SiteServersHref(site)} {...Ev('game_site', { game: game.slug, host, place: 'sidebar', page: 'servers' })} class="flex items-center gap-2 hover:text-cyan"><Server className="size-4 shrink-0 text-muted" /> {Fmt(t.game.serversOnSite, { host })}</a></li>
-            : <li><a href={TmcServersHref(game.slug, locale)} {...Ev('tmc_servers', { game: game.slug })} class="flex items-center gap-2 hover:text-cyan"><ExternalLink className="size-4 shrink-0 text-muted" /> {t.game.serverBrowser}</a></li>}
+          <li><a href={TmcServersHref(game.slug, locale)} {...Ev('tmc_servers', { game: game.slug })} class="flex items-center gap-2 hover:text-cyan"><ExternalLink className="size-4 shrink-0 text-muted" /> {t.game.serverBrowser}</a></li>
           <li><a href={StandoutHref(game.slug)} {...Ev('standout', { game: game.slug, place: 'game' })} class="flex items-center gap-2 hover:text-cyan"><Trophy className="size-4 shrink-0 text-muted" /> {t.game.serverRankings}</a></li>
           {TMC_SURFACES.map((s) => {
             const Icon = SURFACE_ICON[s]
@@ -155,3 +149,4 @@ const SURFACE_ICON = { roadmap: Route, changelog: History, bugs: Bug }
     </div>
   </section>
 </Layout>
+)}

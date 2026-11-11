@@ -1,0 +1,47 @@
+---
+import { LANG_TAG, type Locale } from '../i18n/config'
+
+/*
+ * A page of a game with its own site (its game page or its maps page). Our
+ * nginx answers this address with a 301 before the file is ever read
+ * (`src/lib/redirects.ts`); this page is only for a host that serves `dist/`
+ * as plain files: noindex, a canonical to the page on the game's site, and an
+ * immediate redirect that keeps the query string and the fragment (as nginx's
+ * 301 does). On a maps page (`ids` given) a `#<map id>` this site knows goes
+ * straight to that map's page there, and any other fragment rides along to
+ * `<site>/maps`, which turns a `#<id>` into `/maps/<id>` itself. A meta
+ * refresh cannot carry the fragment, so it only runs without script (in
+ * `noscript`, where it cannot race the script's navigation).
+ */
+interface Props {
+  locale: Locale
+  title: string
+  /** The absolute URL the page moved to. */
+  to: string
+  /** The sentence saying where it went, already escaped HTML. */
+  message: string
+  /** The maps page's map ids, which are also the map slugs on the game's site. */
+  ids?: string[]
+}
+const { locale, title, to, message, ids = [] } = Astro.props
+---
+
+<!doctype html>
+<html lang={LANG_TAG[locale]}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href={to} />
+    <script is:inline define:vars={{ to, ids }}>
+      var id = ''
+      try { id = decodeURIComponent(location.hash.slice(1)) } catch (e) {}
+      location.replace(id && ids.indexOf(id) >= 0 ? to.replace(/\/$/, '') + '/' + encodeURIComponent(id) + location.search : to + location.search + location.hash)
+    </script>
+    <noscript><meta http-equiv="refresh" content={`0; url=${to}`} /></noscript>
+  </head>
+  <body>
+    <p set:html={message} />
+  </body>
+</html>

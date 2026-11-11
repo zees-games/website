@@ -2,8 +2,9 @@
 # entrypoint fills in the listen port and nothing else (NGINX_ENVSUBST_FILTER).
 # The host's nginx terminates TLS in front of this.
 
-# Maps pages that moved to a game's own site (prophunt.net, playlot.app, ...):
-# old path -> absolute URL, generated at build from the site's content
+# Game and maps pages that moved to a game's own site (prophunt.net,
+# playlot.app, ...): old path -> absolute URL (the site's home page or its
+# /maps), generated at build from the site's content
 # (src/lib/redirects.ts -> dist-nginx/moved.map; never edit it by hand).
 map $uri $zg_moved {
     default "";
@@ -57,8 +58,8 @@ server {
         add_header Referrer-Policy "strict-origin-when-cross-origin" always;
     }
 
-    # Moved pages first, so a former slug's maps page goes straight to the
-    # game's site instead of through the slug rewrite below (one hop, no chain).
+    # Moved pages first, so a former slug's game or maps page goes straight to
+    # the game's site instead of through the slug rewrite below (one hop, no chain).
     if ($zg_moved) {
         return 301 $zg_moved$is_args$args;
     }

@@ -6,8 +6,9 @@ import { ACCENT } from '../lib/accent'
 import { TmcServerPlayHref } from '../lib/site'
 import type { Locale } from '../i18n/config'
 import { UseI18n } from '../i18n'
-import { Ev } from '../lib/umami'
+import { Ev, GameSiteEv } from '../lib/umami'
 import CopyAddress from './CopyAddress.astro'
+import { GameHref } from '../lib/redirects'
 
 /*
  * One of Zee's servers in a list: name and game, its address to copy, Play
@@ -31,7 +32,7 @@ const Icon = game ? Server : Shuffle
         <a href={p(ServerPath(server))} {...Ev('server_card', { server: server.id, place })} class="hover:underline">{server.name}</a>
       </h3>
       <p class:list={['mt-0.5 text-sm font-semibold', a.text]}>
-        {game ? <a href={p(`/${game.slug}`)} class="hover:underline">{game.title}</a> : t.servers.multi[server.multi!]}
+        {game ? <a href={GameHref(game, locale)} {...GameSiteEv(game, place)} class="hover:underline">{game.title}</a> : t.servers.multi[server.multi!]}
       </p>
     </div>
   </div>

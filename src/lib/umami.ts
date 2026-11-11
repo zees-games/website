@@ -28,7 +28,12 @@ export const UMAMI_EVENTS = [
   'tmc_servers',
   /** A game's roadmap, changelog or bug tracker on TMC (`surface`: roadmap | changelog | bugs). */
   'tmc_surface',
-  /** A game's own site, a TMC hotspot such as prophunt.net (`game`, `host`; `place`: hero | maps | sidebar; `page`: home | maps | servers | how-to). */
+  /**
+   * A game's own site, a TMC hotspot such as prophunt.net, where links to that
+   * game go instead of its (moved) page here (`game`, `host`; `place`:
+   * servers | server | inspirations; `page`: home | how-to). Game cards keep
+   * `game_card`.
+   */
   'game_site',
   /** Standout Servers' rankings (`place`: game sidebar or servers page; `game` on the game page). */
   'standout',
@@ -120,6 +125,14 @@ export function Ev(name: UmamiEventName, data: Record<string, string | undefined
   const attrs: Record<string, string> = { 'data-umami-event': name }
   for (const [k, v] of Object.entries(data)) if (v !== undefined) attrs[`data-umami-event-${k}`] = v
   return attrs
+}
+
+/**
+ * `game_site` for a link to a game that leads to its own site (`GameHref`),
+ * nothing for one that stays here (the pageview already counts it).
+ */
+export function GameSiteEv(game: { slug: string; site?: string }, place: string, page = 'home'): Record<string, string> {
+  return game.site ? Ev('game_site', { game: game.slug, host: new URL(game.site).host, place, page }) : {}
 }
 
 /** Cap free text a visitor typed before it becomes an event field. */

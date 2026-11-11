@@ -10,8 +10,9 @@ import { ACCENT } from '../../../../lib/accent'
 import { TmcServerHref, TmcServerPlayHref } from '../../../../lib/site'
 import { LocalePaths, type Locale } from '../../../../i18n/config'
 import { Fmt, UseI18n } from '../../../../i18n'
-import { Ev } from '../../../../lib/umami'
+import { Ev, GameSiteEv } from '../../../../lib/umami'
 import { BreadcrumbLd } from '../../../../lib/seo'
+import { GameHref, SiteHowToHref } from '../../../../lib/redirects'
 
 /*
  * One page per server, at `/<app>/s/<subdomain>`: the same shape as the
@@ -83,7 +84,7 @@ const others = SERVERS.filter((s) => s.id !== server.id).slice(0, 3)
         <dl class="space-y-4 text-sm">
           <div>
             <dt class="text-xs font-semibold uppercase tracking-widest text-muted">{t.server.game}</dt>
-            <dd class="mt-1">{game ? <a href={p(`/${game.slug}`)} class:list={['font-semibold hover:underline', a.text]}>{game.title}</a> : t.servers.multi[server.multi!]}</dd>
+            <dd class="mt-1">{game ? <a href={GameHref(game, locale)} {...GameSiteEv(game, 'server')} class:list={['font-semibold hover:underline', a.text]}>{game.title}</a> : t.servers.multi[server.multi!]}</dd>
           </div>
           <div>
             <dt class="text-xs font-semibold uppercase tracking-widest text-muted">{t.server.address}</dt>
@@ -94,8 +95,8 @@ const others = SERVERS.filter((s) => s.id !== server.id).slice(0, 3)
       <div class="rounded-2xl border border-line bg-panel/80 p-5">
         <ul class="space-y-2 text-sm">
           <li><a href={TmcServerHref(server, locale)} {...Ev('tmc_servers', { game: server.app, server: server.id, place: 'server' })} class="flex items-center gap-2 hover:text-cyan"><ExternalLink className="size-4 shrink-0 text-muted" aria-hidden="true" /> {t.server.onTmc}</a></li>
-          {game && <li><a href={p(`/${game.slug}#controls`)} class="flex items-center gap-2 hover:text-cyan"><Keyboard className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.controls, { title: game.title })}</a></li>}
-          {game && <li><a href={p(`/${game.slug}`)} class="flex items-center gap-2 hover:text-cyan"><Gamepad2 className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.aboutGame, { title: game.title })}</a></li>}
+          {game && <li><a href={game.site ? SiteHowToHref(game.site) : p(`/${game.slug}#controls`)} {...GameSiteEv(game, 'server', 'how-to')} class="flex items-center gap-2 hover:text-cyan"><Keyboard className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.controls, { title: game.title })}</a></li>}
+          {game && <li><a href={GameHref(game, locale)} {...GameSiteEv(game, 'server')} class="flex items-center gap-2 hover:text-cyan"><Gamepad2 className="size-4 shrink-0 text-muted" aria-hidden="true" /> {Fmt(t.server.aboutGame, { title: game.title })}</a></li>}
           <li><a href={p('/servers#moderation')} class="flex items-center gap-2 hover:text-cyan"><MessageSquareOff className="size-4 shrink-0 text-muted" aria-hidden="true" /> {t.server.selfModLink}</a></li>
         </ul>
       </div>

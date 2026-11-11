@@ -1,14 +1,15 @@
 import mapsData from '../data/maps.json'
 import { GAMES, type Game } from '../data/games'
-import { LOCALES, LocalizePath } from '../i18n/config'
+import { LOCALES, LocalizePath, type Locale } from '../i18n/config'
 
 /**
  * Pages that moved to a game's own site. A game with a `site` (a TMC hotspot:
- * prophunt.net, playlot.app, fatalcontact.net, airdrift.net) shows its maps
- * there, at `<site>/maps` and `<site>/maps/<map id>` (the map id is the one
- * `maps.json` and this site's `#<id>` anchors use). So this site's maps page
- * for such a game, in every locale and under every former slug, answers 301
- * with the site's maps page.
+ * prophunt.net, playlot.app, fatalcontact.net, airdrift.net) lives there: its
+ * game page here, in every locale and under every former slug, answers 301
+ * with the site's home page (`<site>/`), and its maps page with the site's
+ * maps page (`<site>/maps`; single maps at `<site>/maps/<map id>`, the id
+ * `maps.json` and this site's `#<id>` anchors use). Zee's server pages for the
+ * game (`/<app>/s/<id>`) stay here.
  *
  * Everything here is computed from `GAMES` and `maps.json`, so the list never
  * drifts from the content:
@@ -16,8 +17,10 @@ import { LOCALES, LocalizePath } from '../i18n/config'
  *   (`dist-nginx/moved.map`), and the image includes it into the `map` in
  *   `docker/nginx.conf.template`;
  * - the sitemap leaves out every `MovedPagePaths()` entry;
- * - `[game]/maps.astro` renders a noindex meta-refresh page with a cross-domain
- *   canonical for hosts that serve `dist/` without our nginx.
+ * - `[game]/index.astro` and `[game]/maps.astro` render a noindex page with a
+ *   cross-domain canonical and an immediate redirect (`MovedPage`) for hosts
+ *   that serve `dist/` without our nginx;
+ * - every link here to such a game goes straight to its site (`GameHref`).
  *
  * Maps here are anchors (`/<slug>/maps#<id>`), and a fragment never reaches
  * the server: nginx can only send the maps page to `<site>/maps` (browsers keep
@@ -28,22 +31,29 @@ import { LOCALES, LocalizePath } from '../i18n/config'
  * that needs Astro or Vite at runtime (no `Asset`, no `import.meta.env`).
  */
 
-/** The games whose maps live on their own site. */
+/** The games that live on their own site. */
 export const SiteGames = (): (Game & { site: string })[] =>
   GAMES.filter((g): g is Game & { site: string } => !!g.site)
 
 const trim = (u: string) => u.replace(/\/+$/, '')
 
+/** A game's own site, its home page. */
+export const SiteHomeHref = (site: string) => `${trim(site)}/`
 /** A game's maps on its own site. */
 export const SiteMapsHref = (site: string) => `${trim(site)}/maps`
 /** One map's page on the game's own site. */
 export const SiteMapHref = (site: string, id: string) => `${SiteMapsHref(site)}/${encodeURIComponent(id)}`
-/** The server list on the game's own site (its home page's `#servers` section). */
-export const SiteServersHref = (site: string) => `${trim(site)}/#servers`
 /** How to play, on the game's own site. */
 export const SiteHowToHref = (site: string) => `${trim(site)}/how-to`
 
 const packs = mapsData as Record<string, { maps: { id: string }[] }>
+
+/**
+ * Where a link to a game goes: its own site when it has one (its page here is
+ * a 301 there), else its page here in `locale`.
+ */
+export const GameHref = (game: Pick<Game, 'slug' | 'site'>, locale: Locale): string =>
+  game.site ? SiteHomeHref(game.site) : LocalizePath(`/${game.slug}`, locale)
 
 /** The map ids a game shows, which are also the slugs of its maps on its own site. */
 export const MapIds = (slug: string): string[] => packs[slug]?.maps.map((m) => m.id) ?? []
@@ -56,28 +66,40 @@ export interface Moved {
 }
 
 /**
- * Every address of a moved maps page: each locale, the current and former
- * slugs, with and without the trailing slash, and the file itself. Former
- * slugs go straight to the site, never through the slug rewrite (no chain).
+ * Every address of a moved page: the game page and (when the game has maps)
+ * its maps page, in each locale, under the current and former slugs, with and
+ * without the trailing slash, and the file itself. Former slugs go straight to
+ * the site, never through the slug rewrite (no chain).
  */
 export function MovedPages(): Moved[] {
   const out: Moved[] = []
   for (const g of SiteGames()) {
-    if (MapIds(g.slug).length === 0) continue
-    const to = SiteMapsHref(g.site)
+    const targets: [string, string][] = [['', SiteHomeHref(g.site)]]
+    if (MapIds(g.slug).length > 0) targets.push(['/maps', SiteMapsHref(g.site)])
     for (const slug of [g.slug, ...(g.formerSlugs ?? [])]) {
       for (const l of LOCALES) {
-        const base = LocalizePath(`/${slug}/maps`, l)
-        for (const from of [base, `${base}/`, `${base}/index.html`]) out.push({ from, to })
+        for (const [sub, to] of targets) {
+          const base = LocalizePath(`/${slug}${sub}`, l)
+          for (const from of [base, `${base}/`, `${base}/index.html`]) out.push({ from, to })
+        }
       }
     }
   }
   return out
 }
 
-/** The moved pages as the build writes them (`/<locale>/<slug>/maps/`), for the sitemap filter. */
-export const MovedPagePaths = (): Set<string> =>
-  new Set(MovedPages().map((m) => m.from).filter((p) => p.endsWith('/maps/') && SiteGames().some((g) => p.endsWith(`/${g.slug}/maps/`))))
+/**
+ * The moved pages the build writes (`/<locale>/<slug>/` and
+ * `/<locale>/<slug>/maps/`, current slugs only), for the sitemap filter.
+ */
+export const MovedPagePaths = (): Set<string> => {
+  const current = new Set<string>(SiteGames().map((g) => g.slug))
+  return new Set(
+    MovedPages()
+      .map((m) => m.from)
+      .filter((p) => p.endsWith('/') && current.has(p.replace(/\/maps\/$/, '/').split('/').at(-2) ?? '')),
+  )
+}
 
 const quote = (s: string) => `"${s.replace(/["\\]/g, '\\$&')}"`
 

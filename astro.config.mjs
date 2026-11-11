@@ -13,7 +13,7 @@ const LOCALES = { en: 'en', es: 'es', fr: 'fr', de: 'de', ru: 'ru', nl: 'nl', ja
 // needs it here too, or it refuses to emit a sitemap.
 const SITE = (process.env.PUBLIC_SITE_URL ?? 'https://zeesgames.com').replace(/\/+$/, '')
 
-// The maps pages that moved to a game's own site (src/lib/redirects.ts).
+// The game and maps pages that moved to a game's own site (src/lib/redirects.ts).
 const MOVED = MovedPagePaths()
 
 export default defineConfig({

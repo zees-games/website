@@ -1,15 +1,17 @@
 #!/usr/bin/env node
 /*
- * Checks the maps pages that moved to a game's own site (src/lib/redirects.ts)
- * against a build: `node scripts/test-redirects.mjs` after `npm run build`.
+ * Checks the game and maps pages that moved to a game's own site
+ * (src/lib/redirects.ts) against a build: `node scripts/test-redirects.mjs`
+ * after `npm run build`.
  *
- * - dist-nginx/moved.map: every entry is a maps path and an absolute https URL
+ * - dist-nginx/moved.map: every entry is a game or maps path (never a server
+ *   page, `/<slug>/s/<id>`, which stays here) and an absolute https URL
  *   on another host, no path twice, no target that is itself a moved path;
  * - every moved page the build wrote is the fallback: noindex, its canonical
  *   and meta refresh both the map's target, the refresh only in `noscript`
  *   and the script forwarding `location.hash` (as a 301 does);
  * - the sitemap and every page's links leave the moved paths out;
- * - the maps pages of games without a site are still full pages;
+ * - the game and maps pages of games without a site are still full pages;
  * - every internal link on every page names a file the build wrote, a moved
  *   path, or a renamed slug nginx rewrites (the 404 page's language menu
  *   once linked to nine `/<lang>/404` pages that do not exist).
@@ -17,7 +19,8 @@
  * With a base URL (`node scripts/test-redirects.mjs http://127.0.0.1:8080`,
  * the image running) it also asks nginx for every moved path: one 301 to the
  * target, query string kept and no fragment in `Location` (so the browser
- * keeps the visitor's `#<map id>`), a 200 for a maps page that did not move,
+ * keeps the visitor's `#<map id>`), a 200 for a game page and a maps page that
+ * did not move,
  * and a 404 for a missing page whose language menu links to the home pages.
  * It works against the live host too (`https://zeesgames.com`), given a
  * `dist/` built from the deployed commit.
@@ -43,7 +46,7 @@ const moved = new Map()
 for (const { from, to } of entries) {
   if (moved.has(from)) fail(`${from} listed twice`)
   moved.set(from, to)
-  if (!/\/maps(\/|\/index\.html)?$/.test(from)) fail(`${from} is not a maps path`)
+  if (!/^(\/[a-z]{2})?\/[^/]+(\/maps)?(\/|\/index\.html)?$/.test(from)) fail(`${from} is not a game or maps path`)
   let url
   try { url = new URL(to) } catch { fail(`${from} -> ${to} is not a URL`); continue }
   if (url.protocol !== 'https:' || url.hostname.endsWith('zeesgames.com')) fail(`${from} -> ${to} does not leave the site over https`)
@@ -57,11 +60,13 @@ const htmlFiles = (dir) => readdirSync(dir, { withFileTypes: true }).flatMap((d)
 const pages = htmlFiles(DIST)
 
 let stubs = 0
+let gameStubs = 0
 for (const [from, to] of moved) {
-  if (!from.endsWith('/maps/')) continue
+  if (!from.endsWith('/')) continue
   const file = join(DIST, from, 'index.html')
   if (!existsSync(file)) continue // a former slug: only nginx answers it
-  stubs++
+  if (from.endsWith('/maps/')) stubs++
+  else gameStubs++
   const html = readFileSync(file, 'utf8')
   if (!html.includes(`<link rel="canonical" href="${to}"`)) fail(`${from}: canonical is not ${to}`)
   if (!html.includes(`<noscript><meta http-equiv="refresh" content="0; url=${to}"></noscript>`)) fail(`${from}: meta refresh is not ${to} inside noscript`)
@@ -106,8 +111,14 @@ if (broken) console.error(`${broken} broken internal links`)
 
 const kept = pages.filter((f) => /\/maps\/index\.html$/.test(f) && !moved.has(f.slice(DIST.length).replace(/index\.html$/, '')))
 for (const f of kept) if (!readFileSync(f, 'utf8').includes('data-forms')) fail(`${f} is not a full maps page`)
+// The game page above each kept maps page did not move either.
+const keptGames = kept.map((f) => f.replace(/maps\/index\.html$/, 'index.html'))
+for (const f of keptGames) {
+  if (!existsSync(f)) fail(`${f} is missing`)
+  else if (/name="robots" content="noindex/.test(readFileSync(f, 'utf8'))) fail(`${f} is not a full game page`)
+}
 
-console.log(`moved.map: ${moved.size} paths; fallback pages: ${stubs}; kept maps pages: ${kept.length}; sitemap: ${locs.length} urls; internal links checked: ${links}`)
+console.log(`moved.map: ${moved.size} paths; fallback pages: ${gameStubs} game, ${stubs} maps; kept pages: ${keptGames.length} game, ${kept.length} maps; sitemap: ${locs.length} urls; internal links checked: ${links}`)
 
 if (base) {
   let ok = 0
@@ -117,10 +128,13 @@ if (base) {
     if (res.status !== 301 || loc !== `${to}?ref=test`) fail(`GET ${from}: ${res.status} ${loc}`)
     else ok++
   }
-  const keptPath = kept[0]?.slice(DIST.length).replace(/index\.html$/, '')
-  if (keptPath) {
-    const res = await fetch(`${base}${keptPath}`, { redirect: 'manual' })
-    if (res.status !== 200) fail(`GET ${keptPath}: ${res.status}, want 200`)
+  const keptPaths = [kept[0], keptGames[0]].filter(Boolean).map((f) => f.slice(DIST.length).replace(/index\.html$/, ''))
+  // A server page of a game with a site stays here.
+  const serverPage = pages.map((f) => f.slice(DIST.length).replace(/index\.html$/, '')).find((p) => /^\/[^/]+\/s\/[^/]+\/$/.test(p) && moved.has(p.replace(/s\/[^/]+\/$/, '')))
+  if (serverPage) keptPaths.push(serverPage)
+  for (const p of keptPaths) {
+    const res = await fetch(`${base}${p}`, { redirect: 'manual' })
+    if (res.status !== 200) fail(`GET ${p}: ${res.status}, want 200`)
     else ok++
   }
   const missing = await fetch(`${base}/es/no-such-page-${Date.now()}`, { redirect: 'manual' })
@@ -128,7 +142,7 @@ if (base) {
   if (missing.status !== 404) fail(`GET a missing page: ${missing.status}, want 404`)
   else if (/href="(\/[a-z]{2})?\/404/.test(body)) fail('the 404 page links to a /404 page')
   else ok++
-  console.log(`nginx: ${ok} of ${moved.size + (keptPath ? 1 : 0) + 1} answers right`)
+  console.log(`nginx: ${ok} of ${moved.size + keptPaths.length + 1} answers right`)
 }
 
 console.log(failures ? `${failures} failures` : 'ok')

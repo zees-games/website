@@ -28,12 +28,13 @@ export interface Game {
   /** Other content packs under zees-games (more maps, weapons), linked from the game page only. */
   packs?: string[]
   /**
-   * The game's own site (a TMC hotspot), when it has one. Its maps live there
-   * (`<site>/maps`, `<site>/maps/<map id>`), so this site's maps page for the
-   * game is a 301 to it (`src/lib/redirects.ts`) and the game page links out.
+   * The game's own site (a TMC hotspot), when it has one. The game lives
+   * there, so this site's game page for it is a 301 to `<site>/` and its maps
+   * page a 301 to `<site>/maps` (`src/lib/redirects.ts`), and every link here
+   * to the game goes to the site (`GameHref`). Zee's server pages stay here.
    */
   site?: string
-  /** Slugs the game had before a rename. Their pages are rewritten in `docker/nginx.conf.template`; their maps pages go straight to the game's site. */
+  /** Slugs the game had before a rename. Their pages are rewritten in `docker/nginx.conf.template`; a site game's game and maps pages under them go straight to its site. */
   formerSlugs?: string[]
   accent: 'cyan' | 'amber' | 'violet'
   /** What the game takes after; each entry's description is the same-index string of `inspirations` in the game's copy. A game with none is an original idea. */

@@ -8,16 +8,18 @@ import { ServersFor } from '../data/servers'
 import type { Locale } from '../i18n/config'
 import { Fmt, UseI18n } from '../i18n'
 import { Ev } from '../lib/umami'
+import { GameHref } from '../lib/redirects'
 
 interface Props { game: Game; locale: Locale; /** Which list the card is in, for analytics. */ place: 'games' | 'minigames' | 'more' }
 const { game, locale, place } = Astro.props
-const { t, g, p, plural } = UseI18n(locale)
+const { t, g, plural } = UseI18n(locale)
 const a = ACCENT[game.accent]
 const maps = MapsFor(game.slug)
 const hasServer = ServersFor(game.slug).length > 0
 ---
 
-<a href={p(`/${game.slug}`)} {...Ev('game_card', { game: game.slug, place })} class="glow-card group relative flex flex-col overflow-hidden">
+<!-- A game with its own site links there: its page here is a 301 to it. -->
+<a href={GameHref(game, locale)} {...Ev('game_card', { game: game.slug, place })} class="glow-card group relative flex flex-col overflow-hidden">
   <div class="relative aspect-[16/10] overflow-hidden">
     <img
       src={Asset(`/images/games/${game.slug}.webp`)}
