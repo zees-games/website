@@ -2,13 +2,13 @@
 import { DISCORD_URL, GITHUB_ORG, SITE_REPO, TmcHref } from '../lib/site'
 import type { Locale } from '../i18n/config'
 import { Escape, Rich, UseI18n } from '../i18n'
-import { Ev } from '../lib/umami'
+import { Ev, EvHtml } from '../lib/umami'
 import Socials from './Socials.astro'
 
 interface Props { locale: Locale }
 const { locale } = Astro.props
 const { t, p } = UseI18n(locale)
-const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.footer.tmc)}</a>`
+const tmcLink = `<a href="${TmcHref('/', locale)}"${EvHtml('tmc_play', { place: 'footer' })} class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.footer.tmc)}</a>`
 ---
 
 <footer class="mt-24 border-t border-line/70 bg-night">
@@ -21,10 +21,10 @@ const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline de
     <div>
       <p class="text-xs font-semibold uppercase tracking-widest text-muted">{t.footer.explore}</p>
       <ul class="mt-3 space-y-2 text-sm">
-        <li><a href={p('/#games')} class="hover:text-cyan">{t.nav.games}</a></li>
-        <li><a href={p('/servers')} class="hover:text-cyan">{t.nav.servers}</a></li>
-        <li><a href={p('/goals')} class="hover:text-cyan">{t.nav.goals}</a></li>
-        <li><a href={p('/inspirations')} class="hover:text-cyan">{t.nav.inspirations}</a></li>
+        <li><a href={p('/#games')} {...Ev('nav_link', { place: 'footer', to: 'games' })} class="hover:text-cyan">{t.nav.games}</a></li>
+        <li><a href={p('/servers')} {...Ev('nav_link', { place: 'footer', to: 'servers' })} class="hover:text-cyan">{t.nav.servers}</a></li>
+        <li><a href={p('/goals')} {...Ev('nav_link', { place: 'footer', to: 'goals' })} class="hover:text-cyan">{t.nav.goals}</a></li>
+        <li><a href={p('/inspirations')} {...Ev('nav_link', { place: 'footer', to: 'inspirations' })} class="hover:text-cyan">{t.nav.inspirations}</a></li>
         <li><a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'footer' })} class="hover:text-cyan">{t.nav.playOnTmc}</a></li>
         <li><a href={DISCORD_URL} {...Ev('discord', { place: 'footer' })} class="hover:text-cyan">{t.footer.discord}</a></li>
       </ul>
@@ -34,7 +34,7 @@ const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline de
       <ul class="mt-3 space-y-2 text-sm">
         <li><a href={GITHUB_ORG} {...Ev('repo_link', { kind: 'org', place: 'footer' })} class="hover:text-cyan">{t.footer.github}</a></li>
         <li><a href={SITE_REPO} {...Ev('repo_link', { kind: 'site', repo: 'website', place: 'footer' })} class="hover:text-cyan">{t.footer.sourceCode}</a></li>
-        <li><a href="https://godotengine.org" class="hover:text-cyan">{t.footer.madeWithGodot}</a></li>
+        <li><a href="https://godotengine.org" {...Ev('repo_link', { kind: 'engine', repo: 'godot', place: 'footer' })} class="hover:text-cyan">{t.footer.madeWithGodot}</a></li>
       </ul>
     </div>
   </div>

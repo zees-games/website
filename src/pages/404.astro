@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro'
 import { LANG_TAG, LOCALES, LocalizePath } from '../i18n/config'
 import { UseI18n } from '../i18n'
+import { Ev } from '../lib/umami'
 
 // nginx serves this one file for every missing path, so it carries every
 // locale's copy and the script below shows the one the path asks for.
@@ -17,7 +18,7 @@ const en = UseI18n('en').t
         <div data-locale={l} lang={LANG_TAG[l]} hidden={l !== 'en'}>
           <h1 class="mt-6 text-3xl font-bold">{t.title}</h1>
           <p class="mt-4 text-muted">{t.body}</p>
-          <a href={LocalizePath('/', l)} class="mt-8 inline-flex rounded-xl bg-cyan px-6 py-3 font-semibold text-ink">{t.back}</a>
+          <a href={LocalizePath('/', l)} {...Ev('nav_link', { place: '404', to: 'home' })} class="mt-8 inline-flex rounded-xl bg-cyan px-6 py-3 font-semibold text-ink">{t.back}</a>
         </div>
       )
     })}

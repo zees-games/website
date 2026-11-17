@@ -10,7 +10,7 @@ import { LocalePaths, type Locale } from '../../../i18n/config'
 import { UseI18n } from '../../../i18n'
 import { BreadcrumbLd } from '../../../lib/seo'
 import { GameHref } from '../../../lib/redirects'
-import { GameSiteEv } from '../../../lib/umami'
+import { Ev, GameSiteEv } from '../../../lib/umami'
 
 export const getStaticPaths = LocalePaths
 
@@ -111,7 +111,7 @@ const REVIVED = [['buses_from_hell', 'Buses From Hell', 'text-amber'], ['mg_3k_s
         <p class="font-display text-sm font-semibold tracking-widest text-cyan">03</p>
         <h2 class="mt-2 flex items-center gap-3 text-3xl font-bold"><Sparkles className="size-7 shrink-0 text-amber" aria-hidden="true" />{I.serversTitle}</h2>
         {I.serversBody.map((para) => <p class="mt-4 leading-relaxed text-muted">{para}</p>)}
-        <a href={p('/goals')} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{I.serversCta} <ArrowRight className="size-4" /></a>
+        <a href={p('/goals')} {...Ev('nav_link', { place: 'inspirations', to: 'goals' })} class="mt-6 inline-flex items-center gap-2 font-semibold text-cyan hover:underline">{I.serversCta} <ArrowRight className="size-4" /></a>
       </div>
       <div class="glow-card p-6" aria-hidden="true">
         <div class="mx-auto w-fit rounded-xl border border-amber/40 bg-amber/10 px-5 py-3 text-center font-semibold text-amber">Fatal Contact</div>

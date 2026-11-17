@@ -3,6 +3,7 @@ import MapsList from '../../../components/MapsList.astro'
 import MovedPage from '../../../components/MovedPage.astro'
 import { GAMES, type Game } from '../../../data/games'
 import { MapsFor } from '../../../lib/maps'
+import { EvHtml } from '../../../lib/umami'
 import { HostOf } from '../../../lib/site'
 import { MapIds, SiteMapsHref } from '../../../lib/redirects'
 import { LocalePaths, type Locale } from '../../../i18n/config'
@@ -24,7 +25,7 @@ const { game, locale } = Astro.props
 const { t } = UseI18n(locale)
 const site = game.site
 const to = site ? SiteMapsHref(site) : ''
-const link = site ? `<a href="${Escape(to)}">${Escape(HostOf(site))}</a>` : ''
+const link = site ? `<a href="${Escape(to)}"${EvHtml('game_site', { game: game.slug, host: HostOf(site), place: 'moved', page: 'maps' })}>${Escape(HostOf(site))}</a>` : ''
 ---
 
 {site

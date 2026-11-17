@@ -31,7 +31,7 @@ export const UMAMI_EVENTS = [
   /**
    * A game's own site, a TMC hotspot such as prophunt.net, where links to that
    * game go instead of its (moved) page here (`game`, `host`; `place`:
-   * servers | server | inspirations; `page`: home | how-to). Game cards keep
+   * servers | server | inspirations | moved; `page`: home | how-to). Game cards keep
    * `game_card`.
    */
   'game_site',
@@ -73,6 +73,20 @@ export const UMAMI_EVENTS = [
 
   /** The language picker: `from` and `to` locales. */
   'locale_change',
+
+  /*
+   * Moving around inside the site. `place` is where the link sits (header,
+   * menu, footer, home, game, maps, server, servers, 404) and `to` a fixed
+   * destination id (games, servers, goals, inspirations, game, maps,
+   * moderation), never a translated label.
+   */
+  'nav_link',
+  /** The language or mobile menu being opened (`menu`: language | nav). */
+  'menu_toggle',
+  /** A link to a game's inspiration, on a game page or the inspirations page (`place`). */
+  'inspiration_link',
+  /** The source of a map's original screenshot (`game`). */
+  'map_source',
 
   /*
    * nginx serves one 404.html for every missing path, so Umami files them all
@@ -128,6 +142,15 @@ export function Ev(name: UmamiEventName, data: Record<string, string | undefined
 }
 
 /**
+ * `Ev()` for a link built as an HTML string (translated copy with `set:html`):
+ * the attribute text to put inside the tag, values escaped.
+ */
+export function EvHtml(name: UmamiEventName, data: Record<string, string | undefined> = {}): string {
+  const esc = (v: string) => v.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+  return Object.entries(Ev(name, data)).map(([k, v]) => ` ${k}="${esc(v)}"`).join('')
+}
+
+/**
  * `game_site` for a link to a game that leads to its own site (`GameHref`),
  * nothing for one that stays here (the pageview already counts it).
  */
@@ -135,8 +158,14 @@ export function GameSiteEv(game: { slug: string; site?: string }, place: string,
   return game.site ? Ev('game_site', { game: game.slug, host: new URL(game.site).host, place, page }) : {}
 }
 
-/** Cap free text a visitor typed before it becomes an event field. */
-export function QueryField(query: string): string {
-  const q = query.trim()
-  return q.length > 80 ? `${q.slice(0, 80)}…` : q
+/**
+ * A typed query as a size bucket, never the text: what someone searched for
+ * can be anything, and an event is not the place for it.
+ */
+export function LengthBucket(query: string): string {
+  const n = query.trim().length
+  if (n === 0) return '0'
+  if (n <= 3) return '1-3'
+  if (n <= 8) return '4-8'
+  return '9+'
 }

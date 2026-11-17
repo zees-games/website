@@ -8,7 +8,7 @@ import { SERVERS } from '../../../data/servers'
 import { DEPLOY_REPO, STANDOUT_URL, TmcHref } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../../i18n'
-import { Ev } from '../../../lib/umami'
+import { Ev, EvHtml } from '../../../lib/umami'
 import { BreadcrumbLd } from '../../../lib/seo'
 
 export const getStaticPaths = LocalePaths
@@ -21,8 +21,8 @@ const S = t.servers
 const single = SERVERS.filter((s) => !s.multi)
 const multi = SERVERS.filter((s) => s.multi)
 const LINK = 'text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan'
-const tmcLink = `<a href="${TmcHref('/', locale)}" class="${LINK}">${Escape(S.tmc)}</a>`
-const deployLink = `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(S.deploy)}</a>`
+const tmcLink = `<a href="${TmcHref('/', locale)}"${EvHtml('tmc_play', { place: 'servers' })} class="${LINK}">${Escape(S.tmc)}</a>`
+const deployLink = `<a href="${DEPLOY_REPO}"${EvHtml('repo_link', { kind: 'deploy', repo: 'deploy', place: 'servers' })} class="${LINK}">${Escape(S.deploy)}</a>`
 const standoutLink = `<a href="${STANDOUT_URL}" data-umami-event="standout" data-umami-event-place="servers" class="${LINK}">Standout Servers</a>`
 ---
 
@@ -71,7 +71,7 @@ const standoutLink = `<a href="${STANDOUT_URL}" data-umami-event="standout" data
           <a href={DEPLOY_REPO} {...Ev('repo_link', { kind: 'deploy', repo: 'dot-server-deploy', place: 'servers' })} class="inline-flex items-center gap-2 rounded-xl bg-cyan px-5 py-2.5 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-cyan)] transition hover:brightness-110">
             <FaGithub className="size-5" aria-hidden="true" /> {S.deploy}
           </a>
-          <a href={p('/goals')} class="inline-flex items-center gap-1.5 px-2 py-2.5 font-semibold text-cyan hover:underline">{S.hostCta} <ArrowRight className="size-4" aria-hidden="true" /></a>
+          <a href={p('/goals')} {...Ev('nav_link', { place: 'servers', to: 'goals' })} class="inline-flex items-center gap-1.5 px-2 py-2.5 font-semibold text-cyan hover:underline">{S.hostCta} <ArrowRight className="size-4" aria-hidden="true" /></a>
         </div>
       </section>
     </div>

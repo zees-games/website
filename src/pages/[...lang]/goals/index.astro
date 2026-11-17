@@ -9,7 +9,7 @@ import { FaDiscord } from 'react-icons/fa6'
 import { DISCORD_URL, GITHUB_ORG, TmcHref, DEPLOY_REPO } from '../../../lib/site'
 import { LocalePaths, type Locale } from '../../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../../i18n'
-import { Ev } from '../../../lib/umami'
+import { Ev, EvHtml } from '../../../lib/umami'
 import { BreadcrumbLd } from '../../../lib/seo'
 
 export const getStaticPaths = LocalePaths
@@ -67,7 +67,7 @@ const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-
         <h2 class="mt-2 text-3xl font-bold">{G.community.title}</h2>
         <p class="mt-4 leading-relaxed text-muted" set:html={Rich(G.community.body, {
           strong: strong(G.community.strong),
-          deploy: `<a href="${DEPLOY_REPO}" class="${LINK}">${Escape(G.community.deploy)}</a>`,
+          deploy: `<a href="${DEPLOY_REPO}"${EvHtml('repo_link', { kind: 'deploy', repo: 'deploy', place: 'goals' })} class="${LINK}">${Escape(G.community.deploy)}</a>`,
         })} />
       </div>
       <div class="glow-card relative overflow-hidden p-6 md:order-1" aria-hidden="true">
@@ -150,7 +150,7 @@ const SLIDERS = [[72, 'bg-cyan'], [40, 'bg-amber'], [88, 'bg-violet'], [25, 'bg-
         <p class="font-display text-sm font-semibold tracking-widest text-cyan">06</p>
         <h2 class="mt-2 text-3xl font-bold">{G.cdn.title}</h2>
         <p class="mt-4 leading-relaxed text-muted" set:html={Rich(G.cdn.body, {
-          assets: `<a href="${TmcHref('/assets', locale)}" class="${LINK}">${Escape(G.cdn.assets)}</a>`,
+          assets: `<a href="${TmcHref('/assets', locale)}"${EvHtml('tmc_play', { place: 'goals' })} class="${LINK}">${Escape(G.cdn.assets)}</a>`,
         })} />
       </div>
       <div class="glow-card p-6 md:order-1" aria-hidden="true">

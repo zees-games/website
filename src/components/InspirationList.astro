@@ -1,6 +1,7 @@
 ---
 import { ExternalLink } from 'lucide-react'
 import type { Game } from '../data/games'
+import { Ev } from '../lib/umami'
 
 /** A game's inspirations: title (a link when the source has a page), description beneath. */
 interface Props { game: Game; descriptions: string[] | undefined; compact?: boolean }
@@ -14,7 +15,7 @@ const entries = (game.inspirations ?? []).map((e, i) => ({ ...e, description: de
       <li class:list={[compact ? 'rounded-lg border border-line bg-night/60 px-3 py-2' : '']}>
         <p class="text-sm font-semibold">
           {e.link
-            ? <a href={e.link} target="_blank" rel="nofollow noopener noreferrer" class="inline-flex items-center gap-1.5 text-text hover:text-cyan">{e.title} <ExternalLink className="size-3 shrink-0 text-cyan" aria-hidden="true" /></a>
+            ? <a href={e.link} {...Ev('inspiration_link', { place: compact ? 'game' : 'inspirations' })} target="_blank" rel="nofollow noopener noreferrer" class="inline-flex items-center gap-1.5 text-text hover:text-cyan">{e.title} <ExternalLink className="size-3 shrink-0 text-cyan" aria-hidden="true" /></a>
             : e.title}
         </p>
         {e.description && <p class:list={['mt-0.5 text-muted', compact ? 'text-xs leading-relaxed' : 'text-sm']}>{e.description}</p>}

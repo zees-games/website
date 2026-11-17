@@ -9,7 +9,7 @@ import { SERVERS, ServersFor } from '../../data/servers'
 import { DISCORD_URL, GITHUB_ORG, TmcHref } from '../../lib/site'
 import { LocalePaths, type Locale } from '../../i18n/config'
 import { Escape, Rich, UseI18n } from '../../i18n'
-import { Ev } from '../../lib/umami'
+import { Ev, EvHtml } from '../../lib/umami'
 import { SiteLd } from '../../lib/seo'
 import { Play, Target, Server, Globe, Shuffle, Code2, ArrowRight } from 'lucide-react'
 
@@ -23,7 +23,7 @@ const { t, p, n } = UseI18n(locale)
 const byServer = (kind: GameKind) => GAMES.filter((g) => g.kind === kind).sort((a, b) => Number(ServersFor(b.slug).length > 0) - Number(ServersFor(a.slug).length > 0))
 const full = byServer('game')
 const minis = byServer('minigame')
-const tmcLink = `<a href="${TmcHref('/', locale)}" class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.home.tmc)}</a>`
+const tmcLink = `<a href="${TmcHref('/', locale)}"${EvHtml('tmc_play', { place: 'home' })} class="text-text underline decoration-cyan/50 underline-offset-4 hover:decoration-cyan">${Escape(t.home.tmc)}</a>`
 const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, 'text-violet'], [Code2, 'text-cyan']] as const
 ---
 
@@ -45,10 +45,10 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
         </h1>
         <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted" set:html={Rich(t.home.intro, { tmc: tmcLink })} />
         <div class="mt-8 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap">
-          <a href="#games" class="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan px-6 py-3 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-cyan)] transition hover:brightness-110">
+          <a href="#games" {...Ev('nav_link', { place: 'home', to: 'games' })} class="col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-cyan px-6 py-3 font-semibold text-ink shadow-[0_0_28px_-6px_var(--color-cyan)] transition hover:brightness-110">
             <Play className="size-5 fill-current" aria-hidden="true" /> {t.home.pickGame}
           </a>
-          <a href={p('/goals')} class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-3 font-semibold transition hover:border-amber/60 sm:px-6">
+          <a href={p('/goals')} {...Ev('nav_link', { place: 'home', to: 'goals' })} class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-3 font-semibold transition hover:border-amber/60 sm:px-6">
             <Target className="size-5 text-amber" aria-hidden="true" /> {t.home.myGoals}
           </a>
           <a href={GITHUB_ORG} {...Ev('repo_link', { kind: 'org', place: 'home' })} class="inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-panel px-4 py-3 font-semibold transition hover:border-violet/60 sm:px-6">
@@ -77,7 +77,7 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
         <p class="mt-2 text-muted">{t.home.gamesBody}</p>
       </div>
       <div class="flex flex-wrap items-center gap-5">
-        <a href={p('/servers')} class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 hover:underline">{t.home.allServers} <ArrowRight className="size-4" /></a>
+        <a href={p('/servers')} {...Ev('nav_link', { place: 'home', to: 'servers' })} class="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-300 hover:underline">{t.home.allServers} <ArrowRight className="size-4" /></a>
         <a href={TmcHref('/play', locale)} {...Ev('tmc_play', { place: 'home' })} class="inline-flex items-center gap-1.5 text-sm font-semibold text-cyan hover:underline">{t.home.allOnTmc} <ArrowRight className="size-4" /></a>
       </div>
     </div>
@@ -100,7 +100,7 @@ const FEATURE_STYLE = [[Server, 'text-cyan'], [Globe, 'text-amber'], [Shuffle, '
         <div>
           <h2 class="text-3xl font-bold">{t.home.poweredTitle}</h2>
           <p class="mt-4 leading-relaxed text-muted">{t.home.poweredBody}</p>
-          <a href={p('/goals')} class="mt-6 inline-flex items-center gap-2 font-semibold text-amber hover:underline">{t.home.readGoals} <ArrowRight className="size-4" /></a>
+          <a href={p('/goals')} {...Ev('nav_link', { place: 'home', to: 'goals' })} class="mt-6 inline-flex items-center gap-2 font-semibold text-amber hover:underline">{t.home.readGoals} <ArrowRight className="size-4" /></a>
         </div>
         <ul class="grid gap-4 sm:grid-cols-2">
           {t.home.features.map((f, i) => {
