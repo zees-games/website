@@ -1,9 +1,9 @@
 extends SceneTree
 
 ## Renders map screenshots from named camera poses. Run against a game project, never edits it.
-##   godot --path <game> --script <abs>/shot.gd -- --game fatal-contact|g2gfast --poses poses.json --out /dir [--size 960x540]
+##   godot --path <game> --script <abs>/shot.gd -- --game fatal-contact|airdrift --poses poses.json --out /dir [--size 960x540]
 ## poses.json: { "<key>": { "map": "<id, defaults to key>", "from": [x,y,z], "at": [x,y,z], "fov": 75, "top": false } }
-## Coordinates are Godot metres/units (g2gfast: godot = (src.x, src.z, -src.y)). fov is vertical degrees.
+## Coordinates are Godot metres/units (airdrift: godot = (src.x, src.z, -src.y)). fov is vertical degrees.
 ## Writes <out>/<key>.png. "env": false in a pose drops the map's own environment (neutral stage).
 
 var _args := {}
@@ -18,7 +18,7 @@ func _vec(v: Array) -> Vector3:
 	return Vector3(v[0], v[1], v[2])
 
 func _run() -> void:
-	var game: String = _args.get("--game", "g2gfast")
+	var game: String = _args.get("--game", "airdrift")
 	var poses: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(_args["--poses"]))
 	var out: String = _args.get("--out", "/tmp/shots")
 	DirAccess.make_dir_recursive_absolute(out)
@@ -40,7 +40,11 @@ func _run() -> void:
 				holder.add_child(AL.build(map))
 				ok = true
 		else:
-			var cat = load("res://game/g2g_map_catalogue.gd").discover()
+			# Airdrift's catalogue script, under its new file name once the game renames it (old name until then).
+			var cat_path := "res://game/airdrift_map_catalogue.gd"
+			if not ResourceLoader.exists(cat_path):
+				cat_path = "res://game/g2g_map_catalogue.gd"
+			var cat = load(cat_path).discover()
 			var def = cat.get_map(StringName(id))
 			if def != null:
 				var node: Node3D = (load(def.scene_path) as PackedScene).instantiate()

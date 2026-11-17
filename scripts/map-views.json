@@ -32,7 +32,7 @@
   "note": "Ramps, canal, pagoda and tower from above. Missing: overcast rain sky and fog (clear blue instead), trees and crates on the grass strip, ramp shingle texture (prototype grid on tan), stone texture on the tower."
  },
  "surf_hologram": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    0,
@@ -48,7 +48,7 @@
   "note": "Spawn hall looking down the main ramp at the title sign. Missing: hologram emissive textures, props."
  },
  "surf_greensway": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    22.0,
@@ -64,7 +64,7 @@
   "note": "Ramp over the chasm with candy canes and trees, as in the original. Missing: chocolate and wafer props on the deck, big marshmallow in the left foreground, sky banner text is a flat label, sparse far-field detail."
  },
  "bhop_sqee": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    150,
@@ -80,7 +80,7 @@
   "note": "Outside the first building, sky visible over the maze of corridors. Untextured prototype materials."
  },
  "surf_kitsune": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -223,
@@ -96,7 +96,7 @@
   "note": "Prototype/untextured CS2 materials, no skybox, foliage and lanterns missing."
  },
  "bhop_aztec": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -6.4,
@@ -112,7 +112,7 @@
   "note": "Spawn, looking along the water channels and stone walls."
  },
  "surf_mesa": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    0,
@@ -128,7 +128,7 @@
   "note": "Spawn ramp into the canyon under clouds."
  },
  "surf_summit": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    38,
@@ -144,7 +144,7 @@
   "note": "Spawn terrace over the lake and mountains."
  },
  "surf_beginner2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -298,
@@ -160,7 +160,7 @@
   "note": "Spawn ramp towards the sunset over the sea."
  },
  "bhop_pit": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    21,
@@ -176,7 +176,7 @@
   "note": "Start of the canyon pit with the brick walls."
  },
  "bhop_grove": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    89.6,
@@ -625,7 +625,7 @@
   "env": false
  },
  "bhop_ananas": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    235.4,
@@ -641,7 +641,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_beginner": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    41.8,
@@ -657,7 +657,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_rookie": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -228.1,
@@ -673,7 +673,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_animals": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -205.7,
@@ -689,7 +689,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_eclipse": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -238.0,
@@ -705,7 +705,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_year3000": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    156.0,
@@ -721,7 +721,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_badges": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -199.8,
@@ -737,7 +737,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_eazy": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    42.8,
@@ -753,7 +753,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_elate": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -176.3,
@@ -769,7 +769,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_evolve": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -14.6,
@@ -785,7 +785,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_exodus": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -204.6,
@@ -801,7 +801,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_fur": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -230.7,
@@ -817,7 +817,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_japan": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -128.1,
@@ -833,7 +833,7 @@
   "note": "Third attempt: low oblique from the far side; still reads as a distant overview (the original is a ground-level cherry-tree park). Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_nature": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -3.2,
@@ -849,7 +849,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_ocean": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    152.5,
@@ -865,7 +865,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_aquaflow": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -197.3,
@@ -881,7 +881,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_interference": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    182.1,
@@ -897,7 +897,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_lore": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    251.1,
@@ -913,7 +913,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_omnibus": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -209.9,
@@ -929,7 +929,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_vegetables": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    181.5,
@@ -945,7 +945,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_arcade": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -133.7,
@@ -961,7 +961,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_arcane_v2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -160.8,
@@ -978,7 +978,7 @@
   "env": false
  },
  "bhop_badges2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -196.9,
@@ -994,7 +994,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_badges_mini": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    239.2,
@@ -1010,7 +1010,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_crash_egypt": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -110.3,
@@ -1026,7 +1026,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_eazy_v2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    9.4,
@@ -1042,7 +1042,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_frotinity2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -2695.5,
@@ -1058,7 +1058,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_fury_2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -225.9,
@@ -1074,7 +1074,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_interloper": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -232.9,
@@ -1090,7 +1090,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_lego2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -149.9,
@@ -1106,7 +1106,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_lego3": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -181.9,
@@ -1122,7 +1122,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_monster_jam": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -132.8,
@@ -1138,7 +1138,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_overthinker": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    188.7,
@@ -1154,7 +1154,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_supernova": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -148,
@@ -1170,7 +1170,7 @@
   "note": "bhop_supernova: camera sits above the spawn platform, looking over the purple asteroid track (the earlier black frames were exterior cameras 5000 units away). Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_tesquo_v2": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -98.5,
@@ -1186,7 +1186,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bhop_underground_crypt": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -217.4,
@@ -1202,7 +1202,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "bunnyhop_pro": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -23.9,
@@ -1218,7 +1218,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "kz_bhop_badg3s": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -27.9,
@@ -1234,7 +1234,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "kz_bhop_lucid": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -169.5,
@@ -1250,7 +1250,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "kz_bhop_yonkoma": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    62.1,
@@ -1266,7 +1266,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_life_of_duck": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    166.0,
@@ -1282,7 +1282,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_lt_omnific": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -224.2,
@@ -1298,7 +1298,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_lt_unicorn": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -221.6,
@@ -1314,7 +1314,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_quilavar": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -184.3,
@@ -1330,7 +1330,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_stonework3": {
-  "game": "g2gfast",
+  "game": "airdrift",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    201.8,
