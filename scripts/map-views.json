@@ -1,6 +1,6 @@
 {
  "surf_skyworld": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    60,
@@ -16,7 +16,7 @@
   "note": "Sea/island view from the high corner. Missing: textured sky (flat gradient), water is a flat plane, island props sparse."
  },
  "surf_japan_ptad": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    70,
@@ -192,7 +192,7 @@
   "note": "Spawn grove under the dusk sky and sun."
  },
  "surf_10x_final": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -325.8,
@@ -208,7 +208,7 @@
   "note": "Overview from the -x side over the floating sections; original is a high oblique view of the same layout."
  },
  "surf_10x_reloaded_fixed": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -278.6,
@@ -224,7 +224,7 @@
   "note": "Overview from -x where the two curved ramps meet the pyramid, as in the original."
  },
  "surf_29_12_06": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    0.0,
@@ -240,7 +240,7 @@
   "note": "Overview from -z looking across the arched ramps toward the centre dome, raised a little."
  },
  "surf_adverse": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    28.2,
@@ -256,7 +256,7 @@
   "note": "Overview from +z over the sci-fi hall. Original is an interior view; this is the closest outer angle."
  },
  "surf_akai_final": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -288.7,
@@ -272,7 +272,7 @@
   "note": "Overview from -x along the orange ramp chain. Original is the starting room interior, not matched."
  },
  "surf_buck_wild": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -173.7,
@@ -288,7 +288,7 @@
   "note": "Overview from -x over the central platform and ring ramps, like the original."
  },
  "surf_dust2_2008_final": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -105.5,
@@ -304,7 +304,7 @@
   "note": "Overview from -x over the platform with the mountain backdrop, like the original."
  },
  "surf_greatriver_v4": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    5.5,
@@ -320,7 +320,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_greatriver_xdre4m": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    84.9,
@@ -336,7 +336,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_machine2": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    73.4,
@@ -352,7 +352,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_machine_remix_final": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    201.9,
@@ -368,7 +368,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_matrix_v8": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    45.8,
@@ -384,7 +384,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_ny_bigloop_2008a": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    44.5,
@@ -400,7 +400,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_rebel_resistance_final3": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -178.2,
@@ -416,7 +416,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_ski_2_source": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -26.5,
@@ -432,7 +432,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_the_gloaming": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    277.4,
@@ -448,7 +448,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_thriller": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    197.3,
@@ -464,7 +464,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_ski_2": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -23.7,
@@ -480,7 +480,7 @@
   "note": "Overview from one side of the map's bounding box (approximation of the original's high oblique view; sky and textures are the port's, not the original's)."
  },
  "surf_greatriver": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    46.5,
@@ -496,7 +496,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_torque2": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    83.4,
@@ -512,7 +512,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_velocity": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -153.0,
@@ -528,7 +528,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_xiv_v2a": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    241.4,
@@ -544,7 +544,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_parrot_selector": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -204.0,
@@ -560,7 +560,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_ny_advance": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -58.0,
@@ -576,7 +576,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_mai_remix": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    -147.8,
@@ -592,7 +592,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_forbidden_ways_reloaded": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    208.1,
@@ -608,7 +608,7 @@
   "note": "Overview camera inside the map's bounds (approximation of the original's view; sky and textures are the port's, not the original's)."
  },
  "surf_legends": {
-  "game": "arena",
+  "game": "fatal-contact",
   "tool": "scripts/map-shot/run.sh (shot.gd)",
   "from": [
    75,

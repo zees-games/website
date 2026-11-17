@@ -1,7 +1,7 @@
 extends SceneTree
 
 ## Renders map screenshots from named camera poses. Run against a game project, never edits it.
-##   godot --path <game> --script <abs>/shot.gd -- --game arena|g2gfast --poses poses.json --out /dir [--size 960x540]
+##   godot --path <game> --script <abs>/shot.gd -- --game fatal-contact|g2gfast --poses poses.json --out /dir [--size 960x540]
 ## poses.json: { "<key>": { "map": "<id, defaults to key>", "from": [x,y,z], "at": [x,y,z], "fov": 75, "top": false } }
 ## Coordinates are Godot metres/units (g2gfast: godot = (src.x, src.z, -src.y)). fov is vertical degrees.
 ## Writes <out>/<key>.png. "env": false in a pose drops the map's own environment (neutral stage).
@@ -31,9 +31,9 @@ func _run() -> void:
 		var holder := Node3D.new()
 		root.add_child(holder)
 		var ok := false
-		if game == "arena":
-			var AM = load("res://maps/arena_map.gd")
-			var AL = load("res://maps/arena_map_lighting.gd")
+		if game == "fatal-contact":
+			var AM = load("res://maps/fc_map.gd")
+			var AL = load("res://maps/fc_map_lighting.gd")
 			var map = AM.by_id(StringName(id))
 			if map != null:
 				holder.add_child(map.to_scene())
