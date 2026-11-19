@@ -90,7 +90,7 @@ for (const file of pages) {
   }
 }
 
-// Renamed slugs answer through nginx's `rewrite` lines (docker/nginx.conf.template).
+// (g2gfast and playground are legacy ids.) Renamed slugs answer through nginx's `rewrite` lines (docker/nginx.conf.template).
 const rewritten = /^(\/(es|fr|de|ru|nl|ja|zh|pt))?\/(arena|fatalcontact|g2gfast|playground)(\/|$)/
 let broken = 0
 const exists = (p) => [p, join(p, 'index.html'), `${p}.html`].some((f) => existsSync(join(DIST, f)) && !f.endsWith('/'))

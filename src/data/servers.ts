@@ -26,6 +26,7 @@ export const SERVER_DOMAIN = 'zeesgames.com'
 
 export const SERVERS: ZeeServer[] = [
   { id: 'ar01', app: 'fatal-contact', tmcId: '3803239', name: "Zee's Fatal Contact #1", port: 6020 },
+  // g2gfast01: legacy id, kept as the server's published id.
   { id: 'g2gfast01', app: 'airdrift', tmcId: '3550523', name: "Zee's Airdrift #1", port: 6005 },
   { id: 'pg01', app: 'playlot', tmcId: '3803266', name: "Zee's Playlot #1", port: 6010 },
   { id: 'hg01', app: 'hungario', tmcId: '3803240', name: "Zee's Hungario #1", port: 6030 },

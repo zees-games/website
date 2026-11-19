@@ -68,6 +68,7 @@ server {
     # every locale, and the old cover, share-banner and map-shot names move
     # permanently to the new slug (the query string carries over).
     rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/(?:arena|fatalcontact)(/.*)?$ $1/fatal-contact$2 permanent;
+    # legacy id: g2gfast below is the old Airdrift slug; old links to it must keep working.
     rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/g2gfast(/.*)?$ $1/airdrift$2 permanent;
     rewrite ^(/(?:es|fr|de|ru|nl|ja|zh|pt))?/playground(/.*)?$ $1/playlot$2 permanent;
     rewrite ^/(og|images/games)/arena\.(jpg|webp)$ /$1/fatal-contact.$2 permanent;

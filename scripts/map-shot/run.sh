@@ -13,7 +13,7 @@
 # alias, for the game argument and for a pose's "game".
 set -euo pipefail
 poses=$1 game=$2 out=$3 size=${4:-1600x900}
-[ "$game" = g2gfast ] && game=airdrift
+[ "$game" = g2gfast ] && game=airdrift  # legacy id: the old name still accepted
 here=$(cd "$(dirname "$0")" && pwd)
 tmp=/tmp/map-shot-$$
 python3 -c "

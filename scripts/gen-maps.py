@@ -1,4 +1,5 @@
 import json, os, subprocess, sys
+# legacy id: the game-playground / g2gfast names in the tables below are pre-rename repository names.
 S, OUT = sys.argv[1], sys.argv[2]
 d = json.load(open(f'{S}/inventory.json'))
 PACK = {'fc-surf-dm-maps':'fatal-contact','arena-surf-dm-maps':'fatal-contact','airdrift-maps':'airdrift','g2gfast-maps':'airdrift','playlot-maps':'playlot','game-playlot-maps':'playlot','game-playground-maps':'playlot','hide-n-seek-maps':'hide-n-seek','mg-prop-hunt-maps':'prop-hunt','murder-mystery-maps':'murder-mystery','zombie-zone-maps':'zombie-zone','mg-deathrun-maps':'deathrun','mg-wipeout-maps':'wipeout'}  # external map packs only: maps that ship inside a game are not listed
